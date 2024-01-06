@@ -24,6 +24,32 @@ namespace DHLClient
         /// </summary>
         private string? mName;
 
+        /// <summary>
+        /// The member of the <see cref="Place"/> property
+        /// </summary>
+        private ServicePointLocationByPlaceResponseModel? mPlace;
+
+        /// <summary>
+        /// The member of the <see cref="ServiceTypes"/> property
+        /// </summary>
+        private IEnumerable<ServiceType>? mServiceTypes;
+
+        /// <summary>
+        /// The member of the <see cref="AverageCapacityDayOfWeek"/> property
+        /// </summary>
+        private ServicePointLocationAverageCapacityDayOfWeekResponseModel? mAverageCapacityDayOfWeek;
+
+        /// <summary>
+        /// The member of the <see cref="OpeningHours"/> property
+        /// </summary>
+        private IEnumerable<ServicePointLocationOpeningHoursResponseModel>? mOpeningHours;
+
+        /// <summary>
+        /// The member of the <see cref="ClosurePeriods"/> property
+        /// </summary>
+        private IEnumerable<ServicePointLocationClosurePeriodResponseModel>? mClosurePeriods;
+
+
         #endregion
 
         #region Public Properties
@@ -62,39 +88,59 @@ namespace DHLClient
         /// Distance in meters (m) from the requested geographical coordinates.
         /// </summary>
         [JsonProperty("distance")]
-        public int Distance { get; set; }
+        public double Distance { get; set; }
 
         /// <summary>
         /// An object of objects
         /// </summary>
         [JsonProperty("place")]
-        public ServicePointLocationByPlaceResponseModel Places { get; set; }
+        public ServicePointLocationByPlaceResponseModel Place
+        {
+            get => mPlace ??= new ServicePointLocationByPlaceResponseModel();
+            set => mPlace = value;
+        }
 
         /// <summary>
         /// The list of services available at the DHL Service Point location.
         /// </summary>
         [JsonProperty("serviceTypes")]
-        public ServiceType ServiceTypes { get; set; }
+        public IEnumerable<ServiceType> ServiceTypes
+        {
+            get => mServiceTypes ?? Enumerable.Empty<ServiceType>();
+            set => mServiceTypes = value;
+        }
 
         /// <summary>
         /// Indicates the average capacity of the parcel locker on the listed day. If this information is not available,
         /// only an aggregated average capacity indication based on the last weeks will be provided as availableCapacity.
         /// </summary>
         [JsonProperty("averageCapacityDayOfWeek")]
-        public ServicePointLocationAverageCapacityDayOfWeekResponseModel AverageCapacityDayOfWeek { get; set; }
+        public ServicePointLocationAverageCapacityDayOfWeekResponseModel AverageCapacityDayOfWeek
+        {
+            get => mAverageCapacityDayOfWeek ??= new ServicePointLocationAverageCapacityDayOfWeekResponseModel();
+            set => mAverageCapacityDayOfWeek = value;
+        }
 
         /// <summary>
         /// List of the opening hours of the DHL Service Point location.
         /// </summary>
         /// <remarks>http://supermodel.io/schemaorg/OpeningHoursSpecification</remarks>
         [JsonProperty("openingHours")]
-        public ServicePointLocationOpeningHoursResponseModel OpeningHours { get; set; }
+        public IEnumerable<ServicePointLocationOpeningHoursResponseModel> OpeningHours
+        {
+            get => mOpeningHours ?? Enumerable.Empty<ServicePointLocationOpeningHoursResponseModel>();
+            set => mOpeningHours = value;
+        }
 
         /// <summary>
         /// Periods where the DHL Service Point location is closed in the addition to opening hours.
         /// </summary>
         [JsonProperty("closurePeriods")]
-        public ServicePointLocationClosurePeriodResponseModel ClosurePeriods { get; set; }
+        public IEnumerable<ServicePointLocationClosurePeriodResponseModel> ClosurePeriods
+        {
+            get => mClosurePeriods ?? Enumerable.Empty<ServicePointLocationClosurePeriodResponseModel>();
+            set => mClosurePeriods = value;
+        }
 
         #endregion
 

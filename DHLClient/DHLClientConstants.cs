@@ -32,7 +32,7 @@ namespace DHLClient
             { DayOfWeekType.Sunday, "sunday" },
             { DayOfWeekType.PublicHolidays, "publicHolidays" }
         }.ToImmutableDictionary();
-         
+
         /// <summary>
         /// Maps the <see cref="ServicePointLocationType"/>s to their related <see cref="string"/>s
         /// </summary>

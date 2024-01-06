@@ -22,8 +22,8 @@ namespace DHLClient
         /// Reason for the closure
         /// </summary>
         [JsonProperty("type")]
-        public string Type 
-        { 
+        public string Type
+        {
             get => mType ?? string.Empty;
             set => mType = value;
         }
