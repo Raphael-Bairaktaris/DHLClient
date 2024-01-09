@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient.DataModels.Enums
+﻿namespace DHLClient.DataModels.Enums
 {
     /// <summary>
     /// Provides enumeration over the destination provider type
     /// </summary>
-    public enum DestinationProviderType
+    public enum DestinationProvider
     {
         /// <summary>
         /// Oepag

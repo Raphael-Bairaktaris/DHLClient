@@ -1,10 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -58,8 +52,8 @@ namespace DHLClient
         /// The time stamp
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp 
-        { 
+        public string Timestamp
+        {
             get => mTimestamp ?? string.Empty;
             set => mTimestamp = value;
         }
@@ -68,8 +62,8 @@ namespace DHLClient
         /// The location
         /// </summary>
         [JsonProperty("location")]
-        public ShipmentLocationResponseModel Location 
-        { 
+        public ShipmentLocationResponseModel Location
+        {
             get => mLocation ??= new ShipmentLocationResponseModel();
             set => mLocation = value;
         }
@@ -84,7 +78,7 @@ namespace DHLClient
         /// The shipment status
         /// </summary>
         [JsonProperty("status")]
-        public string Status 
+        public string Status
         {
             get => mStatus ?? string.Empty;
             set => mStatus = value;
@@ -94,8 +88,8 @@ namespace DHLClient
         /// The description
         /// </summary>
         [JsonProperty("description")]
-        public string Description 
-        { 
+        public string Description
+        {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }
@@ -104,8 +98,8 @@ namespace DHLClient
         /// The place ids
         /// </summary>
         [JsonProperty("placeIds")]
-        public IEnumerable<string> PlaceIds 
-        { 
+        public IEnumerable<string> PlaceIds
+        {
             get => mPlaceIds ?? Enumerable.Empty<string>();
             set => mPlaceIds = value;
         }
@@ -115,8 +109,8 @@ namespace DHLClient
         /// </summary>
         /// <example> The shipment is pending completion of customs inspection. </example>
         [JsonProperty("remark")]
-        public string Remark 
-        { 
+        public string Remark
+        {
             get => mRemark ?? string.Empty;
             set => mRemark = value;
         }
@@ -125,8 +119,8 @@ namespace DHLClient
         /// The next steps
         /// </summary>
         [JsonProperty("nextSteps")]
-        public IEnumerable<string> NextSteps 
-        { 
+        public IEnumerable<string> NextSteps
+        {
             get => mNextSteps ?? Enumerable.Empty<string>();
             set => mNextSteps = value;
         }

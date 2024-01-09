@@ -31,7 +31,7 @@
         /// The response will include only locations of the type that matches any of the requested ones.
         /// </summary>
         [ArgumentName("locationType")]
-        public ServicePointLocationType? LocationType { get; set; }
+        public LocationType? LocationType { get; set; }
 
         /// <summary>
         /// Each location can offer more than one service. This parameter can be added multiple times in each API request. The response will include only locations with at
@@ -58,7 +58,7 @@
         /// A two-letter ISO 3166-1 alpha-2 code specifying the country.
         /// </summary>
         [ArgumentName("countryCode")]
-        public CountryCodeType? CountryCode { get; set; }
+        public CountryCode? CountryCode { get; set; }
 
         /// <summary>
         /// When set to true this parameter allows to exclude locations that have a closure period entry at the time of the request.

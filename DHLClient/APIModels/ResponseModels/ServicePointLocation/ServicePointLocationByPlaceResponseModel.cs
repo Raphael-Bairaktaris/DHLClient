@@ -32,8 +32,8 @@ namespace DHLClient
         /// Address properties
         /// </summary>
         [JsonProperty("address")]
-        public ServicePointLocationByAddressResponseModel Address 
-        { 
+        public ServicePointLocationByAddressResponseModel Address
+        {
             get => mAddress ??= new ServicePointLocationByAddressResponseModel();
             set => mAddress = value;
         }
@@ -42,8 +42,8 @@ namespace DHLClient
         /// Geometric coordinates
         /// </summary>
         [JsonProperty("geo")]
-        public ServicePointLocationByGeoResponseModel GeometricCoordinates 
-        { 
+        public ServicePointLocationByGeoResponseModel GeometricCoordinates
+        {
             get => mGeometricCoordinates ??= new ServicePointLocationByGeoResponseModel();
             set => mGeometricCoordinates = value;
         }
@@ -52,8 +52,8 @@ namespace DHLClient
         /// Contained in place
         /// </summary>
         [JsonProperty("containedInPlace")]
-        public ServicePointLocationByContainedInPlaceResponseModel ContainedInPlace 
-        { 
+        public ServicePointLocationByContainedInPlaceResponseModel ContainedInPlace
+        {
             get => mContainedInPlace ??= new ServicePointLocationByContainedInPlaceResponseModel();
             set => mContainedInPlace = value;
         }

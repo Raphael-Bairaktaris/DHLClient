@@ -1,4 +1,5 @@
-﻿using System.Collections.Immutable;
+﻿using DHLClient.DataModels.Enums;
+using System.Collections.Immutable;
 
 namespace DHLClient
 {
@@ -34,15 +35,21 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="ServicePointLocationType"/>s to their related <see cref="string"/>s
+        /// Maps the <see cref="LocationType"/>s to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<ServicePointLocationType, string> ServicePointLocationTypeToStringMapper { get; } = new Dictionary<ServicePointLocationType, string>()
+        public static IReadOnlyDictionary<LocationType, string> LocationTypeToStringMapper { get; } = new Dictionary<LocationType, string>()
         {
-            { ServicePointLocationType.ServicePoint, "servicePoint" },
-            { ServicePointLocationType.Locker, "locker" },
-            { ServicePointLocationType.PostOffice, "postOffice" },
-            { ServicePointLocationType.PostBank, "postBank" },
-            { ServicePointLocationType.POBox, "poBox" }
+            { LocationType.ServicePoint, "servicepoint" },
+            { LocationType.Locker, "locker" },
+            { LocationType.PostOffice, "postoffice" },
+            { LocationType.PostBank, "postbank" },
+            { LocationType.POBox, "pobox" }
+        }.ToImmutableDictionary();
+
+        public static IReadOnlyDictionary<ProviderType, string> ProviderTypeToStringMapper { get; } = new Dictionary<ProviderType, string>()
+        {
+            { ProviderType.Express, "express" },
+            { ProviderType.Parcel, "parcel" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -50,7 +57,75 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<ServiceType, string> ServiceTypeToStringMapper { get; } = new Dictionary<ServiceType, string>()
         {
-            { ServiceType.ParcelPickUp }
+            { ServiceType.ParcelPickup, "parcel:pick-up" },
+            { ServiceType.ParcelDropOff, "parcel:drop-off" },
+            { ServiceType.ExpressPickup, "express:pick-up" },
+            { ServiceType.ExpressDropOff, "express:drop-off" },
+            { ServiceType.ExpressDropOffAccount, "express:drop-off-account" },
+            { ServiceType.ExpressDropOffEasy, "express:drop-off-easy" },
+            { ServiceType.ExpressDropOffPrelabeled, "express:drop-off-prelabeled" },
+            { ServiceType.ParcelPickupRegistered, "parcel:pickup-registered" },
+            { ServiceType.ParcelPickupUnregistered, "parcel:pickup-unregistered" },
+            { ServiceType.ParcelDropOffUnregistered, "parcel:drop-off-unregistered" },
+            { ServiceType.LetterService, "letter-service" },
+            { ServiceType.Postbank, "postbank" },
+            { ServiceType.CashOnDelivery, "cash-on-delivery" },
+            { ServiceType.Franking, "franking" },
+            { ServiceType.CashService, "cash-service" },
+            { ServiceType.PackagingMaterial, "packaging-material" },
+            { ServiceType.Postident, "postident" },
+            { ServiceType.AgeVerification, "age-verification" },
+            { ServiceType.HandicappedAccess, "handicapped-access" },
+            { ServiceType.Parking, "parking" },
+            { ServiceType.ParcelDropOffUnlabeled, "parcel:drop-off-unlabeled" },
+            { ServiceType.ExpressDropOffUnlabeled, "express:drop-off-unlabeled" },
         }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="DestinationProvider"/> to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<DestinationProvider, string> DestinationProviderTypeToStringMapper { get; } = new Dictionary<DestinationProvider, string>()
+        {
+            { DestinationProvider.Oepag, "oepag" },
+            { DestinationProvider.Express, "express" },
+            { DestinationProvider.ParcelBl, "parcel-bl" },
+            { DestinationProvider.Bpost, "bpost" },
+            { DestinationProvider.Rapido, "rapido" },
+            { DestinationProvider.ACSCourier, "acs-courier" },
+            { DestinationProvider.ParcelCZ, "parcel-cz" },
+            { DestinationProvider.Freight, "freight" },
+            { DestinationProvider.ParcelDE, "parcel-de" },
+            { DestinationProvider.TransOFlex, "trans-o-flex" },
+            { DestinationProvider.Bring, "bring" },
+            { DestinationProvider.ParcelES, "parcel-es" },
+            { DestinationProvider.RelaisColis, "relais-colis" },
+            { DestinationProvider.ColisPrive, "colis-prive" },
+            { DestinationProvider.FreightFR, "freight-fr" },
+            { DestinationProvider.Chronopost, "chronopost" },
+            { DestinationProvider.ParcelUK, "parcel-uk" },
+            { DestinationProvider.HrvatskaPosta, "hrvatska-posta" },
+            { DestinationProvider.MagyarPosta, "magyar-posta" },
+            { DestinationProvider.Anpost, "anpost" },
+            { DestinationProvider.Fastway, "fastway" },
+            { DestinationProvider.ParcelLU, "parcel-lu" },
+            { DestinationProvider.ParcelBE, "parcel-be" },
+            { DestinationProvider.ParcelNL, "parcel-nl" },
+            //{ DestinationProvider.Oepag, "oepag" },
+            //{ DestinationProvider.Oepag, "oepag" },
+            //{ DestinationProvider.Oepag, "oepag" },
+            //{ DestinationProvider.Oepag, "oepag" },
+            //{ DestinationProvider.Oepag, "oepag" },
+            //{ DestinationProvider.Oepag, "oepag" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="CountryCode"/> to their related <see cref="string"/>
+        /// </summary>
+        public static IReadOnlyDictionary<CountryCode, string> CountryCodeToStringMapper { get; } = Enum.GetValues<CountryCode>().ToImmutableDictionary(x => x, x => x.ToString().ToLower());
+
+        /// <summary>
+        /// Maps the <see cref="LanguageCode"/> to their related <see cref="string"/>
+        /// </summary>
+        public static IReadOnlyDictionary<LanguageCode, string> LanguageCodeToStringMapper { get; } = Enum.GetValues<LanguageCode>().ToImmutableDictionary(x => x, x => x.ToString().ToLower());
     }
 }

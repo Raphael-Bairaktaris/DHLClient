@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -24,8 +19,8 @@ namespace DHLClient
         /// The product name
         /// </summary>
         [JsonProperty("productName")]
-        public string ProductName 
-        { 
+        public string ProductName
+        {
             get => mProductName ?? string.Empty;
             set => mProductName = value;
         }

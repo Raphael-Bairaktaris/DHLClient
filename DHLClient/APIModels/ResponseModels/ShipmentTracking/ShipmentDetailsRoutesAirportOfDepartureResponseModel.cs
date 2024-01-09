@@ -19,6 +19,11 @@ namespace DHLClient
         /// </summary>
         private ShipmentDetailsAirportOfDepartureLocationCodeResponseModel? mLocationCode;
 
+        /// <summary>
+        /// The member of the <see cref="SuperModelIoSchemaOrganizationText"/> property
+        /// </summary>
+        private ShipmentDetailsAirportOfDepartureSuperModelIoSchemaOrganizationTextResponseModel? mSuperModelIoSchemaOrganizationText;
+
         #endregion
 
         #region Public Properties
@@ -27,8 +32,8 @@ namespace DHLClient
         /// The location name
         /// </summary>
         [JsonProperty("locationName")]
-        public string LocationName 
-        { 
+        public string LocationName
+        {
             get => mLocationName ?? string.Empty;
             set => mLocationName = value;
         }
@@ -37,8 +42,8 @@ namespace DHLClient
         /// The location code
         /// </summary>
         [JsonProperty("LlocationCode")]
-        public ShipmentDetailsAirportOfDepartureLocationCodeResponseModel LocationCode 
-        { 
+        public ShipmentDetailsAirportOfDepartureLocationCodeResponseModel LocationCode
+        {
             get => mLocationCode ??= new ShipmentDetailsAirportOfDepartureLocationCodeResponseModel();
             set => mLocationCode = value;
         }
@@ -47,13 +52,17 @@ namespace DHLClient
         /// The super model io schema organization text
         /// </summary>
         [JsonProperty("supermodelIoSchemaorgText")]
-        public ShipmentDetailsAirportOfDepartureSuperModelIoSchemaOrganizationTextResponseModel SuperModelIoSchemaOrganizationText { get; set; }
+        public ShipmentDetailsAirportOfDepartureSuperModelIoSchemaOrganizationTextResponseModel SuperModelIoSchemaOrganizationText
+        {
+            get => mSuperModelIoSchemaOrganizationText ??= new ShipmentDetailsAirportOfDepartureSuperModelIoSchemaOrganizationTextResponseModel();
+            set => mSuperModelIoSchemaOrganizationText = value;
+        }
 
         /// <summary>
         /// The country code
         /// </summary>
         [JsonProperty("countryCode")]
-        public CountryCodeType CountryCode { get; set; }
+        public CountryCode CountryCode { get; set; }
 
         #endregion
 

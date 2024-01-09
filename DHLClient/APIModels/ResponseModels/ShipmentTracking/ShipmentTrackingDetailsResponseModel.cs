@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -92,8 +87,8 @@ namespace DHLClient
         /// The shipment origin
         /// </summary>
         [JsonProperty("origin")]
-        public ShipmentLocationResponseModel Origin 
-        {   
+        public ShipmentLocationResponseModel Origin
+        {
             get => mOrigin ??= new ShipmentLocationResponseModel();
             set => mOrigin = value;
         }
@@ -102,8 +97,8 @@ namespace DHLClient
         /// The shipment destination
         /// </summary>
         [JsonProperty("destination")]
-        public ShipmentLocationResponseModel Destination 
-        { 
+        public ShipmentLocationResponseModel Destination
+        {
             get => mDestination ??= new ShipmentLocationResponseModel();
             set => mDestination = value;
         }
@@ -112,8 +107,8 @@ namespace DHLClient
         /// The shipment status
         /// </summary>
         [JsonProperty("status")]
-        public ShipmentStatusResponseModel Status 
-        { 
+        public ShipmentStatusResponseModel Status
+        {
             get => mStatus ??= new ShipmentStatusResponseModel();
             set => mStatus = value;
         }
@@ -128,18 +123,18 @@ namespace DHLClient
         /// The estimated delivery time frame
         /// </summary>
         [JsonProperty("estimatedDeliveryTimeFrame")]
-        public ShipmentEstimatedDeliveryTimeFrameResponseModel EstimatedDeliveryTimeFrameResponseModel 
-        { 
+        public ShipmentEstimatedDeliveryTimeFrameResponseModel EstimatedDeliveryTimeFrameResponseModel
+        {
             get => mEstimatedDeliveryTimeFrame ??= new ShipmentEstimatedDeliveryTimeFrameResponseModel();
-            set => mEstimatedDeliveryTimeFrame = value; 
+            set => mEstimatedDeliveryTimeFrame = value;
         }
 
         /// <summary>
         /// The estimated time of delivery remark
         /// </summary>
         [JsonProperty("estimatedTimeOfDeliveryRemark")]
-        public string EstimatedTimeOfDeliveryRemark 
-        { 
+        public string EstimatedTimeOfDeliveryRemark
+        {
             get => mEstimatedTimeOfDeliveryRemark ?? string.Empty;
             set => mEstimatedTimeOfDeliveryRemark = value;
         }
@@ -149,8 +144,8 @@ namespace DHLClient
         /// </summary>
         /// <remarks> http://www.dhl.de/de/privatkunden.html?piececode=7777777770 </remarks>
         [JsonProperty("serviceUrl")]
-        public string ServiceURL 
-        { 
+        public string ServiceURL
+        {
             get => mServiceURL ?? string.Empty;
             set => mServiceURL = value;
         }
@@ -160,8 +155,8 @@ namespace DHLClient
         /// </summary>
         /// <remarks> https://www.dhl.de/de/privatkunden.html?piececode=7777777770&verfuegen_selected_tab=FIRST </remarks>
         [JsonProperty("rerouteUrl")]
-        public string RerouteURL 
-        { 
+        public string RerouteURL
+        {
             get => mRerouteURL ?? string.Empty;
             set => mRerouteURL = value;
         }
@@ -170,8 +165,8 @@ namespace DHLClient
         /// The shipment details
         /// </summary>
         [JsonProperty("details")]
-        public ShipmentDetailsResponseModel Details 
-        { 
+        public ShipmentDetailsResponseModel Details
+        {
             get => mDetails ??= new ShipmentDetailsResponseModel();
             set => mDetails = value;
         }
@@ -180,8 +175,8 @@ namespace DHLClient
         /// The shipment events
         /// </summary>
         [JsonProperty("events")]
-        public IEnumerable<ShipmentEventsResponseModel> Events 
-        { 
+        public IEnumerable<ShipmentEventsResponseModel> Events
+        {
             get => mEvents ?? Enumerable.Empty<ShipmentEventsResponseModel>();
             set => mEvents = value;
         }
@@ -190,8 +185,8 @@ namespace DHLClient
         /// The possible additional shipments URL
         /// </summary>
         [JsonProperty("possibleAdditionalShipmentsURL")]
-        public IEnumerable<string> PossibleAdditionalShipmentsURL 
-        { 
+        public IEnumerable<string> PossibleAdditionalShipmentsURL
+        {
             get => mPossibleAdditionalShipmentsURL ?? Enumerable.Empty<string>();
             set => mPossibleAdditionalShipmentsURL = value;
         }

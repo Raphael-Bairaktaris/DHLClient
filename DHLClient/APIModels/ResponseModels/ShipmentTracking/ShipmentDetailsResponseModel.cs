@@ -1,10 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -73,8 +67,8 @@ namespace DHLClient
         /// The carrier
         /// </summary>
         [JsonProperty("carrier")]
-        public ShipmentDetailsCarrierResponseModel? Carrier 
-        { 
+        public ShipmentDetailsCarrierResponseModel? Carrier
+        {
             get => mCarrier ?? new ShipmentDetailsCarrierResponseModel();
             set => mCarrier = value;
         }
@@ -83,8 +77,8 @@ namespace DHLClient
         /// The product
         /// </summary>
         [JsonProperty("product")]
-        public ShipmentDetailsProductResponseModel? Product 
-        { 
+        public ShipmentDetailsProductResponseModel? Product
+        {
             get => mProduct ?? new ShipmentDetailsProductResponseModel();
             set => mProduct = value;
         }
@@ -93,8 +87,8 @@ namespace DHLClient
         /// The destination provider
         /// </summary>
         [JsonProperty("provider")]
-        public ShipmentDetailsProviderResponseModel? Provider 
-        { 
+        public ShipmentDetailsProviderResponseModel? Provider
+        {
             get => mProvider ?? new ShipmentDetailsProviderResponseModel();
             set => mProvider = value;
         }
@@ -103,8 +97,8 @@ namespace DHLClient
         /// The receiver
         /// </summary>
         [JsonProperty("receiver")]
-        public ShipmentDetailsParticipantResponseModel? Receiver 
-        { 
+        public ShipmentDetailsParticipantResponseModel? Receiver
+        {
             get => mReceiver ??= new ShipmentDetailsParticipantResponseModel();
             set => mReceiver = value;
         }
@@ -113,18 +107,18 @@ namespace DHLClient
         /// The sender
         /// </summary>
         [JsonProperty("sender")]
-        public ShipmentDetailsParticipantResponseModel? Sender 
-        { 
+        public ShipmentDetailsParticipantResponseModel? Sender
+        {
             get => mSender ??= new ShipmentDetailsParticipantResponseModel();
-            set => mSender = value; 
+            set => mSender = value;
         }
 
         /// <summary>
         /// The proof of delivery
         /// </summary>
         [JsonProperty("proofOfDelivery")]
-        public ShipmentDetailsProofOfDeliveryResponseModel? ProofOfDelivery 
-        { 
+        public ShipmentDetailsProofOfDeliveryResponseModel? ProofOfDelivery
+        {
             get => mProofOfDelivery ??= new ShipmentDetailsProofOfDeliveryResponseModel();
             set => mProofOfDelivery = value;
         }
@@ -139,8 +133,8 @@ namespace DHLClient
         /// The place ids
         /// </summary>
         [JsonProperty("placeIds")]
-        public IEnumerable<string> PlaceIds 
-        { 
+        public IEnumerable<string> PlaceIds
+        {
             get => mPlaceIds ?? Enumerable.Empty<string>();
             set => mPlaceIds = value;
         }
@@ -167,8 +161,8 @@ namespace DHLClient
         /// The dimensions
         /// </summary>
         [JsonProperty("dimensions")]
-        public ShipmentDetailsDimensionsResponseModel Dimensions 
-        { 
+        public ShipmentDetailsDimensionsResponseModel Dimensions
+        {
             get => mDimensions ??= new ShipmentDetailsDimensionsResponseModel();
             set => mDimensions = value;
         }
@@ -177,8 +171,8 @@ namespace DHLClient
         /// The references
         /// </summary>
         [JsonProperty("references")]
-        public IEnumerable<ShipmentDetailsReferencesResponseModel> References 
-        { 
+        public IEnumerable<ShipmentDetailsReferencesResponseModel> References
+        {
             get => mReferences ?? Enumerable.Empty<ShipmentDetailsReferencesResponseModel>();
             set => mReferences = value;
         }
@@ -187,8 +181,8 @@ namespace DHLClient
         /// The DGF routes
         /// </summary>
         [JsonProperty("routes")]
-        public ShipmentDetailsDGFRoutesResponseModel DGFRoutes 
-        { 
+        public ShipmentDetailsDGFRoutesResponseModel DGFRoutes
+        {
             get => mDGFRoutes ??= new ShipmentDetailsDGFRoutesResponseModel();
             set => mDGFRoutes = value;
         }

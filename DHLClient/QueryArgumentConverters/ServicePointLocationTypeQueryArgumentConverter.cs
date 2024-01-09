@@ -1,9 +1,9 @@
 ﻿namespace DHLClient
 {
     /// <summary>
-    /// A <see cref="BaseQueryArgumentConverter{Tvalue}"/> that is used for converting a <see cref="ServicePointLocationType"/> to a <see cref="string"/> 
+    /// A <see cref="BaseQueryArgumentConverter{Tvalue}"/> that is used for converting a <see cref="LocationType"/> to a <see cref="string"/> 
     /// </summary>
-    public class ServicePointLocationTypeQueryArgumentConverter : BaseQueryArgumentConverter<ServicePointLocationType>
+    public class ServicePointLocationTypeQueryArgumentConverter : BaseQueryArgumentConverter<LocationType>
     {
         #region Constructor
 
@@ -20,7 +20,7 @@
         #region Public Methods
 
         /// <inheritdoc/>
-        public override string Convert(ServicePointLocationType value) => DHLClientConstants.ServicePointLocationTypeToStringMapper[value];
+        public override string Convert(LocationType value) => DHLClientConstants.LocationTypeToStringMapper[value];
 
         #endregion
     }

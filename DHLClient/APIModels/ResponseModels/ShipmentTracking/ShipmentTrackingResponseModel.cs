@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -56,7 +51,7 @@ namespace DHLClient
         /// The URL
         /// </summary>
         [JsonProperty("url")]
-        public string URL 
+        public string URL
         {
             get => mURL ?? string.Empty;
             set => mURL = value;
@@ -66,8 +61,8 @@ namespace DHLClient
         /// The previous URL
         /// </summary>
         [JsonProperty("prevUrl")]
-        public string PrevURL 
-        { 
+        public string PrevURL
+        {
             get => mPrevURL ?? string.Empty;
             set => mPrevURL = value;
         }
@@ -76,8 +71,8 @@ namespace DHLClient
         /// The next URL
         /// </summary>
         [JsonProperty("nextUrl")]
-        public string NextURL 
-        { 
+        public string NextURL
+        {
             get => mNextURL ?? string.Empty;
             set => mNextURL = value;
         }
@@ -86,8 +81,8 @@ namespace DHLClient
         /// The first URL
         /// </summary>
         [JsonProperty("firstUrl")]
-        public string FirstURL 
-        { 
+        public string FirstURL
+        {
             get => mFirstURL ?? string.Empty;
             set => mFirstURL = value;
         }
@@ -96,8 +91,8 @@ namespace DHLClient
         /// The last URL
         /// </summary>
         [JsonProperty("lastUrl")]
-        public string LastURL 
-        { 
+        public string LastURL
+        {
             get => mLastURL ?? string.Empty;
             set => mLastURL = value;
         }
@@ -106,8 +101,8 @@ namespace DHLClient
         /// The shipments details
         /// </summary>
         [JsonProperty("shipments")]
-        public ShipmentTrackingDetailsResponseModel Shipments 
-        { 
+        public ShipmentTrackingDetailsResponseModel Shipments
+        {
             get => mShipments ??= new ShipmentTrackingDetailsResponseModel();
             set => mShipments = value;
         }
@@ -116,8 +111,8 @@ namespace DHLClient
         /// The possible additional shipments URL
         /// </summary>
         [JsonProperty("possibleAdditionalShipmentsURL")]
-        public IEnumerable<string> PossibleAdditionalShipmentsURL 
-        { 
+        public IEnumerable<string> PossibleAdditionalShipmentsURL
+        {
             get => mPossibleAdditionalShipmentsURL ?? Enumerable.Empty<string>();
             set => mPossibleAdditionalShipmentsURL = value;
         }

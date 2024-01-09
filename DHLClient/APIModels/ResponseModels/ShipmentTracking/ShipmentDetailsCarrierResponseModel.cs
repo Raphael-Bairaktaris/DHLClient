@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     public class ShipmentDetailsCarrierResponseModel
     {
@@ -22,8 +16,8 @@ namespace DHLClient
         /// <summary>
         /// The organization name
         /// </summary>
-        public string? OrganizationName 
-        { 
+        public string? OrganizationName
+        {
             get => mOrganizationName ?? string.Empty;
             set => mOrganizationName = value;
         }

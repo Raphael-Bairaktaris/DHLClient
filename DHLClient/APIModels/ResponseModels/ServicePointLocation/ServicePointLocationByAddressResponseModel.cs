@@ -29,7 +29,7 @@ namespace DHLClient
         /// A short text string code (ISO 3166-1 alpha-2 country code) specifying the country.
         /// </summary>
         [JsonProperty("countryCode")]
-        public CountryCodeType CountryCode { get; set; }
+        public CountryCode CountryCode { get; set; }
 
         /// <summary>
         /// Text specifying the postal code for an address.

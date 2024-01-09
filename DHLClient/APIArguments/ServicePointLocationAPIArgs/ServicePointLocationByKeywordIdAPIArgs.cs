@@ -17,7 +17,7 @@
         /// A two-letter ISO 3166-1 alpha-2 code specifying the country.
         /// </summary>
         [ArgumentName("countryCode")]
-        public CountryCodeType? CountryCode { get; set; }
+        public CountryCode? CountryCode { get; set; }
 
         /// <summary>
         /// Text specifying the postal code for an address.

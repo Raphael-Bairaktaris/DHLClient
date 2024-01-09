@@ -3,7 +3,7 @@
     /// <summary>
     /// Provides enumeration over the service point type
     /// </summary>
-    public enum ServicePointLocationType
+    public enum LocationType
     {
         /// <summary>
         /// Service point

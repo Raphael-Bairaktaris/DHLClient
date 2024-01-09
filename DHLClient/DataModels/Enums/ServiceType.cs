@@ -8,7 +8,7 @@
         /// <summary>
         /// Parcel pickup
         /// </summary>
-        ParcelPickUp = 0,
+        ParcelPickup = 0,
 
         /// <summary>
         /// Parcel drop off
@@ -18,7 +18,7 @@
         /// <summary>
         /// Express pickup
         /// </summary>
-        ExpressPickUp = 2,
+        ExpressPickup = 2,
 
         /// <summary>
         /// Express drop off
@@ -26,78 +26,93 @@
         ExpressDropOff = 3,
 
         /// <summary>
+        /// Express drop off account
+        /// </summary>
+        ExpressDropOffAccount = 4,
+
+        /// <summary>
+        /// Express drop off easy
+        /// </summary>
+        ExpressDropOffEasy = 5,
+
+        /// <summary>
+        /// Express drop off prelabeled
+        /// </summary>
+        ExpressDropOffPrelabeled = 6,
+
+        /// <summary>
         /// Parcel pickup registered
         /// </summary>
-        ParcelPickupRegistered = 4,
+        ParcelPickupRegistered = 7,
 
         /// <summary>
         /// Parcel pickup unregistered
         /// </summary>
-        ParcelPickUpUnregistered = 5,
+        ParcelPickupUnregistered = 8,
 
         /// <summary>
         /// Parcel drop off unregistered
         /// </summary>
-        ParcelDropOffUnregistered = 6,
+        ParcelDropOffUnregistered = 9,
 
         /// <summary>
         /// Latter service
         /// </summary>
-        LetterService = 7,
+        LetterService = 10,
 
         /// <summary>
         /// Post bank
         /// </summary>
-        Postbank = 8,
+        Postbank = 11,
 
         /// <summary>
         /// Cash on delivery
         /// </summary>
-        CashOnDelivery = 9,
+        CashOnDelivery = 12,
 
         /// <summary>
         /// Franking
         /// </summary>
-        Franking = 10,
+        Franking = 13,
 
         /// <summary>
         /// Cash service
         /// </summary>
-        CashService = 11,
+        CashService = 14,
 
         /// <summary>
         /// Packaging material
         /// </summary>
-        PackagingMaterial = 12,
+        PackagingMaterial = 15,
 
         /// <summary>
         /// Postident
         /// </summary>
-        Postident = 13,
+        Postident = 16,
 
         /// <summary>
         /// Age verification
         /// </summary>
-        AgeVerification = 14,
+        AgeVerification = 17,
 
         /// <summary>
         /// Handicapped access
         /// </summary>
-        HandicappedAccess = 15,
+        HandicappedAccess = 18,
 
         /// <summary>
         /// Parking
         /// </summary>
-        Parking = 16,
+        Parking = 19,
 
         /// <summary>
         /// Parcel drop off unlabeled
         /// </summary>
-        ParcelDropOffUnlabeled = 17,
+        ParcelDropOffUnlabeled = 20,
 
         /// <summary>
         /// Express drop off unlabeled
         /// </summary>
-        ExpressDropOffUnlabeled = 18
+        ExpressDropOffUnlabeled = 21
     }
 }

@@ -12,7 +12,7 @@ namespace DHLClient
         /// <summary>
         /// The name of the provider organization handling the delivery in the destination country.
         /// </summary>
-        public DestinationProviderType DestinationProvider { get; set; }
+        public DestinationProvider DestinationProvider { get; set; }
 
         #endregion
 

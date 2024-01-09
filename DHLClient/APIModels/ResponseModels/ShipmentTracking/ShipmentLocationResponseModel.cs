@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Represents a shipment origin response
@@ -25,8 +19,8 @@ namespace DHLClient
         /// <summary>
         /// The address
         /// </summary>
-        public IEnumerable<string> Address 
-        { 
+        public IEnumerable<string> Address
+        {
             get => mAddress ?? Enumerable.Empty<string>();
             set => mAddress = value;
         }

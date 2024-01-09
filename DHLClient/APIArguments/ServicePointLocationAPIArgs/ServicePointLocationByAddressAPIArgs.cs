@@ -12,13 +12,13 @@
         /// </summary>
         /// <example> DE </example>
         [ArgumentName("countryCode")]
-        public CountryCodeType? CountryCode { get; set; }
+        public CountryCode? CountryCode { get; set; }
 
         /// <summary>
         /// Text specifying the name of the locality, for example a city.
         /// </summary>
         /// <example> Bonn </example>
-        [ArgumentName ("addressLocality")]
+        [ArgumentName("addressLocality")]
         public string? AddressLocality { get; set; }
 
         /// <summary>
@@ -50,7 +50,7 @@
         /// </summary>
         /// <example> servicepoint, locker, postoffice, postbank, pobox </example>
         [ArgumentName("locationType")]
-        public ServicePointLocationType? LocationType { get; set; }
+        public LocationType? LocationType { get; set; }
 
         /// <summary>
         /// Each location can offer more than one service. This parameter can be added multiple times in each API request. The response will include 

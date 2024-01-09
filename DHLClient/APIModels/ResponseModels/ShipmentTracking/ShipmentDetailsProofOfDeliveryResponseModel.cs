@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Text.Json.Serialization;
 
 namespace DHLClient
 {
@@ -34,8 +33,8 @@ namespace DHLClient
         /// The signature URL
         /// </summary>
         [JsonProperty("signatureUrl")]
-        public string SignatureURL 
-        { 
+        public string SignatureURL
+        {
             get => mSignatureURL ?? string.Empty;
             set => mSignatureURL = value;
         }
@@ -44,8 +43,8 @@ namespace DHLClient
         /// The document URL
         /// </summary>
         [JsonProperty("documentUrl")]
-        public string DocumentURL 
-        { 
+        public string DocumentURL
+        {
             get => mDocumentURL ?? string.Empty;
             set => mDocumentURL = value;
         }

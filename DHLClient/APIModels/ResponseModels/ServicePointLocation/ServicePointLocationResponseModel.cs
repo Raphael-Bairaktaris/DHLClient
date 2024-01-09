@@ -27,7 +27,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Type"/> property
         /// </summary>
-        private IEnumerable<ServicePointLocationType>? mType;
+        private IEnumerable<LocationType>? mType;
 
         #endregion
 
@@ -72,9 +72,9 @@ namespace DHLClient
         /// </summary>
         /// <example> servicepoint </example>
         [JsonProperty("type")]
-        public IEnumerable<ServicePointLocationType> Type
+        public IEnumerable<LocationType> Type
         {
-            get => mType ?? Enumerable.Empty<ServicePointLocationType>();
+            get => mType ?? Enumerable.Empty<LocationType>();
             set => mType = value;
         }
 

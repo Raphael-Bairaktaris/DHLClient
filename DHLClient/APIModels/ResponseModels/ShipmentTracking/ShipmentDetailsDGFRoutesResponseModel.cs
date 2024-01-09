@@ -32,22 +32,22 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="PlaceOfAcceptance"/> property
         /// </summary>
-        private ShipmentDetailsRoutesPlaceOfAcceptanceResponseModel? mPlaceOfAcceptance;
+        private ShipmentDetailsRoutesShippingLocationResponseModel? mPlaceOfAcceptance;
 
         /// <summary>
         /// The member of the <see cref="PortOfLoading"/> property
         /// </summary>
-        private ShipmentDetailsRoutesPortOfLoadingResponseModel? mPortOfLoading;
+        private ShipmentDetailsRoutesShippingLocationResponseModel? mPortOfLoading;
 
         /// <summary>
         /// The member of the <see cref="PortOfUnloading"/> property
         /// </summary>
-        private ShipmentDetailsRoutesPortOfUnloadingResponseModel? mPortOfUnloading;
+        private ShipmentDetailsRoutesShippingLocationResponseModel? mPortOfUnloading;
 
         /// <summary>
         /// the member of the <see cref="PlaceOfDelivery"/> property
         /// </summary>
-        private ShipmentDetailsRoutesPlaceOfDeliveryResponseModel? mPlaceOfDelivery;
+        private ShipmentDetailsRoutesShippingLocationResponseModel? mPlaceOfDelivery;
 
         #endregion
 
@@ -57,8 +57,8 @@ namespace DHLClient
         /// The vessel name
         /// </summary>
         [JsonProperty("vesselName")]
-        public string VesselName 
-        { 
+        public string VesselName
+        {
             get => mVesselName ?? string.Empty;
             set => mVesselName = value;
         }
@@ -67,8 +67,8 @@ namespace DHLClient
         /// The voyage flight number
         /// </summary>
         [JsonProperty("voyageFlightNumber")]
-        public string VoyageFlightNumber 
-        { 
+        public string VoyageFlightNumber
+        {
             get => mVoyageFlightNumber ?? string.Empty;
             set => mVoyageFlightNumber = value;
         }
@@ -77,8 +77,8 @@ namespace DHLClient
         /// The airport of departure
         /// </summary>
         [JsonProperty("airportOfDeparture")]
-        public ShipmentDetailsRoutesAirportOfDepartureResponseModel AirportOfDeparture 
-        { 
+        public ShipmentDetailsRoutesAirportOfDepartureResponseModel AirportOfDeparture
+        {
             get => mAirportOfDeparture ??= new ShipmentDetailsRoutesAirportOfDepartureResponseModel();
             set => mAirportOfDeparture = value;
         }
@@ -87,9 +87,9 @@ namespace DHLClient
         /// The airport of destination
         /// </summary>
         [JsonProperty("airportOfDestination")]
-        public ShipmentDetailsRoutesAirportOfDestinationResponseModel AirportOfDestination 
-        { 
-            get => mAirportOfDestination ?? new ShipmentDetailsRoutesAirportOfDestinationResponseModel(); 
+        public ShipmentDetailsRoutesAirportOfDestinationResponseModel AirportOfDestination
+        {
+            get => mAirportOfDestination ?? new ShipmentDetailsRoutesAirportOfDestinationResponseModel();
             set => mAirportOfDestination = value;
         }
 
@@ -109,9 +109,9 @@ namespace DHLClient
         /// The place of acceptance
         /// </summary>
         [JsonProperty("placeOfAcceptance")]
-        public ShipmentDetailsRoutesPlaceOfAcceptanceResponseModel PlaceOfAcceptance 
-        { 
-            get => mPlaceOfAcceptance ??= new ShipmentDetailsRoutesPlaceOfAcceptanceResponseModel();
+        public ShipmentDetailsRoutesShippingLocationResponseModel PlaceOfAcceptance
+        {
+            get => mPlaceOfAcceptance ??= new ShipmentDetailsRoutesShippingLocationResponseModel();
             set => mPlaceOfAcceptance = value;
         }
 
@@ -119,9 +119,9 @@ namespace DHLClient
         /// The port of loading
         /// </summary>
         [JsonProperty("portOfLoading")]
-        public ShipmentDetailsRoutesPortOfLoadingResponseModel PortOfLoading
-        { 
-            get => mPortOfLoading ??= new ShipmentDetailsRoutesPortOfLoadingResponseModel();
+        public ShipmentDetailsRoutesShippingLocationResponseModel PortOfLoading
+        {
+            get => mPortOfLoading ??= new ShipmentDetailsRoutesShippingLocationResponseModel();
             set => mPortOfLoading = value;
         }
 
@@ -129,9 +129,9 @@ namespace DHLClient
         /// The port of unloading
         /// </summary>
         [JsonProperty("portOfUnloading")]
-        public ShipmentDetailsRoutesPortOfUnloadingResponseModel PortOfUnloading 
-        { 
-            get => mPortOfUnloading ??= new ShipmentDetailsRoutesPortOfUnloadingResponseModel();
+        public ShipmentDetailsRoutesShippingLocationResponseModel PortOfUnloading
+        {
+            get => mPortOfUnloading ??= new ShipmentDetailsRoutesShippingLocationResponseModel();
             set => mPortOfUnloading = value;
         }
 
@@ -139,9 +139,9 @@ namespace DHLClient
         /// The place of delivery
         /// </summary>
         [JsonProperty("placeOfDelivery")]
-        public ShipmentDetailsRoutesPlaceOfDeliveryResponseModel PlaceOfDelivery 
-        { 
-            get => mPlaceOfDelivery ??= new ShipmentDetailsRoutesPlaceOfDeliveryResponseModel();
+        public ShipmentDetailsRoutesShippingLocationResponseModel PlaceOfDelivery
+        {
+            get => mPlaceOfDelivery ??= new ShipmentDetailsRoutesShippingLocationResponseModel();
             set => mPlaceOfDelivery = value;
         }
 
