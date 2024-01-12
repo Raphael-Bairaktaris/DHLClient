@@ -7,6 +7,20 @@ namespace DHLClient
     /// </summary>
     public class ProductTotalPriceBreakdownResponseModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="PriceBreakdown"/> property
+        /// </summary>
+        private ProductPriceBreakDownResponseModel? mPriceBreakdown;
+
+        /// <summary>
+        /// The member of the <see cref="DetailedPriceBreakdown"/> property
+        /// </summary>
+        private ProductDetailedPriceBreakdownResponseModel? mDetailedPriceBreakdown;
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
@@ -30,12 +44,21 @@ namespace DHLClient
         /// The price breakdown
         /// </summary>
         [JsonProperty("priceBreakdown")]
-        public ProductPriceBreakDownResponseModel PriceBreakdown { get; set; }
+        public ProductPriceBreakDownResponseModel PriceBreakdown
+        {
+            get => mPriceBreakdown ??= new ProductPriceBreakDownResponseModel();
+            set => mPriceBreakdown = value;
+        }
 
         /// <summary>
         /// The detailed price breakdown
         /// </summary>
-        public ProductDetailedPriceBreakdownResponseModel DetailedPriceBreakdown { get; set; }
+        [JsonProperty("detailedPriceBreakdown")]
+        public ProductDetailedPriceBreakdownResponseModel DetailedPriceBreakdown
+        {
+            get => mDetailedPriceBreakdown ??= new ProductDetailedPriceBreakdownResponseModel();
+            set => mDetailedPriceBreakdown = value;
+        }
 
         #endregion
 

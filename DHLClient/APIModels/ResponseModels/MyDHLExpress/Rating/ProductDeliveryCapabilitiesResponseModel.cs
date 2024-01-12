@@ -64,11 +64,13 @@ namespace DHLClient
         /// <summary>
         /// Destination day of the week number
         /// </summary>
+        [JsonProperty("deliveryDayOfWeek")]
         public DayOfWeek DeliveryDayOfWeek { get; set; }
 
         /// <summary>
         /// The number of transit days
         /// </summary>
+        [JsonProperty("totalTransitDays")]
         public double TotalTransitDays { get; set; }
 
         #endregion

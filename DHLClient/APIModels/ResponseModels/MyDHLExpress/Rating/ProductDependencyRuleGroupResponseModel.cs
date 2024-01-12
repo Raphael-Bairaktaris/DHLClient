@@ -24,6 +24,11 @@ namespace DHLClient
         /// </summary>
         private string? mDependencyCondition;
 
+        /// <summary>
+        /// The member of the <see cref="RequiredServiceCodes"/> property
+        /// </summary>
+        private IEnumerable<ProductDependencyRuleGroupRequiredServiceCodesResponseModel>? mRequiredServiceCodes;
+
         #endregion
 
         #region Public Properties
@@ -64,7 +69,11 @@ namespace DHLClient
         /// <summary>
         /// The required service codes
         /// </summary>
-        public ProductDependencyRuleGroupRequiredServiceCodesResponseModel RequiredServiceCodes { get; set; }
+        public IEnumerable<ProductDependencyRuleGroupRequiredServiceCodesResponseModel> RequiredServiceCodes
+        {
+            get => mRequiredServiceCodes ?? Enumerable.Empty<ProductDependencyRuleGroupRequiredServiceCodesResponseModel>();
+            set => mRequiredServiceCodes = value;
+        }
 
         #endregion
 

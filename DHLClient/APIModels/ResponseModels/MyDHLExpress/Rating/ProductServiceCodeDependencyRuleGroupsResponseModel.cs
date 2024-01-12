@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Representa a service code dependency rule groups response
+    /// Represents a service code dependency rule groups response
     /// </summary>
     public class ProductServiceCodeDependencyRuleGroupsResponseModel
     {
@@ -13,6 +13,11 @@ namespace DHLClient
         /// The member of the <see cref="DependetServiceCode"/> property
         /// </summary>
         private string? mDependetServiceCode;
+
+        /// <summary>
+        /// The member of the <see cref="DependencyRuleGroup"/> property
+        /// </summary>
+        private ProductDependencyRuleGroupResponseModel? mDependencyRuleGroup;
 
         #endregion
 
@@ -32,7 +37,11 @@ namespace DHLClient
         /// The dependency rule group
         /// </summary>
         [JsonProperty("dependencyRuleGroup")]
-        public ProductDependencyRuleGroupResponseModel DependencyRuleGroup { get; set; }
+        public ProductDependencyRuleGroupResponseModel DependencyRuleGroup
+        {
+            get => mDependencyRuleGroup ??= new ProductDependencyRuleGroupResponseModel();
+            set => mDependencyRuleGroup = value;
+        }
 
         #endregion
 

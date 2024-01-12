@@ -19,6 +19,11 @@ namespace DHLClient
         /// </summary>
         private string? mDescription;
 
+        /// <summary>
+        /// The member of the <see cref="ServiceCodes"/> property
+        /// </summary>
+        private IEnumerable<ProductServiceCodeMutuallyExclusiveGroupsServiceCodesResponseModel>? mServiceCodes;
+
         #endregion
 
         #region Public Properties
@@ -49,7 +54,12 @@ namespace DHLClient
         /// The special service charge code
         /// </summary>
         [JsonProperty("serviceCodes")]
-        public ProductServiceCodeMutuallyExclusiveGroupsServiceCodesResponseModel ServiceCodes { get; set; }
+        public IEnumerable<ProductServiceCodeMutuallyExclusiveGroupsServiceCodesResponseModel> ServiceCodes
+        {
+            get => mServiceCodes ?? Enumerable.Empty<ProductServiceCodeMutuallyExclusiveGroupsServiceCodesResponseModel>();
+            set => mServiceCodes = value;
+        }
+
         #endregion
 
         #region Constructors
