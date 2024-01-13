@@ -25,7 +25,7 @@ namespace DHLClient
         /// The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.
         /// </summary>
         [JsonProperty("dayOfWeek")]
-        public DayOfWeekType DayOfWeek { get; set; }
+        public DHLDayOfWeek DayOfWeek { get; set; }
 
         #endregion
 

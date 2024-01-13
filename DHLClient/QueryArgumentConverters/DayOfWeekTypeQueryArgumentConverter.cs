@@ -1,9 +1,9 @@
 ﻿namespace DHLClient
 {
     /// <summary>
-    /// A <see cref="BaseQueryArgumentConverter{Tvalue}"/> that is used for converting a <see cref="DayOfWeekType"/> to a <see cref="string"/> 
+    /// A <see cref="BaseQueryArgumentConverter{Tvalue}"/> that is used for converting a <see cref="DHLDayOfWeek"/> to a <see cref="string"/> 
     /// </summary>
-    public class DayOfWeekTypeQueryArgumentConverter : BaseQueryArgumentConverter<DayOfWeekType>
+    public class DayOfWeekTypeQueryArgumentConverter : BaseQueryArgumentConverter<DHLDayOfWeek>
     {
         #region Constructors
 
@@ -20,7 +20,7 @@
         #region Public Methods
 
         /// <inheritdoc/>
-        public override string Convert(DayOfWeekType value) => DHLClientConstants.DayOfWeekTypeToStringMapper[value];
+        public override string Convert(DHLDayOfWeek value) => DHLClientConstants.DayOfWeekTypeToStringMapper[value];
 
         #endregion
     }

@@ -14,14 +14,14 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("shipperDetails")]
-        public IEnumerable<ShipperDetailsRequestModel> ShipperDetails { get; set; }
+        public IEnumerable<ShipperDetailsRequestModel>? ShipperDetails { get; set; }
 
         /// <summary>
         /// Address definition for rating related services
         /// </summary>
         [JsonRequired]
         [JsonProperty("receiverDetails")]
-        public IEnumerable<ReceiverDetailsRequestModel> ReceiverDetails { get; set; }
+        public IEnumerable<ReceiverDetailsRequestModel>? ReceiverDetails { get; set; }
 
         #endregion
 

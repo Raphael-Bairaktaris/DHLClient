@@ -3,7 +3,7 @@
     /// <summary>
     /// Provides enumeration of opening hours of the locker
     /// </summary>
-    public enum DayOfWeekType
+    public enum DHLDayOfWeek
     {
         /// <summary>
         /// Monday

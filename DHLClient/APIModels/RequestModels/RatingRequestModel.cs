@@ -53,7 +53,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("payerCountryCode")]
-        public CountryCode PayerCountryCode { get; set; }
+        public CountryCode? PayerCountryCode { get; set; }
 
         /// <summary>
         /// Identifies the date and time the package is tendered. Both the date and time portions of the string are expected to be used. 
@@ -118,14 +118,21 @@ namespace DHLClient
         /// Please select which type of products you are interested in
         /// </summary>
         [JsonProperty("productTypeCode")]
-        public ProductType ProductTypeCode { get; set; }
+        public ProductType? ProductTypeCode { get; set; }
 
         /// <summary>
         /// Here you can define properties per package
         /// </summary>
         [JsonRequired]
         [JsonProperty("packages")]
-        public PackageRequestModel  Packages {get;set;}
+        public PackageRequestModel?  Packages {get;set;}
+
+        /// <summary>
+        /// Dimensions of the package
+        /// </summary>
+        [JsonRequired]
+        [JsonProperty("dimensions")]
+        public ShipmentDetailsDimensionsResponseModel? Dimensions { get; set; }
 
         #endregion
 

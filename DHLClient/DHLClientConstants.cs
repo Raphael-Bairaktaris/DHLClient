@@ -22,16 +22,16 @@ namespace DHLClient
         /// <summary>
         /// Maps the <see cref="ClosurePeriodType"/>s to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<DayOfWeekType, string> DayOfWeekTypeToStringMapper { get; } = new Dictionary<DayOfWeekType, string>()
+        public static IReadOnlyDictionary<DHLDayOfWeek, string> DayOfWeekTypeToStringMapper { get; } = new Dictionary<DHLDayOfWeek, string>()
         {
-            { DayOfWeekType.Monday, "monday" },
-            { DayOfWeekType.Tuesday, "tuesday" },
-            { DayOfWeekType.Wednesday, "wednesday" },
-            { DayOfWeekType.Thursday, "thursday" },
-            { DayOfWeekType.Friday, "friday" },
-            { DayOfWeekType.Saturday, "saturday" },
-            { DayOfWeekType.Sunday, "sunday" },
-            { DayOfWeekType.PublicHolidays, "publicHolidays" }
+            { DHLDayOfWeek.Monday, "monday" },
+            { DHLDayOfWeek.Tuesday, "tuesday" },
+            { DHLDayOfWeek.Wednesday, "wednesday" },
+            { DHLDayOfWeek.Thursday, "thursday" },
+            { DHLDayOfWeek.Friday, "friday" },
+            { DHLDayOfWeek.Saturday, "saturday" },
+            { DHLDayOfWeek.Sunday, "sunday" },
+            { DHLDayOfWeek.PublicHolidays, "publicHolidays" }
         }.ToImmutableDictionary();
 
         /// <summary>
