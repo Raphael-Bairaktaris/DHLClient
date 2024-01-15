@@ -104,7 +104,20 @@ namespace DHLClient
         /// <summary>
         /// The items
         /// </summary>
+        [JsonProperty("items")]
         public ItemRequestModel? Items { get; set; }
+
+        /// <summary>
+        /// Allowed values 'true' - tariff formula on item and shipment level will be returned, 'false' - tariff formula on item and shipment level will not be returned
+        /// </summary>
+        [JsonProperty("getTariffFormula")]
+        public bool ShouldGetTariffFormula { get; set; }
+
+        /// <summary>
+        /// Allowed values 'true' - quotation ID on shipment level will be returned, 'false' - quotation ID on shipment level will not be returned
+        /// </summary>
+        [JsonProperty("getQuotation")]
+        public bool ShouldGetQuotation { get; set; }
 
         #endregion
 
