@@ -125,14 +125,14 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("packages")]
-        public PackageRequestModel?  Packages {get;set;}
+        public PackageRequestModel? Packages { get; set; }
 
         /// <summary>
         /// Dimensions of the package
         /// </summary>
         [JsonRequired]
         [JsonProperty("dimensions")]
-        public ShipmentDetailsDimensionsResponseModel? Dimensions { get; set; }
+        public ShipmentDetailDimensionResponseModel? Dimensions { get; set; }
 
         #endregion
 

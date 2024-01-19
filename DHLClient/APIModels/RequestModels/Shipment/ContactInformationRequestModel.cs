@@ -21,7 +21,7 @@ namespace DHLClient
         /// Please enter phone number
         /// </summary>
         /// <example>+1123456789</example>
-        [JsonRequired] 
+        [JsonRequired]
         [JsonProperty("phone")]
         public string? Phone { get; set; }
 

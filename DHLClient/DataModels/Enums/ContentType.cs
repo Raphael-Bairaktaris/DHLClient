@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the content types
@@ -19,17 +13,17 @@ namespace DHLClient
         /// <summary>
         /// Epod summary
         /// </summary>
-        EpodSummary = 1, 
+        EpodSummary = 1,
 
         /// <summary>
         /// Epod detail esig
         /// </summary>
-        EpodDetailEsig= 2, 
+        EpodDetailEsig = 2,
 
         /// <summary>
         /// Epod summary esig
         /// </summary>
-        EpodSummaryEsig = 3, 
+        EpodSummaryEsig = 3,
 
         /// <summary>
         /// Epod table

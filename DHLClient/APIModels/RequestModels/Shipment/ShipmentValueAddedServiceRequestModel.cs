@@ -36,7 +36,7 @@ namespace DHLClient
         /// <example>Cash</example>
         [JsonProperty("method")]
         public PaymentMethod? Method { get; set; }
-       
+
         /// <summary>
         /// 
         /// </summary>

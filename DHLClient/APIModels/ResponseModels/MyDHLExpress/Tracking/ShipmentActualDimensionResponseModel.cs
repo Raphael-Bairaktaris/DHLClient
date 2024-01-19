@@ -1,20 +1,16 @@
 ﻿namespace DHLClient
 {
     /// <summary>
-    /// Arguments used for retrieving a product
+    /// Represents a shipment's actual dimensions
     /// </summary>
-    public class RetrieveProductAPIArgs : RatingShipmentAPIArgs
+    public class ShipmentActualDimensionResponseModel : ShipmentDetailDimensionResponseModel
     {
-        #region Public Properties
-
-        #endregion
-
         #region Constructors
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public RetrieveProductAPIArgs() : base()
+        public ShipmentActualDimensionResponseModel() : base()
         {
 
         }

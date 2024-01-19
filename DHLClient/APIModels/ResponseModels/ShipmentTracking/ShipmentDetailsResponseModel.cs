@@ -47,7 +47,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Dimensions"/> property
         /// </summary>
-        private ShipmentDetailsDimensionsResponseModel? mDimensions;
+        private ShipmentDetailDimensionResponseModel? mDimensions;
 
         /// <summary>
         /// The member of the <see cref="References"/> property
@@ -161,9 +161,9 @@ namespace DHLClient
         /// The dimensions
         /// </summary>
         [JsonProperty("dimensions")]
-        public ShipmentDetailsDimensionsResponseModel Dimensions
+        public ShipmentDetailDimensionResponseModel Dimensions
         {
-            get => mDimensions ??= new ShipmentDetailsDimensionsResponseModel();
+            get => mDimensions ??= new ShipmentDetailDimensionResponseModel();
             set => mDimensions = value;
         }
 

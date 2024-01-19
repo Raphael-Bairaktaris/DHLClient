@@ -23,7 +23,7 @@ namespace DHLClient
         [JsonProperty("amount")]
         public double Amount { get; set; }
 
-        
+
 
         #endregion
 

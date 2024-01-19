@@ -24,7 +24,7 @@
         /// Center rate
         /// </summary>
         CenterRate = 3,
-        
+
         /// <summary>
         /// Lowest rate
         /// </summary>

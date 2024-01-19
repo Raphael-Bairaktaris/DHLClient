@@ -19,6 +19,8 @@ foreach(var enumValue in Enum.GetValues<CountryCode>())
     sb.AppendLine($"{{ {nameof(CountryCode)}.{enumValue}, \"{enumValue.ToLocalizedString()}\" }},");
 }
 
+
+
 var r = sb.ToString();
 
 Console.ReadLine();

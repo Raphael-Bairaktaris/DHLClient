@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the encoding format types
@@ -19,6 +13,11 @@ namespace DHLClient
         /// <summary>
         /// ZPL document
         /// </summary>
-        ZPL = 1
+        ZPL = 1,
+
+        /// <summary>
+        /// Tiff
+        /// </summary>
+        Tiff = 2
     }
 }

@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating a package
     /// </summary>
-    public class PackageRequestModel : ShipmentDetailsDimensionsResponseModel
+    public class PackageRequestModel : ShipmentDetailDimensionResponseModel
     {
         #region Public Properties
 

@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -141,11 +136,11 @@ namespace DHLClient
         /// <summary>
         /// The product breakdown
         /// </summary>
-        public ProductBreakdownResponseModel? Breadkdown 
-        { 
+        public ProductBreakdownResponseModel? Breadkdown
+        {
             get => mBreakdown ??= new ProductBreakdownResponseModel();
             set => mBreakdown = value;
-        } 
+        }
 
         /// <summary>
         /// Group of serviceCodes that are mutually exclusive. Only one serviceCode among the list must be applied for a shipment

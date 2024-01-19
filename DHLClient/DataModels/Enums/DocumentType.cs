@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the document types
@@ -34,7 +28,7 @@ namespace DHLClient
         /// <summary>
         /// Custom Declaration
         /// </summary>
-        DCL = 4, 
+        DCL = 4,
 
         /// <summary>
         /// Air Waybill and Waybill Document

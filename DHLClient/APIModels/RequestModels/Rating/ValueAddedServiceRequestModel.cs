@@ -40,7 +40,7 @@ namespace DHLClient
         /// <summary>
         /// The payment method (for future use)
         /// </summary>
-        public PaymentMethod Method { get; set; } 
+        public PaymentMethod Method { get; set; }
 
         #endregion
 

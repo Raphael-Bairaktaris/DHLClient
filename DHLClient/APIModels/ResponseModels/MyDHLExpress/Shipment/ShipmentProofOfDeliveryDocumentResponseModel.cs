@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -40,8 +35,8 @@ namespace DHLClient
         /// </summary>
         /// <example>base64 encoded content</example>
         [JsonProperty("content")]
-        public string Content 
-        { 
+        public string Content
+        {
             get => mContent ?? string.Empty;
             set => mContent = value;
         }
@@ -51,8 +46,8 @@ namespace DHLClient
         /// </summary>
         /// <example>POD</example>
         [JsonProperty("typeCode")]
-        public string TypeCode 
-        { 
+        public string TypeCode
+        {
             get => mTypeCode ?? string.Empty;
             set => mTypeCode = value;
         }

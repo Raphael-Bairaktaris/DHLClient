@@ -79,7 +79,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("valueAddedServices")]
-        public ShipmentValueAddedServiceRequestModel ValueAddedServices { get; set; }
+        public ShipmentValueAddedServiceRequestModel? ValueAddedServices { get; set; }
 
         #endregion
 

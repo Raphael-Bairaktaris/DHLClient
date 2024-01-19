@@ -1,5 +1,8 @@
 ﻿namespace DHLClient
 {
+    /// <summary>
+    /// Represents a shipment details carrier response
+    /// </summary>
     public class ShipmentDetailsCarrierResponseModel
     {
         #region Private Members

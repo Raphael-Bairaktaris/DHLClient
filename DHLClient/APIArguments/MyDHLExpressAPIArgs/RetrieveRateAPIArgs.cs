@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Arguments used for retrieving rate
@@ -29,7 +23,7 @@ namespace DHLClient
         public RetrieveRateAPIArgs() : base()
         {
 
-        } 
+        }
 
         #endregion
     }
