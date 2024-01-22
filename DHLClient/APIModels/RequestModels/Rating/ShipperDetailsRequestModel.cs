@@ -29,7 +29,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("countryCode")]
-        public CountryCode CountryCode { get; set; }
+        public CountryCode? CountryCode { get; set; }
 
         /// <summary>
         /// Please enter your province or state code

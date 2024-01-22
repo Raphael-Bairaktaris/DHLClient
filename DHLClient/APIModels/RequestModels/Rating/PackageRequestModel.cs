@@ -13,7 +13,7 @@ namespace DHLClient
         /// Please contact your DHL Express representative if you wish to use a DHL specific package otherwise ignore this element.
         /// </summary>
         [JsonProperty("typeCode")]
-        public PackagingType TypeCode { get; set; }
+        public PackagingType? TypeCode { get; set; }
 
         /// <summary>
         /// The weight of the package.

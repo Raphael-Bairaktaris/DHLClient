@@ -37,8 +37,8 @@ namespace DHLClient
         /// The service area code
         /// </summary>
         /// <example>BSA</example>
-        public string Code 
-        { 
+        public string Code
+        {
             get => mCode ?? string.Empty;
             set => mCode = value;
         }
@@ -48,8 +48,8 @@ namespace DHLClient
         /// </summary>
         /// <example>BSA area</example>
         [JsonProperty("description")]
-        public string Description 
-        { 
+        public string Description
+        {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }
@@ -59,8 +59,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Facility area</example>
         [JsonProperty("facilityCode")]
-        public string FacilityCode 
-        { 
+        public string FacilityCode
+        {
             get => mFacilityCode ?? string.Empty;
             set => mFacilityCode = value;
         }
@@ -69,8 +69,8 @@ namespace DHLClient
         /// The service area inbound sort code
         /// </summary>
         [JsonProperty("inboundSortCode")]
-        public string InboundSotCode 
-        { 
+        public string InboundSotCode
+        {
             get => mInboundSortCode ?? string.Empty;
             set => mInboundSortCode = value;
         }

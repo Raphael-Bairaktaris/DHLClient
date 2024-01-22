@@ -31,8 +31,8 @@ namespace DHLClient
         /// <summary>
         /// The shipper's name
         /// </summary>
-        public string Name 
-        { 
+        public string Name
+        {
             get => mName ?? string.Empty;
             set => mName = value;
         }
@@ -41,8 +41,8 @@ namespace DHLClient
         /// The shipper's postal address
         /// </summary>
         [JsonProperty("postalAddress")]
-        public ShipperPostalAddressResponseModel PostalAddress 
-        { 
+        public ShipperPostalAddressResponseModel PostalAddress
+        {
             get => mPostalAddress ??= new ShipperPostalAddressResponseModel();
             set => mPostalAddress = value;
         }
@@ -51,8 +51,8 @@ namespace DHLClient
         /// The shipper's service area
         /// </summary>
         [JsonProperty("serviceArea")]
-        public ShipperServiceAreaResponseModel ServiceArea 
-        { 
+        public ShipperServiceAreaResponseModel ServiceArea
+        {
             get => mServiceArea ??= new ShipperServiceAreaResponseModel();
             set => mServiceArea = value;
         }

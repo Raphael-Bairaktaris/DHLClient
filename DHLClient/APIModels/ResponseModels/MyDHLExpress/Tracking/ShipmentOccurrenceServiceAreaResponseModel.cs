@@ -28,8 +28,8 @@ namespace DHLClient
         /// </summary>
         /// <example>BNE</example>
         [JsonProperty("code")]
-        public string Code 
-        { 
+        public string Code
+        {
             get => mCode ?? string.Empty;
             set => mCode = value;
         }
@@ -39,8 +39,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Brisbane-AU</example>
         [JsonProperty("description")]
-        public string Description 
-        { 
+        public string Description
+        {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }

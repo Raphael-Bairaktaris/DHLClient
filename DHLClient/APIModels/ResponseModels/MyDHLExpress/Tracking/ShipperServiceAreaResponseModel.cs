@@ -33,8 +33,8 @@ namespace DHLClient
         /// </summary>
         /// <example>ABC</example>
         [JsonProperty("code")]
-        public string Code 
-        { 
+        public string Code
+        {
             get => mCode ?? string.Empty;
             set => mCode = value;
         }
@@ -43,8 +43,8 @@ namespace DHLClient
         /// The service area description
         /// </summary>
         [JsonProperty("description")]
-        public string Description 
-        { 
+        public string Description
+        {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }
@@ -53,8 +53,8 @@ namespace DHLClient
         /// The service area outbound sort code
         /// </summary>
         [JsonProperty("outboundSortCode")]
-        public string OutboundSortCode 
-        { 
+        public string OutboundSortCode
+        {
             get => mOutboundSortCode ?? string.Empty;
             set => mOutboundSortCode = value;
         }

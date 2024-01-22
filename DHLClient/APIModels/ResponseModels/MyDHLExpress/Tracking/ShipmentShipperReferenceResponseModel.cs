@@ -11,7 +11,7 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of tehe <see cref="Value"/> property
+        /// The member of the <see cref="Value"/> property
         /// </summary>
         private string? mValue;
 
@@ -23,8 +23,8 @@ namespace DHLClient
         /// The shipper's reference value
         /// </summary>
         [JsonProperty("value")]
-        public string Value 
-        { 
+        public string Value
+        {
             get => mValue ?? string.Empty;
             set => mValue = value;
         }
@@ -32,6 +32,7 @@ namespace DHLClient
         /// <summary>
         /// The shipper's reference
         /// </summary>
+        [JsonProperty("typeCode")]
         public ShipperReference TypeCode { get; set; }
 
         #endregion

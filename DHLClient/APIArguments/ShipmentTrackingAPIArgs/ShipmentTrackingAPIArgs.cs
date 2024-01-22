@@ -24,13 +24,14 @@
         /// Optional ISO 3166-1 alpha-2 country code represents country of the consumer of the API response. It optimizes the return of the API response.
         /// </summary>
         [ArgumentName("")]
-        public CountryCode RequesterCountryCode { get; set; }
+        public CountryCode? RequesterCountryCode { get; set; }
 
         /// <summary>
         /// Optional ISO 3166-1 alpha-2 country code of the shipment origin to further qualify the shipment tracking number 
         /// (trackingNumber) parameter of the request. This parameter is necessary to search for the shipment in dsc service.
         /// </summary>
-        public CountryCode OriginCountryCode { get; set; }
+        [ArgumentName("")]
+        public CountryCode? OriginCountryCode { get; set; }
 
         /// <summary>
         /// Postal code of the destination address to
@@ -45,7 +46,7 @@
         /// ISO 639-1 2-character language code for the response. This parameter serves as an indication of the client preferences ONLY.
         /// Language availability depends on the service used. The actual response language is indicated by the Content-Language header.
         /// </summary>
-        public CountryCode Language { get; set; }
+        public CountryCode? Language { get; set; }
 
         /// <summary>
         /// Pagination parameter. Offset from the start of the result set at which to retrieve the remainder of the results (if any).

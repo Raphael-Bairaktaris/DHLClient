@@ -19,7 +19,10 @@ foreach(var enumValue in Enum.GetValues<CountryCode>())
     sb.AppendLine($"{{ {nameof(CountryCode)}.{enumValue}, \"{enumValue.ToLocalizedString()}\" }},");
 }
 
-
+foreach (var enumValue in Enum.GetValues<LanguageCode>())
+{
+    sb.AppendLine($"{{ {nameof(LanguageCode)}.{enumValue}, \" {enumValue.ToString().ToLower()} \" }},");
+}
 
 var r = sb.ToString();
 

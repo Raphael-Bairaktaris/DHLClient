@@ -52,8 +52,8 @@ namespace DHLClient
         /// </summary>
         /// <example>PU</example>
         [JsonProperty("typeCode")]
-        public string TypeCode 
-        { 
+        public string TypeCode
+        {
             get => mTypeCode ?? string.Empty;
             set => mTypeCode = value;
         }
@@ -63,8 +63,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Shipment picked up</example>
         [JsonProperty("description")]
-        public string Description 
-        { 
+        public string Description
+        {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }
@@ -73,8 +73,8 @@ namespace DHLClient
         /// The occurrence service area
         /// </summary>
         [JsonProperty("serviceArea")]
-        public ShipmentOccurrenceServiceAreaResponseModel ServiceArea 
-        { 
+        public ShipmentOccurrenceServiceAreaResponseModel ServiceArea
+        {
             get => mServiceArea ??= new ShipmentOccurrenceServiceAreaResponseModel();
             set => mServiceArea = value;
         }
@@ -84,8 +84,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Mr. Grey</example>
         [JsonProperty("signedBy")]
-        public string SignedBy 
-        { 
+        public string SignedBy
+        {
             get => mSignedBy ?? string.Empty;
             set => mSignedBy = value;
         }

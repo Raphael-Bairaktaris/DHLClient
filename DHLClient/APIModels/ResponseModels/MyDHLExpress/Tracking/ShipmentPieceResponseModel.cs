@@ -96,8 +96,8 @@ namespace DHLClient
         /// The shipment's dimensions
         /// </summary>
         [JsonProperty("dimensions")]
-        public ShipmentDetailDimensionResponseModel Dimensions 
-        { 
+        public ShipmentDetailDimensionResponseModel Dimensions
+        {
             get => mDimensions ??= new ShipmentDetailDimensionResponseModel();
             set => mDimensions = value;
         }
@@ -106,8 +106,8 @@ namespace DHLClient
         /// The shipment's actual dimensions 
         /// </summary>
         [JsonProperty("actualDimensions")]
-        public ShipmentActualDimensionResponseModel ActualDimensions 
-        { 
+        public ShipmentActualDimensionResponseModel ActualDimensions
+        {
             get => mActualDimensions ??= new ShipmentActualDimensionResponseModel();
             set => mActualDimensions = value;
         }
@@ -116,8 +116,8 @@ namespace DHLClient
         /// The shipment's references
         /// </summary>
         [JsonProperty("shipmentReferences")]
-        public ShipmentShipperReferenceResponseModel ShipmentReferences 
-        { 
+        public ShipmentShipperReferenceResponseModel ShipmentReferences
+        {
             get => mShipmentReferences ??= new ShipmentShipperReferenceResponseModel();
             set => mShipmentReferences = value;
         }
@@ -126,8 +126,8 @@ namespace DHLClient
         /// The shipment's events
         /// </summary>
         [JsonProperty("events")]
-        public ShipmentOccurrenceResponseModel Events 
-        { 
+        public ShipmentOccurrenceResponseModel Events
+        {
             get => mEvents ??= new ShipmentOccurrenceResponseModel();
             set => mEvents = value;
         }

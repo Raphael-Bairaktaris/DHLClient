@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -74,8 +69,8 @@ namespace DHLClient
         /// </summary>
         /// <examnple>Success</examnple>
         [JsonProperty("status")]
-        public string Status 
-        { 
+        public string Status
+        {
             get => mStatus ?? string.Empty;
             set => mStatus = value;
         }
@@ -93,8 +88,8 @@ namespace DHLClient
         /// </summary>
         /// <example>N</example>
         [JsonProperty("productCode")]
-        public string ProductCode 
-        { 
+        public string ProductCode
+        {
             get => mProductCode ?? string.Empty;
             set => mProductCode = value;
         }
@@ -103,8 +98,8 @@ namespace DHLClient
         /// The shipment description
         /// </summary>
         [JsonProperty("description")]
-        public string Description 
-        { 
+        public string Description
+        {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }
@@ -113,8 +108,8 @@ namespace DHLClient
         /// The shipper details
         /// </summary>
         [JsonProperty("shipperDetails")]
-        public ShipmentShipperDetailResponseModel ShipperDetails 
-        { 
+        public ShipmentShipperDetailResponseModel ShipperDetails
+        {
             get => mShipperDetails ??= new ShipmentShipperDetailResponseModel();
             set => mShipperDetails = value;
         }
@@ -122,8 +117,8 @@ namespace DHLClient
         /// <summary>
         /// The receiver's details
         /// </summary>
-        public ShipmentReceiverDetailResponseModel ReceiverDetails 
-        { 
+        public ShipmentReceiverDetailResponseModel ReceiverDetails
+        {
             get => mReceiverDetails ??= new ShipmentReceiverDetailResponseModel();
             set => mReceiverDetails = value;
         }
@@ -145,8 +140,8 @@ namespace DHLClient
         /// The shipment's shipper references
         /// </summary>
         [JsonProperty("shipperReferences")]
-        public ShipmentShipperReferenceResponseModel ShipperReferences 
-        { 
+        public ShipmentShipperReferenceResponseModel ShipperReferences
+        {
             get => mShipperReferences ??= new ShipmentShipperReferenceResponseModel();
             set => mShipperReferences = value;
         }
@@ -155,8 +150,8 @@ namespace DHLClient
         /// the shipmen's events
         /// </summary>
         [JsonProperty("events")]
-        public ShipmentOccurrenceResponseModel Events 
-        { 
+        public ShipmentOccurrenceResponseModel Events
+        {
             get => mEvents ??= new ShipmentOccurrenceResponseModel();
             set => mEvents = value;
         }
@@ -172,8 +167,8 @@ namespace DHLClient
         /// The shipment's piece details
         /// </summary>
         [JsonProperty("pieces")]
-        public ShipmentPieceResponseModel Pieces 
-        { 
+        public ShipmentPieceResponseModel Pieces
+        {
             get => mPieces ??= new ShipmentPieceResponseModel();
             set => mPieces = value;
         }
@@ -188,8 +183,8 @@ namespace DHLClient
         /// The children shipment identification numbers
         /// </summary>
         [JsonProperty("childrenShipmentIdentificationNumbers")]
-        public IEnumerable<double> ChildrenShipmentIdentificationNumbers 
-        { 
+        public IEnumerable<double> ChildrenShipmentIdentificationNumbers
+        {
             get => mChildrenShipmentIdentificationNumbers ?? Enumerable.Empty<double>();
             set => mChildrenShipmentIdentificationNumbers = value;
         }
