@@ -27,7 +27,7 @@ namespace DHLClient
         /// When landed-cost is requested then following items name (Charge Types) might be returned
         /// </summary>
         [JsonProperty("name")]
-        public ChargeType Name { get; set; }
+        public TotalChargeType Name { get; set; }
 
         /// <summary>
         /// Special service or extra charge code. This is the code you would have to use in the

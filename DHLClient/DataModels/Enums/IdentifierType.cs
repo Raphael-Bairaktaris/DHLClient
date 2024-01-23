@@ -16,27 +16,27 @@
         PID = 1,
 
         /// <summary>
-        /// Asid3
+        /// Advanced shipment of three (3) months
         /// </summary>
         ASID3 = 2,
 
         /// <summary>
-        /// Asid6
+        /// Advanced shipment of six (6) months
         /// </summary>
         ASID6 = 3,
 
         /// <summary>
-        /// Asid12
+        /// Advances Shipment of twelve (12) months
         /// </summary>
         ASID12 = 4,
 
         /// <summary>
-        /// Asid24
+        /// Advances Shipment of twenty four (24) months
         /// </summary>
         ASID24 = 5,
 
         /// <summary>
-        /// Hallmark unique identification
+        /// Handling Unit ID
         /// </summary>
         HUID = 6
     }

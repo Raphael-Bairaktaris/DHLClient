@@ -1,50 +1,89 @@
-﻿namespace DHLClient
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DHLClient
 {
     /// <summary>
-    /// Provides enumeration over the charge type
+    /// Provides enumeration over the charge types
     /// </summary>
     public enum ChargeType
     {
         /// <summary>
-        /// Quoted shipment total discount
+        /// Administration charge
         /// </summary>
-        STDIS = 0,
+        Admin = 0,
 
         /// <summary>
-        /// Shipment Customs value
+        /// Delivery charge
         /// </summary>
-        SCUSV = 1,
+        Delivery = 1,
 
         /// <summary>
-        /// Shipment Insured value
+        /// Documentation charge
         /// </summary>
-        SINSV = 2,
+        Documentation = 2,
 
         /// <summary>
-        /// Shipment product quote discount
+        /// Expedite charge
         /// </summary>
-        SPRQD = 3,
+        Expedite = 3,
 
         /// <summary>
-        /// The price quoted to the Customer by DHL at the time of the booking.
-        /// This quote covers the weight price including discounts and without taxes.
+        /// Export charge
         /// </summary>
-        SPRQN = 4,
+        Export = 4,
 
         /// <summary>
-        /// The total of service charges quoted to customer for DHL Express value added services,
-        /// the amount is after discounts and doesn't include tax amounts.
+        /// Freight charge
         /// </summary>
-        STSCH = 5,
+        Freight = 5,
 
         /// <summary>
-        /// The total of service charges as provided by Merchant for the purpose of landed cost calculation.
+        /// Fuel surcharge
         /// </summary>
-        MACHG = 6,
+        FuelSurcharge = 6,
 
         /// <summary>
-        /// The freight charge as provided by Merchant for the purpose of landed cost calculation.
+        /// Logistic charge
         /// </summary>
-        MFCHG = 7
+        Logistic = 7,
+
+        /// <summary>
+        /// Other charge
+        /// </summary>
+        Other = 8,
+
+        /// <summary>
+        /// Packaging charge
+        /// </summary>
+        Packaging = 9,
+
+        /// <summary>
+        /// Pickup charge
+        /// </summary>
+        Pickup = 10,
+
+        /// <summary>
+        /// Handling charge
+        /// </summary>
+        Handling = 11,
+
+        /// <summary>
+        /// Vat charge
+        /// </summary>
+        Vat = 12,
+
+        /// <summary>
+        /// Insurance cost
+        /// </summary>
+        Insurance = 13,
+
+        /// <summary>
+        /// Reverse charge
+        /// </summary>
+        ReverseCharge = 14
     }
 }

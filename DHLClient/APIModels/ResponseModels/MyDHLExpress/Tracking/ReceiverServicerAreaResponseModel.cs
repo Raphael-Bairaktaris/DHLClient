@@ -25,7 +25,7 @@ namespace DHLClient
         private string? mFacilityCode;
 
         /// <summary>
-        /// The member of the <see cref="InboundSotCode"/> property
+        /// The member of the <see cref="InboundSortCode"/> property
         /// </summary>
         private string? mInboundSortCode;
 
@@ -69,7 +69,7 @@ namespace DHLClient
         /// The service area inbound sort code
         /// </summary>
         [JsonProperty("inboundSortCode")]
-        public string InboundSotCode
+        public string InboundSortCode
         {
             get => mInboundSortCode ?? string.Empty;
             set => mInboundSortCode = value;
