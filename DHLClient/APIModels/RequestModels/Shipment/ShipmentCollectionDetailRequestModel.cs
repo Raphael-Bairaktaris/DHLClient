@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating pickup details
     /// </summary>
-    public class ShipmentCollectionDetailRequestModel : ShipperDetailsRequestModel
+    public class ShipmentCollectionDetailRequestModel : ShipperDetailRequestModel
     {
         #region Public Properties
 

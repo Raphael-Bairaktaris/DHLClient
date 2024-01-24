@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating booking requestor details
     /// </summary>
-    public class BookingRequestorDetailRequestModel : ShipperDetailsRequestModel
+    public class BookingRequestorDetailRequestModel : ShipperDetailRequestModel
     {
         #region Public Properties
 

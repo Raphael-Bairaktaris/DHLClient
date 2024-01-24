@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represent shipper details request
     /// </summary>
-    public class ShipperDetailsRequestModel
+    public class ShipperDetailRequestModel
     {
         #region Public Properties
 
@@ -20,6 +20,7 @@ namespace DHLClient
         /// <summary>
         /// Please enter the city
         /// </summary>
+        /// <example>Prague</example>
         [JsonRequired]
         [JsonProperty("cityName")]
         public string? CityName { get; set; }
@@ -27,6 +28,7 @@ namespace DHLClient
         /// <summary>
         /// Please enter ISO country code
         /// </summary>
+        /// <example>CZ</example>
         [JsonRequired]
         [JsonProperty("countryCode")]
         public CountryCode? CountryCode { get; set; }
@@ -34,12 +36,14 @@ namespace DHLClient
         /// <summary>
         /// Please enter your province or state code
         /// </summary>
+        /// <example>CZ</example>
         [JsonProperty("provinceCode")]
         public string? ProvinceCode { get; set; }
 
         /// <summary>
         /// Please enter address line 1
         /// </summary>
+        /// <example>V Park 2308/10</example>
         [JsonProperty("addressLine1")]
         public string? AddressLine1 { get; set; }
 
@@ -69,7 +73,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipperDetailsRequestModel() : base()
+        public ShipperDetailRequestModel() : base()
         {
 
         }

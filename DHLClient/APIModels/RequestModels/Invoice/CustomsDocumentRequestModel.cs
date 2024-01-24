@@ -12,6 +12,7 @@ namespace DHLClient
         /// <summary>
         /// Please provide the customs documents details
         /// </summary>
+        /// <example>972</example>
         [JsonRequired]
         [JsonProperty("typeCode")]
         public CustomsDocumentType TypeCode { get; set; }
@@ -19,6 +20,7 @@ namespace DHLClient
         /// <summary>
         /// Please provide the line item customs document ID
         /// </summary>
+        /// <example>custdoc445</example>
         [JsonRequired]
         [JsonProperty("value")]
         public string? Value { get; set; }

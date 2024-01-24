@@ -3,7 +3,7 @@
     /// <summary>
     /// A set of coordinates.
     /// </summary>
-    public readonly record struct Coordinates
+    public readonly record struct Coordinates : IAPIStringFormattable
     {
         #region Public Properties
 
@@ -38,6 +38,9 @@
 
         /// <inheritdoc/>
         public override string ToString() => $"Latitude: {Latitude}, Longitude: {Longitude}";
+
+        /// <inheritdoc/>
+        public string ToAPIString() => $"{Latitude.ToString().Replace(",", ".")},{Longitude.ToString().Replace(",", ".")}";
 
         #endregion
     }

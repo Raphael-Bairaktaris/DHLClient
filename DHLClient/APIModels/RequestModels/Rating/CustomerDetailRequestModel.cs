@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// 
+    /// Requests used for creating or updating a customer detail
     /// </summary>
     public class CustomerDetailRequestModel
     {
@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("shipperDetails")]
-        public IEnumerable<ShipperDetailsRequestModel>? ShipperDetails { get; set; }
+        public IEnumerable<ShipperDetailRequestModel>? ShipperDetails { get; set; }
 
         /// <summary>
         /// Address definition for rating related services

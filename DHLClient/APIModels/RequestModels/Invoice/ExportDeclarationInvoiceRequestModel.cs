@@ -57,24 +57,6 @@ namespace DHLClient
         [JsonProperty("preCalculatedTotalValues")]
         public PreCalculatedTotalValueRequestModel? PreCalculatedTotalValues { get; set; }
 
-        /// <summary>
-        /// Please enter up to three remarks
-        /// </summary>
-        public ExportDeclarationRemarkRequestModel Remarks { get; set; }
-
-        /// <summary>
-        /// Please enter additional charge to appear on the invoice
-        /// </summary>
-        [JsonProperty("additionalCharges")]
-        public ExportDeclarationAdditionalChargeRequestModel AdditionalCharges { get; set; }
-
-        /// <summary>
-        /// Name of port of departure, shipment or destination as required under the applicable delivery term.
-        /// </summary>
-        /// <example>port of departure or destination details</example>
-        [JsonProperty("placeOfIncoterm")]
-        public string PlaceOfIncoterm { get; set; }
-
         #endregion
 
         #region Constructors

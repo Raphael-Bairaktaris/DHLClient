@@ -3,7 +3,7 @@
     /// <summary>
     /// Represent receiver details request
     /// </summary>
-    public class ReceiverDetailsRequestModel : ShipperDetailsRequestModel
+    public class ReceiverDetailsRequestModel : ShipperDetailRequestModel
     {
         #region Constructors
 

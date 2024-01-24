@@ -66,7 +66,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("weight")]
-        public LineItemWeightRequestModel Weight { get; set; }
+        public LineItemWeightRequestModel? Weight { get; set; }
 
         /// <summary>
         /// Please provide if the Taxes is paid for the line item
@@ -78,13 +78,13 @@ namespace DHLClient
         /// Please provide the Customer References for the line item
         /// </summary>
         [JsonProperty("customerReferences")]
-        public CustomerReferenceRequestModel CustomerReferences { get; set; }
+        public CustomerReferenceRequestModel? CustomerReferences { get; set; }
 
         /// <summary>
         /// Please provide the line item customs document type code.
         /// </summary>
         [JsonProperty("customsDocuments")]
-        public CustomsDocumentRequestModel CustomsDocuments { get; set; }
+        public CustomsDocumentRequestModel? CustomsDocuments { get; set; }
 
         /// <summary>
         /// Please provide monetary value of the line item x quantity

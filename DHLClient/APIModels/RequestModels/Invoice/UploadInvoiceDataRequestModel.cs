@@ -26,7 +26,7 @@ namespace DHLClient
         /// The date must be in the format: YYYY-MM-DD
         /// </summary>
         [JsonProperty("plannedShipDate")]
-        public DateOnly PlannedShipDate { get; set; }
+        public DateOnly? PlannedShipDate { get; set; }
 
         /// <summary>
         /// Please enter all the DHL Express accounts and types to be used for this shipment. 
@@ -40,7 +40,19 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("content")]
-        public ShipmentContentRequestModel Content { get; set; }
+        public ShipmentContentRequestModel? Content { get; set; }
+
+        /// <summary>
+        /// The output image properties
+        /// </summary>
+        [JsonProperty("outputImageProperties")]
+        public InvoiceOutputImagePropertyRequestModel? OutputImageProperties { get; set; }
+
+        /// <summary>
+        /// The customer details 
+        /// </summary>
+        [JsonProperty("customerDetails")]
+        public InvoiceCustomerDetailRequestModel? CustomerDetails { get; set; }
 
         #endregion
 
