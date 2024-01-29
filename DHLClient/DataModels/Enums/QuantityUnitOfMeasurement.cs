@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the quantity unit of measurement
@@ -169,7 +163,7 @@ namespace DHLClient
         /// <summary>
         /// Each (EA)
         /// </summary>
-        EA= 31,
+        EA = 31,
 
         /// <summary>
         /// Rill (RILL)

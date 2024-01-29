@@ -1,9 +1,11 @@
-﻿namespace DHLClient
+﻿using Newtonsoft.Json;
+
+namespace DHLClient
 {
     /// <summary>
-    /// Represents a search location suggestion response
+    /// Represents a geographical location suggestion response
     /// </summary>
-    public class SearchLocationSuggestionResponseModel
+    public class GeographicalLocationSuggestionResponseModel
     {
         #region Private Members
 
@@ -34,8 +36,9 @@
         /// <summary>
         /// Always holds null value
         /// </summary>
-        public string Label
-        {
+        [JsonProperty("label")]
+        public string Label 
+        { 
             get => mLabel ?? string.Empty;
             set => mLabel = value;
         }
@@ -43,22 +46,28 @@
         /// <summary>
         /// Always holds null value
         /// </summary>
-        public string Value
-        {
+        [JsonProperty("value")]
+        public string Value 
+        { 
             get => mValue ?? string.Empty;
             set => mValue = value;
         }
 
+        /// <summary>
+        /// The geographical coordinates
+        /// </summary>
         public Coordinates Coordinates { get; set; }
 
         /// <summary>
         /// Country code of the search address
         /// </summary>
+        [JsonProperty("countryCode")]
         public CountryCode CountryCode { get; set; }
 
         /// <summary>
         /// Place id of the search address
         /// </summary>
+        [JsonProperty("placeId")]
         public string PlaceId
         {
             get => mPlaceId ?? string.Empty;
@@ -68,6 +77,7 @@
         /// <summary>
         /// Provider id of the search address
         /// </summary>
+        [JsonProperty("providerId")]
         public string ProviderId
         {
             get => mProviderId ?? string.Empty;
@@ -81,7 +91,7 @@
         /// <summary>
         /// Default constructor
         /// </summary>
-        public SearchLocationSuggestionResponseModel() : base()
+        public GeographicalLocationSuggestionResponseModel() : base()
         {
 
         }

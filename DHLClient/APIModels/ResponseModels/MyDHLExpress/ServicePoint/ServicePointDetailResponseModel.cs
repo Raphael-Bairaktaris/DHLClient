@@ -7,10 +7,10 @@ namespace DHLClient
     /// </summary>
     public class ServicePointDetailResponseModel
     {
-        #region Private Members 
+        #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="FacilityId"/> property
+        /// the member of the <see cref="FacilityId"/> property
         /// </summary>
         private string? mFacilityId;
 
@@ -30,14 +30,16 @@ namespace DHLClient
         private string? mServicePointName;
 
         /// <summary>
-        /// The member of the <see cref="ServicePointNameFormatted"/> property
-        /// </summary>
-        private string? mServicePointNameFormatted;
-
-        /// <summary>
-        /// the member of the <see cref="LocalName"/> property
+        /// The member of the <see cref="LocalName"/> property
         /// </summary>
         private string? mLocalName;
+
+        private ServicePointDetailAddressResponseModel? mAddress;
+
+        /// <summary>
+        /// The member of the <see cref="GeographicLocation"/> property
+        /// </summary>
+        private ServicePointDetailGeograpgicalLocationResponseModel? mGeographicLocation;
 
         #endregion
 
@@ -51,12 +53,12 @@ namespace DHLClient
 
         /// <summary>
         /// Service Point ID is a unique key with 6 characters, consisting of Service Area for first 3 characters
-        /// and the last 3 characters is the Facility code. If address is used id not possible to use.
+        /// and the last 3 characters is the Facility code
         /// </summary>
         /// <example>ID = BRU001</example>
         [JsonProperty("facilityId")]
-        public string FacilityId 
-        { 
+        public string FacilityId
+        {
             get => mFacilityId ?? string.Empty;
             set => mFacilityId = value;
         }
@@ -65,8 +67,8 @@ namespace DHLClient
         /// The facility type code from GREF database
         /// </summary>
         [JsonProperty("facilityTypeCode")]
-        public string FacilityTypeCode 
-        { 
+        public string FacilityTypeCode
+        {
             get => mFacilityTypeCode ?? string.Empty;
             set => mFacilityTypeCode = value;
         }
@@ -75,8 +77,8 @@ namespace DHLClient
         /// The service point’s Service Area Code
         /// </summary>
         [JsonProperty("serviceAreaCode")]
-        public string ServiceAreaCode 
-        { 
+        public string ServiceAreaCode
+        {
             get => mServiceAreaCode ?? string.Empty;
             set => mServiceAreaCode = value;
         }
@@ -85,8 +87,8 @@ namespace DHLClient
         /// Name of the service point
         /// </summary>
         [JsonProperty("servicePointName")]
-        public string ServicePointName 
-        { 
+        public string ServicePointName
+        {
             get => mServicePointName ?? string.Empty;
             set => mServicePointName = value;
         }
@@ -94,19 +96,9 @@ namespace DHLClient
         /// <summary>
         /// Formatted name of the service point
         /// </summary>
-        [JsonProperty("servicePointNameFormatted")]
-        public string ServicePointNameFormatted 
-        { 
-            get => mServicePointNameFormatted ?? string.Empty;
-            set => mServicePointNameFormatted = value;
-        }
-
-        /// <summary>
-        /// The local trading name of the Service Point
-        /// </summary>
         [JsonProperty("localName")]
-        public string LocalName 
-        { 
+        public string LocalName
+        {
             get => mLocalName ?? string.Empty;
             set => mLocalName = value;
         }
@@ -116,6 +108,44 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("servicePointType")]
         public ServicePoint ServicePointType { get; set; }
+
+        /// <summary>
+        /// Sub-entity holding the facility address
+        /// </summary>
+        [JsonProperty("address")]
+        public ServicePointDetailAddressResponseModel Address 
+        { 
+            get => mAddress ??= new ServicePointDetailAddressResponseModel();
+            set => mAddress = value;
+        }
+
+        /// <summary>
+        /// The geographical coordinates of the facility’s location
+        /// </summary>
+        [JsonProperty("geoLocation")]
+        public ServicePointDetailGeograpgicalLocationResponseModel GeographicLocation 
+        { 
+            get => mGeographicLocation ??= new ServicePointDetailGeograpgicalLocationResponseModel();
+            set => mGeographicLocation = value;
+        }
+
+        /// <summary>
+        /// The distance from the search address to this Service Point (beeline).
+        /// </summary>
+        [JsonProperty("distance")]
+        public double Distance { get; set; }
+
+        /// <summary>
+        /// Time until which a shipment can be handed in at the Service Point, and is still shipped on the same day
+        /// </summary>
+        [JsonProperty("shippingCutOffTime")]
+        public TimeOnly ShippingCutOffTime { get; set; }
+
+        /// <summary>
+        /// Array of openingHours entities, each consisting of week day, opening time and closing time.
+        /// </summary>
+        [JsonProperty("openingHours")]
+        public IEnumerable<ServicePointDetailOpeningHoursResponseModel> OpeningHours { get; set; }
 
         #endregion
 

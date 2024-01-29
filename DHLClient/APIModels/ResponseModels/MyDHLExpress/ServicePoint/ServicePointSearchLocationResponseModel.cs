@@ -7,19 +7,10 @@ namespace DHLClient
     /// </summary>
     public class ServicePointSearchLocationResponseModel
     {
-        #region Private Members
-
-        /// <summary>
-        /// The member of the <see cref="Suggestion"/> property
-        /// </summary>
-        private SearchLocationSuggestionResponseModel? mSuggestion;
-
-        #endregion
-
         #region Public Properties
 
         /// <summary>
-        /// The geographical coordinates of a location
+        /// The geographical latitude and longitude
         /// </summary>
         public Coordinates Coordinates { get; set; }
 
@@ -27,11 +18,7 @@ namespace DHLClient
         /// Suggestion for the search address
         /// </summary>
         [JsonProperty("suggestion")]
-        public SearchLocationSuggestionResponseModel Suggestion 
-        { 
-            get => mSuggestion ??= new SearchLocationSuggestionResponseModel();
-            set => mSuggestion = value;
-        }
+        public SearchLocationSuggestionResponseModel Suggestion { get; set; }
 
         #endregion
 

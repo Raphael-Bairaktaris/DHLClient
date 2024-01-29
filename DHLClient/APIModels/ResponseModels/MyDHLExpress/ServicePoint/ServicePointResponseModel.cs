@@ -1,14 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
     /// <summary>
-    /// The service point response
+    /// Represents a service point response
     /// </summary>
     public class ServicePointResponseModel
     {
@@ -17,20 +12,20 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Status"/> property
         /// </summary>
-        private ServicePointStatusResponseModel? mStatus;
+        private ServicePointStatusResponseModel mStatus;
 
         /// <summary>
         /// The member of the <see cref="SearchAddress"/> property
         /// </summary>
-        private string? mSearchAddres;
+        private string? mSearchAddress;
 
         /// <summary>
         /// The member of the <see cref="SearchLocation"/> property
         /// </summary>
-        private ServicePointSearchLocationResponseModel? mSearchLocation;
+        private ServicePointSearchLocationResponseModel mSearchLocation;
 
         /// <summary>
-        /// The member of the <see cref="MapCulture"/> property
+        /// the member of the <see cref="MapCulture"/> property
         /// </summary>
         private string? mMapCulture;
 
@@ -39,21 +34,16 @@ namespace DHLClient
         /// </summary>
         private string? mMapLanguage;
 
-        /// <summary>
-        /// The member of the <see cref="ServicePoints"/> property
-        /// </summary>
-        private ServicePointDetailResponseModel? mServicePoints;
-
         #endregion
 
         #region Public Properties
 
         /// <summary>
-        /// The response status
+        /// Response status
         /// </summary>
         [JsonProperty("status")]
-        public ServicePointStatusResponseModel Status 
-        { 
+        public ServicePointStatusResponseModel Status
+        {
             get => mStatus ??= new ServicePointStatusResponseModel();
             set => mStatus = value;
         }
@@ -62,57 +52,60 @@ namespace DHLClient
         /// The address used for the search (value of request parameter 'address')
         /// </summary>
         [JsonProperty("searchAddress")]
-        public string SearchAddress 
-        { 
-            get => mSearchAddres ?? string.Empty;
-            set => mSearchAddres = value;
+        public string SearchAddress
+        {
+            get => mSearchAddress ?? string.Empty;
+            set => mSearchAddress = value;
         }
 
         /// <summary>
-        /// The geographical coordinates of the facility's location
+        /// The geographical coordinates of the facility’s location
         /// </summary>
         [JsonProperty("searchLocation")]
-        public ServicePointSearchLocationResponseModel SearchLocation 
-        { 
-            get => mSearchLocation ??= new ServicePointSearchLocationResponseModel();
-            set => mSearchLocation = value;
-        }
+        public ServicePointSearchLocationResponseModel SearchLocation { get; set; }
 
         /// <summary>
         /// The culture parameter for Bing Maps API (derived from the country parameter in the request)
         /// </summary>
         [JsonProperty("mapCulture")]
-        public string MapCulture 
-        { 
-            get => mMapCulture ?? string.Empty;
-            set => mMapCulture = value;
-        }
+        public string MapCulture { get; set; }
 
         /// <summary>
         /// Map Culture Used for Third party Maps
         /// </summary>
         [JsonProperty("mapLanguage")]
-        public string MapLanguage 
-        { 
-            get => mMapLanguage ?? string.Empty;
-            set => mMapLanguage = value;
-        }
+        public string MapLanguage { get; set; }
 
         /// <summary>
         /// Array of the found Service Points. Each Service Point entity contains details about the service point.
         /// </summary>
         [JsonProperty("servicePoints")]
-        public ServicePointDetailResponseModel ServicePoints 
-        { 
-            get => mServicePoints ??= new ServicePointDetailResponseModel();
-            set => mServicePoints = value;
-        }
+        public ServicePointDetailResponseModel ServicePoints { get; set; }
 
         /// <summary>
-        /// Sub-entity holding the facility address 
+        /// Array of strings. Contains information messages
         /// </summary>
-        [JsonProperty("address")]
-        public ServicePointAddressResponseModel Address { get; set; }
+        /// <example>required language is not available, result was filtered due to incoming holidays.</example>
+        [JsonProperty("messages")]
+        public IEnumerable<string> Messages { get; set; }
+
+        /// <summary>
+        /// The translations
+        /// </summary>
+        [JsonProperty("translations")]
+        public ServicePointTranslationResponseModel Translations { get; set; }
+
+        /// <summary>
+        /// Indicates whether lite mode is activated or not.
+        /// </summary>
+        [JsonProperty("liteMode")]
+        public bool HasLiteMode { get; set; }
+
+        /// <summary>
+        /// Promotion on a SVP level
+        /// </summary>
+        [JsonProperty("promotion")]
+        public ServicePointPromotionResponseModel Promotion { get; set; }
 
         #endregion
 

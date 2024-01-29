@@ -3,11 +3,11 @@
 namespace DHLClient
 {
     /// <summary>
-    /// List of the opening hours of the DHL Service Point location
+    /// Represents a service point opening hour response
     /// </summary>
     public class ServicePointLocationOpeningHoursResponseModel
     {
-        #region Public Properties
+        #region MyRegion
 
         /// <summary>
         /// The closing hours of the place or service on the given day(s) of the week

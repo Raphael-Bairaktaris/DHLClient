@@ -20,7 +20,7 @@ namespace DHLClient
         /// Please provide invoice related information
         /// </summary>
         [JsonProperty("invoice")]
-        public ExportDeclarationInvoiceRequestModel? Invoice { get;set; }
+        public ExportDeclarationInvoiceRequestModel? Invoice { get; set; }
 
         /// <summary>
         /// Please enter up to three remarks
