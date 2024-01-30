@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("contactInformation")]
-        public ContactInformationRequestModel ContactInformation { get; set; }
+        public ContactInformationRequestModel? ContactInformation { get; set; }
 
         #endregion
 

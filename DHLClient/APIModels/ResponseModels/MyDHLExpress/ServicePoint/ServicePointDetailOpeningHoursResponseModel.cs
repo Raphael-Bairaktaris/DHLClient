@@ -25,14 +25,9 @@ namespace DHLClient
         private IEnumerable<string>? mHolidaysDates;
 
         /// <summary>
-        /// The member of the <see cref="PPCList"/> property
+        /// The member of the <see cref="Holiday"/> property
         /// </summary>
-        private IEnumerable<string>? mPPCList;
-
-        /// <summary>
-        /// The member of the <see cref="CapabilityCodes"/> property
-        /// </summary>
-        private string? mCapabilityCodes;
+        private ServicePointDetailHolidayResponseModel? mHolidays;
 
         #endregion
 
@@ -71,80 +66,11 @@ namespace DHLClient
         /// Holiday details
         /// </summary>
         [JsonProperty("holidays")]
-        public ServicePointDetailHolidayResponseModel Holidays { get; set; }
-
-        /// <summary>
-        /// An entity that lists all capabilities of a Service Point.
-        /// </summary>
-        [JsonProperty("servicePointCapabilities")]
-        public ServicePointDetailCapabilitiesResponseModel ServicePointCapabilities { get; set; }
-
-        /// <summary>
-        /// Array of numbers L W H
-        /// </summary>
-        public PieceDimensionLimitResponseModel PieceDimensionsLimit { get; set; }
-
-        /// <summary>
-        /// Enumeration (CM or IN)
-        /// </summary>
-        [JsonProperty("pieceDimensionsLimitUnit")]
-        public DimensionUnit PieceDimensionsLimitUnit { get; set; }
-
-        /// <summary>
-        /// The piece count limit
-        /// </summary>
-        [JsonProperty("pieceCountLimit")]
-        public double PieceCountLimit { get; set; }
-
-        /// <summary>
-        /// Account prepaid shippers
-        /// </summary>
-        [JsonProperty("accountPrepaidShippers")]
-        public bool HasAccountPrepaidShippers { get; set; }
-
-        /// <summary>
-        /// Prepaid shippers
-        /// </summary>
-        [JsonProperty("prepaidShippers")]
-        public bool HasPrepaidShippers { get; set; }
-
-        /// <summary>
-        /// Pre-printed return label
-        /// </summary>
-        [JsonProperty("prePrintReturnLabel")]
-        public bool HasPrePrinReturnLabel { get; set; }
-
-        /// <summary>
-        /// Indicates whether this particular service point can handle label free shipments or not
-        /// </summary>
-        [JsonProperty("labelFree")]
-        public bool IsLabelFree { get; set; }
-
-        /// <summary>
-        /// The PPC list.
-        /// </summary>
-        [JsonProperty("ppcList")]
-        public IEnumerable<string> PPCList
-        {
-            get => mPPCList ?? Enumerable.Empty<string>();
-            set => mPPCList = value;
+        public ServicePointDetailHolidayResponseModel Holidays 
+        { 
+            get => mHolidays ??= new ServicePointDetailHolidayResponseModel();
+            set => mHolidays = value;
         }
-
-        /// <summary>
-        /// PPC codes available for this service point
-        /// </summary>
-        [JsonProperty("capabilityCodes")]
-        public string CapabilityCodes
-        {
-            get => mCapabilityCodes ?? string.Empty;
-            set => mCapabilityCodes = value;
-        }
-
-        /// <summary>
-        /// Information about how the Service Point can be contacted
-        /// </summary>
-        [JsonProperty("contactDetails")]
-        public ServicePointContactDetailResponseModel ContactDetails { get; set; }
 
         #endregion
 

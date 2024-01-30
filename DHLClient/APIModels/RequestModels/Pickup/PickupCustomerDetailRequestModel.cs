@@ -10,7 +10,7 @@
         /// <summary>
         /// The booking requestor details
         /// </summary>
-        public BookingRequestorDetailRequestModel BookingRequestorDetails { get; set; }
+        public BookingRequestorDetailRequestModel? BookingRequestorDetails { get; set; }
 
         #endregion
 

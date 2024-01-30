@@ -10,14 +10,54 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// 
+        /// The member of the <see cref="PartnerTypeCode"/> property
         /// </summary>
-        private string mPartnerTypeCode;
+        private string? mPartnerTypeCode;
 
         /// <summary>
-        /// 
+        /// The member of the <see cref="ServicePointId"/> property
         /// </summary>
-        private string mServicePointId;
+        private string? mServicePointId;
+
+        /// <summary>
+        /// The member of the <see cref="ClientId"/> property
+        /// </summary>
+        private string? mClientId;
+
+        /// <summary>
+        /// The member of the <see cref="Capability"/> property
+        /// </summary>
+        private string? mCapability;
+
+        /// <summary>
+        /// The member of the <see cref="Text1"/> property
+        /// </summary>
+        private string? mText1;
+
+        /// <summary>
+        /// The member of the <see cref="ButtonText1"/> property
+        /// </summary>
+        private string? mButtonText1;
+
+        /// <summary>
+        /// The member of the <see cref="Text2"/> property
+        /// </summary>
+        private string? mText2;
+
+        /// <summary>
+        /// The member of the <see cref="ButtonText2"/> property
+        /// </summary>
+        private string? mButtonText2;
+
+        /// <summary>
+        /// The member of the <see cref="Text3"/> property
+        /// </summary>
+        private string? mText3;
+
+        /// <summary>
+        /// The member of the <see cref="ButtonText3"/> property
+        /// </summary>
+        private string? mButtonText3;
 
         #endregion
 
@@ -39,25 +79,41 @@ namespace DHLClient
         /// The partner type code
         /// </summary>
         [JsonProperty("partnerTypeCode")]
-        public string PartnerTypeCode { get; set; }
+        public string PartnerTypeCode 
+        { 
+            get => mPartnerTypeCode ?? string.Empty;
+            set => mPartnerTypeCode = value;
+        }
 
         /// <summary>
         /// The service point Id
         /// </summary>
         [JsonProperty("servicePointId")]
-        public string ServicePointId { get; set; }
+        public string ServicePointId
+        {
+            get => mServicePointId ?? string.Empty;
+            set => mServicePointId = value;
+        }
 
         /// <summary>
         /// The client id
         /// </summary>
         [JsonProperty("clientId")]
-        public string ClientId { get; set; }
+        public string ClientId
+        {
+            get => mClientId ?? string.Empty;
+            set => mClientId = value;
+        }
 
         /// <summary>
         /// The capability (PPC)
         /// </summary>
         [JsonProperty("capability")]
-        public string Capability { get; set; }
+        public string Capability
+        {
+            get => mCapability ?? string.Empty;
+            set => mCapability = value;
+        }
 
         /// <summary>
         /// Promotion Start Date
@@ -81,13 +137,21 @@ namespace DHLClient
         /// The promotion message
         /// </summary>
         [JsonProperty("text1")]
-        public string Text1 { get; set; }
+        public string Text1
+        {
+            get => mText1 ?? string.Empty;
+            set => mText1 = value;
+        }
 
         /// <summary>
         /// The promotion button text
         /// </summary>
         [JsonProperty("buttonText1")]
-        public string ButtonText1 { get; set; }
+        public string ButtonText1
+        {
+            get => mButtonText1 ?? string.Empty;
+            set => mButtonText1 = value;
+        }
 
         /// <summary>
         /// The promotion language code
@@ -99,13 +163,21 @@ namespace DHLClient
         /// The promotion message
         /// </summary>
         [JsonProperty("text2")]
-        public string Text2 { get; set; }
+        public string Text2
+        {
+            get => mText2 ?? string.Empty;
+            set => mText2 = value;
+        }
 
         /// <summary>
         /// The promotion button text
         /// </summary>
         [JsonProperty("buttonText2")]
-        public string ButtonText2 { get; set; }
+        public string ButtonText2
+        {
+            get => mButtonText2 ?? string.Empty;
+            set => mButtonText2 = value;
+        }
 
         /// <summary>
         /// The promotion language code
@@ -117,13 +189,21 @@ namespace DHLClient
         /// The promotion message
         /// </summary>
         [JsonProperty("text3")]
-        public string Text3 { get; set; }
+        public string Text3
+        {
+            get => mText3 ?? string.Empty;
+            set => mText3 = value;
+        }
 
         /// <summary>
         /// The promotion button text
         /// </summary>
         [JsonProperty("buttonText3")]
-        public string ButtonText3 { get; set; }
+        public string ButtonText3
+        {
+            get => mButtonText3 ?? string.Empty;
+            set => mButtonText3 = value;
+        }
 
         /// <summary>
         /// The promotion language code
@@ -135,7 +215,7 @@ namespace DHLClient
         /// Promotion web link
         /// </summary>
         [JsonProperty("hyperLink")]
-        public Uri HyperLink { get; set; }
+        public Uri? HyperLink { get; set; }
 
         /// <summary>
         /// Promotion date created

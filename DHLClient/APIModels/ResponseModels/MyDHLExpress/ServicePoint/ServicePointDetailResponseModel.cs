@@ -34,12 +34,80 @@ namespace DHLClient
         /// </summary>
         private string? mLocalName;
 
+        /// <summary>
+        /// The member of the <see cref="Address"/> property
+        /// </summary>
         private ServicePointDetailAddressResponseModel? mAddress;
 
         /// <summary>
         /// The member of the <see cref="GeographicLocation"/> property
         /// </summary>
         private ServicePointDetailGeograpgicalLocationResponseModel? mGeographicLocation;
+
+        /// <summary>
+        /// The member of the <see cref="OpeningHours"/> property
+        /// </summary>
+        private IEnumerable<ServicePointDetailOpeningHoursResponseModel>? mOpeningHours;
+
+        /// <summary>
+        /// The member of the <see cref="ServicePointCapabilities"/> property
+        /// </summary>
+        private ServicePointDetailCapabilitiesResponseModel? mServicePointCapabilities;
+
+        /// <summary>
+        /// The member of the <see cref="ContactDetails"/> property
+        /// </summary>
+        private ServicePointContactDetailResponseModel? mContactDetails;
+
+        /// <summary>
+        /// The member of the <see cref="Language"/> property
+        /// </summary>
+        private ServicePointDetailLanguageResponseModel? mLanguage;
+
+        /// <summary>
+        /// The member of the <see cref="ShipmentLimitations"/> property
+        /// </summary>
+        private ServicePointDetailShipmentLimitationResponseModel? mShipmentLimitations;
+
+        /// <summary>
+        /// The member of the <see cref="ShipmentLimitationsByPiece"/> property
+        /// </summary>
+        private ShipmentLimitaionByPieceResponseModel? mShipmentLimitationsByPiece;
+
+        /// <summary>
+        /// The member of the <see cref="ChargeCode"/> property
+        /// </summary>
+        private string? mChargeCode;
+
+        /// <summary>
+        /// The member of the <see cref="Partner"/> property
+        /// </summary>
+        private ServicePointDetailPartnerResponseModel? mPartner;
+
+        /// <summary>
+        /// The member of the <see cref="Promotion"/> property
+        /// </summary>
+        private ServicePointPromotionResponseModel? mPromotion;
+
+        /// <summary>
+        /// The member of the <see cref="CapacityStatus"/> property
+        /// </summary>
+        private ServicePointDetailCapacityStatusResponseModel? mCapacityStatus;
+
+        /// <summary>
+        /// The member of the <see cref="SvpStatus"/> property
+        /// </summary>
+        private string? mSvpStatus;
+
+        /// <summary>
+        /// The member of the <see cref="LocatedAt"/> property
+        /// </summary>
+        private string? mLocatedAt;
+
+        /// <summary>
+        /// The member of the <see cref="TimeZone"/> property
+        /// </summary>
+        private ServicePointDetailTimeZoneResponseModel? mTimeZone;
 
         #endregion
 
@@ -145,7 +213,150 @@ namespace DHLClient
         /// Array of openingHours entities, each consisting of week day, opening time and closing time.
         /// </summary>
         [JsonProperty("openingHours")]
-        public IEnumerable<ServicePointDetailOpeningHoursResponseModel> OpeningHours { get; set; }
+        public IEnumerable<ServicePointDetailOpeningHoursResponseModel> OpeningHours 
+        { 
+            get => mOpeningHours ?? Enumerable.Empty<ServicePointDetailOpeningHoursResponseModel>();
+            set => mOpeningHours = value;
+        }
+
+        /// <summary>
+        /// An entity that lists all capabilities of a Service Point.
+        /// </summary>
+        [JsonProperty("servicePointCapabilities")]
+        public ServicePointDetailCapabilitiesResponseModel ServicePointCapabilities 
+        { 
+            get => mServicePointCapabilities ??= new ServicePointDetailCapabilitiesResponseModel();
+            set => mServicePointCapabilities = value;
+        }
+
+        /// <summary>
+        /// Information about how the Service Point can be contacted
+        /// </summary>
+        [JsonProperty("contactDetails")]
+        public ServicePointContactDetailResponseModel ContactDetails 
+        { 
+            get => mContactDetails ??= new ServicePointContactDetailResponseModel();
+            set => mContactDetails = value;
+        }
+
+        /// <summary>
+        /// Distance of SVP from searched location
+        /// </summary>
+        [JsonProperty("distanceValue")]
+        public double DistanceValue { get; set; }
+
+        /// <summary>
+        /// Metric of distance
+        /// </summary>
+        [JsonProperty("distanceMetric")]
+        public double DistanceMetric { get; set; }
+
+        /// <summary>
+        /// Information about language used for search
+        /// </summary>
+        [JsonProperty("language")]
+        public ServicePointDetailLanguageResponseModel Language
+        {
+            get => mLanguage ??= new ServicePointDetailLanguageResponseModel();
+            set => mLanguage = value;
+        }
+
+        /// <summary>
+        /// Information about shipment piece / size
+        /// </summary>
+        [JsonProperty("shipmentLimitations")]
+        public ServicePointDetailShipmentLimitationResponseModel ShipmentLimitations
+        {
+            get => mShipmentLimitations ??= new ServicePointDetailShipmentLimitationResponseModel();
+            set => mShipmentLimitations = value;
+        }
+
+        /// <summary>
+        /// Shipment Piece Limitations in this Service Point.
+        /// </summary>
+        [JsonProperty("shipmentLimitationsByPiece")]
+        public ShipmentLimitaionByPieceResponseModel ShipmentLimitationsByPiece 
+        { 
+            get => mShipmentLimitationsByPiece ??= new ShipmentLimitaionByPieceResponseModel();
+            set => mShipmentLimitationsByPiece = value;
+        }
+
+        /// <summary>
+        /// Charge code
+        /// </summary>
+        /// <example>XX</example>
+        [JsonProperty("chargeCode")]
+        public string ChargeCode 
+        { 
+            get => mChargeCode = string.Empty;
+            set => mChargeCode = value;
+        }
+
+        /// <summary>
+        /// Partner information (when SVP type is PRT)
+        /// </summary>
+        [JsonProperty("partner")]
+        public ServicePointDetailPartnerResponseModel Partner 
+        { 
+            get => mPartner ??= new ServicePointDetailPartnerResponseModel();
+            set => mPartner = value;
+        }
+
+        /// <summary>
+        /// Promotion on a SVP level
+        /// </summary>
+        [JsonProperty("promotion")]
+        public ServicePointPromotionResponseModel Promotion
+        {
+            get => mPromotion ??= new ServicePointPromotionResponseModel();
+            set => mPromotion = value;
+        }
+
+        /// <summary>
+        /// Capacity information – only if additional call to SCMS was triggered
+        /// </summary>
+        [JsonProperty("capacityStatus")]
+        public ServicePointDetailCapacityStatusResponseModel CapacityStatus
+        {
+            get => mCapacityStatus ??= new ServicePointDetailCapacityStatusResponseModel();
+            set => mCapacityStatus = value;
+        }
+
+        /// <summary>
+        /// Status of the service point (active or inactive)
+        /// </summary>
+        [JsonProperty("svpStatus")]
+        public string SvpStatus
+        {
+            get => mSvpStatus ??= string.Empty;
+            set => mSvpStatus = value;
+        }
+
+        /// <summary>
+        /// Number of day when the work week starts. It starts from 0 to 6(Sunday to Saturday)
+        /// </summary>
+        [JsonProperty("workWeekStart")]
+        public DayOfWeek WorkWeekStart { get; set; }
+
+        /// <summary>
+        /// The service point location
+        /// </summary>
+        [JsonProperty("locatedAt")]
+        public string LocatedAt
+        {
+            get => mLocatedAt ??= string.Empty;
+            set => mLocatedAt = value;
+        }
+
+        /// <summary>
+        /// The service point time zone
+        /// </summary>
+        [JsonProperty("timeZone")]
+        public ServicePointDetailTimeZoneResponseModel TimeZone
+        {
+            get => mTimeZone ??= new ServicePointDetailTimeZoneResponseModel();
+            set => mTimeZone = value;
+        }
 
         #endregion
 

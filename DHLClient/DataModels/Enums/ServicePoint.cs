@@ -8,21 +8,21 @@
         /// <summary>
         /// City
         /// </summary>
-        CITY = 0,
+        City = 0,
 
         /// <summary>
         /// Station
         /// </summary>
-        STATION = 1,
+        Station = 1,
 
         /// <summary>
         /// Partner
         /// </summary>
-        PARTNER = 2,
+        Partner = 2,
 
         /// <summary>
-        /// Twentyfour sever
+        /// Twentyfour seven
         /// </summary>
-        TWENTYFOURSERVER = 3
+        TwentyFourSeven = 3
     }
 }

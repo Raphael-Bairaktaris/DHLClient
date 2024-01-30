@@ -3,7 +3,7 @@
     /// <summary>
     /// Arguments used for retrieving rate
     /// </summary>
-    public class RetrieveRateAPIArgs : LandedCostAPIArgs
+    public class RetrieveRateAPIArgs : BaseMyDHLAPIArgs
     {
         #region Public Properties
 

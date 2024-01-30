@@ -49,8 +49,6 @@ namespace DHLClient
         [JsonProperty("typeCode")]
         public BusinessPartyType? TypeCode { get; set; }
 
-        public
-
         #endregion
 
         #region Constructors

@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace DHLClient
 {
     /// <summary>
-    /// Provides enumeration over the weight unit types
+    /// Provides enumeration over the distance unit types 
     /// </summary>
-    public enum WeightUnit
+    public enum DistanceUnit
     {
         /// <summary>
-        /// Kilograms
+        /// Kilometers
         /// </summary>
-        Kg = 0,
+        Km = 0,
 
         /// <summary>
-        /// Pounds
+        /// Miles
         /// </summary>
-        Lb = 1
+        Mi = 1
     }
 }

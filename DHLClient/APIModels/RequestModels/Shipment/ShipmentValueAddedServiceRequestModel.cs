@@ -40,7 +40,8 @@ namespace DHLClient
         /// <summary>
         /// 
         /// </summary>
-        public DangerousGoodsRequestModel DangerousGoods { get; set; }
+        [JsonProperty("dangerousGoods")]
+        public DangerousGoodsRequestModel? DangerousGoods { get; set; }
 
         #endregion
 

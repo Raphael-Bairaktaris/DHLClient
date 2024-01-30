@@ -7,18 +7,23 @@ using System.Threading.Tasks;
 namespace DHLClient
 {
     /// <summary>
-    /// Provides enumeration over the weight unit types
+    /// Provides enumeration over the comparison operator types
     /// </summary>
-    public enum WeightUnit
+    public enum ComparisonOperatorType
     {
         /// <summary>
-        /// Kilograms
+        /// Equal
         /// </summary>
-        Kg = 0,
+        Equal = 0,
+        
+        /// <summary>
+        /// Not equal
+        /// </summary>
+        NotEqual = 1,
 
         /// <summary>
-        /// Pounds
+        /// Contains
         /// </summary>
-        Lb = 1
+        Contains = 2
     }
 }

@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// requests used for creating or updating shipment detail value added services
     /// </summary>
-    public class ShipmentDetailValueAddedServicesrequestModel
+    public class ShipmentDetailValueAddedServicesRequestModel
     {
         #region Public Properties
 
@@ -14,40 +14,40 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("IsCustomsDeclarable")]
-        public bool IsCustomsDeclarable { get; set; }
+        public bool? IsCustomsDeclarable { get; set; }
 
         /// <summary>
         /// For customs purposes please advise on declared value of the shipment
         /// </summary>
         [JsonProperty("declaredValue")]
-        public double DeclaredValue { get; set; }
+        public double? DeclaredValue { get; set; }
 
         /// <summary>
         /// For customs purposes please advise on declared value currency code of the shipment
         /// </summary>
         [JsonProperty("declaredValueCurrency")]
-        public CurrencyCode DeclaredValueCurrency { get; set; }
+        public CurrencyCode? DeclaredValueCurrency { get; set; }
 
         /// <summary>
         /// Please enter Unit of measurement
         /// </summary>
         [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
-        public MeasurmentUnit UnitOfMeasurement { get; set; }
+        public MeasurmentUnit? UnitOfMeasurement { get; set; }
 
         /// <summary>
         /// Please provide Shipment Identification number (AWB number)
         /// </summary>
         /// <example>123456790</example>
         [JsonProperty("shipmentTrackingNumber")]
-        public double ShipmentTrackingNumber { get; set; }
+        public double? ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// The package details
         /// </summary>
         [JsonRequired]
         [JsonProperty("packages")]
-        public PackageRequestModel Packages { get; set; }
+        public PackageRequestModel? Packages { get; set; }
 
         #endregion
 
@@ -56,7 +56,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentDetailValueAddedServicesrequestModel() : base()
+        public ShipmentDetailValueAddedServicesRequestModel() : base()
         {
 
         }

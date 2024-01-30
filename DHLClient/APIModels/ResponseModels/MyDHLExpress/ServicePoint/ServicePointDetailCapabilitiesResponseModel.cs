@@ -19,6 +19,21 @@ namespace DHLClient
         /// </summary>
         private string? mDisabledAccessTitle;
 
+        /// <summary>
+        /// The member of the <see cref="PieceDimensionsLimit"/> property
+        /// </summary>
+        private PieceDimensionLimitResponseModel? mPieceDimensionsLimit;
+
+        /// <summary>
+        /// The member of the <see cref="PPCList"/> property
+        /// </summary>
+        private IEnumerable<string>? mPPCList;
+
+        /// <summary>
+        /// The member of the <see cref="CapabilityCodes"/> property
+        /// </summary>
+        private string? mCapabilityCodes;
+
         #endregion
 
         #region Public Properties
@@ -167,50 +182,67 @@ namespace DHLClient
         /// Array of numbers L W H
         /// </summary>
         [JsonProperty("pieceDimensionsLimit")]
-        public PieceDimensionLimitResponseModel PieceDimensionsLimit { get; set; }
+        public PieceDimensionLimitResponseModel PieceDimensionsLimit 
+        { 
+            get => mPieceDimensionsLimit ??= new PieceDimensionLimitResponseModel();
+            set => mPieceDimensionsLimit = value;
+        }
 
         /// <summary>
-        /// Distance of SVP from searched location
+        /// Enumeration (CM or IN)
         /// </summary>
-        [JsonProperty("distanceValue")]
-        public double DistanceValue { get; set; }
+        [JsonProperty("pieceDimensionsLimitUnit")]
+        public DimensionUnit PieceDimensionsLimitUnit { get; set; }
 
         /// <summary>
-        /// Metric of distance
+        /// The piece count limit
         /// </summary>
-        [JsonProperty("distanceMetric")]
-        public double DistanceMetric { get; set; }
+        [JsonProperty("pieceCountLimit")]
+        public double PieceCountLimit { get; set; }
 
         /// <summary>
-        /// Information about language used for search
+        /// Account prepaid shippers
         /// </summary>
-        [JsonProperty("language")]
-        public ServicePointDetailLanguageResponseModel Language { get; set; }
+        [JsonProperty("accountPrepaidShippers")]
+        public bool HasAccountPrepaidShippers { get; set; }
 
         /// <summary>
-        /// Information about shipment piece / size
+        /// Prepaid shippers
         /// </summary>
-        [JsonProperty("shipmentLimitations")]
-        public ServicePointDetailShipmentLimitationResponseModel ShipmentLimitations { get; set; }
+        [JsonProperty("prepaidShippers")]
+        public bool HasPrepaidShippers { get; set; }
 
         /// <summary>
-        /// Shipment Piece Limitations in this Service Point.
+        /// Pre-printed return label
         /// </summary>
-        [JsonProperty("shipmentLimitationsByPiece")]
-        public ShipmentLimitaionByPieceResponseModel ShipmentLimitationsByPiece { get; set; }
+        [JsonProperty("prePrintReturnLabel")]
+        public bool HasPrePrinReturnLabel { get; set; }
 
         /// <summary>
-        /// Charge code
+        /// Indicates whether this particular service point can handle label free shipments or not
         /// </summary>
-        /// <example>XX</example>
-        [JsonProperty("chargeCode")]
-        public string ChargeCode { get; set; }
+        [JsonProperty("labelFree")]
+        public bool IsLabelFree { get; set; }
 
         /// <summary>
-        /// Partner information (when SVP type is PRT)
+        /// The PPC list.
         /// </summary>
-        [JsonProperty("partner")]
-        public ServicePointDetailPartnerResponseModel Partner { get; set; }
+        [JsonProperty("ppcList")]
+        public IEnumerable<string> PPCList
+        {
+            get => mPPCList ?? Enumerable.Empty<string>();
+            set => mPPCList = value;
+        }
+
+        /// <summary>
+        /// PPC codes available for this service point
+        /// </summary>
+        [JsonProperty("capabilityCodes")]
+        public string CapabilityCodes
+        {
+            get => mCapabilityCodes ?? string.Empty;
+            set => mCapabilityCodes = value;
+        }
 
         #endregion
 

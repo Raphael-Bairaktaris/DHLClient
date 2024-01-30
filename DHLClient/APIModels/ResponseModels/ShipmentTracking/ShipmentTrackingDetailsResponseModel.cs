@@ -69,6 +69,12 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
+        /// Define the TTL value in seconds of shipment between 30 and 365 days
+        /// </summary>
+        [JsonProperty("@ttl")]
+        public double TTL { get; set; }
+
+        /// <summary>
         /// The Id
         /// </summary>
         public string Id
