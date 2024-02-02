@@ -27,8 +27,8 @@ namespace DHLClient
         /// Max. weight per piece
         /// </summary>
         [JsonProperty("maxNumberOfPieces")]
-        public MaxShipmentPieceWeightResponseModel MaxNumberOfPieces 
-        { 
+        public MaxShipmentPieceWeightResponseModel MaxNumberOfPieces
+        {
             get => mMaxNumberOfPieces ??= new MaxShipmentPieceWeightResponseModel();
             set => mMaxNumberOfPieces = value;
         }
@@ -37,8 +37,8 @@ namespace DHLClient
         /// Max. weight per piece
         /// </summary>
         [JsonProperty("maxShipmentWeight")]
-        public MaxShipmentPieceWeightResponseModel MaxShipmentWeight 
-        { 
+        public MaxShipmentPieceWeightResponseModel MaxShipmentWeight
+        {
             get => mMaxShipmentWeight ??= new MaxShipmentPieceWeightResponseModel();
             set => mMaxShipmentWeight = value;
         }

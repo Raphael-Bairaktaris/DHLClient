@@ -6,9 +6,9 @@
     public enum IdentifierType
     {
         /// <summary>
-        /// Shipment Id
+        /// Shipment Id (SID)
         /// </summary>
-        SID = 0,
+        ShipmentId = 0,
 
         /// <summary>
         /// Pid
@@ -16,28 +16,28 @@
         PID = 1,
 
         /// <summary>
-        /// Advanced shipment of three (3) months
+        /// Advanced shipment of three (3) months (ASID3)
         /// </summary>
-        ASID3 = 2,
+        AdvanceShipmentOfThreeMonths = 2,
 
         /// <summary>
-        /// Advanced shipment of six (6) months
+        /// Advanced shipment of six (6) months (ASID6)
         /// </summary>
-        ASID6 = 3,
+        AdvanceShipmentOfSixMonths = 3,
 
         /// <summary>
-        /// Advances Shipment of twelve (12) months
+        /// Advances Shipment of twelve (12) months (ASID12)
         /// </summary>
-        ASID12 = 4,
+        AdvanceShipmentOfNineMonths = 4,
 
         /// <summary>
-        /// Advances Shipment of twenty four (24) months
+        /// Advances Shipment of twenty four (24) months (ASID24)
         /// </summary>
-        ASID24 = 5,
+        AdvanceShipmentOfTwentyFourMonths = 5,
 
         /// <summary>
-        /// Handling Unit ID
+        /// Handling Unit ID (HUID)
         /// </summary>
-        HUID = 6
+        HandlingUnitId = 6
     }
 }

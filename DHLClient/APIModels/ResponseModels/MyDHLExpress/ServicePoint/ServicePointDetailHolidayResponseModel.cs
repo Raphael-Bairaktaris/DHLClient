@@ -27,8 +27,8 @@ namespace DHLClient
         /// Array of objects: {date, from, to}, where date is date and from and to is time
         /// </summary>
         [JsonProperty("open")]
-        public IEnumerable<ServicePointDetailHolidayOpenResponseModel> Open 
-        { 
+        public IEnumerable<ServicePointDetailHolidayOpenResponseModel> Open
+        {
             get => mOpen ?? Enumerable.Empty<ServicePointDetailHolidayOpenResponseModel>();
             set => mOpen = value;
         }
@@ -37,9 +37,9 @@ namespace DHLClient
         /// Array of dates:{from, to} when is closed
         /// </summary>
         [JsonProperty("closed")]
-        public IEnumerable<ServicePointDetailHolidayCloseResponseModel> Closed 
-        { 
-            get => mClosed ?? Enumerable.Empty<ServicePointDetailHolidayCloseResponseModel>(); 
+        public IEnumerable<ServicePointDetailHolidayCloseResponseModel> Closed
+        {
+            get => mClosed ?? Enumerable.Empty<ServicePointDetailHolidayCloseResponseModel>();
             set => mClosed = value;
         }
 

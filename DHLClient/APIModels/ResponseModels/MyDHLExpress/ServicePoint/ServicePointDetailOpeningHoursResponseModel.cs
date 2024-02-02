@@ -36,8 +36,8 @@ namespace DHLClient
         /// <summary>
         /// Multiple opening hours entities can exist for the same week day.
         /// </summary>
-        public IEnumerable<ServicePointDetailOpeningHourResponseModel> OpeningHours 
-        { 
+        public IEnumerable<ServicePointDetailOpeningHourResponseModel> OpeningHours
+        {
             get => mOpeningHours ?? Enumerable.Empty<ServicePointDetailOpeningHourResponseModel>();
             set => mOpeningHours = value;
         }
@@ -46,8 +46,8 @@ namespace DHLClient
         /// Holiday details with date
         /// </summary>
         [JsonProperty("holidayDates")]
-        public IEnumerable<string> HolidayDates 
-        { 
+        public IEnumerable<string> HolidayDates
+        {
             get => mHolidayDates ?? Enumerable.Empty<string>();
             set => mHolidayDates = value;
         }
@@ -56,8 +56,8 @@ namespace DHLClient
         /// Holiday details with date
         /// </summary>
         [JsonProperty("holidaysDates")]
-        public IEnumerable<string> HolidaysDates 
-        { 
+        public IEnumerable<string> HolidaysDates
+        {
             get => mHolidaysDates ?? Enumerable.Empty<string>();
             set => mHolidaysDates = value;
         }
@@ -66,8 +66,8 @@ namespace DHLClient
         /// Holiday details
         /// </summary>
         [JsonProperty("holidays")]
-        public ServicePointDetailHolidayResponseModel Holidays 
-        { 
+        public ServicePointDetailHolidayResponseModel Holidays
+        {
             get => mHolidays ??= new ServicePointDetailHolidayResponseModel();
             set => mHolidays = value;
         }

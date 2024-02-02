@@ -11,119 +11,119 @@
         AFE = 0,
 
         /// <summary>
-        /// Brand
+        /// Brand (BRD)
         /// </summary>
-        BRD = 1,
+        Brand = 1,
 
         /// <summary>
-        /// Dangerous Goods Content Identifier
+        /// Dangerous Goods Content Identifier (DGC)
         /// </summary>
-        DGC = 2,
+        DangerousGoodsContentIdentifier = 2,
 
         /// <summary>
-        /// Delivery Order Number
+        /// Delivery Order Number (AAJ)
         /// </summary>
-        AAJ = 3,
+        DeliveryOrderNumber = 3,
 
         /// <summary>
-        /// In Bond Shipment
+        /// Inches Bond Shipment (INB)
         /// </summary>
-        INB = 4,
+        InchesBondShipment = 4,
 
         /// <summary>
-        /// Make
+        /// Make (MAK)
         /// </summary>
-        MAK = 5,
+        Make = 5,
 
         /// <summary>
-        /// Model
+        /// Model (ALX)
         /// </summary>
-        ALX = 6,
+        Model = 6,
 
         /// <summary>
-        /// Part No
+        /// Part No (PAN)
         /// </summary>
-        PAN = 7,
+        PartNo = 7,
 
         /// <summary>
-        /// Purchase Order Number
+        /// Purchase Order Number (PON)
         /// </summary>
-        PON = 8,
+        PurchaseOrderNumber = 8,
 
         /// <summary>
-        /// Stock Keeping Unit
+        /// Stock Keeping Unit (ABW)
         /// </summary>
-        ABW = 9,
+        StockKeepingUnit = 9,
 
         /// <summary>
-        /// Serial Number
+        /// Serial Number (SE)
         /// </summary>
-        SE = 10,
+        SerialNumber = 10,
 
         /// <summary>
-        /// Sales Order No
+        /// Sales Order No (SON)
         /// </summary>
-        SON = 11,
+        SalesOrderNo = 11,
 
         /// <summary>
-        /// Order Id
+        /// Order Id (OID)
         /// </summary>
-        OID = 12,
+        OrderId = 12,
 
         /// <summary>
-        /// DDTC Eligibility indicator
+        /// DDTC Eligibility indicator (DTC)
         /// </summary>
-        DTC = 13,
+        DTCEligibilityIndicator = 13,
 
         /// <summary>
-        /// DDTC UOM
+        /// DDTC UOM (DTM)
         /// </summary>
         DTM = 14,
 
         /// <summary>
-        /// DDTC Quantity
+        /// DDTC Quantity (DTQ)
         /// </summary>
         DTQ = 15,
 
         /// <summary>
-        /// DDTC Registration No
+        /// DDTC Registration No (DTR)
         /// </summary>
         DTR = 16,
 
         /// <summary>
-        /// DDTC ITAR Exemption No
+        /// DDTC ITAR Exemption No (ITR)
         /// </summary>
-        ITR = 17,
+        ITARExemptionNo = 17,
 
         /// <summary>
-        /// Manufacturers Identification code
+        /// Manufacturers Identification code (MID)
         /// </summary>
-        MID = 18,
+        ManufacturersIdentificationCode = 18,
 
         /// <summary>
-        /// Original Export Date
+        /// Original Export Date (OED)
         /// </summary>
-        OED = 19,
+        OriginalExportDate = 19,
 
         /// <summary>
-        /// Original Export OB Tracking ID
+        /// Original Export OB Tracking ID (OET)
         /// </summary>
-        OET = 20,
+        OriginalExportTracikngId = 20,
 
         /// <summary>
-        /// Original Outbound Carrier
+        /// Original Outbound Carrier (OOR)
         /// </summary>
-        OOR = 21,
+        OriginalOutboundCarrier = 21,
 
         /// <summary>
-        /// SME Indicator
+        /// SME Indicator (SME)
         /// </summary>
-        SME = 22,
+        SMEIndicator = 22,
 
         /// <summary>
-        /// USM Category Code
+        /// USM Category Code (USM)
         /// </summary>
-        USM = 23,
+        USMCategoryCode = 23,
 
         /// <summary>
         /// AAM Ref#
@@ -131,33 +131,33 @@
         AAM = 24,
 
         /// <summary>
-        /// Licence Exemption (CFR)
+        /// License Exemption (CFR) (CFR)
         /// </summary>
-        CFR = 25,
+        LicenseExemption = 25,
 
         /// <summary>
-        /// Domestic Indicator (US)
+        /// Domestic Indicator (US) (DOM)
         /// </summary>
-        DOM = 26,
+        DomesticIndicator = 26,
 
         /// <summary>
-        /// Foreign Indicator CoO (US)
+        /// Foreign Indicator CoO (US) (FOR)
         /// </summary>
-        FOR = 27,
+        ForeignIndicator = 27,
 
         /// <summary>
-        /// Usage
+        /// Usage (USG)
         /// </summary>
-        USG = 28,
+        Usage = 28,
 
         /// <summary>
-        /// Material
+        /// Material (MAT)
         /// </summary>
-        MAT = 29,
+        Material = 29,
 
         /// <summary>
-        /// No Licence Required
+        /// No License Required (NLR)
         /// </summary>
-        NLR = 30
+        NoLicenseRequired = 30
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the comparison operator types
@@ -15,7 +9,7 @@ namespace DHLClient
         /// Equal
         /// </summary>
         Equal = 0,
-        
+
         /// <summary>
         /// Not equal
         /// </summary>

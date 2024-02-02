@@ -6,124 +6,123 @@
     public enum TaxIdentifier
     {
         /// <summary>
-        /// Value-Added tax
+        /// Value-Added tax (VAT)
         /// </summary>
-        VAT,
+        ValueAddedTax = 0,
 
         /// <summary>
-        /// Employer Identification Number
+        /// Employer Identification Number (EIN)
         /// </summary>
-        EIN,
+        EmployerIdentificationNumber = 1,
 
         /// <summary>
-        /// Goods and Service Tax
+        /// Goods and Service Tax (GST)
         /// </summary>
-        GST,
+        GoodsAndServiceTax = 2,
 
         /// <summary>
-        /// Social Security Number
+        /// Social Security Number (SSN)
         /// </summary>
-        SSN,
+        SocialSecurityNumber = 3,
 
         /// <summary>
-        /// European Union Registration and Identification
+        /// European Union Registration and Identification (EOR)
         /// </summary>
-        EOR,
+        EuropeanUnionRegistrastionAndIdentification = 4,
 
         /// <summary>
-        /// Data Universal Numbering System
+        /// Data Universal Numbering System (DUN)
         /// </summary>
-        DUN,
+        DataUniversalNumberingSystem = 5,
 
         /// <summary>
-        /// Federal Tax ID
+        /// Federal Tax ID (FED)
         /// </summary>
-        FED,
+        FederalTaxId = 6,
 
         /// <summary>
-        /// State Tax ID
+        /// State Tax ID (STA)
         /// </summary>
-        STA,
+        StateTaxId = 7,
 
         /// <summary>
-        /// Brazil CNPJ/CPF Federal Tax
+        /// Brazil CNPJ/CPF Federal Tax (CNP)
         /// </summary>
-        CNP,
+        CNP = 8,
 
         /// <summary>
-        /// Brazil type IE/RG Federal Tax
+        /// Brazil type IE/RG Federal Tax (IE)
         /// </summary>
-        IE,
+        IE = 9,
 
         /// <summary>
-        /// Russia bank details section INN
+        /// Russia bank details section (INN)
         /// </summary>
-        INN,
+        RussiaBankDetailsSection = 10,
 
         /// <summary>
-        /// Russia bank details section KPP
+        /// Russia bank details section (KPP)
         /// </summary>
-        KPP,
+        KPP = 11,
 
         /// <summary>
-        /// Russia bank details section OGRN
+        /// Russia bank details section OGRN (OGR)
         /// </summary>
-        OGR,
+        OGR = 12,
 
         /// <summary>
-        /// Russia bank details section OKPO
+        /// Russia bank details section OKPO (OKp)
         /// </summary>
-        OKP,
+        OKP = 13,
 
         /// <summary>
-        /// Overseas Registered Supplier or Import One-Stop-Shop or GB VAT (foreign) registration or AUSid GST Registration or VAT on E-Commerce
+        /// Overseas Registered Supplier or Import One-Stop-Shop or GB VAT (foreign) registration or AUSid GST Registration or VAT on E-Commerce (SDT)
         /// </summary>
-        SDT,
+        SDT = 14,
 
         /// <summary>
-        /// Free Trade Zone ID
+        /// Free Trade Zone ID (FTZ)
         /// </summary>
-        FTZ,
+        FreeTradeZone = 15,
 
         /// <summary>
-        /// Deferment Account Duties Only
+        /// Deferment Account Duties Only (DAN)
         /// </summary>
-        DAN,
+        DefermentAccountDutiesOnly = 16,
 
         /// <summary>
-        /// Deferment Account Tax Only
+        /// Deferment Account Tax Only (TAN)
         /// </summary>
-        TAN,
+        DefermentAccountTaxOnly = 17,
 
         /// <summary>
-        /// Deferment Account Duties, Taxes and Fees Only
+        /// Deferment Account Duties, Taxes and Fees Only (DTF)
         /// </summary>
-        DTF,
+        DefermentAccountDutiesTaxesAndFeesOnly = 18,
 
         /// <summary>
-        /// EU Registered Exporters registration ID
+        /// EU Registered Exporters registration ID (RGP)
         /// </summary>
-        RGP,
+        RegisteredExportersRegistrationId = 19,
 
         /// <summary>
-        /// Driver's License
+        /// Driver's License (DLI)
         /// </summary>
-        DLI,
+        DriversLicense = 20,
 
         /// <summary>
-        /// National Identity Card
+        /// National Identity Card (NID)
         /// </summary>
-        NID,
+        NationalIdentityCard = 21,
 
         /// <summary>
-        /// Passport
+        /// Passport (PAS)
         /// </summary>
-        PAS,
+        Passport = 22,
 
         /// <summary>
-        /// Manufacturer ID
+        /// Manufacturer ID (MID)
         /// </summary>
-        MID
-
+        ManufacturersId = 23
     }
 }

@@ -13,7 +13,7 @@
         /// <summary>
         /// Centigram (2GM)
         /// </summary>
-        Centigram = 1,
+        Centigrams = 1,
 
         /// <summary>
         /// Grams (GM)

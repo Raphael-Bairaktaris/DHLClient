@@ -6,44 +6,44 @@
     public enum TotalChargeType
     {
         /// <summary>
-        /// Quoted shipment total discount
+        /// Quoted shipment total discount (STDIS)
         /// </summary>
-        STDIS = 0,
+        QuotedShipmentTotalDiscount = 0,
 
         /// <summary>
-        /// Shipment Customs value
+        /// Shipment Customs value (SCUSV)
         /// </summary>
-        SCUSV = 1,
+        ShipmentCustomsValue = 1,
 
         /// <summary>
-        /// Shipment Insured value
+        /// Shipment Insured value (SINSV)
         /// </summary>
-        SINSV = 2,
+        ShipmentInsuredValue = 2,
 
         /// <summary>
-        /// Shipment product quote discount
+        /// Shipment product quote discount (SPRQD)
         /// </summary>
-        SPRQD = 3,
+        ShipmentQuoteDiscount = 3,
 
         /// <summary>
         /// The price quoted to the Customer by DHL at the time of the booking.
-        /// This quote covers the weight price including discounts and without taxes.
+        /// This quote covers the weight price including discounts and without taxes. (SPRQN)
         /// </summary>
         SPRQN = 4,
 
         /// <summary>
         /// The total of service charges quoted to customer for DHL Express value added services,
-        /// the amount is after discounts and doesn't include tax amounts.
+        /// the amount is after discounts and doesn't include tax amounts. (STSCH)
         /// </summary>
         STSCH = 5,
 
         /// <summary>
-        /// The total of service charges as provided by Merchant for the purpose of landed cost calculation.
+        /// The total of service charges as provided by Merchant for the purpose of landed cost calculation. (MACHG)
         /// </summary>
         MACHG = 6,
 
         /// <summary>
-        /// The freight charge as provided by Merchant for the purpose of landed cost calculation.
+        /// The freight charge as provided by Merchant for the purpose of landed cost calculation. (MFCHG)
         /// </summary>
         MFCHG = 7
     }

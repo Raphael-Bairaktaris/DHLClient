@@ -18,7 +18,7 @@
         /// <summary>
         /// Parcel BL
         /// </summary>
-        ParcelBl = 2,
+        ParcelBL = 2,
 
         /// <summary>
         /// Bpost
@@ -153,6 +153,46 @@
         /// <summary>
         /// Urgent cargus
         /// </summary>
-        UrgentCargus = 29
+        UrgentCargus = 29,
+
+        /// <summary>
+        /// Econnect
+        /// </summary>
+        Econnect = 30,
+
+        /// <summary>
+        /// Freight Se
+        /// </summary>
+        FreightSE = 31,
+
+        /// <summary>
+        /// Parcel iberia
+        /// </summary>
+        ParcelIberia = 32,
+
+        /// <summary>
+        /// Posta slovenije
+        /// </summary>
+        PostaSlovenije = 33,
+
+        /// <summary>
+        /// Poste italiane
+        /// </summary>
+        PosteItaliane = 34,
+
+        /// <summary>
+        /// PPL
+        /// </summary>
+        PPL = 35,
+
+        /// <summary>
+        /// Speedy
+        /// </summary>
+        Speedy = 36,
+
+        /// <summary>
+        /// Sps
+        /// </summary>
+        SPS = 37,
     }
 }

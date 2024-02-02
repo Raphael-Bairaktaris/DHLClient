@@ -6,83 +6,83 @@
     public enum IncotermRule
     {
         /// <summary>
-        /// Ex works 
+        /// Ex works (EXW) 
         /// </summary>
-        EXW = 0,
+        ExWorks = 0,
 
         /// <summary>
-        /// Free carrier
+        /// Free carrier (FCA)
         /// </summary>
-        FCA = 1,
+        FreeCarrier = 1,
 
         /// <summary>
-        /// Carriage Paid To
+        /// Carriage Paid To (CPT)
         /// </summary>
-        CPT = 2,
+        CarriagePaidTo = 2,
 
         /// <summary>
-        /// Carriage And Insurance Paid To
+        /// Carriage And Insurance Paid To (CIP)
         /// </summary>
-        CIP = 3,
+        CarriageAndInsurancePaidTo = 3,
 
         /// <summary>
-        /// Delivered At Place Unloaded
+        /// Delivered At Place Unloaded (DPU)
         /// </summary>
-        DPU = 4,
+        DeliveredAtPlaceUnloaded = 4,
 
         /// <summary>
-        /// Delivered At Place
+        /// Delivered At Place (DAP)
         /// </summary>
-        DAP = 5,
+        DeliveredAtPlace = 5,
 
         /// <summary>
-        /// Delivery Duty Paid
+        /// Delivery Duty Paid (DDP)
         /// </summary>
-        DDP = 6,
+        DeliveryDutyPaid = 6,
 
         /// <summary>
-        /// Free Alongside Ship
+        /// Free Alongside Ship (FAS)
         /// </summary>
-        FAS = 7,
+        FreeAlongsideShip = 7,
 
         /// <summary>
-        /// Free On Board
+        /// Free On Board (FOB)
         /// </summary>
-        FOB = 8,
+        FreeOnBoard = 8,
 
         /// <summary>
-        /// Cost And Freight
+        /// Cost And Freight (CFR)
         /// </summary>
-        CFR = 9,
+        CostAndFreight = 9,
 
         /// <summary>
-        /// Cost, Insurance and Freight
+        /// Cost, Insurance and Freight (CIF)
         /// </summary>
-        CIF = 10,
+        CostInsuranceAndFreight = 10,
 
         /// <summary>
-        /// Delivered At Frontier
+        /// Delivered At Frontier (DAF)
         /// </summary>
-        DAF = 11,
+        DeliveredAtFrontier = 11,
 
         /// <summary>
-        /// Delivered At Terminal
+        /// Delivered At Terminal (DAT)
         /// </summary>
-        DAT = 12,
+        DeliveredAtTerminal = 12,
 
         /// <summary>
-        /// Delivery Duty Unpaid
+        /// Delivery Duty Unpaid (DDU)
         /// </summary>
-        DDU = 13,
+        DeliveryDutyUnpaid = 13,
 
         /// <summary>
-        /// Delivery Ex Quay (Duty Paid)
+        /// Delivery Ex Quay (Duty Paid) (DEQ)
         /// </summary>
-        DEQ = 14,
+        DeliveryExQuay = 14,
 
         /// <summary>
-        /// Delivered Ex Ship
+        /// Delivered Ex Ship (DES)
         /// </summary>
-        DES = 15
+        DeliveredExShip = 15
     }
 }

@@ -29,7 +29,7 @@ namespace DHLClient
         /// Please provide the purpose was the document details captured and are planned to be used.
         /// </summary>
         /// <remarks>
-        /// export and import is only applicable for approve Sale In Transit customers
+        /// export and import is only applicable for approve Sale Inches Transit customers
         /// </remarks>
         /// <example>import</example>
         [JsonRequired]

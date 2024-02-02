@@ -42,8 +42,8 @@ namespace DHLClient
         /// The severity code
         /// </summary>
         [JsonProperty("sev")]
-        public string Severity 
-        { 
+        public string Severity
+        {
             get => mSeverity ?? string.Empty;
             set => mSeverity = value;
         }
@@ -67,7 +67,7 @@ namespace DHLClient
             get => mMsgClgd ?? string.Empty;
             set => mMsgClgd = value;
         }
-    
+
 
         /// <summary>
         /// SCMS description of status code
@@ -75,28 +75,28 @@ namespace DHLClient
         [JsonProperty("description")]
         public string Description
         {
-        get => mDescription ?? string.Empty;
-        set => mDescription = value;
+            get => mDescription ?? string.Empty;
+            set => mDescription = value;
         }
 
-    /// <summary>
-    /// SCMS detailed description
-    /// </summary>
-    [JsonProperty("dtlDsc")]
+        /// <summary>
+        /// SCMS detailed description
+        /// </summary>
+        [JsonProperty("dtlDsc")]
         public string DetailedDescription
         {
-        get => mDetailedDescription ?? string.Empty;
-        set => mDetailedDescription = value;
+            get => mDetailedDescription ?? string.Empty;
+            set => mDetailedDescription = value;
         }
 
-    #endregion
+        #endregion
 
-    #region Constructors
+        #region Constructors
 
-    /// <summary>
-    /// Default constructor
-    /// </summary>
-    public ServicePointDetailCapacityStatusResponseModel() : base()
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public ServicePointDetailCapacityStatusResponseModel() : base()
         {
 
         }

@@ -3,7 +3,7 @@
     /// <summary>
     /// Provides enumeration over the cargo
     /// </summary>
-    public enum Cargo
+    public enum CargoType
     {
         /// <summary>
         /// Freight

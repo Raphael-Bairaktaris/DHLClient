@@ -79,8 +79,8 @@ namespace DHLClient
         /// The partner type code
         /// </summary>
         [JsonProperty("partnerTypeCode")]
-        public string PartnerTypeCode 
-        { 
+        public string PartnerTypeCode
+        {
             get => mPartnerTypeCode ?? string.Empty;
             set => mPartnerTypeCode = value;
         }

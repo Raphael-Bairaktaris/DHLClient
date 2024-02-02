@@ -1,4 +1,4 @@
-﻿namespace DHLClient.DataModels.Enums
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the shipper's reference types
@@ -6,74 +6,76 @@
     public enum ShipperReference
     {
         /// <summary>
-        /// Shipment reference number of receiver
+        /// Shipment reference number of receiver (AAO)
         /// </summary>
-        AAO = 0,
+        ShipmentReferenceNumberOfReceiver = 0,
 
         /// <summary>
-        /// Reference number of consignor - default
+        /// Reference number of consignor - default (CU)
         /// </summary>
-        CU = 1,
+        ReferenceNumberOfConsignor = 1,
 
         /// <summary>
-        /// Reference number of freight forwarder
+        /// Reference number of freight forwarder (FF)
         /// </summary>
-        FF = 2,
+        ReferenceNumberOfFreightForwarder = 2,
 
         /// <summary>
-        /// Freight bill number for
+        /// Freight bill number for (FN)
         /// </summary>
         /// <example>Works invoice number</example>
-        FN = 3,
+        FreightBillNumber = 3,
 
         /// <summary>
-        /// Inbound center reference number
+        /// Inbound center reference number (IBC)
         /// </summary>
-        IBC = 4,
+        InboundCenterReferenceNumber = 4,
 
         /// <summary>
-        /// Load list reference for <10-digit Shipment ID>
+        /// Load list reference for <10-digit Shipment ID> (LLR)
         /// </summary>
-        LLR = 5,
+        LoadListReference = 5,
 
         /// <summary>
-        /// Outbound center reference number for <example>SHIPMENT IDENTIFIER (COUNTRY OF ORIGIN)</example>
+        /// Outbound center reference number for (OBC)
         /// </summary>
-        OBC = 6,
+        /// <example>SHIPMENT IDENTIFIER (COUNTRY OF ORIGIN)</example>
+        OutboundCenterReferenceNumber = 6,
 
         /// <summary>
-        /// Pickup request number for <example>BOOKINGREFERENCE NUMBER</example>
+        /// Pickup request number for (PRN)
         /// </summary>
-        PRN = 7,
+        /// <example>BOOKINGREFERENCE NUMBER</example>
+        PickupRequestNumber = 7,
 
         /// <summary>
-        /// Local payer account number
+        /// Local payer account number (ACP)
         /// </summary>
-        ACP = 8,
+        LocalPayerAccountNumber = 8,
 
         /// <summary>
-        /// Local shipper account number
+        /// Local shipper account number (ACS)
         /// </summary>
-        ACS = 9,
+        LocalShipperAccountNumber = 9,
 
         /// <summary>
-        /// Local receiver account number
+        /// Local receiver account number (ACR)
         /// </summary>
-        ACR = 10,
+        LocalReceiverAccountNumber = 10,
 
         /// <summary>
-        /// Customs declaration number
+        /// Customs declaration number (CDN)
         /// </summary>
-        CDN = 11,
+        CustomsDeclarationNumber = 11,
 
         /// <summary>
-        /// Eurolog 15-digit shipment id
+        /// Eurolog 15-digit shipment id (STD)
         /// </summary>
-        STD = 12,
+        EurologShipmentId = 12,
 
         /// <summary>
-        /// Buyers order number
+        /// Buyers order number (CO)
         /// </summary>
-        CO = 13
+        BuyersOrderNumber = 13
     }
 }

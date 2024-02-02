@@ -6,18 +6,18 @@
     public enum TypeCode
     {
         /// <summary>
-        /// Total tax for the shipment
+        /// Total tax for the shipment (STTXA)
         /// </summary>
-        STTXA = 0,
+        TotalTaxForTheShipment = 0,
 
         /// <summary>
-        /// Total discount for the shipment
+        /// Total discount for the shipment (STDIS)
         /// </summary>
-        STDIS = 1,
+        TotalDiscountForTheShipment = 1,
 
         /// <summary>
-        /// Net shipment / weight charge
+        /// Net shipment / weight charge (SPQRT)
         /// </summary>
-        SPRQT = 2
+        NetShipmentWeightCharge = 2
     }
 }

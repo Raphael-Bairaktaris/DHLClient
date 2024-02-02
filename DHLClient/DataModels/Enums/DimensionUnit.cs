@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the dimension unit
@@ -14,11 +8,11 @@ namespace DHLClient
         /// <summary>
         /// Centimeters
         /// </summary>
-        CM = 0,
+        Centimeters = 0,
 
         /// <summary>
         /// Inches
         /// </summary>
-        IN = 1
+        Inches = 1
     }
 }

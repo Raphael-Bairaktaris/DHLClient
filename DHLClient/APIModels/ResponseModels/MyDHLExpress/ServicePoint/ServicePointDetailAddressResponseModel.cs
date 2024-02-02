@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Diagnostics.Contracts;
 
 namespace DHLClient
 {
@@ -63,8 +62,8 @@ namespace DHLClient
         /// First line of the facility address
         /// </summary>
         [JsonProperty("addressLine1")]
-        public string AddressLine1 
-        { 
+        public string AddressLine1
+        {
             get => mAddressLine1 ?? string.Empty;
             set => mAddressLine1 = value;
         }
@@ -73,8 +72,8 @@ namespace DHLClient
         /// Second line of the facility address (only present if field is filled in GREF database)
         /// </summary>
         [JsonProperty("addressLine2")]
-        public string AddressLine2 
-        { 
+        public string AddressLine2
+        {
             get => mAddressLine2 ?? string.Empty;
             set => mAddressLine2 = value;
         }
@@ -83,8 +82,8 @@ namespace DHLClient
         /// Third line of the facility address (only present if field is filled in GREF database)
         /// </summary>
         [JsonProperty("addressLine3")]
-        public string AddressLine3 
-        { 
+        public string AddressLine3
+        {
             get => mAddressLine3 ?? string.Empty;
             set => mAddressLine3 = value;
         }
@@ -122,7 +121,7 @@ namespace DHLClient
         public string City
         {
             get => mCity ?? string.Empty;
-            set => mCity= value;
+            set => mCity = value;
         }
 
         /// <summary>
@@ -141,7 +140,7 @@ namespace DHLClient
         [JsonProperty("state")]
         public string State
         {
-            get => mState?? string.Empty;
+            get => mState ?? string.Empty;
             set => mState = value;
         }
 

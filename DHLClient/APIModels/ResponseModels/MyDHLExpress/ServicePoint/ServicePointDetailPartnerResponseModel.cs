@@ -32,8 +32,8 @@ namespace DHLClient
         /// ID of a partner
         /// </summary>
         [JsonProperty("partnerId")]
-        public string PartnerId 
-        { 
+        public string PartnerId
+        {
             get => mPartnerId ?? string.Empty;
             set => mPartnerId = value;
         }
@@ -42,8 +42,8 @@ namespace DHLClient
         /// Name of a partner
         /// </summary>
         [JsonProperty("partnerName")]
-        public string PartnerName 
-        { 
+        public string PartnerName
+        {
             get => mPartnerName ?? string.Empty;
             set => mPartnerName = value;
         }
@@ -52,8 +52,8 @@ namespace DHLClient
         /// Code of a partner
         /// </summary>
         [JsonProperty("partnerTypeCode")]
-        public string PartnerTypeCode 
-        { 
+        public string PartnerTypeCode
+        {
             get => mPartnerTypeCode ?? string.Empty;
             set => mPartnerTypeCode = value;
         }

@@ -13,7 +13,7 @@ namespace DHLClient
         /// Provide type code of data that can be returned in response.
         /// </summary>
         [JsonProperty("typeCode")]
-        public ValueAddedServices TypeCode { get; set; }
+        public ValueAddedService TypeCode { get; set; }
 
         /// <summary>
         /// Indicates if additional information is requested 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the service point status types
@@ -12,28 +6,28 @@ namespace DHLClient
     public enum ServicePointStatus
     {
         /// <summary>
-        /// Service Available (Open)
+        /// Service Available (Open) (A)
         /// </summary>
-        A = 0,
-        
-        /// <summary>
-        /// Service Suspended (Temporarily Closed)
-        /// </summary>
-        S = 1,
+        ServiceAvailable = 0,
 
         /// <summary>
-        /// Service Unavailable (Temporarily Closed)
+        /// Service Suspended (Temporarily Closed) (S)
         /// </summary>
-        U = 2,
+        ServiceSuspended = 1,
 
         /// <summary>
-        /// Closed (Temporarily Closed)
+        /// Service Unavailable (Temporarily Closed) (U)
         /// </summary>
-        X = 3,
+        ServiceUnavailable = 2,
 
         /// <summary>
-        /// Not Yet Open (Temporarily Closed)
+        /// Closed (Temporarily Closed) (X)
         /// </summary>
-        Y = 4
+        Closed = 3,
+
+        /// <summary>
+        /// Not Yet Open (Temporarily Closed) (Y)
+        /// </summary>
+        NotYetOpen = 4
     }
 }

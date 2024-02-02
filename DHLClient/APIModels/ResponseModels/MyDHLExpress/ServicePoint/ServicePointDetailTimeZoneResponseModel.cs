@@ -22,8 +22,8 @@ namespace DHLClient
         /// The id
         /// </summary>
         [JsonProperty("id")]
-        public string Id 
-        { 
+        public string Id
+        {
             get => mId ?? string.Empty;
             set => mId = value;
         }

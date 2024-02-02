@@ -6,18 +6,28 @@
     public enum EncodingFormat
     {
         /// <summary>
-        /// PDF document
+        /// PDF format
         /// </summary>
         PDF = 0,
 
         /// <summary>
-        /// ZPL document
+        /// ZPL format
         /// </summary>
         ZPL = 1,
 
         /// <summary>
-        /// Tiff
+        /// LP2 format
         /// </summary>
-        Tiff = 2
+        LP2 = 2,
+
+        /// <summary>
+        /// Epl format
+        /// </summary>
+        EPL = 3,
+
+        /// <summary>
+        /// Tiff format
+        /// </summary>
+        Tiff = 4
     }
 }

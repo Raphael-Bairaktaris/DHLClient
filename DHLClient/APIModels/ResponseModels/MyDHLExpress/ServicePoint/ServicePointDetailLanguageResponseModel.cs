@@ -31,8 +31,8 @@ namespace DHLClient
         /// <summary>
         /// Language Script Code
         /// </summary>
-        public string LanguageScriptCode 
-        { 
+        public string LanguageScriptCode
+        {
             get => mLanguageScriptCode ?? string.Empty;
             set => mLanguageScriptCode = value;
         }
@@ -41,8 +41,8 @@ namespace DHLClient
         /// Language Country Code
         /// </summary>
         [JsonProperty("languageCountryCode")]
-        public string LanguageCountryCode 
-        { 
+        public string LanguageCountryCode
+        {
             get => mLanguageCountryCode ?? string.Empty;
             set => mLanguageCountryCode = value;
         }

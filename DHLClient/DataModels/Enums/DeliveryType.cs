@@ -15,6 +15,5 @@
         /// and potentially other special operational non-transport component(s), when relevant.
         /// </summary>
         QDDF = 1,
-
     }
 }

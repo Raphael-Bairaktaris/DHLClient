@@ -82,8 +82,8 @@ namespace DHLClient
         /// The geographical coordinates of the facility’s location
         /// </summary>
         [JsonProperty("searchLocation")]
-        public ServicePointSearchLocationResponseModel SearchLocation 
-        { 
+        public ServicePointSearchLocationResponseModel SearchLocation
+        {
             get => mSearchLocation ??= new ServicePointSearchLocationResponseModel();
             set => mSearchLocation = value;
         }
@@ -92,8 +92,8 @@ namespace DHLClient
         /// The culture parameter for Bing Maps API (derived from the country parameter in the request)
         /// </summary>
         [JsonProperty("mapCulture")]
-        public string MapCulture 
-        { 
+        public string MapCulture
+        {
             get => mMapCulture ?? string.Empty;
             set => mMapCulture = value;
         }
@@ -123,8 +123,8 @@ namespace DHLClient
         /// </summary>
         /// <example>required language is not available, result was filtered due to incoming holidays.</example>
         [JsonProperty("messages")]
-        public IEnumerable<string> Messages 
-        { 
+        public IEnumerable<string> Messages
+        {
             get => mMessages ?? Enumerable.Empty<string>();
             set => mMessages = value;
         }
@@ -133,8 +133,8 @@ namespace DHLClient
         /// The translations
         /// </summary>
         [JsonProperty("translations")]
-        public ServicePointTranslationResponseModel Translations 
-        { 
+        public ServicePointTranslationResponseModel Translations
+        {
             get => mTranslations ??= new ServicePointTranslationResponseModel();
             set => mTranslations = value;
         }
@@ -149,8 +149,8 @@ namespace DHLClient
         /// Promotion on a SVP level
         /// </summary>
         [JsonProperty("promotion")]
-        public ServicePointPromotionResponseModel Promotion 
-        { 
+        public ServicePointPromotionResponseModel Promotion
+        {
             get => mPromotion ??= new ServicePointPromotionResponseModel();
             set => mPromotion = value;
         }

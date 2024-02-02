@@ -28,8 +28,8 @@ namespace DHLClient
         /// </summary>
         /// <example>country</example>
         [JsonProperty("datasetName")]
-        public string DataSetName 
-        { 
+        public string DataSetName
+        {
             get => mDatasetName ?? string.Empty;
             set => mDatasetName = value;
         }
@@ -38,8 +38,8 @@ namespace DHLClient
         /// The data set captions
         /// </summary>
         [JsonProperty("dataSetCaptions")]
-        public string DataSetCaptions 
-        { 
+        public string DataSetCaptions
+        {
             get => mDataSetCaptions ?? string.Empty;
             set => mDataSetCaptions = value;
         }

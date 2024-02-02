@@ -1,15 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Arguments used for service point
@@ -144,7 +133,7 @@ namespace DHLClient
         /// <summary>
         /// Distance uom to be used when returning response, it can be either km or mi. If not provided, default uom set for the country is returned.
         /// </summary>
-        /// <example>Mi</example>
+        /// <example>Miles</example>
         [ArgumentName("resultUom")]
         public DistanceUnit? ResultUom { get; set; }
 

@@ -150,8 +150,8 @@ namespace DHLClient
         /// Title for the parking icon
         /// </summary>
         [JsonProperty("parkingTitle")]
-        public string ParkingTitle 
-        { 
+        public string ParkingTitle
+        {
             get => mParkingTitle ?? string.Empty;
             set => mParkingTitle = value;
         }
@@ -160,8 +160,8 @@ namespace DHLClient
         /// Title for the disable wheel chair icon
         /// </summary>
         [JsonProperty("disabledAccessTitle")]
-        public string DisabledAccessTitle 
-        { 
+        public string DisabledAccessTitle
+        {
             get => mDisabledAccessTitle ?? string.Empty;
             set => mDisabledAccessTitle = value;
         }
@@ -182,8 +182,8 @@ namespace DHLClient
         /// Array of numbers L W H
         /// </summary>
         [JsonProperty("pieceDimensionsLimit")]
-        public PieceDimensionLimitResponseModel PieceDimensionsLimit 
-        { 
+        public PieceDimensionLimitResponseModel PieceDimensionsLimit
+        {
             get => mPieceDimensionsLimit ??= new PieceDimensionLimitResponseModel();
             set => mPieceDimensionsLimit = value;
         }

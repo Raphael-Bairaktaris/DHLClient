@@ -6,12 +6,12 @@
     public enum QuantityType
     {
         /// <summary>
-        /// Part
+        /// Part (prt)
         /// </summary>
-        PRT = 0,
+        Part = 0,
 
         /// <summary>
-        /// Box
+        /// Box 
         /// </summary>
         Box = 1,
     }

@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -28,8 +23,8 @@ namespace DHLClient
         /// <summary>
         /// The result of search from provided reference criteria
         /// </summary>
-        public IEnumerable<ReferenceDataDetailResponseModel> ReferenceData 
-        { 
+        public IEnumerable<ReferenceDataDetailResponseModel> ReferenceData
+        {
             get => mReferenceData ?? Enumerable.Empty<ReferenceDataDetailResponseModel>();
             set => mReferenceData = value;
         }
@@ -38,8 +33,8 @@ namespace DHLClient
         /// The warnings
         /// </summary>
         [JsonProperty("warnings")]
-        public IEnumerable<string> Warnings 
-        { 
+        public IEnumerable<string> Warnings
+        {
             get => mWarnings ?? Enumerable.Empty<string>();
             set => mWarnings = value;
         }

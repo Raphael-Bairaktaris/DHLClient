@@ -11,228 +11,228 @@
         DispensePaymentDroits = 0,
 
         /// <summary>
-        /// Analysis and Health Certificate
+        /// Analysis and Health Certificate (AHC)
         /// </summary>
-        AHC = 1,
+        AnalysisAndHealthCertificate = 1,
 
         /// <summary>
-        /// Agricultural License
+        /// Agricultural License (ALC)
         /// </summary>
-        ALC = 2,
+        AgriculturalLicense = 2,
 
         /// <summary>
-        /// ATA Carnet
+        /// ATA Carnet (ATA)
         /// </summary>
-        ATA = 3,
+        ATACarnet = 3,
 
         /// <summary>
         /// Preference Certificate ATR
         /// </summary>
-        ATR = 4,
+        PreferenceCertificateATR = 4,
 
         /// <summary>
-        /// Branch Letter of Exemption
+        /// Branch Letter of Exemption (BEX)
         /// </summary>
-        BEX = 5,
+        BranchLetterOfExemption = 5,
 
         /// <summary>
-        /// Power of Attorney
+        /// Power of Attorney (CHA)
         /// </summary>
-        CHA = 6,
+        PowerOfAttorney = 6,
 
         /// <summary>
         /// CHED-D (Common Health Entry Document for Feed and Food of Non Animal Origin)
         /// </summary>
-        CHD = 7,
+        CommonHealthEntryDocument = 7,
 
         /// <summary>
         /// CHED-P (Common Health Entry Document for Products)
         /// </summary>
-        CHP = 8,
+        CommonHealthEntryDocumentForProducts = 8,
 
         /// <summary>
-        /// CITES Certificate
+        /// CITES Certificate (CIT)
         /// </summary>
-        CIT = 9,
+        CitesCertificate = 9,
 
         /// <summary>
-        /// Customs Invoice Value
+        /// Customs Invoice Value (CIV)
         /// </summary>
-        CIV = 10,
+        CustomsInvoiceValue = 10,
 
         /// <summary>
-        /// Export-only Invoice
+        /// Export-only Invoice (CI2)
         /// </summary>
-        CI2 = 11,
+        ExportOnlyInvoice = 11,
 
         /// <summary>
-        /// Generic Certificate of Origin
+        /// Generic Certificate of Origin (COO)
         /// </summary>
-        COO = 12,
+        GenericCertificateOfOrigin = 12,
 
         /// <summary>
-        /// Consignee Power of Attorney
+        /// Consignee Power of Attorney (CPA)
         /// </summary>
-        CPA = 13,
+        ConsigneePowerOfAttorney = 13,
 
         /// <summary>
-        /// Control Document
+        /// Control Document (CRL)
         /// </summary>
-        CRL = 14,
+        ControlDocument = 14,
 
         /// <summary>
-        /// Consolidated Customs Entry
+        /// Consolidated Customs Entry (CSD)
         /// </summary>
-        CSD = 15,
+        ConsolidatedCustomsEntry = 15,
 
         /// <summary>
-        /// Duty Exemption Certificate
+        /// Duty Exemption Certificate (DEX)
         /// </summary>
-        DEX = 16,
+        DutyExemptionCertificate = 16,
 
         /// <summary>
-        /// Dangerous Goods Declaration
+        /// Dangerous Goods Declaration (DGD)
         /// </summary>
-        DGD = 17,
+        DagerousGoodsDeclaration = 17,
 
         /// <summary>
-        /// Driver's License
+        /// Driver's License (DLI)
         /// </summary>
-        DLI = 18,
+        DriverLicence = 18,
 
         /// <summary>
-        /// Invoice
+        /// Invoice (DOV)
         /// </summary>
-        DOV = 19,
+        Invoice = 19,
 
         /// <summary>
-        /// Export Licenses and Permits
+        /// Export Licenses and Permits (ELP)
         /// </summary>
-        ELP = 20,
+        ExportLicensesAndPermits = 20,
 
         /// <summary>
-        /// Preference Certificate EUR1
+        /// Preference Certificate EUR1 (EU1)
         /// </summary>
-        EU1 = 21,
+        PreferenceCertificateEUR1 = 21,
 
         /// <summary>
-        /// Preferential Declaration of Origin on the Invoice - EUR2
+        /// Preferential Declaration of Origin on the Invoice - EUR2 (EU2)
         /// </summary>
-        EU2 = 22,
+        PreferentialDeclarationOfOriginOnTheInvoiceEUR2 = 22,
 
         /// <summary>
-        /// End Use Authorization
+        /// End Use Authorization (EUS)
         /// </summary>
-        EUS = 23,
+        EndOfAuthorization = 23,
 
         /// <summary>
-        /// DCE Export of Customs Data
+        /// DCE Export of Customs Data (EXL)
         /// </summary>
-        EXL = 24,
+        DCEExportOfCustomsData = 24,
 
         /// <summary>
-        /// Certificate of Origin (Form A)
+        /// Certificate of Origin (FMA)
         /// </summary>
-        FMA = 25,
+        CertificateOfOrigin = 25,
 
         /// <summary>
-        /// Health Products Regulatory Authority (HPRA) Licensing Requirements
+        /// Health Products Regulatory Authority (HPRA) Licensing Requirements (HLC)
         /// </summary>
-        HLC = 26,
+        HealethProductsRegulatoryAuthorityLicensingRequirements = 26,
 
         /// <summary>
-        /// House Waybill
+        /// House Waybill (HWB)
         /// </summary>
-        HWB = 27,
+        HouseWaybill = 27,
 
         /// <summary>
         /// Commercial Invoice
         /// </summary>
-        INV = 28,
+        CommercialInvoice = 28,
 
         /// <summary>
-        /// Intellectual Property Authorization
+        /// Intellectual Property Authorization (IPA)
         /// </summary>
-        IPA = 29,
+        IntellectualPropertyAuthorization = 29,
 
         /// <summary>
-        /// Justice License
+        /// Justice License (JLC)
         /// </summary>
-        JLC = 30,
+        JusticeLicence = 30,
 
         /// <summary>
-        /// Specific Export Licenses
+        /// Specific Export Licenses (LIC)
         /// </summary>
-        LIC = 31,
+        SpecificExportLicences = 31,
 
         /// <summary>
-        /// License or Permit
+        /// License or Permit (LNP)
         /// </summary>
-        LNP = 32,
+        LicenceOfPermit = 32,
 
         /// <summary>
-        /// National Identity Card
+        /// National Identity Card (NID)
         /// </summary>
-        NID = 33,
+        NationalIdentityCard = 33,
 
         /// <summary>
-        /// Passport
+        /// Passport (PAS)
         /// </summary>
-        PAS = 34,
+        Passport = 34,
 
         /// <summary>
-        /// Pro-Forma
+        /// Pro-Forma (PFI)
         /// </summary>
-        PFI = 35,
+        ProForma = 35,
 
         /// <summary>
-        ///  Phytosanitary Certificate
+        /// Phytosanitary Certificate (PHY)
         /// </summary>
-        PHY = 36,
+        PhytosanitaryCertificate = 36,
 
         /// <summary>
-        /// Permits and Licenses
+        /// Permits and Licenses (PLI)
         /// </summary>
-        PLI = 37,
+        PermitsAndLicenses = 37,
 
         /// <summary>
-        /// Power of Attorney (Customer-based)
+        /// Power of Attorney (Customer-based) (POA)
         /// </summary>
-        POA = 38,
+        PowerOfAttorneyCustomerBased = 38,
 
         /// <summary>
-        /// Proof Of Payment
+        /// Proof Of Payment (PPY)
         /// </summary>
-        PPY = 39,
+        ProofOfPayment = 39,
 
         /// <summary>
-        /// Receipt on Delivery
+        /// Receipt on Delivery (ROD)
         /// </summary>
-        ROD = 40,
+        ReceiptOnDelivery = 40,
 
         /// <summary>
-        /// T2M Transport Accompanying Document
+        /// T2M Transport Accompanying Document (T2M)
         /// </summary>
-        T2M = 41,
+        TransportAccompanyingDocument = 41,
 
         /// <summary>
-        /// TAD Transport Accompanying Document T1
+        /// TAD Transport Accompanying Document T1 (TAD)
         /// </summary>
-        TAD = 42,
+        TransportAccompanyingDocumentT1 = 42,
 
         /// <summary>
-        /// Transportation Charges Statement
+        /// Transportation Charges Statement (TCS)
         /// </summary>
-        TCS = 43,
+        TransportationChargesStatement = 43,
 
         /// <summary>
-        /// Veterinary Entry Document
+        /// Veterinary Entry Document (VET)
         /// </summary>
-        VET = 44,
+        VeterinaryEntryDocument = 44,
 
         /// <summary>
-        /// VAT Exemption Certificate
+        /// VAT Exemption Certificate (VEX)
         /// </summary>
-        VEX = 45
+        VATExemptionCertificate = 45
     }
 }

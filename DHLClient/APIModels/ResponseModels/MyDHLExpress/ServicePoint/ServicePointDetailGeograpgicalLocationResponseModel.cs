@@ -27,8 +27,8 @@ namespace DHLClient
         /// Suggestion for the search address
         /// </summary>
         [JsonProperty("suggestion")]
-        public GeographicalLocationSuggestionResponseModel Suggestion 
-        { 
+        public GeographicalLocationSuggestionResponseModel Suggestion
+        {
             get => mSuggestion ??= new GeographicalLocationSuggestionResponseModel();
             set => mSuggestion = value;
         }

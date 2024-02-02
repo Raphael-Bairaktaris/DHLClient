@@ -4,7 +4,7 @@ namespace DHLClient
     /// <summary>
     /// Arguments used for landed cost
     /// </summary>
-    public class LandedCostAPIArgs :BaseMyDHLAPIArgs
+    public class LandedCostAPIArgs : BaseMyDHLAPIArgs
     {
         #region Constructors
 

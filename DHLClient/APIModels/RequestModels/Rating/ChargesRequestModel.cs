@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("typeCode")]
-        public Cargo TypeCode { get; set; }
+        public CargoType TypeCode { get; set; }
 
         /// <summary>
         /// The amount

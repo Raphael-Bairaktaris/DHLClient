@@ -3,7 +3,7 @@
     /// <summary>
     /// Provides enumeration over the value added services
     /// </summary>
-    public enum ValueAddedServices
+    public enum ValueAddedService
     {
         /// <summary>
         /// All value added services

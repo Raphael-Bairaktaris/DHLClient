@@ -37,8 +37,8 @@ namespace DHLClient
         /// Max. weight per piece
         /// </summary>
         [JsonProperty("placeSizeLimit1")]
-        public MaxShipmentPieceWeightResponseModel PieceSizeLimit1 
-        { 
+        public MaxShipmentPieceWeightResponseModel PieceSizeLimit1
+        {
             get => mPieceSizeLimit1 ??= new MaxShipmentPieceWeightResponseModel();
             set => mPieceSizeLimit1 = value;
         }
@@ -47,8 +47,8 @@ namespace DHLClient
         /// Max. weight per piece
         /// </summary>
         [JsonProperty("placeSizeLimit2")]
-        public MaxShipmentPieceWeightResponseModel PieceSizeLimit2 
-        { 
+        public MaxShipmentPieceWeightResponseModel PieceSizeLimit2
+        {
             get => mPieceSizeLimit2 ??= new MaxShipmentPieceWeightResponseModel();
             set => mPieceSizeLimit2 = value;
         }
@@ -57,8 +57,8 @@ namespace DHLClient
         /// Max. weight per piece
         /// </summary>
         [JsonProperty("placeSizeLimit3")]
-        public MaxShipmentPieceWeightResponseModel PieceSizeLimit3 
-        { 
+        public MaxShipmentPieceWeightResponseModel PieceSizeLimit3
+        {
             get => mPieceSiziLimit3 ??= new MaxShipmentPieceWeightResponseModel();
             set => mPieceSiziLimit3 = value;
         }
@@ -67,8 +67,8 @@ namespace DHLClient
         /// Max. weight per piece
         /// </summary>
         [JsonProperty("maxPieceWeight")]
-        public MaxShipmentPieceWeightResponseModel MaxPieceWeight 
-        { 
+        public MaxShipmentPieceWeightResponseModel MaxPieceWeight
+        {
             get => mMaxPieceWeight ??= new MaxShipmentPieceWeightResponseModel();
             set => mMaxPieceWeight = value;
         }

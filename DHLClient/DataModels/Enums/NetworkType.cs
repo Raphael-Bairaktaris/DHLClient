@@ -6,13 +6,13 @@
     public enum NetworkType
     {
         /// <summary>
-        /// Day Definite product
+        /// Day Definite product (DD)
         /// </summary>
-        DD = 0,
+        DayDefinite = 0,
 
         /// <summary>
-        /// Time Definite product
+        /// Time Definite product (TD)
         /// </summary>
-        TD = 1
+        TimeDefinite = 1
     }
 }

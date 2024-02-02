@@ -6,23 +6,23 @@
     public enum SpecialServiceChargeCode
     {
         /// <summary>
-        /// Extra charge
+        /// Extra charge (XCH)
         /// </summary>
-        XCH = 0,
+        ExtraCharge = 0,
 
         /// <summary>
-        /// Fee
+        /// Fee (FEE)
         /// </summary>
-        FEE = 1,
+        Fee = 1,
 
         /// <summary>
-        /// Surcharge
+        /// Surcharge (SCH)
         /// </summary>
-        SCH = 2,
+        Surcharge = 2,
 
         /// <summary>
-        /// Non Revenue Item
+        /// Non Revenue Item (NRI)
         /// </summary>
-        NRI = 3,
+        NonRevenueItem = 3,
     }
 }

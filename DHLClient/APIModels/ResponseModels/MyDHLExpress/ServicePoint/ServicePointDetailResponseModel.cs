@@ -181,8 +181,8 @@ namespace DHLClient
         /// Sub-entity holding the facility address
         /// </summary>
         [JsonProperty("address")]
-        public ServicePointDetailAddressResponseModel Address 
-        { 
+        public ServicePointDetailAddressResponseModel Address
+        {
             get => mAddress ??= new ServicePointDetailAddressResponseModel();
             set => mAddress = value;
         }
@@ -191,8 +191,8 @@ namespace DHLClient
         /// The geographical coordinates of the facility’s location
         /// </summary>
         [JsonProperty("geoLocation")]
-        public ServicePointDetailGeograpgicalLocationResponseModel GeographicLocation 
-        { 
+        public ServicePointDetailGeograpgicalLocationResponseModel GeographicLocation
+        {
             get => mGeographicLocation ??= new ServicePointDetailGeograpgicalLocationResponseModel();
             set => mGeographicLocation = value;
         }
@@ -213,8 +213,8 @@ namespace DHLClient
         /// Array of openingHours entities, each consisting of week day, opening time and closing time.
         /// </summary>
         [JsonProperty("openingHours")]
-        public IEnumerable<ServicePointDetailOpeningHoursResponseModel> OpeningHours 
-        { 
+        public IEnumerable<ServicePointDetailOpeningHoursResponseModel> OpeningHours
+        {
             get => mOpeningHours ?? Enumerable.Empty<ServicePointDetailOpeningHoursResponseModel>();
             set => mOpeningHours = value;
         }
@@ -223,8 +223,8 @@ namespace DHLClient
         /// An entity that lists all capabilities of a Service Point.
         /// </summary>
         [JsonProperty("servicePointCapabilities")]
-        public ServicePointDetailCapabilitiesResponseModel ServicePointCapabilities 
-        { 
+        public ServicePointDetailCapabilitiesResponseModel ServicePointCapabilities
+        {
             get => mServicePointCapabilities ??= new ServicePointDetailCapabilitiesResponseModel();
             set => mServicePointCapabilities = value;
         }
@@ -233,8 +233,8 @@ namespace DHLClient
         /// Information about how the Service Point can be contacted
         /// </summary>
         [JsonProperty("contactDetails")]
-        public ServicePointContactDetailResponseModel ContactDetails 
-        { 
+        public ServicePointContactDetailResponseModel ContactDetails
+        {
             get => mContactDetails ??= new ServicePointContactDetailResponseModel();
             set => mContactDetails = value;
         }
@@ -275,8 +275,8 @@ namespace DHLClient
         /// Shipment Piece Limitations in this Service Point.
         /// </summary>
         [JsonProperty("shipmentLimitationsByPiece")]
-        public ShipmentLimitaionByPieceResponseModel ShipmentLimitationsByPiece 
-        { 
+        public ShipmentLimitaionByPieceResponseModel ShipmentLimitationsByPiece
+        {
             get => mShipmentLimitationsByPiece ??= new ShipmentLimitaionByPieceResponseModel();
             set => mShipmentLimitationsByPiece = value;
         }
@@ -286,8 +286,8 @@ namespace DHLClient
         /// </summary>
         /// <example>XX</example>
         [JsonProperty("chargeCode")]
-        public string ChargeCode 
-        { 
+        public string ChargeCode
+        {
             get => mChargeCode = string.Empty;
             set => mChargeCode = value;
         }
@@ -296,8 +296,8 @@ namespace DHLClient
         /// Partner information (when SVP type is PRT)
         /// </summary>
         [JsonProperty("partner")]
-        public ServicePointDetailPartnerResponseModel Partner 
-        { 
+        public ServicePointDetailPartnerResponseModel Partner
+        {
             get => mPartner ??= new ServicePointDetailPartnerResponseModel();
             set => mPartner = value;
         }
