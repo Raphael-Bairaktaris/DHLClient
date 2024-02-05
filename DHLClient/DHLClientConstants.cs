@@ -130,6 +130,15 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
+        /// Maps the <see cref="CountryDivisionCode"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<CountryDivisionCode, string> CountryDivisionCodeToStringMapper { get; } = new Dictionary<CountryDivisionCode, string>()
+        {
+            { CountryDivisionCode.State, "state"},
+            { CountryDivisionCode.Province, "province" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="CustomsDocumentType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<CustomsDocumentType, string> CustomsDocumentTypeToStringMapper { get; } = new Dictionary<CustomsDocumentType, string>()
@@ -311,6 +320,20 @@ namespace DHLClient
             { DocumentInvoiceType.Waybill, "waybill" },
             { DocumentInvoiceType.CommercialInvoice, "commercial-invoice" },
             { DocumentInvoiceType.CustomsEntry, "customs-entry" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="DocumentType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<DocumentType, string> DocumentTypeToStringMapper { get; } = new Dictionary<DocumentType, string>()
+        {
+            { DocumentType.Invoice, "INV" },
+            { DocumentType.Proforma, "PNV" },
+            { DocumentType.CertificateOfOrigin, "COO" },
+            { DocumentType.CommercialInvoice, "CIN" },
+            { DocumentType.CustomDeclaration, "DCL" },
+            { DocumentType.AirWaybillAndWaybillDocument, "AWB" },
+            { DocumentType.NaftaCertificateOfOrigin, "NAF" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -764,7 +787,7 @@ namespace DHLClient
         /// <summary>
         /// Maps the <see cref="TaxIdentifier"/>s to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<TaxIdentifier, string> TaxIdentiferToStringMapper { get; } = new Dictionary<TaxIdentifier, string>()
+        public static IReadOnlyDictionary<TaxIdentifier, string> TaxIdentifierToStringMapper { get; } = new Dictionary<TaxIdentifier, string>()
         {
             { TaxIdentifier.ValueAddedTax, "VAT" },
             { TaxIdentifier.EmployerIdentificationNumber, "EIN" },

@@ -1,4 +1,4 @@
-﻿using DHLClient.DataModels.Enums;
+﻿using Newtonsoft.Json;
 
 namespace DHLClient
 {
@@ -12,6 +12,8 @@ namespace DHLClient
         /// <summary>
         /// The name of the provider organization handling the delivery in the destination country.
         /// </summary>
+        [JsonProperty("destinationProvider")]
+        [JsonConverter(typeof(DestinationProviderToStringJsonConverter))]
         public DestinationProvider DestinationProvider { get; set; }
 
         #endregion

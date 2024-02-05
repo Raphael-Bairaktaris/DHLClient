@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipment estimated delivery time frame response
     /// </summary>
-    public class ShipmentEstimatedDeliveryTimeFrameResponseModel
+    public class ShipmentDetailEstimatedDeliveryTimeFrameResponseModel
     {
         #region Public Properties
 
@@ -30,7 +30,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentEstimatedDeliveryTimeFrameResponseModel() : base()
+        public ShipmentDetailEstimatedDeliveryTimeFrameResponseModel() : base()
         {
 
         }

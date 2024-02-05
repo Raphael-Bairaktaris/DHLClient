@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipment tracking detail response
     /// </summary>
-    public class ShipmentTrackingDetailsResponseModel
+    public class ShipmentDetailResponseModel
     {
         #region MyRegion
 
@@ -17,12 +17,12 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Origin"/> property
         /// </summary>
-        private ShipmentLocationResponseModel? mOrigin;
+        private ShipmentDetailOriginResponseModel? mOrigin;
 
         /// <summary>
         /// The member of the <see cref="Destination"/> property
         /// </summary>
-        private ShipmentLocationResponseModel? mDestination;
+        private ShipmentDetailOriginResponseModel? mDestination;
 
         /// <summary>
         /// The member of the <see cref="Status"/> property
@@ -32,7 +32,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="EstimatedDeliveryTimeFrameResponseModel"/> property
         /// </summary>
-        private ShipmentEstimatedDeliveryTimeFrameResponseModel? mEstimatedDeliveryTimeFrame;
+        private ShipmentDetailEstimatedDeliveryTimeFrameResponseModel? mEstimatedDeliveryTimeFrame;
 
         /// <summary>
         /// The member of the <see cref="EstimatedTimeOfDeliveryRemark"/> property
@@ -77,6 +77,7 @@ namespace DHLClient
         /// <summary>
         /// The Id
         /// </summary>
+        [JsonProperty("id")]
         public string Id
         {
             get => mId ?? string.Empty;
@@ -87,15 +88,16 @@ namespace DHLClient
         /// The shipment service type
         /// </summary>
         [JsonProperty("service")]
+        [JsonConverter(typeof(ShipmentServiceTypeToStringJsonConverter))]
         public ShipmentServiceType Service { get; set; }
 
         /// <summary>
         /// The shipment origin
         /// </summary>
         [JsonProperty("origin")]
-        public ShipmentLocationResponseModel Origin
+        public ShipmentDetailOriginResponseModel Origin
         {
-            get => mOrigin ??= new ShipmentLocationResponseModel();
+            get => mOrigin ??= new ShipmentDetailOriginResponseModel();
             set => mOrigin = value;
         }
 
@@ -103,9 +105,9 @@ namespace DHLClient
         /// The shipment destination
         /// </summary>
         [JsonProperty("destination")]
-        public ShipmentLocationResponseModel Destination
+        public ShipmentDetailOriginResponseModel Destination
         {
-            get => mDestination ??= new ShipmentLocationResponseModel();
+            get => mDestination ??= new ShipmentDetailOriginResponseModel();
             set => mDestination = value;
         }
 
@@ -120,23 +122,29 @@ namespace DHLClient
         }
 
         /// <summary>
+        /// Shipment pickup date
+        /// </summary>
+        [JsonProperty("pickupDate")]
+        public DateOnly PickupDate { get; set; }
+
+        /// <summary>
         /// The estimated time of delivery
         /// </summary>
         [JsonProperty("estimatedTimeOfDelivery")]
         public DateTimeOffset? EstimatedTimeOfDelivery { get; set; }
 
         /// <summary>
-        /// The estimated delivery time frame
+        /// A term when shipment is expected to arrive
         /// </summary>
         [JsonProperty("estimatedDeliveryTimeFrame")]
-        public ShipmentEstimatedDeliveryTimeFrameResponseModel EstimatedDeliveryTimeFrameResponseModel
+        public ShipmentDetailEstimatedDeliveryTimeFrameResponseModel EstimatedDeliveryTimeFrameResponseModel
         {
-            get => mEstimatedDeliveryTimeFrame ??= new ShipmentEstimatedDeliveryTimeFrameResponseModel();
+            get => mEstimatedDeliveryTimeFrame ??= new ShipmentDetailEstimatedDeliveryTimeFrameResponseModel();
             set => mEstimatedDeliveryTimeFrame = value;
         }
 
         /// <summary>
-        /// The estimated time of delivery remark
+        /// Human-readable description of the estimated delivery time
         /// </summary>
         [JsonProperty("estimatedTimeOfDeliveryRemark")]
         public string EstimatedTimeOfDeliveryRemark
@@ -146,7 +154,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The service URL
+        /// Custom link to BU tracking service
         /// </summary>
         /// <remarks> http://www.dhl.de/de/privatkunden.html?piececode=7777777770 </remarks>
         [JsonProperty("serviceUrl")]
@@ -157,7 +165,8 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The rerouted URL
+        /// Custom link to BU rerouting service, if available for the current status of the shipment
+
         /// </summary>
         /// <remarks> https://www.dhl.de/de/privatkunden.html?piececode=7777777770&verfuegen_selected_tab=FIRST </remarks>
         [JsonProperty("rerouteUrl")]
@@ -166,6 +175,12 @@ namespace DHLClient
             get => mRerouteURL ?? string.Empty;
             set => mRerouteURL = value;
         }
+
+        /// <summary>
+        /// Custom link to BU rerouting service, if available for the current status of the shipment
+        /// </summary>
+        [JsonProperty("returnFlag")]
+        public bool ShouldReturnFlag { get; set; }
 
         /// <summary>
         /// The shipment details
@@ -204,7 +219,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentTrackingDetailsResponseModel() : base()
+        public ShipmentDetailResponseModel() : base()
         {
 
         }

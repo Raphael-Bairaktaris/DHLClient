@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a shipment event location response 
     /// </summary>
-    public class ShipmentEventsLocationResponseModel : ShipmentLocationAddressResponseModel
+    public class ShipmentEventsLocationResponseModel : ShipmentDetailOriginAddressResponseModel
     {
         #region Constructors
 

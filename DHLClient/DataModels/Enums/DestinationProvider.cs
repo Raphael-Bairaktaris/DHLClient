@@ -1,4 +1,4 @@
-﻿namespace DHLClient.DataModels.Enums
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the destination provider type

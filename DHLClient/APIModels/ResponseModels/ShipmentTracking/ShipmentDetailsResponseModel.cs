@@ -10,11 +10,6 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="Carrier"/> property
-        /// </summary>
-        private ShipmentDetailsCarrierResponseModel? mCarrier;
-
-        /// <summary>
         /// The member of the <see cref="Product"/> property
         /// </summary>
         private ShipmentDetailsProductResponseModel? mProduct;
@@ -33,6 +28,11 @@ namespace DHLClient
         /// The member of the <see cref="Sender"/> property
         /// </summary>
         private ShipmentDetailsParticipantResponseModel? mSender;
+
+        /// <summary>
+        /// The member of the <see cref="Carrier"/> property
+        /// </summary>
+        private ShipmentDetailsCarrierResponseModel? mCarrier;
 
         /// <summary>
         /// The member of the <see cref="ProofOfDelivery"/> property
@@ -62,16 +62,6 @@ namespace DHLClient
         #endregion
 
         #region Public Properties
-
-        /// <summary>
-        /// The carrier
-        /// </summary>
-        [JsonProperty("carrier")]
-        public ShipmentDetailsCarrierResponseModel? Carrier
-        {
-            get => mCarrier ?? new ShipmentDetailsCarrierResponseModel();
-            set => mCarrier = value;
-        }
 
         /// <summary>
         /// The product
@@ -111,6 +101,16 @@ namespace DHLClient
         {
             get => mSender ??= new ShipmentDetailsParticipantResponseModel();
             set => mSender = value;
+        }
+
+        /// <summary>
+        /// The carrier
+        /// </summary>
+        [JsonProperty("carrier")]
+        public ShipmentDetailsCarrierResponseModel? Carrier
+        {
+            get => mCarrier ?? new ShipmentDetailsCarrierResponseModel();
+            set => mCarrier = value;
         }
 
         /// <summary>

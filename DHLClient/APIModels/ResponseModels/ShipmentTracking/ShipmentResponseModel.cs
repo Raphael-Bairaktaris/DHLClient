@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipment tracking response
     /// </summary>
-    public class ShipmentTrackingResponseModel
+    public class ShipmentResponseModel
     {
         #region Private Members
 
@@ -37,7 +37,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Shipments"/> property
         /// </summary>
-        private ShipmentTrackingDetailsResponseModel? mShipments;
+        private ShipmentDetailResponseModel? mShipments;
 
         /// <summary>
         /// The member of the <see cref="PossibleAdditionalShipmentsURL"/> property
@@ -101,9 +101,9 @@ namespace DHLClient
         /// The shipments details
         /// </summary>
         [JsonProperty("shipments")]
-        public ShipmentTrackingDetailsResponseModel Shipments
+        public ShipmentDetailResponseModel Shipments
         {
-            get => mShipments ??= new ShipmentTrackingDetailsResponseModel();
+            get => mShipments ??= new ShipmentDetailResponseModel();
             set => mShipments = value;
         }
 
@@ -124,7 +124,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentTrackingResponseModel() : base()
+        public ShipmentResponseModel() : base()
         {
 
         }

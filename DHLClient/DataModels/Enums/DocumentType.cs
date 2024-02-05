@@ -6,38 +6,38 @@
     public enum DocumentType
     {
         /// <summary>
-        /// Invoice
+        /// Invoice (INV)
         /// </summary>
-        INV = 0,
+        Invoice = 0,
 
         /// <summary>
-        /// Proforma
+        /// Proforma (PNV)
         /// </summary>
-        PNV = 1,
+        Proforma = 1,
 
         /// <summary>
-        /// Certificate Of Origin
+        /// Certificate Of Origin (COO)
         /// </summary>
-        COO = 2,
+        CertificateOfOrigin = 2,
 
         /// <summary>
-        /// Commercial Invoice
+        /// Commercial Invoice (CIN)
         /// </summary>
-        CIN = 3,
+        CommercialInvoice = 3,
 
         /// <summary>
-        /// Custom Declaration
+        /// Custom Declaration (DCL)
         /// </summary>
-        DCL = 4,
+        CustomDeclaration = 4,
 
         /// <summary>
-        /// Air Waybill and Waybill Document
+        /// Air Waybill and Waybill Document (AWB)
         /// </summary>
-        AWB = 5,
+        AirWaybillAndWaybillDocument = 5,
 
         /// <summary>
-        /// Nafta Certificate of Origin
+        /// Nafta Certificate of Origin (NAF)
         /// </summary>
-        NAF = 6
+        NaftaCertificateOfOrigin = 6
     }
 }

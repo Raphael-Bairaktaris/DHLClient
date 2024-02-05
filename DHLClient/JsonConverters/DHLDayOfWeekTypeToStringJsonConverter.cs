@@ -3,14 +3,14 @@
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="DHLDayOfWeek"/> to <see cref="string"/>
     /// </summary>
-    public class DayOfWeekTypeToStringJsonConverter : BaseEnumEnumerableJsonConverter<DHLDayOfWeek>
+    public class DHLDayOfWeekTypeToStringJsonConverter : BaseEnumEnumerableJsonConverter<DHLDayOfWeek>
     {
         #region Constructors
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public DayOfWeekTypeToStringJsonConverter()
+        public DHLDayOfWeekTypeToStringJsonConverter()
         {
 
         }

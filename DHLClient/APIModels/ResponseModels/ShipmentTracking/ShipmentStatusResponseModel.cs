@@ -17,7 +17,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Location"/> property
         /// </summary>
-        private ShipmentLocationResponseModel? mLocation;
+        private ShipmentDetailOriginResponseModel? mLocation;
 
         /// <summary>
         /// The member of the <see cref="Status"/> property
@@ -28,11 +28,6 @@ namespace DHLClient
         /// The member of the <see cref="Description"/> property
         /// </summary>
         private string? mDescription;
-
-        /// <summary>
-        /// The member of the <see cref="PlaceIds"/> property
-        /// </summary>
-        private IEnumerable<string>? mPlaceIds;
 
         /// <summary>
         /// The member of the <see cref="Remark"/> property
@@ -62,20 +57,22 @@ namespace DHLClient
         /// The location
         /// </summary>
         [JsonProperty("location")]
-        public ShipmentLocationResponseModel Location
+        public ShipmentDetailOriginResponseModel Location
         {
-            get => mLocation ??= new ShipmentLocationResponseModel();
+            get => mLocation ??= new ShipmentDetailOriginResponseModel();
             set => mLocation = value;
         }
 
         /// <summary>
-        /// The status code
+        /// Code of the status (high-level grouping statuses)
         /// </summary>
+        /// <example>delivered</example>
         [JsonProperty("statusCode")]
+        [JsonConverter(typeof(StatusCodeTypeToStringJsonConverter))]
         public StatusCodeType? StatusCode { get; set; }
 
         /// <summary>
-        /// The shipment status
+        /// Short description of the status - title
         /// </summary>
         [JsonProperty("status")]
         public string Status
@@ -95,17 +92,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The place ids
-        /// </summary>
-        [JsonProperty("placeIds")]
-        public IEnumerable<string> PlaceIds
-        {
-            get => mPlaceIds ?? Enumerable.Empty<string>();
-            set => mPlaceIds = value;
-        }
-
-        /// <summary>
-        /// The remark
+        /// Remark regarding the shipment status
         /// </summary>
         /// <example> The shipment is pending completion of customs inspection. </example>
         [JsonProperty("remark")]
@@ -116,7 +103,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The next steps
+        /// Description of the next steps
         /// </summary>
         [JsonProperty("nextSteps")]
         public IEnumerable<string> NextSteps

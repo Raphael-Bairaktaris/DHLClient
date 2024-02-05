@@ -7,6 +7,16 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
+        /// The member of the <see cref="DeliveryMethodMark"/> property
+        /// </summary>
+        private string? mDeliveryMethodMark;
+
+        /// <summary>
+        /// The member of the <see cref="ProductCode"/> property
+        /// </summary>
+        private string? mProductCode;
+
+        /// <summary>
         /// The member of the <see cref="ProductName"/> property
         /// </summary>
         private string? mProductName;
@@ -14,6 +24,26 @@ namespace DHLClient
         #endregion
 
         #region Public Properties
+
+        /// <summary>
+        /// Specific detail of product
+        /// </summary>
+        /// <example>D2P</example>
+        public string DeliveryMethodMark 
+        { 
+            get => mDeliveryMethodMark ?? string.Empty;
+            set => mDeliveryMethodMark = value;
+        }
+
+        /// <summary>
+        /// The product code
+        /// </summary>
+        [JsonProperty("productCode")]
+        public string ProductCode 
+        { 
+            get => mProductCode ?? string.Empty;
+            set => mProductCode = value;
+        }
 
         /// <summary>
         /// The product name
