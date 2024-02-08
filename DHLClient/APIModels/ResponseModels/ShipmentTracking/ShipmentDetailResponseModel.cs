@@ -40,16 +40,6 @@ namespace DHLClient
         private string? mEstimatedTimeOfDeliveryRemark;
 
         /// <summary>
-        /// The member of the <see cref="ServiceUrl"/> property
-        /// </summary>
-        private string? mServiceURL;
-
-        /// <summary>
-        /// The member of the <see cref="RerouteURL"/> property
-        /// </summary>
-        private string? mRerouteURL;
-
-        /// <summary>
         /// The member of the <see cref="Details"/> property
         /// </summary>
         private ShipmentDetailsResponseModel? mDetails;
@@ -158,23 +148,14 @@ namespace DHLClient
         /// </summary>
         /// <remarks> http://www.dhl.de/de/privatkunden.html?piececode=7777777770 </remarks>
         [JsonProperty("serviceUrl")]
-        public string ServiceURL
-        {
-            get => mServiceURL ?? string.Empty;
-            set => mServiceURL = value;
-        }
+        public Uri ServiceURL { get; set; }
 
         /// <summary>
         /// Custom link to BU rerouting service, if available for the current status of the shipment
-
         /// </summary>
         /// <remarks> https://www.dhl.de/de/privatkunden.html?piececode=7777777770&verfuegen_selected_tab=FIRST </remarks>
         [JsonProperty("rerouteUrl")]
-        public string RerouteURL
-        {
-            get => mRerouteURL ?? string.Empty;
-            set => mRerouteURL = value;
-        }
+        public Uri RerouteURL { get; set; }
 
         /// <summary>
         /// Custom link to BU rerouting service, if available for the current status of the shipment
@@ -193,7 +174,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The shipment events
+        /// Historical list of events & timestamps
         /// </summary>
         [JsonProperty("events")]
         public IEnumerable<ShipmentEventsResponseModel> Events
@@ -203,7 +184,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The possible additional shipments URL
+        /// TAn array of business services, where should be potentially shipment found
         /// </summary>
         [JsonProperty("possibleAdditionalShipmentsURL")]
         public IEnumerable<string> PossibleAdditionalShipmentsURL

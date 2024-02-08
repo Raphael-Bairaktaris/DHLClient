@@ -12,6 +12,7 @@
         /// </summary>
         /// <example> DE </example>
         [ArgumentName("countryCode")]
+        [QueryArgumentConverter<CountryCodeQueryArgymentConverter>]
         public CountryCode? CountryCode { get; set; }
 
         /// <summary>
@@ -42,6 +43,7 @@
         /// The available providerTypes are: express (DHL Express Global), parcel (eCommerce Solutions Europe and Post & Parcel Germany)
         /// </summary>
         [ArgumentName("providerType")]
+        [QueryArgumentConverter<ProviderTypeQueryArgumentConverter>]
         public ProviderType? ProviderType { get; set; }
 
         /// <summary>
@@ -50,6 +52,7 @@
         /// </summary>
         /// <example> servicepoint, locker, postoffice, postbank, pobox </example>
         [ArgumentName("locationType")]
+        [QueryArgumentConverter<LocationTypeQueryArgumentConverter>]
         public LocationType? LocationType { get; set; }
 
         /// <summary>
@@ -57,6 +60,7 @@
         /// only locations with at least all of the serviceTypes requested. Only exception of this behaviour is parcel:pick-up-all, which includes any of the three parcel:pick-up services.
         /// </summary>
         [ArgumentName("serviceType")]
+        [QueryArgumentConverter<ServiceTypeQueryArgumentConverter>]
         public ServiceType? ServiceType { get; set; }
 
         /// <summary>

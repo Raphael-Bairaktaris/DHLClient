@@ -3,7 +3,7 @@
     /// <summary>
     /// Provides enumeration over the type code
     /// </summary>
-    public enum TypeCode
+    public enum BreakdownType
     {
         /// <summary>
         /// Total tax for the shipment (STTXA)

@@ -1,9 +1,11 @@
-﻿namespace DHLClient
+﻿using Newtonsoft.Json;
+
+namespace DHLClient
 {
     /// <summary>
     /// Represents a shipment details routes shipping location response
     /// </summary>
-    public class ShipmentDetailsRoutesShippingLocationResponseModel
+    public class ShipmentDetailsShippingRouteLocationResponseModel
     {
         #region Private Members
 
@@ -19,6 +21,7 @@
         /// <summary>
         /// The location Name
         /// </summary>
+        [JsonProperty("locationName")]
         public string LocationName
         {
             get => mLocationName ?? string.Empty;
@@ -32,7 +35,7 @@
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentDetailsRoutesShippingLocationResponseModel() : base()
+        public ShipmentDetailsShippingRouteLocationResponseModel() : base()
         {
 
         }

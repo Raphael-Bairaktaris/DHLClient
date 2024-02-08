@@ -15,11 +15,6 @@ namespace DHLClient
         private IEnumerable<ServicePointLocationResponseModel>? mLocations;
 
         /// <summary>
-        /// The member of the <see cref="URL"/> property
-        /// </summary>
-        private string? mURL;
-
-        /// <summary>
         /// The member of the <see cref="Name"/> property
         /// </summary>
         private string? mName;
@@ -55,6 +50,13 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
+        /// The `self` link relation - globally unique identifier of this DHL Service Point location.
+        /// </summary>
+        /// <example>/locations/8003-4103535</example>
+        [JsonProperty("url")]
+        public Uri? Url { get; set; }
+
+        /// <summary>
         /// The locations
         /// </summary>
         [JsonProperty("locations")]
@@ -62,16 +64,6 @@ namespace DHLClient
         {
             get => mLocations ?? Enumerable.Empty<ServicePointLocationResponseModel>();
             set => mLocations = value;
-        }
-
-        /// <summary>
-        /// The `self` link relation - globally unique identifier of this DHL Service Point location.
-        /// </summary>
-        [JsonProperty("url")]
-        public string URL
-        {
-            get => mURL ?? string.Empty;
-            set => mURL = value;
         }
 
         /// <summary>
@@ -91,7 +83,7 @@ namespace DHLClient
         public double Distance { get; set; }
 
         /// <summary>
-        /// An object of objects
+        /// The place
         /// </summary>
         [JsonProperty("place")]
         public ServicePointLocationByPlaceResponseModel Place
@@ -104,6 +96,7 @@ namespace DHLClient
         /// The list of services available at the DHL Service Point location.
         /// </summary>
         [JsonProperty("serviceTypes")]
+        [JsonConverter(typeof(ServiceTypeEnumEnumerableToStringJsonConverter))] 
         public IEnumerable<ServiceType> ServiceTypes
         {
             get => mServiceTypes ?? Enumerable.Empty<ServiceType>();
@@ -120,6 +113,13 @@ namespace DHLClient
             get => mAverageCapacityDayOfWeek ??= new ServicePointLocationAverageCapacityDayOfWeekResponseModel();
             set => mAverageCapacityDayOfWeek = value;
         }
+
+        /// <summary>
+        /// Information on the average availability of locker capacity (only available in Germany).
+        /// </summary>
+        [JsonProperty("availableCapacity")]
+        [JsonConverter (typeof(CapacityTypeToStringJsonConverter))]
+        public CapacityType AvailableCapacity { get; set; }
 
         /// <summary>
         /// List of the opening hours of the DHL Service Point location.

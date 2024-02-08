@@ -4,7 +4,7 @@ namespace DHLClient
     /// <summary>
     /// The arguments used for rating a piece of shipment
     /// </summary>
-    public class RatingShipmentAPIArgs : BaseMyDHLAPIArgs
+    public class RetrieveShipmentRateAPIArgs : BaseMyDHLAPIArgs
     {
         #region Public Properties
 
@@ -19,6 +19,7 @@ namespace DHLClient
         /// </summary>
         /// <remarks>https://gs1.org/voc/Country, Alpha-2 Code</remarks>
         [ArgumentName("originCountryCode")]
+        [QueryArgumentConverter<CountryCodeQueryArgymentConverter>]
         public CountryCode? OriginCountryCode { get; set; }
 
         /// <summary>
@@ -39,6 +40,7 @@ namespace DHLClient
         /// </summary>
         /// <remarks>https://gs1.org/voc/Country, Alpha-2 Code</remarks>
         [ArgumentName("destinationCountryCode")]
+        [QueryArgumentConverter<CountryCodeQueryArgymentConverter>]
         public CountryCode? DestinationCountryCode { get; set; }
 
         /// <summary>
@@ -95,6 +97,7 @@ namespace DHLClient
         /// This single value corresponds to the units of weight and measurement which are used throughout the message processing.
         /// </summary>
         [ArgumentName("unitOfMeasurement")]
+        [QueryArgumentConverter<MeasurementUnitQueryArgumentConverter>]
         public MeasurmentUnit UnitOfMeasurement { get; set; }
 
         /// <summary>
@@ -125,6 +128,7 @@ namespace DHLClient
         /// The estimated Delivery Date Type.
         /// </summary>
         [ArgumentName("estimatedDeliveryDateType")]
+        [QueryArgumentConverter<DeliveryTypeQueryArgumentConverter>]
         public DeliveryType EstimatedDeliveryDateType { get; set; }
 
         #endregion
@@ -134,7 +138,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public RatingShipmentAPIArgs() : base()
+        public RetrieveShipmentRateAPIArgs() : base()
         {
 
         }

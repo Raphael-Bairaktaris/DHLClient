@@ -9,16 +9,24 @@ namespace DHLClient
     {
         #region Public Properties
 
+        ///// <summary>
+        ///// A secret scope of protected or sensitive information
+        ///// </summary>
+        ///// <example>public</example>
+        //[JsonProperty("@scope")]
+        //public DataClassification Scope { get; set; }
+
         /// <summary>
-        /// The number
+        /// A value of reference
         /// </summary>
         [JsonProperty("number")]
         public double Number { get; set; }
 
         /// <summary>
-        /// The type
+        /// Type of reference
         /// </summary>
         [JsonProperty("type")]
+        [JsonConverter(typeof(ReferenceTypeToStringJsonConverter))]
         public ReferenceType Type { get; set; }
 
         #endregion

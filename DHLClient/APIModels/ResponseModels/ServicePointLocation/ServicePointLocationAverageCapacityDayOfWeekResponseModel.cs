@@ -11,12 +11,14 @@ namespace DHLClient
         /// </summary>
         /// <remarks> https://schema.org/DayOfWeek </remarks>
         [JsonProperty("dayOfWeek")]
-        public DayOfWeek DayOfWeek { get; set; }
+        [JsonConverter(typeof(DHLDayOfWeekTypeToStringJsonConverter))]
+        public DHLDayOfWeek DayOfWeek { get; set; }
 
         /// <summary>
         /// Information on the average availability of locker capacity (only available in Germany).
         /// </summary>
         [JsonProperty("capacity")]
+        [JsonConverter(typeof(CapacityTypeToStringJsonConverter))]
         public CapacityType Capacity { get; set; }
         #endregion
 

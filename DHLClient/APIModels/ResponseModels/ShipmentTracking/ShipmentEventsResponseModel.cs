@@ -39,19 +39,26 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
-        /// The event location
+        /// A combination of date and time of day
+        /// </summary>
+        [JsonProperty("timestamp")]
+        public DateTime Timestamp { get; set; }
+
+        /// <summary>
+        /// The location of object
         /// </summary>
         [JsonProperty("location")]
         public ShipmentEventsLocationResponseModel? Location { get; set; }
 
         /// <summary>
-        /// The status code
+        /// Code of the status (high-level grouping statuses)
         /// </summary>
         [JsonProperty("statusCode")]
+        [JsonConverter(typeof(StatusCodeTypeToStringJsonConverter))]
         public StatusCodeType StatusCode { get; set; }
 
         /// <summary>
-        /// The status
+        /// Short description of the status - title
         /// </summary>
         /// <example> Customs inspection. </example>
         [JsonProperty("status")]
@@ -62,7 +69,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The description
+        /// Human-readable detailed description
         /// </summary>
         /// <example> Package delivered. </example>
         [JsonProperty("description")]
@@ -70,16 +77,6 @@ namespace DHLClient
         {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
-        }
-
-        /// <summary>
-        /// the place ids
-        /// </summary>
-        [JsonProperty("placeIds")]
-        public IEnumerable<string> PlaceIds
-        {
-            get => mPlaceIds ?? Enumerable.Empty<string>();
-            set => mPlaceIds = value;
         }
 
         /// <summary>
@@ -102,6 +99,16 @@ namespace DHLClient
         {
             get => mNextSteps ?? Enumerable.Empty<string>();
             set => mNextSteps = value;
+        }
+
+        /// <summary>
+        /// Ids of all the items or pieces in the shipment
+        /// </summary>
+        [JsonProperty("placeIds")]
+        public IEnumerable<string> PlaceIds
+        {
+            get => mPlaceIds ?? Enumerable.Empty<string>();
+            set => mPlaceIds = value;
         }
 
         #endregion

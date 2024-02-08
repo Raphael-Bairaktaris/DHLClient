@@ -37,6 +37,11 @@ namespace DHLClient
         private ProductWeightResponseModel? mWeight;
 
         /// <summary>
+        /// The member of the <see cref="TotalPrice"/> property
+        /// </summary>
+        private IEnumerable<ProductTotalPriceResponseModel>? mTotalPrice;
+
+        /// <summary>
         /// the member of the <see cref="Breakdown"/> property
         /// </summary>
         private ProductBreakdownResponseModel? mBreakdown;
@@ -105,6 +110,7 @@ namespace DHLClient
         /// The country code for the local service used
         /// </summary>
         [JsonProperty("localProductCountryCode")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode LocalProductCountryCode { get; set; }
 
         /// <summary>
@@ -134,8 +140,25 @@ namespace DHLClient
         }
 
         /// <summary>
+        /// The product total price
+        /// </summary>
+        [JsonProperty("totalPrice")]
+        public IEnumerable<ProductTotalPriceResponseModel> TotalPrice 
+        { 
+            get => mTotalPrice ?? Enumerable.Empty<ProductTotalPriceResponseModel>();
+            set => mTotalPrice = value;
+        }
+
+        /// <summary>
+        /// The total price breakdown
+        /// </summary>
+        [JsonProperty("totalPriceBreakdown")]
+        public IEnumerable<ProductTotalPriceBreakdownResponseModel> TotalPriceBreakdown { get; set; }
+
+        /// <summary>
         /// The product breakdown
         /// </summary>
+        [JsonProperty("breakdown")]
         public ProductBreakdownResponseModel? Breadkdown
         {
             get => mBreakdown ??= new ProductBreakdownResponseModel();

@@ -7,6 +7,25 @@ namespace DHLClient
     /// </summary>
     public class ShipmentDetailDimensionResponseModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="Width"/> property
+        /// </summary>
+        private ShipmentDetailDimensionAttributeResponseModel mWidth;
+
+        /// <summary>
+        /// The member of the <see cref="Height"/> property
+        /// </summary>
+        private ShipmentDetailDimensionAttributeResponseModel mHeight;
+
+        /// <summary>
+        /// The member of the <see cref="Length"/> property
+        /// </summary>
+        private ShipmentDetailDimensionAttributeResponseModel mLength;
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
@@ -14,21 +33,33 @@ namespace DHLClient
         /// </summary>
         /// <example>15</example>
         [JsonProperty("width")]
-        public double Width { get; set; }
+        public ShipmentDetailDimensionAttributeResponseModel Width 
+        { 
+            get => mWidth ??= new ShipmentDetailDimensionAttributeResponseModel();
+            set => mWidth = value;
+        }
 
         /// <summary>
         /// The height
         /// </summary>
         /// <example>40</example>
         [JsonProperty("height")]
-        public double Height { get; set; }
+        public ShipmentDetailDimensionAttributeResponseModel Height
+        {
+            get => mHeight ??= new ShipmentDetailDimensionAttributeResponseModel();
+            set => mHeight = value;
+        }
 
         /// <summary>
         /// The length
         /// </summary>
         /// <example>15</example>
         [JsonProperty("length")]
-        public double Length { get; set; }
+        public ShipmentDetailDimensionAttributeResponseModel Length
+        {
+            get => mLength ??= new ShipmentDetailDimensionAttributeResponseModel();
+            set => mLength = value;
+        }
 
         #endregion
 

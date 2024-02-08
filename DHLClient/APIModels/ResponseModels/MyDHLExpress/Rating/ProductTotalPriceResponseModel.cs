@@ -18,6 +18,7 @@ namespace DHLClient
         /// </list>
         /// </summary>
         [JsonProperty("currencyType")]
+        [JsonConverter(typeof(CurrencyTypeToStringJsonConverter))]
         public CurrencyType CurrencyType { get; set; }
 
         /// <summary>

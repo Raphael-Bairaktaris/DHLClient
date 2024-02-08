@@ -10,11 +10,6 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="Location"/> property
-        /// </summary>
-        private IEnumerable<ServicePointLocationByIdsResponseModel>? mLocation;
-
-        /// <summary>
         /// The member of the <see cref="Keyword"/> property
         /// </summary>
         private string? mKeyword;
@@ -33,9 +28,8 @@ namespace DHLClient
 
         #region Public Properties
 
-
         /// <summary>
-        /// The location
+        /// One location can be known within different business units (providerTypes). They will be known under a unique ID within each business unit domain, as provided.
         /// </summary>
         [JsonProperty("location")]
         public IEnumerable<ServicePointLocationByIdsResponseModel> Location
@@ -72,11 +66,8 @@ namespace DHLClient
         /// </summary>
         /// <example> servicepoint </example>
         [JsonProperty("type")]
-        public IEnumerable<LocationType> Type
-        {
-            get => mType ?? Enumerable.Empty<LocationType>();
-            set => mType = value;
-        }
+        [JsonConverter(typeof(LocationTypeToStringJsonConverter))]
+        public LocationType Type { get; set; }
 
         /// <summary>
         /// Lean lockers can only be operated with a mobile phone.

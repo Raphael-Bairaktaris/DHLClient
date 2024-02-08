@@ -3,9 +3,9 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a shipment details routes airport of destination response
+    /// Represents a shipment details routes airport of departure response
     /// </summary>
-    public class ShipmentDetailsRoutesAirportOfDestinationResponseModel
+    public class ShipmentDetailsRoutesAirportResponseModel
     {
         #region Private Members
 
@@ -13,6 +13,11 @@ namespace DHLClient
         /// The member of the <see cref="LocationName"/> property
         /// </summary>
         private string? mLocationName;
+
+        /// <summary>
+        /// The member of the <see cref="LocationCode"/> property
+        /// </summary>
+        private string? mLocationCode;
 
         #endregion
 
@@ -31,12 +36,19 @@ namespace DHLClient
         /// <summary>
         /// The location code
         /// </summary>
-        public ShipmentDetailsAirportOfDestinationLocationCodeResponseModel? LocationCode { get; set; }
+        [JsonProperty("locationCode")]
+        public string LocationCode
+        {
+            get => mLocationCode ??= string.Empty;
+            set => mLocationCode = value;
+        }
 
         /// <summary>
-        /// The country code
+        /// Airport of departure/destination ISO country code
         /// </summary>
-        public ShipmentDetailsAirportOfDestinationCountryCodeResponseModel? CountryCode { get; set; }
+        [JsonProperty("countryCode")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
+        public CountryCode CountryCode { get; set; }
 
         #endregion
 
@@ -45,7 +57,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentDetailsRoutesAirportOfDestinationResponseModel() : base()
+        public ShipmentDetailsRoutesAirportResponseModel() : base()
         {
 
         }

@@ -22,17 +22,17 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Receiver"/> property
         /// </summary>
-        private ShipmentDetailsParticipantResponseModel? mReceiver;
+        private ShipmentDetailsEntityResponseModel? mReceiver;
 
         /// <summary>
         /// The member of the <see cref="Sender"/> property
         /// </summary>
-        private ShipmentDetailsParticipantResponseModel? mSender;
+        private ShipmentDetailsEntityResponseModel? mSender;
 
         /// <summary>
         /// The member of the <see cref="Carrier"/> property
         /// </summary>
-        private ShipmentDetailsCarrierResponseModel? mCarrier;
+        private ShipmentDetailsEntityResponseModel? mCarrier;
 
         /// <summary>
         /// The member of the <see cref="ProofOfDelivery"/> property
@@ -55,6 +55,11 @@ namespace DHLClient
         private IEnumerable<ShipmentDetailsReferencesResponseModel>? mReferences;
 
         /// <summary>
+        /// The member of the <see cref="ControlledDataCodes"/> property
+        /// </summary>
+        private IEnumerable<string> mControlledDataCodes;
+
+        /// <summary>
         /// The member of the <see cref="DGFRoutes"/> property
         /// </summary>
         private ShipmentDetailsDGFRoutesResponseModel? mDGFRoutes;
@@ -64,7 +69,7 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
-        /// The product
+        /// Offered product or service
         /// </summary>
         [JsonProperty("product")]
         public ShipmentDetailsProductResponseModel? Product
@@ -74,7 +79,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The destination provider
+        /// The service provider, service operator, or service performer
         /// </summary>
         [JsonProperty("provider")]
         public ShipmentDetailsProviderResponseModel? Provider
@@ -84,37 +89,37 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The receiver
+        /// A real organization or personal entity, if type is not specified, a Organization implementation is used
         /// </summary>
         [JsonProperty("receiver")]
-        public ShipmentDetailsParticipantResponseModel? Receiver
+        public ShipmentDetailsEntityResponseModel? Receiver
         {
-            get => mReceiver ??= new ShipmentDetailsParticipantResponseModel();
+            get => mReceiver ??= new ShipmentDetailsEntityResponseModel();
             set => mReceiver = value;
         }
 
         /// <summary>
-        /// The sender
+        /// A real organization or personal entity, if type is not specified, a Organization implementation is used
         /// </summary>
         [JsonProperty("sender")]
-        public ShipmentDetailsParticipantResponseModel? Sender
+        public ShipmentDetailsEntityResponseModel? Sender
         {
-            get => mSender ??= new ShipmentDetailsParticipantResponseModel();
+            get => mSender ??= new ShipmentDetailsEntityResponseModel();
             set => mSender = value;
         }
 
         /// <summary>
-        /// The carrier
+        /// A real organization or personal entity, if type is not specified, a Organization implementation is used
         /// </summary>
         [JsonProperty("carrier")]
-        public ShipmentDetailsCarrierResponseModel? Carrier
+        public ShipmentDetailsEntityResponseModel? Carrier
         {
-            get => mCarrier ?? new ShipmentDetailsCarrierResponseModel();
+            get => mCarrier ?? new ShipmentDetailsEntityResponseModel();
             set => mCarrier = value;
         }
 
         /// <summary>
-        /// The proof of delivery
+        /// An acknowledgment that an order successfully arrived at its intended destination
         /// </summary>
         [JsonProperty("proofOfDelivery")]
         public ShipmentDetailsProofOfDeliveryResponseModel? ProofOfDelivery
@@ -124,13 +129,19 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The total number of pieces
+        /// \'Yes\' if signer identification is available
+        /// </summary>
+        [JsonProperty("proofOfDeliverySignedAvailable")]
+        public bool IsProofOfDeliverySignedAvailable { get; set; }
+
+        /// <summary>
+        /// Total number of items or pieces in the shipment
         /// </summary>
         [JsonProperty("totalNumberOfPieces")]
         public double TotalNumberOfPieces { get; set; }
 
         /// <summary>
-        /// The place ids
+        /// Ids of all the items or pieces in the shipment
         /// </summary>
         [JsonProperty("placeIds")]
         public IEnumerable<string> PlaceIds
@@ -140,25 +151,25 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The weight
+        /// A point value or interval for product characteristics and other purposes
         /// </summary>
         [JsonProperty("weight")]
-        public double Weight { get; set; }
+        public ShipmentDetailQuantityResponseModel Weight { get; set; }
 
         /// <summary>
-        /// the volume
+        /// A point value or interval for product characteristics and other purposes
         /// </summary>
         [JsonProperty("volume")]
-        public double Volume { get; set; }
+        public ShipmentDetailQuantityResponseModel Volume { get; set; }
 
         /// <summary>
-        /// The loading meters
+        /// A loading meter standard unit of measurement for transport by truck
         /// </summary>
         [JsonProperty("loadingMeters")]
         public double LoadingMeters { get; set; }
 
         /// <summary>
-        /// The dimensions
+        /// A measurable extent of a particular kind of delivery
         /// </summary>
         [JsonProperty("dimensions")]
         public ShipmentDetailDimensionResponseModel Dimensions
@@ -168,7 +179,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The references
+        /// A list of indications that refers to related shipment
         /// </summary>
         [JsonProperty("references")]
         public IEnumerable<ShipmentDetailsReferencesResponseModel> References
@@ -178,7 +189,23 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The DGF routes
+        /// Services I booked together with my Tracking details
+        /// </summary>
+        [JsonProperty("valueAddedServices")]
+        public ShipmentDetailValueAddedServicesResponseModel ValueAddedServices { get; set; }
+
+        /// <summary>
+        /// Extra Controlled Access Data Codes
+        /// </summary>
+        [JsonProperty("controlledDataCodes")]
+        public IEnumerable<string> ControlledDataCodes 
+        { 
+            get => mControlledDataCodes ?? Enumerable.Empty<string>();
+            set => mControlledDataCodes = value;
+        }
+
+        /// <summary>
+        /// DHL Global Forwarding routing Details
         /// </summary>
         [JsonProperty("routes")]
         public ShipmentDetailsDGFRoutesResponseModel DGFRoutes

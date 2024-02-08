@@ -53,7 +53,7 @@ namespace DHLClient
         /// Price breakdown type code
         /// </summary>
         [JsonProperty("typeCode")]
-        public TypeCode TypeCode { get; set; }
+        public BreakdownType TypeCode { get; set; }
 
         /// <summary>
         /// Special service charge code type for service. 

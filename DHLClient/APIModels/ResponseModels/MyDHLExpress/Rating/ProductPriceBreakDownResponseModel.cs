@@ -13,7 +13,8 @@ namespace DHLClient
         /// Expected values in breakdown
         /// </summary>
         [JsonProperty("typeCode")]
-        public TypeCode TypeCode { get; set; }
+        [JsonConverter(typeof(TypeCodeToStringJsonConverter))]
+        public BreakdownType TypeCode { get; set; }
 
         /// <summary>
         /// The amount price of DHL product and services

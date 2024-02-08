@@ -1,5 +1,6 @@
 ﻿using DHLClient.DataModels.Enums;
 using System.Collections.Immutable;
+using System.Net.Http.Headers;
 
 namespace DHLClient
 {
@@ -139,6 +140,16 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
+        /// Maps the <see cref="CurrencyType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<CurrencyType, string> CurrencyTypeToStringMapper { get; } = new Dictionary<CurrencyType, string>()
+        {
+            { CurrencyType.PulCl, "PULCL" },
+            { CurrencyType.BillC, "BILLC" },
+            { CurrencyType.BaseC, "BASEC" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="CustomsDocumentType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<CustomsDocumentType, string> CustomsDocumentTypeToStringMapper { get; } = new Dictionary<CustomsDocumentType, string>()
@@ -189,6 +200,16 @@ namespace DHLClient
             { CustomsDocumentType.TransportationChargesStatement, "TCS" },
             { CustomsDocumentType.VeterinaryEntryDocument, "VET" },
             { CustomsDocumentType.VATExemptionCertificate, "VEX" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="DataClassification"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<DataClassification, string> DataClassificationToStringMapper { get; } = new Dictionary<DataClassification, string>()
+        {
+            { DataClassification.Public, "public" },
+            { DataClassification.Secret, "secret" },
+            { DataClassification.Sensitive, "sensitive" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -563,6 +584,15 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
+        /// Maps the <see cref="PolicyType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<PolicyType, string> PolicyToStringMapper { get; } = new Dictionary<PolicyType, string>()
+        {
+            { PolicyType.None, "none" },
+            { PolicyType.PostalCode, "postal-code" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="ProductType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<ProductType, string> ProductTypeToStringMapper { get; } = new Dictionary<ProductType, string>()
@@ -751,6 +781,16 @@ namespace DHLClient
             { ShipperReference.BuyersOrderNumber, "CO" },
         }.ToImmutableDictionary();
 
+        public static IReadOnlyDictionary<ShippingOption, string> ShippinngOptionToStringMapper { get; } = new Dictionary<ShippingOption, string>()
+        {
+            { ShippingOption.Bulky, "bulky" },
+            { ShippingOption.Priority, "priority" },
+            { ShippingOption.Pickup, "pickup" },
+            { ShippingOption.ExtraInsurance, "extraInsurance" },
+            { ShippingOption.DirectInjection, "directInjection" },
+            { ShippingOption.CashOnDelivery, "cashOnDelivery" }
+        }.ToImmutableDictionary();
+
         /// <summary>
         /// Maps the <see cref="ShippingRole"/>s to their related <see cref="string"/>s
         /// </summary>
@@ -852,11 +892,11 @@ namespace DHLClient
             { TransportationMode.Ground, "ground" }
         }.ToImmutableDictionary();
 
-        public static IReadOnlyDictionary<TypeCode, string> TypeCodeToStringMapper { get; } = new Dictionary<TypeCode, string>()
+        public static IReadOnlyDictionary<BreakdownType, string> TypeCodeToStringMapper { get; } = new Dictionary<BreakdownType, string>()
         {
-            { TypeCode.TotalTaxForTheShipment, "STTXA" },
-            { TypeCode.TotalDiscountForTheShipment, "STDIS" },
-            { TypeCode.NetShipmentWeightCharge, "SPQRT" }
+            { BreakdownType.TotalTaxForTheShipment, "STTXA" },
+            { BreakdownType.TotalDiscountForTheShipment, "STDIS" },
+            { BreakdownType.NetShipmentWeightCharge, "SPQRT" }
         }.ToImmutableDictionary();
 
         /// <summary>

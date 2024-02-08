@@ -3,7 +3,7 @@
     /// <summary>
     /// Arguments used for retrieving rate
     /// </summary>
-    public class RetrieveRateAPIArgs : BaseMyDHLAPIArgs
+    public class RetrieveMultipleShipmentRateAPIArgs : BaseMyDHLAPIArgs
     {
         #region Public Properties
 
@@ -20,7 +20,7 @@
         /// <summary>
         /// Default constructor
         /// </summary>
-        public RetrieveRateAPIArgs() : base()
+        public RetrieveMultipleShipmentRateAPIArgs() : base()
         {
 
         }

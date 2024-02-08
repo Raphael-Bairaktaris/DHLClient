@@ -3,7 +3,7 @@
     /// <summary>
     /// Arguments used for retrieving a product
     /// </summary>
-    public class RetrieveProductAPIArgs : RatingShipmentAPIArgs
+    public class RetrieveProductAPIArgs : RetrieveShipmentRateAPIArgs
     {
         #region Public Properties
 

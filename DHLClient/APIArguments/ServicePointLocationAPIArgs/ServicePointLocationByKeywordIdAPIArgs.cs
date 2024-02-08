@@ -17,6 +17,7 @@
         /// A two-letter ISO 3166-1 alpha-2 code specifying the country.
         /// </summary>
         [ArgumentName("countryCode")]
+        [QueryArgumentConverter<CountryCodeQueryArgymentConverter>]
         public CountryCode? CountryCode { get; set; }
 
         /// <summary>

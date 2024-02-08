@@ -3,11 +3,16 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a shipment details participant response
+    /// Represents a shipment detail organization name response
     /// </summary>
-    public class ShipmentDetailsParticipantResponseModel : ShipmentDetailsSignedResponseModel
+    public class ShipmentDetailOrganizationNameResponseModel
     {
         #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="Name"/> property
+        /// </summary>
+        private string? mName;
 
         /// <summary>
         /// The member of the <see cref="OrganizationName"/> property
@@ -19,11 +24,21 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
-        /// The organization name
+        /// The name of the person
+        /// </summary>
+        [JsonProperty("name")]
+        public string Name 
+        { 
+            get => mName ?? string.Empty;
+            set => mName = value;
+        }
+
+        /// <summary>
+        /// The name of the organization
         /// </summary>
         [JsonProperty("organizationName")]
-        public string OrganizationName
-        {
+        public string OrganizationName 
+        { 
             get => mOrganizationName ?? string.Empty;
             set => mOrganizationName = value;
         }
@@ -35,7 +50,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentDetailsParticipantResponseModel() : base()
+        public ShipmentDetailOrganizationNameResponseModel() : base()
         {
 
         }

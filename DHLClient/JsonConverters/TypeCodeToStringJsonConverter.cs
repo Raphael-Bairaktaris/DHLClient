@@ -3,9 +3,9 @@
 namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="TypeCode"/> to <see cref="string"/>
+    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="BreakdownType"/> to <see cref="string"/>
     /// </summary>
-    public class TypeCodeToStringJsonConverter : BaseEnumJsonConverter<TypeCode>
+    public class TypeCodeToStringJsonConverter : BaseEnumJsonConverter<BreakdownType>
     {
         #region Constructors
 
@@ -22,7 +22,7 @@ namespace DHLClient
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<TypeCode, string> GetMapper() => DHLClientConstants.TypeCodeToStringMapper;
+        protected override IReadOnlyDictionary<BreakdownType, string> GetMapper() => DHLClientConstants.TypeCodeToStringMapper;
 
         #endregion
     }

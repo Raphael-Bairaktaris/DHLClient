@@ -3,14 +3,14 @@
     /// <summary>
     /// A <see cref="BaseQueryArgumentConverter{Tvalue}"/> that is used for converting a <see cref="LocationType"/> to a <see cref="string"/> 
     /// </summary>
-    public class ServicePointLocationTypeQueryArgumentConverter : BaseQueryArgumentConverter<LocationType>
+    public class LocationTypeQueryArgumentConverter : BaseQueryArgumentConverter<LocationType>
     {
         #region Constructor
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointLocationTypeQueryArgumentConverter()
+        public LocationTypeQueryArgumentConverter()
         {
 
         }

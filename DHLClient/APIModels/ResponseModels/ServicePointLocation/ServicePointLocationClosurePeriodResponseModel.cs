@@ -21,6 +21,7 @@ namespace DHLClient
         /// <summary>
         /// Reason for the closure
         /// </summary>
+        /// <example>holiday</example>
         [JsonProperty("type")]
         public string Type
         {
@@ -33,6 +34,7 @@ namespace DHLClient
         /// </summary>
         /// <example>2018-03-02T07:53:47Z</example>
         [JsonProperty("fromDate")]
+        [JsonConverter(typeof(DateTimeOffsetToUnixTimestampJsonConverter))]
         public DateTimeOffset FromDate { get; set; }
 
         /// <summary>
@@ -40,6 +42,7 @@ namespace DHLClient
         /// </summary>
         /// <example>2018-03-02T07:53:47Z</example>
         [JsonProperty("toDate")]
+        [JsonConverter(typeof(DateTimeOffsetToUnixTimestampJsonConverter))]
         public DateTimeOffset ToDate { get; set; }
 
         #endregion

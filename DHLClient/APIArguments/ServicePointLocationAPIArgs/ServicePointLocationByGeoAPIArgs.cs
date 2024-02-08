@@ -10,6 +10,7 @@
         /// <summary>
         /// The latitude (only accepts values between -90 to 90 )
         /// </summary>
+        [ArgumentName("latitude")]
         public double? Latitude { get; set; }
 
         /// <summary>
@@ -24,6 +25,7 @@
         /// There may be locations with more than one providerType.
         /// </summary>
         [ArgumentName("providerType")]
+        [QueryArgumentConverter<ProviderTypeQueryArgumentConverter>]
         public ProviderType? ProviderType { get; set; }
 
         /// <summary>
@@ -31,6 +33,7 @@
         /// The response will include only locations of the type that matches any of the requested ones.
         /// </summary>
         [ArgumentName("locationType")]
+        [QueryArgumentConverter<LocationTypeQueryArgumentConverter>]
         public LocationType? LocationType { get; set; }
 
         /// <summary>
@@ -38,6 +41,7 @@
         /// least all of the serviceTypes requested. Only exception of this behaviour is parcel:pick-up-all, which includes any of the three parcel:pick-up services.
         /// </summary>
         [ArgumentName("serviceType")]
+        [QueryArgumentConverter<ServiceTypeQueryArgumentConverter>]
         public ServiceType? ServiceType { get; set; }
 
         /// <summary>
@@ -58,6 +62,7 @@
         /// A two-letter ISO 3166-1 alpha-2 code specifying the country.
         /// </summary>
         [ArgumentName("countryCode")]
+        [QueryArgumentConverter<CountryCodeQueryArgymentConverter>]
         public CountryCode? CountryCode { get; set; }
 
         /// <summary>

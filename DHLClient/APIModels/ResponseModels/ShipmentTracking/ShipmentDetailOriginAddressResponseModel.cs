@@ -38,8 +38,14 @@ namespace DHLClient
 
         #region Public Properties
 
+        ///// <summary>
+        ///// A secret policy protecting sensitive information
+        ///// </summary>
+        //[JsonProperty("@policy")]
+        //public PolicyType Policy { get; set; }
+
         /// <summary>
-        /// The address locality
+        /// Text specifying the name of the locality, for example a city
         /// </summary>
         /// <example>Prague</example>
         [JsonProperty("addressLocality")]
@@ -63,7 +69,7 @@ namespace DHLClient
         /// <summary>
         /// Text specifying a detail of country
         /// </summary>
-        /// <example<Prague 11
+        /// <example>Prague 11</example>
         [JsonProperty("addressRegion")]
         public string AddressRegion 
         { 
@@ -72,7 +78,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The country code
+        /// Code specifying the country for the address using ISO 3166-1
         /// </summary>
         /// <example>CZ</example>
         [JsonProperty("countryCode")]
@@ -80,7 +86,7 @@ namespace DHLClient
         public CountryCode CountryCode { get; set; }
 
         /// <summary>
-        /// The postal code
+        /// Text specifying the postal code for an address
         /// </summary>
         /// <example>14000</example>
         [JsonProperty("postalCode")]

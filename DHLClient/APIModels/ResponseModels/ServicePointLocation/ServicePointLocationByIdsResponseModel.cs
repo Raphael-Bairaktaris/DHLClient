@@ -10,11 +10,6 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="Ids"/> property
-        /// </summary>
-        private IEnumerable<ServicePointLocationByIdResponseModel>? mIds;
-
-        /// <summary>
         /// The member of the <see cref="LocationId"/> property
         /// </summary>
         private string? mLocationId;
@@ -27,16 +22,6 @@ namespace DHLClient
         #endregion
 
         #region Public Properties
-
-        /// <summary>
-        /// One location can be known within different business units (providerTypes). They will be known under a unique ID within each business unit domain, as provided.
-        /// </summary>
-        [JsonProperty("ids")]
-        public IEnumerable<ServicePointLocationByIdResponseModel> Ids
-        {
-            get => mIds ?? Enumerable.Empty<ServicePointLocationByIdResponseModel>();
-            set => mIds = value;
-        }
 
         /// <summary>
         /// The ID as how the location is know within this business unit / provider.

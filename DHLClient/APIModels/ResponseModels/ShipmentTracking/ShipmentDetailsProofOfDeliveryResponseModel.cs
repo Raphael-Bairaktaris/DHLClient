@@ -7,53 +7,33 @@ namespace DHLClient
     /// </summary>
     public class ShipmentDetailsProofOfDeliveryResponseModel
     {
-        #region Private Members
-
-        /// <summary>
-        /// The member of the <see cref="SignatureURL"/> property
-        /// </summary>
-        private string? mSignatureURL;
-
-        /// <summary>
-        /// The member of the <see cref="DocumentURL"/> property
-        /// </summary>
-        private string? mDocumentURL;
-
-        #endregion
-
         #region Public Properties
 
         /// <summary>
-        /// The timestamp
+        /// The document URL
         /// </summary>
-        [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
+        /// <remarks>https://webpod.dhl.com/pod?token=510f1359603a768a57af49cf10083f90&language=en</remarks>
+        [JsonProperty("documentUrl")]
+        public Uri? DocumentURL { get; set; }
 
         /// <summary>
         /// The signature URL
         /// </summary>
         [JsonProperty("signatureUrl")]
-        public string SignatureURL
-        {
-            get => mSignatureURL ?? string.Empty;
-            set => mSignatureURL = value;
-        }
+        public Uri? SignatureURL { get; set; }
 
         /// <summary>
-        /// The document URL
-        /// </summary>
-        [JsonProperty("documentUrl")]
-        public string DocumentURL
-        {
-            get => mDocumentURL ?? string.Empty;
-            set => mDocumentURL = value;
-        }
-
-        /// <summary>
-        /// The signed
+        /// A real organization or personal entity, if type is not specified, a Organization implementation is used
         /// </summary>
         [JsonProperty("signed")]
-        public ShipmentDetailsSignedResponseModel? Signed { get; set; }
+        public ShipmentDetailsEntityResponseModel Signed { get; set; }
+
+        /// <summary>
+        /// Date and time of related proof of delivery document
+        /// </summary>
+        /// <example>2022-10-21T12:30:00</example>
+        [JsonProperty("timestamp")]
+        public DateTimeOffset? Timestamp { get; set; }
 
         #endregion
 

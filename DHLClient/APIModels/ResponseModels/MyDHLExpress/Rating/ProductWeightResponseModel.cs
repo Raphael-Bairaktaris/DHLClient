@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a my dhl rating product weight response
+    /// Represents rating product weight response
     /// </summary>
     public class ProductWeightResponseModel
     {
@@ -12,6 +12,7 @@ namespace DHLClient
         /// <summary>
         /// The dimensional weight of the shipment
         /// </summary>
+        /// <example>0</example>
         [JsonProperty("volumetric")]
         public double Volumetric { get; set; }
 
@@ -25,6 +26,7 @@ namespace DHLClient
         /// The unit of measurement for the dimensions of the package.
         /// </summary>
         [JsonProperty("unitOfMeasurment")]
+        [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
         public MeasurmentUnit UnitOfMeasurment { get; set; }
 
         #endregion

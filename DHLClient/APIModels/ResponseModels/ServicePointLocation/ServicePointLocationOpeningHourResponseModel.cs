@@ -7,12 +7,13 @@ namespace DHLClient
     /// </summary>
     public class ServicePointLocationOpeningHoursResponseModel
     {
-        #region MyRegion
+        #region Public region
 
         /// <summary>
         /// The closing hours of the place or service on the given day(s) of the week
         /// </summary>
         [JsonProperty("closes")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public TimeOnly Closes { get; set; }
 
         /// <summary>
@@ -25,6 +26,7 @@ namespace DHLClient
         /// The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.
         /// </summary>
         [JsonProperty("dayOfWeek")]
+        [JsonConverter(typeof(DHLDayOfWeekTypeToStringJsonConverter))]
         public DHLDayOfWeek DayOfWeek { get; set; }
 
         #endregion
