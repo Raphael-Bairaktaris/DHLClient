@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a service code mutually exclusive group response
     /// </summary>
-    public class ProductServiceCodeMutuallyExclusiveGroupsResponseModel
+    public class RatingProductServiceCodeMutuallyExclusiveGroupResponseModel
     {
         #region Private Members
 
@@ -22,7 +22,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="ServiceCodes"/> property
         /// </summary>
-        private IEnumerable<ProductServiceCodeMutuallyExclusiveGroupsServiceCodesResponseModel>? mServiceCodes;
+        private IEnumerable<BaseRequiredServiceCodeResponseModel>? mServiceCodes;
 
         #endregion
 
@@ -32,9 +32,9 @@ namespace DHLClient
         /// Mutually exclusive serviceCode group name
         /// </summary>
         /// <example>Exclusive Billing Services</example>
-        [JsonProperty("serviceCodRuleName")]
-        public string ServiceCodeRuleName
-        {
+        [JsonProperty("serviceCodeRuleName")]
+        public string ServiceCodeRuleName 
+        { 
             get => mServiceCodeRuleName ?? string.Empty;
             set => mServiceCodeRuleName = value;
         }
@@ -44,19 +44,19 @@ namespace DHLClient
         /// </summary>
         /// <example>Mutually exclusive Billing Services - shipment can contain just one of following</example>
         [JsonProperty("description")]
-        public string Decription
-        {
+        public string Description 
+        { 
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }
 
         /// <summary>
-        /// The special service charge code
+        /// The service codes
         /// </summary>
         [JsonProperty("serviceCodes")]
-        public IEnumerable<ProductServiceCodeMutuallyExclusiveGroupsServiceCodesResponseModel> ServiceCodes
-        {
-            get => mServiceCodes ?? Enumerable.Empty<ProductServiceCodeMutuallyExclusiveGroupsServiceCodesResponseModel>();
+        public IEnumerable<BaseRequiredServiceCodeResponseModel> ServiceCodes 
+        { 
+            get => mServiceCodes ?? Enumerable.Empty<BaseRequiredServiceCodeResponseModel>();
             set => mServiceCodes = value;
         }
 
@@ -67,7 +67,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProductServiceCodeMutuallyExclusiveGroupsResponseModel() : base()
+        public RatingProductServiceCodeMutuallyExclusiveGroupResponseModel() : base()
         {
 
         }

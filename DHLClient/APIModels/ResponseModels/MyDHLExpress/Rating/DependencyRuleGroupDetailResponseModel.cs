@@ -3,16 +3,16 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a dependency rule group response
+    /// Represents a dependency rule group detail response
     /// </summary>
-    public class ProductDependencyRuleGroupResponseModel
+    public class DependencyRuleGroupDetailResponseModel
     {
-        #region Private Members
+        #region private Members
 
         /// <summary>
-        /// The member of the <see cref="DependencyRuleName"/> property
+        /// The member of the <see cref="Dependency"/> property
         /// </summary>
-        private string? mDependencyRuleName;
+        private string? mDependency;
 
         /// <summary>
         /// The member of the <see cref="DependencyDescription"/> property
@@ -24,11 +24,6 @@ namespace DHLClient
         /// </summary>
         private string? mDependencyCondition;
 
-        /// <summary>
-        /// The member of the <see cref="RequiredServiceCodes"/> property
-        /// </summary>
-        private IEnumerable<ProductDependencyRuleGroupRequiredServiceCodesResponseModel>? mRequiredServiceCodes;
-
         #endregion
 
         #region Public Properties
@@ -36,18 +31,17 @@ namespace DHLClient
         /// <summary>
         /// Dependency rule group name
         /// </summary>
-        /// <example>Labelfree and PLT rule</example>
-        [JsonProperty("dependencyRuleName")]
-        public string DependencyRuleName
+        /// <example>Label free and PLT rule</example>
+        [JsonProperty("dependency")]
+        public string Dependency
         {
-            get => mDependencyRuleName ?? string.Empty;
-            set => mDependencyRuleName = value;
+            get => mDependency ?? string.Empty;
+            set => mDependency = value;
         }
 
         /// <summary>
-        /// Dependency rule group description
+        /// Label free requires Paperless Trade (PLT) only if PLT is allowed for product globally
         /// </summary>
-        /// <example>Labelfree requires Paperless Trade (PLT) only if PLT is allowed for product globaly</example>
         [JsonProperty("dependencyDescription")]
         public string DependencyDescription
         {
@@ -66,15 +60,6 @@ namespace DHLClient
             set => mDependencyCondition = value;
         }
 
-        /// <summary>
-        /// The required service codes
-        /// </summary>
-        public IEnumerable<ProductDependencyRuleGroupRequiredServiceCodesResponseModel> RequiredServiceCodes
-        {
-            get => mRequiredServiceCodes ?? Enumerable.Empty<ProductDependencyRuleGroupRequiredServiceCodesResponseModel>();
-            set => mRequiredServiceCodes = value;
-        }
-
         #endregion
 
         #region Constructors
@@ -82,7 +67,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProductDependencyRuleGroupResponseModel() : base()
+        public DependencyRuleGroupDetailResponseModel() : base()
         {
 
         }

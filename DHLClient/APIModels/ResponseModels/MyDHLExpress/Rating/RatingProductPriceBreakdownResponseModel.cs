@@ -3,24 +3,26 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a rating product price breakdown response 
+    /// Represents a product price breakdown response
     /// </summary>
-    public class ProductPriceBreakDownResponseModel
+    public class RatingProductPriceBreakdownResponseModel
     {
         #region Public Properties
 
         /// <summary>
-        /// Expected values in breakdown
+        /// The breakdown type
         /// </summary>
+        /// <example>SPRQT</example>
         [JsonProperty("typeCode")]
-        [JsonConverter(typeof(TypeCodeToStringJsonConverter))]
+        [JsonConverter(typeof(BreakdownTypeToStringJsonConverter))]
         public BreakdownType TypeCode { get; set; }
 
         /// <summary>
         /// The amount price of DHL product and services
         /// </summary>
-        [JsonProperty("price")]
-        public decimal Price { get; set; }
+        /// <example>114.92</example>
+        [JsonProperty("number")]
+        public double Number { get; set; }
 
         #endregion
 
@@ -29,7 +31,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProductPriceBreakDownResponseModel() : base()
+        public RatingProductPriceBreakdownResponseModel() : base()
         {
 
         }

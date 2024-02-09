@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating an item
     /// </summary>
-    public class ItemRequestModel
+    public class RatingItemRequestModel
     {
         #region Public Properties
 
@@ -32,6 +32,7 @@ namespace DHLClient
         /// ISO Country code of the goods manufacturer
         /// </summary>
         [JsonProperty("manufacturerCountry")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode ManufacturerCountry { get; set; }
 
         /// <summary>
@@ -48,9 +49,10 @@ namespace DHLClient
         public double Quantity { get; set; }
 
         /// <summary>
-        /// Please provide quantitiy type.
+        /// Please provide quantity type.
         /// </summary>
         [JsonProperty("quantityType")]
+        [JsonConverter(typeof(QuantityTypeToStringJsonConverter))]
         public QuantityType QuantityType { get; set; }
 
         /// <summary>
@@ -65,12 +67,14 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("unitPriceCurrencyCode")]
+        [JsonConverter (typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode UnitPriceCurrencyCode { get; set; }
 
         /// <summary>
         /// The commodity code
         /// </summary>
         [JsonProperty("commodityCode")]
+        [JsonConverter(typeof(CommodityCodeToStringJsonConverter))]
         public CommodityCode CommodityCode { get; set; }
 
         /// <summary>
@@ -83,10 +87,11 @@ namespace DHLClient
         /// The unit of measurement
         /// </summary>
         [JsonProperty("weightUnitOfMeasurement")]
+        [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
         public MeasurmentUnit WeightUnitOfMeasurement { get; set; }
 
         /// <summary>
-        /// The category
+        /// Category code of the Item
         /// </summary>
         [JsonProperty("category")]
         public string? Category { get; set; }
@@ -100,25 +105,20 @@ namespace DHLClient
         /// <summary>
         /// The goods characteristics
         /// </summary>
-        public GoodsCharacteristicRequestModel? GoodsCharacteristics { get; set; }
+        [JsonProperty("goodsCharacteristics")]
+        public IEnumerable<GoodsCharacteristicRequestModel>? GoodsCharacteristics { get; set; }
+
+        /// <summary>
+        /// The additional quantity definitions
+        /// </summary>
+        public IEnumerable<AdditionalQuantityDefinitionRequestModel>? AdditionalQuantityDefinitions { get; set; }
 
         /// <summary>
         /// Please enter Tariff Rate Type
         /// </summary>
         [JsonProperty("estimatedTariffRateType")]
+        [JsonConverter(typeof(EstimatedTariffRateToStringJsonConverter))]
         public EstimatedTariffRate EstimatedTariffRateType { get; set; }
-
-        /// <summary>
-        /// Allowed values 'true' - tariff formula on item and shipment level will be returned, 'false' - tariff formula on item and shipment level will not be returned
-        /// </summary>
-        [JsonProperty("getTariffFormula")]
-        public bool GetTariffFormula { get; set; }
-
-        /// <summary>
-        /// Allowed values 'true' - quotation ID on shipment level will be returned, 'false' - quotation ID on shipment level will not be returned
-        /// </summary>
-        [JsonProperty("getQuotationID")]
-        public bool GetQuotationId { get; set; }
 
         #endregion
 
@@ -127,7 +127,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ItemRequestModel() : base()
+        public RatingItemRequestModel() : base()
         {
 
         }

@@ -125,7 +125,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("packages")]
-        public PackageRequestModel? Packages { get; set; }
+        public RatingLandedCostPackageRequestModel? Packages { get; set; }
 
         /// <summary>
         /// Dimensions of the package

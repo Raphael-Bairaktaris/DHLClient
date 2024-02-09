@@ -3,20 +3,16 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a my dhl rating product total price response
+    /// Represents a product total price response
     /// </summary>
-    public class ProductTotalPriceResponseModel
+    public class RatingProductTotalPriceResponseModel
     {
         #region Public Properties
 
         /// <summary>
-        /// Possible values
-        /// <list type="bullet|number|table">
-        ///     <item>BILLC</item>
-        ///     <item>PULCL</item>
-        ///     <item>BASEC</item>
-        /// </list>
+        /// The currency Type
         /// </summary>
+        /// <example>BILLC</example>
         [JsonProperty("currencyType")]
         [JsonConverter(typeof(CurrencyTypeToStringJsonConverter))]
         public CurrencyType CurrencyType { get; set; }
@@ -24,14 +20,17 @@ namespace DHLClient
         /// <summary>
         /// This the currency of the rated shipment for the prices listed.
         /// </summary>
-        [JsonProperty("priceCurrency")]
-        public CurrencyCode PriceCurrency { get; set; }
+        /// <example>GBP</example>
+        [JsonProperty("currencyCode")]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
+        public CurrencyCode CurrencyCode { get; set; }
 
         /// <summary>
-        /// This is the total price of the rated shipment for the product listed.
+        /// This is the total price of the rated shipment for the product listed. 
         /// </summary>
-        [JsonProperty("price")]
-        public decimal Price { get; set; }
+        /// <example>141.51</example>
+        [JsonProperty("number")]
+        public double Number { get; set; }
 
         #endregion
 
@@ -40,7 +39,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProductTotalPriceResponseModel() : base()
+        public RatingProductTotalPriceResponseModel() : base()
         {
 
         }

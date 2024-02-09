@@ -3,11 +3,16 @@
 namespace DHLClient
 {
     /// <summary>
-    /// represents a rating product detailed price breakdown response 
+    /// Represents a product item breakdown response
     /// </summary>
-    public class ProductDetailedPriceBreakdownResponseModel
+    public class ProductItemBreakdownResponseModel
     {
         #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="Name"/> property
+        /// </summary>
+        private string? mName;
 
         /// <summary>
         /// The member of the <see cref="ServiceCode"/> property
@@ -19,28 +24,42 @@ namespace DHLClient
         /// </summary>
         private string? mLocalServiceCode;
 
+        /// <summary>
+        /// The member of the <see cref="PriceBreakdown"/> property
+        /// </summary>
+        private IEnumerable<ProductItemPriceBreakdownResponseModel>? mPriceBreakdown;
+
+        /// <summary>
+        /// The member of the <see cref="TariffRateFormula"/> property
+        /// </summary>
+        private string? mTariffRateFormula;
+
         #endregion
 
         #region Public Properties
 
         /// <summary>
-        /// When landed-cost is requested then following items name (Charge Types) might be returned
+        /// Name of the charge
         /// </summary>
         [JsonProperty("name")]
-        public TotalChargeType Name { get; set; }
+        public string Name 
+        { 
+            get => mName ?? string.Empty;
+            set => mName = value;
+        }
 
         /// <summary>
-        /// Special service or extra charge code. This is the code you would have to use in the
-        /// /shipment service if you wish to add an optional Service such as Saturday delivery
+        /// Special service or extra charge code. This is the code you would have to use in the /shipment service if you wish to add an optional Service such as Saturday delivery
         /// </summary>
-        public string ServiceCode
-        {
+        [JsonProperty("serviceCode")]
+        public string ServiceCode 
+        { 
             get => mServiceCode ?? string.Empty;
             set => mServiceCode = value;
         }
 
         /// <summary>
-        /// The local service code
+        /// Local service code
         /// </summary>
         [JsonProperty("localServiceCode")]
         public string LocalServiceCode
@@ -50,19 +69,21 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// Price breakdown type code
+        /// Charge type or category.
         /// </summary>
         [JsonProperty("typeCode")]
-        public BreakdownType TypeCode { get; set; }
+        [JsonConverter(typeof(ChargeCategoryToStringJsonConverter))]
+        public ChargeCategory TypeCode { get; set; }
 
         /// <summary>
-        /// Special service charge code type for service. 
+        /// Special service charge code type for service.
         /// </summary>
         [JsonProperty("serviceTypeCode")]
+        [JsonConverter(typeof(SpecialServiceChargeCodeToStringJsonConverter))]
         public SpecialServiceChargeCode ServiceTypeCode { get; set; }
 
         /// <summary>
-        /// The price breakdown value
+        /// The charge amount of the line item charge.
         /// </summary>
         [JsonProperty("price")]
         public decimal Price { get; set; }
@@ -71,7 +92,8 @@ namespace DHLClient
         /// This the currency of the rated shipment for the prices listed.
         /// </summary>
         [JsonProperty("priceCurrency")]
-        public CurrencyCode PriceCurrency { get; set; }
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
+        public CurrencyCode PriceCurrency {  get; set; }
 
         /// <summary>
         /// Customer agreement indicator for product and services, if service is offered with prior customer agreement
@@ -91,6 +113,27 @@ namespace DHLClient
         [JsonProperty("isBillingServiceIndicator")]
         public bool IsBillingServiceIndicator { get; set; }
 
+        /// <summary>
+        /// The item price breakdown
+        /// </summary>
+        [JsonProperty("priceBreakdown")]
+        public IEnumerable<ProductItemPriceBreakdownResponseModel> PriceBreakdown 
+        { 
+            get => mPriceBreakdown ?? Enumerable.Empty<ProductItemPriceBreakdownResponseModel>();
+            set => mPriceBreakdown = value;
+        }
+
+        /// <summary>
+        /// Tariff Rate Formula on Line Item Level
+        /// </summary>
+        [JsonProperty("tarriffRateFormula")]
+        public string TariffRateFormula
+        {
+            get => mTariffRateFormula ?? string.Empty;
+            set => mTariffRateFormula = value;
+        }
+
+
         #endregion
 
         #region Constructors
@@ -98,7 +141,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProductDetailedPriceBreakdownResponseModel() : base()
+        public ProductItemBreakdownResponseModel() : base()
         {
 
         }

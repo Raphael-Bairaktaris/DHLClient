@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating a package
     /// </summary>
-    public class PackageRequestModel : ShipmentDetailDimensionResponseModel
+    public class RatingLandedCostPackageRequestModel
     {
         #region Public Properties
 
@@ -13,6 +13,7 @@ namespace DHLClient
         /// Please contact your DHL Express representative if you wish to use a DHL specific package otherwise ignore this element.
         /// </summary>
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(PackagingTypeToStringJsonConverter))]
         public PackagingType? TypeCode { get; set; }
 
         /// <summary>
@@ -22,6 +23,13 @@ namespace DHLClient
         [JsonProperty("weight")]
         public double? Weight { get; set; }
 
+        /// <summary>
+        /// Dimensions of the package
+        /// </summary>
+        [JsonRequired]
+        [JsonProperty("dimensions")]
+        public RatingLandedCostPackageDimensionRequestModel? Dimensions { get; set; }  
+
         #endregion
 
         #region Constructors
@@ -29,7 +37,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public PackageRequestModel() : base()
+        public RatingLandedCostPackageRequestModel() : base()
         {
 
         }

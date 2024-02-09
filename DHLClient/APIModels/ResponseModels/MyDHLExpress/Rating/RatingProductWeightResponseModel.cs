@@ -3,16 +3,15 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents rating product weight response
+    /// Represents a rating product weight response
     /// </summary>
-    public class ProductWeightResponseModel
+    public class RatingProductWeightResponseModel
     {
         #region Public Properties
 
         /// <summary>
         /// The dimensional weight of the shipment
         /// </summary>
-        /// <example>0</example>
         [JsonProperty("volumetric")]
         public double Volumetric { get; set; }
 
@@ -36,7 +35,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProductWeightResponseModel() : base()
+        public RatingProductWeightResponseModel() : base()
         {
 
         }

@@ -10,10 +10,11 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
-        /// Please enter DHL Express acount type 
+        /// Please enter DHL Express account type 
         /// </summary>
         [JsonRequired]
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(ShippingRoleToStringJsonConverter))]
         public ShippingRole TypeCode { get; set; }
 
         /// <summary>

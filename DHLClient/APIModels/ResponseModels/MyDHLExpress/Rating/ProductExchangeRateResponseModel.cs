@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a product exchange rate response
     /// </summary>
-    public class ProdcutExchangeRatesResponseModel
+    public class ProductExchangeRateResponseModel
     {
         #region Public Properties
 
@@ -19,13 +19,15 @@ namespace DHLClient
         /// The currency code
         /// </summary>
         [JsonProperty("currency")]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode Currency { get; set; }
 
         /// <summary>
         /// The currency code of the base currency is either USD or EUR
         /// </summary>
         [JsonProperty("baseCurrency")]
-        public CurrencyCode BaseCurrency { get; set; }
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
+        public CurrencyCode BaseCurrency { get; set; } = CurrencyCode.EUR;
 
         #endregion
 
@@ -34,7 +36,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProdcutExchangeRatesResponseModel() : base()
+        public ProductExchangeRateResponseModel() : base()
         {
 
         }

@@ -33,11 +33,15 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
+        [JsonConverter(typeof(MeasurmentUnit))]
         public MeasurmentUnit? UnitOfMeasurement { get; set; }
 
         /// <summary>
         /// Currency code for the item price (the product being sold) and freight charge. The Landed Cost calculation result will be returned in this defined currency
         /// </summary>
+        [JsonRequired]
+        [JsonProperty("currencyCode")]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode? CurrencyCode { get; set; }
 
         /// <summary>
@@ -70,37 +74,42 @@ namespace DHLClient
         /// Please provide any additional charges you would like to include in total cost calculation
         /// </summary>
         [JsonProperty("charges")]
-        public ChargesRequestModel? Charges { get; set; }
+        public IEnumerable<RatingLandedCostChargesRequestModel>? Charges { get; set; }
 
         /// <summary>
         /// The shipment purpose
         /// </summary>
         [JsonProperty("shipmentPurpose")]
-        public ShipmentPurpose ShipmentPurpose { get; set; }
+        [JsonConverter(typeof(ShipmentPurposeToStringJsonConverter))]
+        public ShipmentPurpose? ShipmentPurpose { get; set; }
 
         /// <summary>
         /// The type of transportation
         /// </summary>
         [JsonProperty("transoportationMode")]
-        public TransportationMode TransportationMode { get; set; }
+        [JsonConverter(typeof(TransportationModeToStringJsonConverter))]
+        public TransportationMode? TransportationMode { get; set; }
 
         /// <summary>
         /// Carrier being used to ship with.
         /// </summary>
         [JsonProperty("merchantSelectedCarrierName")]
-        public CarrierName MerchantSelectedCarrierName { get; set; }
+        [JsonConverter(typeof(CarrierNameToStringJsonConverter))]
+        public CarrierName? MerchantSelectedCarrierName { get; set; }
 
         /// <summary>
         /// Here you can define properties per package
         /// </summary>
+        [JsonRequired]
         [JsonProperty("packages")]
-        public PackageRequestModel? Packages { get; set; }
+        public IEnumerable<RatingLandedCostPackageRequestModel>? Packages { get; set; }
 
         /// <summary>
         /// The items
         /// </summary>
+        [JsonRequired]
         [JsonProperty("items")]
-        public ItemRequestModel? Items { get; set; }
+        public IEnumerable<RatingItemRequestModel>? Items { get; set; }
 
         /// <summary>
         /// Allowed values 'true' - tariff formula on item and shipment level will be returned, 'false' - tariff formula on item and shipment level will not be returned

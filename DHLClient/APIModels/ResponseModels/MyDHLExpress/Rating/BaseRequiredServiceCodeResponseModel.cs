@@ -3,9 +3,9 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a dependency rule group required service code response
+    /// Represents a base required service code response
     /// </summary>
-    public class ProductDependencyRuleGroupRequiredServiceCodesResponseModel
+    public class BaseRequiredServiceCodeResponseModel
     {
         #region Private Members
 
@@ -19,12 +19,12 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
-        /// Required special service code
+        /// The special service charge code
         /// </summary>
-        /// <example>WY</example>
+        /// <example>PZ</example>
         [JsonProperty("serviceCode")]
-        public string ServiceCode
-        {
+        public string ServiceCode 
+        { 
             get => mServiceCode ?? string.Empty;
             set => mServiceCode = value;
         }
@@ -36,7 +36,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProductDependencyRuleGroupRequiredServiceCodesResponseModel() : base()
+        public BaseRequiredServiceCodeResponseModel() : base()
         {
 
         }

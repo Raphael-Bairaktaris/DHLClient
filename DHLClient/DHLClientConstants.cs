@@ -10,6 +10,16 @@ namespace DHLClient
     public static class DHLClientConstants
     {
         /// <summary>
+        /// Maps the <see cref="BreakdownType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<BreakdownType, string> BreakdownTypeToStringMapper { get; } = new Dictionary<BreakdownType, string>()
+        {
+            { BreakdownType.TotalTaxForTheShipment, "STTXA" },
+            { BreakdownType.TotalDiscountForTheShipment, "STDIS" },
+            { BreakdownType.NetShipmentWeightCharge, "SPQRT" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="BusinessPartyType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<BusinessPartyType, string> BusinessPartyTypeToStringMapper { get; } = new Dictionary<BusinessPartyType, string>()
@@ -325,6 +335,15 @@ namespace DHLClient
         };
 
         /// <summary>
+        /// Maps the <see cref="DiscountType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<DiscountType, string> DiscountTypeToStringMapper { get; } = new Dictionary<DiscountType, string>()
+        {
+            { DiscountType.Promotional, "P" },
+            { DiscountType.Special, "S" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="DistanceUnit"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<DistanceUnit, string> DistanceUnitToStringMapper { get; } = new Dictionary<DistanceUnit, string>()
@@ -366,6 +385,18 @@ namespace DHLClient
             { EncodingFormat.ZPL, "zpl" },
             { EncodingFormat.LP2, "lp2" },
             { EncodingFormat.Tiff, "tiff" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="EstimatedTariffRate"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<EstimatedTariffRate, string> EstimatedTariffRateToStringMapper { get; } = new Dictionary<EstimatedTariffRate, string>()
+        {
+            { EstimatedTariffRate.DefaultRate, "default_rate" },
+            { EstimatedTariffRate.DerivedRate, "derived_rate" },
+            { EstimatedTariffRate.HighestRate, "highest_rate" },
+            { EstimatedTariffRate.CenterRate, "center_rate" },
+            { EstimatedTariffRate.LowestRate, "lowest_rate" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -600,6 +631,15 @@ namespace DHLClient
             { ProductType.All, "all" },
             { ProductType.TimeDefinite, "timeDefinite" },
             { ProductType.DayDefinite, "dayDefinite" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="PriceType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<PriceType, string> PriceTypeToStringMapper { get; } = new Dictionary<PriceType, string>()
+        {
+            { PriceType.Tax, "TAX" },
+            { PriceType.Discount, "DISCOUNT" }
         }.ToImmutableDictionary();
 
         /// <summary>

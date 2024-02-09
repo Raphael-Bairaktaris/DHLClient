@@ -20,10 +20,8 @@ namespace DHLClient
         /// An Item's additional quantity value
         /// </summary>
         [JsonRequired]
-        [JsonProperty("amount")]
-        public double Amount { get; set; }
-
-
+        [JsonProperty("value")]
+        public double Value { get; set; }
 
         #endregion
 

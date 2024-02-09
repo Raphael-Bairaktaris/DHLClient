@@ -3,32 +3,27 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Requests used for creating or updating charges
+    /// Requests used for creating or updating an additional quantity definition
     /// </summary>
-    public class ChargesRequestModel
+    public class AdditionalQuantityDefinitionRequestModel
     {
         #region Public Properties
 
         /// <summary>
-        /// The cargo type
+        /// Item additional quantity value UOM
         /// </summary>
+        /// <example>PFL=percent of alcohol</example>
         [JsonRequired]
         [JsonProperty("typeCode")]
-        public CargoType TypeCode { get; set; }
+        public string? TypeCode { get; set; }
 
         /// <summary>
-        /// The amount
+        /// An Item's additional quantity value
         /// </summary>
+        /// <example>example is percent of alcohol</example>
         [JsonRequired]
         [JsonProperty("amount")]
-        public decimal Amount { get; set; }
-
-        /// <summary>
-        /// The currency code
-        /// </summary>
-        [JsonRequired]
-        [JsonProperty("currencyCode")]
-        public CurrencyCode CurrencyCode { get; set; }
+        public double? Amount { get; set; }
 
         #endregion
 
@@ -37,7 +32,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ChargesRequestModel() : base()
+        public AdditionalQuantityDefinitionRequestModel() : base()
         {
 
         }

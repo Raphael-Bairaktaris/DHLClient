@@ -3,36 +3,42 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a product item breakdown response
+    /// Represents a product item response
     /// </summary>
-    public class ProductItemsResponseModel
+    public class RatingProductItemResponseModel
     {
         #region Private Members
 
         /// <summary>
         /// The member of the <see cref="Breakdown"/> property
         /// </summary>
-        private ProductItemsBreakdownResponseModel? mBreakdown;
+        private IEnumerable<ProductItemBreakdownResponseModel>? mBreakdown;
 
         #endregion
 
         #region Public Properties
 
         /// <summary>
-        /// Item line number 
+        /// Item line number
         /// </summary>
         [JsonProperty("number")]
         public double Number { get; set; }
 
         /// <summary>
-        /// The items breakdown
+        /// The item breakdown
         /// </summary>
         [JsonProperty("breakdown")]
-        public ProductItemsBreakdownResponseModel Breakdown
-        {
-            get => mBreakdown ??= new ProductItemsBreakdownResponseModel();
+        public IEnumerable<ProductItemBreakdownResponseModel> Breakdown 
+        { 
+            get => mBreakdown ?? Enumerable.Empty<ProductItemBreakdownResponseModel>();
             set => mBreakdown = value;
         }
+
+        /// <summary>
+        /// The date when the rates for DHL products and services is provided
+        /// </summary>
+        [JsonProperty("pricingDate")]
+        public DateOnly PricingDate { get; set; }
 
         #endregion
 
@@ -41,7 +47,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProductItemsResponseModel() : base()
+        public RatingProductItemResponseModel() : base()
         {
 
         }
