@@ -14,6 +14,11 @@ namespace DHLClient
         /// </summary>
         private string? mDependentServiceCode;
 
+        /// <summary>
+        /// The member of the <see cref="DependencyRuleGroup"/> property
+        /// </summary>
+        private IEnumerable<DependencyRuleGroupDetailResponseModel>? mDependencyRuleGroup;
+
         #endregion
 
         #region Public Properties
@@ -22,8 +27,8 @@ namespace DHLClient
         /// Dependent special service charge code where the rule groups are applied
         /// </summary>
         [JsonProperty("dependentServiceCode")]
-        public string DependentServiceCode 
-        { 
+        public string DependentServiceCode
+        {
             get => mDependentServiceCode ?? string.Empty;
             set => mDependentServiceCode = value;
         }
@@ -32,7 +37,11 @@ namespace DHLClient
         /// The dependency rule group
         /// </summary>
         [JsonProperty("dependencyRuleGroup")]
-        public IEnumerable<DependencyRuleGroupDetailResponseModel> DependencyRuleGroup { get; set; }
+        public IEnumerable<DependencyRuleGroupDetailResponseModel> DependencyRuleGroup
+        {
+            get => mDependencyRuleGroup ?? Enumerable.Empty<DependencyRuleGroupDetailResponseModel>();
+            set => mDependencyRuleGroup = value;
+        }
 
         #endregion
 

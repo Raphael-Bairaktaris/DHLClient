@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating a registration number
     /// </summary>
-    public class RegistrationNumberRequestModel
+    public class ShipmentRegistrationNumberRequestModel
     {
         #region Public Properties
 
@@ -37,7 +37,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public RegistrationNumberRequestModel() : base()
+        public ShipmentRegistrationNumberRequestModel() : base()
         {
 
         }

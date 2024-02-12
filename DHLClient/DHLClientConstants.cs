@@ -1,6 +1,5 @@
 ﻿using DHLClient.DataModels.Enums;
 using System.Collections.Immutable;
-using System.Net.Http.Headers;
 
 namespace DHLClient
 {
@@ -248,6 +247,18 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
+        /// Maps the <see cref="DeliveryDocumentType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<DeliveryDocumentType, string> DeliveryDocumentTypeToStringMapper { get; } = new Dictionary<DeliveryDocumentType, string>()
+        {
+            { DeliveryDocumentType.Label, "label" },
+            { DeliveryDocumentType.WaybillDoc, "waybillDoc" },
+            { DeliveryDocumentType.Invoice, "invoice" },
+            { DeliveryDocumentType.QRCode, "qr-code" },
+            { DeliveryDocumentType.ShipmentReceipt, "shipmentReceipt" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="DeliveryOption"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<DeliveryOption, string> DeliveryOptionToStringMapper { get; } = new Dictionary<DeliveryOption, string>()
@@ -416,6 +427,17 @@ namespace DHLClient
             { ExportReason.WarrantyReplacement, "warranty_replacement" },
             { ExportReason.DiplomaticGoods, "diplomatic_goods" },
             { ExportReason.DefenceMaterial, "defence_material" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="FileFormat"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<FileFormat, string> FileFormatToStringMapper { get; } = new Dictionary<FileFormat, string>()
+        {
+            { FileFormat.Png, "PNG" },
+            { FileFormat.Gif, "GIF" },
+            { FileFormat.Jpeg, "JPEG" },
+            { FileFormat.Jpg, "JPG" }
         }.ToImmutableDictionary();
 
         /// <summary>

@@ -28,8 +28,8 @@ namespace DHLClient
         /// The item breakdown
         /// </summary>
         [JsonProperty("breakdown")]
-        public IEnumerable<ProductItemBreakdownResponseModel> Breakdown 
-        { 
+        public IEnumerable<ProductItemBreakdownResponseModel> Breakdown
+        {
             get => mBreakdown ?? Enumerable.Empty<ProductItemBreakdownResponseModel>();
             set => mBreakdown = value;
         }

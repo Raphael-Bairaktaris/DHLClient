@@ -36,8 +36,8 @@ namespace DHLClient
         /// The price breakdown
         /// </summary>
         [JsonProperty("priceBreakdown")]
-        public IEnumerable<RatingProductPriceBreakdownResponseModel> PriceBreakdown 
-        { 
+        public IEnumerable<RatingProductPriceBreakdownResponseModel> PriceBreakdown
+        {
             get => mPriceBreakdown ?? Enumerable.Empty<RatingProductPriceBreakdownResponseModel>();
             set => mPriceBreakdown = value;
         }

@@ -32,8 +32,8 @@ namespace DHLClient
         /// Family name, the last name of a person
         /// </summary>
         [JsonProperty("familyName")]
-        public string FamilyName 
-        { 
+        public string FamilyName
+        {
             get => mFamilyName ?? string.Empty;
             set => mFamilyName = value;
         }
@@ -42,8 +42,8 @@ namespace DHLClient
         /// Given name, the first name of a person
         /// </summary>
         [JsonProperty("givenName")]
-        public string GivenName 
-        { 
+        public string GivenName
+        {
             get => mGivenName ?? string.Empty;
             set => mGivenName = value;
         }
@@ -53,8 +53,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Dariel Leola</example>
         [JsonProperty("name")]
-        public string Name 
-        { 
+        public string Name
+        {
             get => mName ?? string.Empty;
             set => mName = value;
         }

@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating pickup details
     /// </summary>
-    public class ShipmentCollectionDetailRequestModel : ShipperDetailRequestModel
+    public class ShipmentPickupDetailRequestModel : ShipperDetailRequestModel
     {
         #region Public Properties
 
@@ -28,20 +28,20 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("contactInformation")]
-        public ContactInformationRequestModel? ContactInformation { get; set; }
+        public ShipmentContactInformationRequestModel? ContactInformation { get; set; }
 
         /// <summary>
         /// The registration numbers
         /// </summary>
         [JsonProperty("registrationNumbers")]
-        public RegistrationNumberRequestModel? RegistrationNumbers { get; set; }
+        public ShipmentRegistrationNumberRequestModel? RegistrationNumbers { get; set; }
 
         /// <summary>
         /// The bank details
         /// </summary>
         [JsonRequired]
         [JsonProperty("bankDetails")]
-        public BankDetailRequestModel? BankDetails { get; set; }
+        public ShipmentEntityBankDetailRequestModel? BankDetails { get; set; }
 
         /// <summary>
         /// Please enter the business party type related to the pickup.
@@ -56,7 +56,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentCollectionDetailRequestModel() : base()
+        public ShipmentPickupDetailRequestModel() : base()
         {
 
         }

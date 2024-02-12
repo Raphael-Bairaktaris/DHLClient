@@ -28,8 +28,8 @@ namespace DHLClient
         /// The label
         /// </summary>
         [JsonProperty("label")]
-        public string Label 
-        { 
+        public string Label
+        {
             get => mLabel ?? string.Empty;
             set => mLabel = value;
         }

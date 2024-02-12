@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating bank details
     /// </summary>
-    public class BankDetailRequestModel
+    public class ShipmentEntityBankDetailRequestModel
     {
         #region Public Properties
 
@@ -37,7 +37,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public BankDetailRequestModel() : base()
+        public ShipmentEntityBankDetailRequestModel() : base()
         {
 
         }

@@ -67,7 +67,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("unitPriceCurrencyCode")]
-        [JsonConverter (typeof(CurrencyCodeToStringJsonConverter))]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode UnitPriceCurrencyCode { get; set; }
 
         /// <summary>

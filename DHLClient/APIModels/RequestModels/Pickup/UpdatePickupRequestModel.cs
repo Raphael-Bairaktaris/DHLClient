@@ -67,7 +67,7 @@ namespace DHLClient
         /// Please provide updated details related to shipment you want update the pickup for
         /// </summary>
         [JsonProperty("specialInstructions")]
-        public SpecialInstructionRequestModel? SpecialInstructions { get; set; }
+        public ShipmentSpecialInstructionRequestModel? SpecialInstructions { get; set; }
 
         /// <summary>
         /// Please provide additional pickup remark

@@ -3,7 +3,7 @@
     /// <summary>
     /// Arguments used for uploading a paperless trade
     /// </summary>
-    public class UploadPLTAPIArgs : BaseMyDHLAPIArgs
+    public class ShipmentUploadPLTAPIArgs
     {
         #region Public Properties
 
@@ -21,7 +21,7 @@
         /// <summary>
         /// Default constructor
         /// </summary>
-        public UploadPLTAPIArgs() : base()
+        public ShipmentUploadPLTAPIArgs() : base()
         {
 
         }

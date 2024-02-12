@@ -42,8 +42,8 @@ namespace DHLClient
         /// Name of the charge
         /// </summary>
         [JsonProperty("name")]
-        public string Name 
-        { 
+        public string Name
+        {
             get => mName ?? string.Empty;
             set => mName = value;
         }
@@ -52,8 +52,8 @@ namespace DHLClient
         /// Special service or extra charge code. This is the code you would have to use in the /shipment service if you wish to add an optional Service such as Saturday delivery
         /// </summary>
         [JsonProperty("serviceCode")]
-        public string ServiceCode 
-        { 
+        public string ServiceCode
+        {
             get => mServiceCode ?? string.Empty;
             set => mServiceCode = value;
         }
@@ -93,7 +93,7 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("priceCurrency")]
         [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
-        public CurrencyCode PriceCurrency {  get; set; }
+        public CurrencyCode PriceCurrency { get; set; }
 
         /// <summary>
         /// Customer agreement indicator for product and services, if service is offered with prior customer agreement
@@ -117,8 +117,8 @@ namespace DHLClient
         /// The item price breakdown
         /// </summary>
         [JsonProperty("priceBreakdown")]
-        public IEnumerable<ProductItemPriceBreakdownResponseModel> PriceBreakdown 
-        { 
+        public IEnumerable<ProductItemPriceBreakdownResponseModel> PriceBreakdown
+        {
             get => mPriceBreakdown ?? Enumerable.Empty<ProductItemPriceBreakdownResponseModel>();
             set => mPriceBreakdown = value;
         }

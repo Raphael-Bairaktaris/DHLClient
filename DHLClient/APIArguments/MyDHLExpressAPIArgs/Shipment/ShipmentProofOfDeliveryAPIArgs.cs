@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Arguments used for shipment
     /// </summary>
-    public class ShipmentAPIArgs : BaseMyDHLAPIArgs
+    public class ShipmentProofOfDeliveryAPIArgs : BaseMyDHLAPIArgs
     {
         #region Public Properties
 
@@ -13,23 +13,23 @@ namespace DHLClient
         /// DHL Express shipment identification number
         /// </summary>
         /// <example>9356579890</example>
-        [JsonRequired]
-        [JsonProperty("shipmentTrackingNumber")]
+        [ArgumentName("shipmentTrackingNumber")]
         public double ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// DHL Express customer shipper account number
         /// </summary>
         /// <example>123456789</example>
-        [JsonProperty("shipmentAccountNumber")]
+        [ArgumentName("shipmentAccountNumber")]
         public double ShipmentAccountNumber { get; set; }
 
         /// <summary>
         /// The content
         /// </summary>
         /// <example>epod-summary</example>
-        [JsonProperty("content")]
-        public string? Content { get; set; }
+        [ArgumentName("content")]
+        [QueryArgumentConverter<ContentTypeQueryArgumentConverter>]
+        public ContentType Content { get; set; }
 
         #endregion
 
@@ -38,7 +38,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentAPIArgs() : base()
+        public ShipmentProofOfDeliveryAPIArgs() : base()
         {
 
         }

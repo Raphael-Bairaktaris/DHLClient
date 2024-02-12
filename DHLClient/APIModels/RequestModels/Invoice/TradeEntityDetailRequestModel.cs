@@ -21,7 +21,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("contactInformation")]
-        public ContactInformationRequestModel? ContactInformation { get; set; }
+        public ShipmentContactInformationRequestModel? ContactInformation { get; set; }
 
         /// <summary>
         /// The business party type
@@ -34,7 +34,7 @@ namespace DHLClient
         /// The registration number details
         /// </summary>
         [JsonProperty("registrationNumbers")]
-        public RegistrationNumberRequestModel? RegistrationNumbers { get; set; }
+        public ShipmentRegistrationNumberRequestModel? RegistrationNumbers { get; set; }
 
         #endregion
 

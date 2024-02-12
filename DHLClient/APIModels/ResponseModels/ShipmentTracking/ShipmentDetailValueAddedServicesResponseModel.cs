@@ -8,7 +8,7 @@ namespace DHLClient
     public class ShipmentDetailValueAddedServicesResponseModel
     {
         #region Private Members
-        
+
         /// <summary>
         /// The member of the <see cref="Services"/> property
         /// </summary>
@@ -22,8 +22,8 @@ namespace DHLClient
         /// List of customer services
         /// </summary>
         [JsonProperty("services")]
-        public ShipmentDetailServicesResponseModel Services 
-        { 
+        public ShipmentDetailServicesResponseModel Services
+        {
             get => mServices ??= new ShipmentDetailServicesResponseModel();
             set => mServices = value;
         }

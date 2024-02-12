@@ -27,8 +27,8 @@ namespace DHLClient
         /// The name of the person
         /// </summary>
         [JsonProperty("name")]
-        public string Name 
-        { 
+        public string Name
+        {
             get => mName ?? string.Empty;
             set => mName = value;
         }
@@ -37,8 +37,8 @@ namespace DHLClient
         /// The name of the organization
         /// </summary>
         [JsonProperty("organizationName")]
-        public string OrganizationName 
-        { 
+        public string OrganizationName
+        {
             get => mOrganizationName ?? string.Empty;
             set => mOrganizationName = value;
         }

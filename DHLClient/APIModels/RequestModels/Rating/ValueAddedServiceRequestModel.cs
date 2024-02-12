@@ -35,12 +35,21 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("currency")]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode Currency { get; set; }
 
         /// <summary>
         /// The payment method (for future use)
         /// </summary>
+        [JsonProperty("method")]
+        [JsonConverter(typeof(PaymentMethodToStringJsonConverter))]
         public PaymentMethod Method { get; set; }
+
+        /// <summary>
+        /// The DangerousGoods section indicates if there is dangerous good content within the shipment.
+        /// </summary>
+        [JsonProperty("dangerousGoods")]
+        public DangerousGoodRequestModel DangeroudGoods { get; set; }
 
         #endregion
 

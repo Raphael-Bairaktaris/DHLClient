@@ -96,7 +96,7 @@ namespace DHLClient
         /// The list of services available at the DHL Service Point location.
         /// </summary>
         [JsonProperty("serviceTypes")]
-        [JsonConverter(typeof(ServiceTypeEnumEnumerableToStringJsonConverter))] 
+        [JsonConverter(typeof(ServiceTypeEnumEnumerableToStringJsonConverter))]
         public IEnumerable<ServiceType> ServiceTypes
         {
             get => mServiceTypes ?? Enumerable.Empty<ServiceType>();
@@ -118,7 +118,7 @@ namespace DHLClient
         /// Information on the average availability of locker capacity (only available in Germany).
         /// </summary>
         [JsonProperty("availableCapacity")]
-        [JsonConverter (typeof(CapacityTypeToStringJsonConverter))]
+        [JsonConverter(typeof(CapacityTypeToStringJsonConverter))]
         public CapacityType AvailableCapacity { get; set; }
 
         /// <summary>

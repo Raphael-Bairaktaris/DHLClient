@@ -29,8 +29,8 @@ namespace DHLClient
         /// Specific detail of product
         /// </summary>
         /// <example>D2P</example>
-        public string DeliveryMethodMark 
-        { 
+        public string DeliveryMethodMark
+        {
             get => mDeliveryMethodMark ?? string.Empty;
             set => mDeliveryMethodMark = value;
         }
@@ -39,8 +39,8 @@ namespace DHLClient
         /// The product code
         /// </summary>
         [JsonProperty("productCode")]
-        public string ProductCode 
-        { 
+        public string ProductCode
+        {
             get => mProductCode ?? string.Empty;
             set => mProductCode = value;
         }

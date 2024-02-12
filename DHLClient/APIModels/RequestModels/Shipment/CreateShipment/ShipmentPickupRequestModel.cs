@@ -34,19 +34,19 @@ namespace DHLClient
         /// Details special pickup instructions you may wish to send to the DHL Courier.
         /// </summary>
         [JsonProperty("specialInstructions")]
-        public IEnumerable<SpecialInstructionRequestModel>? SpecialInstructions { get; set; }
+        public IEnumerable<ShipmentSpecialInstructionRequestModel>? SpecialInstructions { get; set; }
 
         /// <summary>
         /// Please enter address and contact details related to your pickup
         /// </summary>
         [JsonProperty("pickupDetails")]
-        public ShipmentCollectionDetailRequestModel? PickupDetails { get; set; }
+        public ShipmentPickupDetailRequestModel? PickupDetails { get; set; }
 
         /// <summary>
         /// Please enter address and contact details of the individual requesting the pickup
         /// </summary>
         [JsonProperty("pickupRequestorDetails")]
-        public ShipmentCollectionDetailRequestModel? PickupRequestorDetails { get; set; }
+        public ShipmentPickupDetailRequestModel? PickupRequestorDetails { get; set; }
 
         /// <summary>
         /// Please enter DHL Express Global Product code

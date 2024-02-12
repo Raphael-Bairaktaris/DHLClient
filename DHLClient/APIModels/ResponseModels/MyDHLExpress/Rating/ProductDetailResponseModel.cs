@@ -55,7 +55,7 @@ namespace DHLClient
         private IEnumerable<RatingProductServiceCodeDependencyRuleGroupResponseModel>? mServiceCodeDependencyRuleGroups;
 
         /// <summary>
-        /// the member of the <see cref="PickupCapabilities"/> property
+        /// The member of the <see cref="PickupCapabilities"/> property
         /// </summary>
         private RatingProductPickupCapabilityResponseModel? mPickupCapabilities;
 
@@ -78,8 +78,8 @@ namespace DHLClient
         /// </summary>
         /// <example>EXPRESS DOMESTIC</example>
         [JsonProperty("productName")]
-        public string ProductName 
-        { 
+        public string ProductName
+        {
             get => mProductName ?? string.Empty;
             set => mProductName = value;
         }
@@ -89,8 +89,8 @@ namespace DHLClient
         /// </summary>
         /// <example>N</example>
         [JsonProperty("productCode")]
-        public string ProductCode 
-        { 
+        public string ProductCode
+        {
             get => mProductCode ?? string.Empty;
             set => mProductCode = value;
         }
@@ -100,8 +100,8 @@ namespace DHLClient
         /// </summary>
         /// <example>N</example>
         [JsonProperty("localProductCode")]
-        public string LocalProductCode 
-        { 
+        public string LocalProductCode
+        {
             get => mLocalProductCode ?? string.Empty;
             set => mLocalProductCode = value;
         }
@@ -140,8 +140,8 @@ namespace DHLClient
         /// The total price
         /// </summary>
         [JsonProperty("totalPrice")]
-        public IEnumerable<RatingProductTotalPriceResponseModel> TotalPrice 
-        { 
+        public IEnumerable<RatingProductTotalPriceResponseModel> TotalPrice
+        {
             get => mTotalPrice ?? Enumerable.Empty<RatingProductTotalPriceResponseModel>();
             set => mTotalPrice = value;
         }
@@ -150,8 +150,8 @@ namespace DHLClient
         /// The total price breakdown
         /// </summary>
         [JsonProperty("totalPriceBreakdown")]
-        public IEnumerable<ProductTotalPriceBreakdownResponseModel> TotalPriceBreakdown 
-        { 
+        public IEnumerable<ProductTotalPriceBreakdownResponseModel> TotalPriceBreakdown
+        {
             get => mTotalPriceBreakdown ??= Enumerable.Empty<ProductTotalPriceBreakdownResponseModel>();
             set => mTotalPriceBreakdown = value;
         }
@@ -159,9 +159,9 @@ namespace DHLClient
         /// <summary>
         /// The detailed price breakdown
         /// </summary>
-        public IEnumerable<RatingProductDetailedPriceBreakdownResponseModel> DetailedPriceBreakdown 
-        { 
-            get => mDetailedPriceBreakdown ??Enumerable.Empty<RatingProductDetailedPriceBreakdownResponseModel>();
+        public IEnumerable<RatingProductDetailedPriceBreakdownResponseModel> DetailedPriceBreakdown
+        {
+            get => mDetailedPriceBreakdown ?? Enumerable.Empty<RatingProductDetailedPriceBreakdownResponseModel>();
             set => mDetailedPriceBreakdown = value;
         }
 
@@ -169,9 +169,9 @@ namespace DHLClient
         /// Group of serviceCodes that are mutually exclusive. Only one serviceCode among the list must be applied for a shipment
         /// </summary>
         [JsonProperty("serviceCodeMutuallyExclusiveGroups")]
-        public IEnumerable<RatingProductServiceCodeMutuallyExclusiveGroupResponseModel> ServiceCodeMutuallyExclusiveGroups 
-        { 
-            get => mServiceCodeMutuallyExclusiveGroups ?? Enumerable.Empty<RatingProductServiceCodeMutuallyExclusiveGroupResponseModel>(); 
+        public IEnumerable<RatingProductServiceCodeMutuallyExclusiveGroupResponseModel> ServiceCodeMutuallyExclusiveGroups
+        {
+            get => mServiceCodeMutuallyExclusiveGroups ?? Enumerable.Empty<RatingProductServiceCodeMutuallyExclusiveGroupResponseModel>();
             set => mServiceCodeMutuallyExclusiveGroups = value;
         }
 
@@ -179,8 +179,8 @@ namespace DHLClient
         /// Dependency rule groups for a particular serviceCode.
         /// </summary>
         [JsonProperty("serviceCodeDependencyRuleGroups")]
-        public IEnumerable<RatingProductServiceCodeDependencyRuleGroupResponseModel> ServiceCodeDependencyRuleGroups 
-        { 
+        public IEnumerable<RatingProductServiceCodeDependencyRuleGroupResponseModel> ServiceCodeDependencyRuleGroups
+        {
             get => mServiceCodeDependencyRuleGroups ?? Enumerable.Empty<RatingProductServiceCodeDependencyRuleGroupResponseModel>();
             set => mServiceCodeDependencyRuleGroups = value;
         }
@@ -189,8 +189,8 @@ namespace DHLClient
         /// The pickup capabilities
         /// </summary>
         [JsonProperty("pickupCapabilities")]
-        public RatingProductPickupCapabilityResponseModel PickupCapabilities 
-        { 
+        public RatingProductPickupCapabilityResponseModel PickupCapabilities
+        {
             get => mPickupCapabilities ??= new RatingProductPickupCapabilityResponseModel();
             set => mPickupCapabilities = value;
         }
@@ -198,8 +198,8 @@ namespace DHLClient
         /// <summary>
         /// The delivery capabilities
         /// </summary>
-        public RatingProductDeliveryCapabilityResponseModel DeliveryCapabilities 
-        { 
+        public RatingProductDeliveryCapabilityResponseModel DeliveryCapabilities
+        {
             get => mDeliveryCapabilities ??= new RatingProductDeliveryCapabilityResponseModel();
             set => mDeliveryCapabilities = value;
         }
@@ -208,8 +208,8 @@ namespace DHLClient
         /// The items
         /// </summary>
         [JsonProperty("items")]
-        public IEnumerable<RatingProductItemResponseModel> Items 
-        { 
+        public IEnumerable<RatingProductItemResponseModel> Items
+        {
             get => mItems ?? Enumerable.Empty<RatingProductItemResponseModel>();
             set => mItems = value;
         }

@@ -12,12 +12,12 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Open"/> property
         /// </summary>
-        private IEnumerable<ServicePointDetailHolidayOpenResponseModel> mOpen;
+        private IEnumerable<ServicePointDetailHolidayOpenResponseModel>? mOpen;
 
         /// <summary>
         /// The member of the <see cref="Closed"/> property
         /// </summary>
-        private IEnumerable<ServicePointDetailHolidayCloseResponseModel> mClosed;
+        private IEnumerable<ServicePointDetailHolidayCloseResponseModel>? mClosed;
 
         #endregion
 

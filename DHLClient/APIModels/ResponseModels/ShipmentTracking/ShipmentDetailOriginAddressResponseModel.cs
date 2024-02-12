@@ -60,8 +60,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Chodov</example>
         [JsonProperty("addressLocalityServicing")]
-        public string AddressLocalityServicing 
-        { 
+        public string AddressLocalityServicing
+        {
             get => mAddressLocalityServicing ?? string.Empty;
             set => mAddressLocalityServicing = value;
         }
@@ -71,8 +71,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Prague 11</example>
         [JsonProperty("addressRegion")]
-        public string AddressRegion 
-        { 
+        public string AddressRegion
+        {
             get => mAddressRegion ?? string.Empty;
             set => mAddressRegion = value;
         }

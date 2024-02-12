@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// A <see cref="BaseEnumEnumerableJsonConverter{T}"/> that is used for converting a <see cref="ProviderType"/> to a <see cref="string"/>

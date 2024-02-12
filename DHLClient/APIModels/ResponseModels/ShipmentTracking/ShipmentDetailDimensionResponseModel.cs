@@ -12,17 +12,17 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Width"/> property
         /// </summary>
-        private ShipmentDetailDimensionAttributeResponseModel mWidth;
+        private ShipmentDetailDimensionAttributeResponseModel? mWidth;
 
         /// <summary>
         /// The member of the <see cref="Height"/> property
         /// </summary>
-        private ShipmentDetailDimensionAttributeResponseModel mHeight;
+        private ShipmentDetailDimensionAttributeResponseModel? mHeight;
 
         /// <summary>
         /// The member of the <see cref="Length"/> property
         /// </summary>
-        private ShipmentDetailDimensionAttributeResponseModel mLength;
+        private ShipmentDetailDimensionAttributeResponseModel? mLength;
 
         #endregion
 
@@ -33,8 +33,8 @@ namespace DHLClient
         /// </summary>
         /// <example>15</example>
         [JsonProperty("width")]
-        public ShipmentDetailDimensionAttributeResponseModel Width 
-        { 
+        public ShipmentDetailDimensionAttributeResponseModel Width
+        {
             get => mWidth ??= new ShipmentDetailDimensionAttributeResponseModel();
             set => mWidth = value;
         }

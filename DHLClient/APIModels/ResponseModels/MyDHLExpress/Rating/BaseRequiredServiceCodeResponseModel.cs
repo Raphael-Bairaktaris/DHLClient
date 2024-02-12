@@ -23,8 +23,8 @@ namespace DHLClient
         /// </summary>
         /// <example>PZ</example>
         [JsonProperty("serviceCode")]
-        public string ServiceCode 
-        { 
+        public string ServiceCode
+        {
             get => mServiceCode ?? string.Empty;
             set => mServiceCode = value;
         }

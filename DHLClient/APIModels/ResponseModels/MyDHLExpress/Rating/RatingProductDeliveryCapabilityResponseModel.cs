@@ -40,8 +40,8 @@ namespace DHLClient
         /// The DHL Service Area Code for the destination of the Shipment
         /// </summary>
         [JsonProperty("destinationServiceAreaCode")]
-        public string DestinationServiceAreaCode 
-        { 
+        public string DestinationServiceAreaCode
+        {
             get => mDestinationServiceAreaCode ?? string.Empty;
             set => mDestinationServiceAreaCode = value;
         }
@@ -50,8 +50,8 @@ namespace DHLClient
         /// The DHL Facility Code for the Destination
         /// </summary>
         [JsonProperty("destinationFacilityAreaCode")]
-        public string DestinationFacilityAreaCode 
-        { 
+        public string DestinationFacilityAreaCode
+        {
             get => mDestinationFacilityAreaCode ?? string.Empty;
             set => mDestinationFacilityAreaCode = value;
         }

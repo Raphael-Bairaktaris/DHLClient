@@ -27,7 +27,7 @@ namespace DHLClient
         /// This indicator has values of Y or N, and tells the consumer if the service in the response has a pickup date on the same day as the requested shipment date (per the request).
         /// </summary>
         [JsonProperty("nextBusinessDay")]
-        public bool SghouldDeliverNextBusinessDay { get; set; }
+        public bool ShouldDeliverNextBusinessDay { get; set; }
 
         /// <summary>
         /// This is the cutoff time for the service<BR> offered in the response. This represents the latest time (local to origin) which the shipment can be tendered to the courier for that service on that day.
@@ -63,8 +63,8 @@ namespace DHLClient
         /// </summary>
         /// <example>ELA</example>
         [JsonProperty("originServiceCodeArea")]
-        public string OriginServiceCodeArea 
-        { 
+        public string OriginServiceCodeArea
+        {
             get => mOriginServiceCodeArea ?? string.Empty;
             set => mOriginServiceCodeArea = value;
         }
@@ -73,8 +73,8 @@ namespace DHLClient
         /// The DHL facility code for the origin
         /// </summary>
         [JsonProperty("originFacilityAreaCode")]
-        public string OriginFacilityAreaCode 
-        { 
+        public string OriginFacilityAreaCode
+        {
             get => mOriginFacilityAreaCode ?? string.Empty;
             set => mOriginFacilityAreaCode = value;
         }

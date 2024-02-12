@@ -1,6 +1,4 @@
-﻿using DHLClient.DataModels.Enums;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="IEnumerable{DestinationProvider}"/> to <see cref="string"/>

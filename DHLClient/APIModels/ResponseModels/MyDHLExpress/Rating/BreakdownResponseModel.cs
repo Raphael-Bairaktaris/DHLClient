@@ -1,5 +1,4 @@
-﻿using DHLClient.JsonConverters;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace DHLClient
 {
@@ -121,8 +120,8 @@ namespace DHLClient
         /// The price breakdown
         /// </summary>
         [JsonProperty("priceBreakdown")]
-        public IEnumerable<PriceBreakdownResponseModel> PriceBreakdown 
-        { 
+        public IEnumerable<PriceBreakdownResponseModel> PriceBreakdown
+        {
             get => mPriceBreakdown ?? Enumerable.Empty<PriceBreakdownResponseModel>();
             set => mPriceBreakdown = value;
         }
@@ -131,8 +130,8 @@ namespace DHLClient
         /// Tariff Rate Formula on Shipment Level
         /// </summary>
         [JsonProperty("tariffRateFormula")]
-        public string TariffRateFormula 
-        { 
+        public string TariffRateFormula
+        {
             get => mTariffRateFormula ?? string.Empty;
             set => mTariffRateFormula = value;
         }

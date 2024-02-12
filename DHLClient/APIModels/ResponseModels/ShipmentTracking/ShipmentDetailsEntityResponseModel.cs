@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipment details participant response
     /// </summary>
-    public class ShipmentDetailsEntityResponseModel 
+    public class ShipmentDetailsEntityResponseModel
     {
         #region Private Members
 
@@ -32,8 +32,8 @@ namespace DHLClient
         /// Common organization such as school, club etc.
         /// </summary>
         [JsonProperty("organizationName")]
-        public ShipmentDetailOrganizationNameResponseModel OrganizationName 
-        { 
+        public ShipmentDetailOrganizationNameResponseModel OrganizationName
+        {
             get => mOrganizationName ??= new ShipmentDetailOrganizationNameResponseModel();
             set => mOrganizationName = value;
         }
@@ -42,8 +42,8 @@ namespace DHLClient
         /// A business organization
         /// </summary>
         [JsonProperty("Company")]
-        public ShipmentDetailCompanyResponseModel Company 
-        { 
+        public ShipmentDetailCompanyResponseModel Company
+        {
             get => mCompany ??= new ShipmentDetailCompanyResponseModel();
             set => mCompany = value;
         }
@@ -58,7 +58,7 @@ namespace DHLClient
             set => mPerson = value;
         }
 
-        public 
+        public
 
         #endregion
 

@@ -28,7 +28,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("dimensions")]
-        public RatingLandedCostPackageDimensionRequestModel? Dimensions { get; set; }  
+        public RatingLandedCostPackageDimensionRequestModel? Dimensions { get; set; }
 
         #endregion
 

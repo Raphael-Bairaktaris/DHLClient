@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Arguments uses for receiving a shipment tracking by number

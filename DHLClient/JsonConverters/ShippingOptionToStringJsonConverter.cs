@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="ShippingOption"/> to <see cref="string"/>

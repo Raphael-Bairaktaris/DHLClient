@@ -33,8 +33,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Exclusive Billing Services</example>
         [JsonProperty("serviceCodeRuleName")]
-        public string ServiceCodeRuleName 
-        { 
+        public string ServiceCodeRuleName
+        {
             get => mServiceCodeRuleName ?? string.Empty;
             set => mServiceCodeRuleName = value;
         }
@@ -44,8 +44,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Mutually exclusive Billing Services - shipment can contain just one of following</example>
         [JsonProperty("description")]
-        public string Description 
-        { 
+        public string Description
+        {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }
@@ -54,8 +54,8 @@ namespace DHLClient
         /// The service codes
         /// </summary>
         [JsonProperty("serviceCodes")]
-        public IEnumerable<BaseRequiredServiceCodeResponseModel> ServiceCodes 
-        { 
+        public IEnumerable<BaseRequiredServiceCodeResponseModel> ServiceCodes
+        {
             get => mServiceCodes ?? Enumerable.Empty<BaseRequiredServiceCodeResponseModel>();
             set => mServiceCodes = value;
         }

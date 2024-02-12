@@ -198,8 +198,8 @@ namespace DHLClient
         /// Extra Controlled Access Data Codes
         /// </summary>
         [JsonProperty("controlledDataCodes")]
-        public IEnumerable<string> ControlledDataCodes 
-        { 
+        public IEnumerable<string> ControlledDataCodes
+        {
             get => mControlledDataCodes ?? Enumerable.Empty<string>();
             set => mControlledDataCodes = value;
         }

@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating special instructions
     /// </summary>
-    public class SpecialInstructionRequestModel
+    public class ShipmentSpecialInstructionRequestModel
     {
         #region Public Properties
 
@@ -30,7 +30,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public SpecialInstructionRequestModel() : base()
+        public ShipmentSpecialInstructionRequestModel() : base()
         {
 
         }
