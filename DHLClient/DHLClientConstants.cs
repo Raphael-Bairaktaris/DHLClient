@@ -159,6 +159,27 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
+        /// Maps the <see cref="CustomerReference"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<CustomerReference, string> CustomerReferenceToStringMapper { get; } = new Dictionary<CustomerReference, string>()
+        {
+            { CustomerReference.ShipmentReferenceNumberOfTheReceiver, "AAO" },
+            { CustomerReference.ReferenceNumberOfConsignor, "CU" },
+            { CustomerReference.ReferenceNumberOfFreightForwarder, "FF" },
+            { CustomerReference.FreightBillNumber, "FN" },
+            { CustomerReference.InboundCenterReferenceNumber, "IBC" },
+            { CustomerReference.LoadListReference, "LLR" },
+            { CustomerReference.OutboundReferenceNumber, "OBC" },
+            { CustomerReference.PickupRequestNumber, "PRN" },
+            { CustomerReference.LocalPayerAccountNumber, "ACP" },
+            { CustomerReference.LocalShipperAccountNumber, "ACS" },
+            { CustomerReference.LocalReceiverAccountNumber, "ACR" },
+            { CustomerReference.CustomsDeclarationNumber, "CDN" },
+            { CustomerReference.EurologShipmentId, "STD" },
+            { CustomerReference.BuyersOrderNumber, "AAO" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="CustomsDocumentType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<CustomsDocumentType, string> CustomsDocumentTypeToStringMapper { get; } = new Dictionary<CustomsDocumentType, string>()
@@ -792,6 +813,16 @@ namespace DHLClient
             { ServiceType.Parking, "parking" },
             { ServiceType.ParcelDropOffUnlabeled, "parcel:drop-off-unlabeled" },
             { ServiceType.ExpressDropOffUnlabeled, "express:drop-off-unlabeled" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="ShipmentAttribute"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<ShipmentAttribute, string> ShipmentAttributeToStringMapper { get; } = new Dictionary<ShipmentAttribute, string>()
+        {
+            { ShipmentAttribute.ParentId, "parentId" },
+            { ShipmentAttribute.ShipmentId, "shipmentId" },
+            { ShipmentAttribute.PieceId, "pieceId" }
         }.ToImmutableDictionary();
 
         /// <summary>

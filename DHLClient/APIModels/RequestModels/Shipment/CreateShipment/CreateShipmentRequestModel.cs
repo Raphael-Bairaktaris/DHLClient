@@ -62,7 +62,19 @@ namespace DHLClient
         /// Here you can modify label, waybillDoc, invoice and shipment receipt properties
         /// </summary>
         [JsonProperty("outputImageProperties")]
-        public ShipmentOutputImagePropertyRequestModel OutputImageProperties { get; set; }
+        public IEnumerable<ShipmentOutputImagePropertyRequestModel> OutputImageProperties { get; set; }
+
+        /// <summary>
+        /// Here you can declare your customer references
+        /// </summary>
+        [JsonProperty("customerReferences")]
+        public IEnumerable<ShipmentCustomerReferenceRequestModel> CustomerReferences { get; set; }
+
+        /// <summary>
+        /// Identifiers section is on the shipment level where you can optionally provide a DHL Express waybill number. This has to be enabled by your DHL Express IT contact.
+        /// </summary>
+        [JsonProperty("identifiers")]
+        public IEnumerable<ShipmentIdentifierRequestModel> Identifiers { get; set; }
 
         #endregion
 
