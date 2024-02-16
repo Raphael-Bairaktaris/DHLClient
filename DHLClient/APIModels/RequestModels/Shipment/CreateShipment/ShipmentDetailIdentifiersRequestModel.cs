@@ -3,15 +3,16 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Requests used for creating or updating a shipment identifier
+    /// Requests used for creating or updating identifiers
     /// </summary>
-    public class ShipmentIdentifierRequestModel
+    public class ShipmentDetailIdentifiersRequestModel
     {
         #region Public Properties
 
         /// <summary>
-        /// Identifiers section is on the shipment level where you can optionally provide a DHL Express waybill number. This has to be enabled by your DHL Express IT contact.
+        /// Please provide type of the identifier you want to set value for
         /// </summary>
+        /// <example>shipmentId</example>
         [JsonRequired]
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(ShipmentAttributeToStringJsonConverter))]
@@ -20,13 +21,14 @@ namespace DHLClient
         /// <summary>
         /// Please enter value of your identifier (WB number, PieceID)
         /// </summary>
+        /// <example>1234567890</example>
         [JsonRequired]
         [JsonProperty("value")]
         public string? Value { get; set; }
 
         /// <summary>
-        /// Please enter value of Piece Data Identifier.
-        /// Note: Piece identification data should be same for all the pieces provided in single shipment
+        /// Please enter value of Piece Data Identifier. 
+        /// Note: Piece identification data should be same for all the pieces provided in single shipment.
         /// </summary>
         [JsonProperty("dataIdentifier")]
         public string? DataIdentifier { get; set; }
@@ -38,7 +40,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentIdentifierRequestModel() : base()
+        public ShipmentDetailIdentifiersRequestModel() : base()
         {
 
         }

@@ -30,6 +30,7 @@ namespace DHLClient
         [JsonRequired]
         [JsonProperty("issuerCountryCode")]
         public CountryCode? IssuerCountryCode { get; set; }
+
         #endregion
 
         #region Constructors

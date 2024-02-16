@@ -3,9 +3,9 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Requests used for creating or updating line items
+    /// 
     /// </summary>
-    public class InvoiceLineItemsRequestModel
+    public class ShipmentDetailLineItemRequestModel
     {
         #region Public Properties
 
@@ -15,7 +15,7 @@ namespace DHLClient
         /// <example>1</example>
         [JsonRequired]
         [JsonProperty("number")]
-        public double Number { get; set; }
+        public int? Number { get; set; }
 
         /// <summary>
         /// Please provide description of the line item
@@ -28,13 +28,13 @@ namespace DHLClient
         /// <summary>
         /// Please provide unit or article price line item value
         /// </summary>
-        /// <example>150</example>
-        public decimal? Price { get; set; }
+        [JsonRequired]
+        [JsonProperty("price")]
+        public double? Price { get; set; }
 
         /// <summary>
         /// Please enter information about quantity for this line item
         /// </summary>
-        [JsonRequired]
         [JsonProperty("quantity")]
         public ShipmentDetailLineItemQuantityRequestModel? Quantity { get; set; }
 
@@ -42,27 +42,25 @@ namespace DHLClient
         /// Please provide Commodity codes for the shipment at item line level
         /// </summary>
         [JsonProperty("commodityCodes")]
-        public LineItemCommodityCodeRequestModel? CommodityCodes { get; set; }
+        public IEnumerable<ShipmentLineItemCommodityCodeRequestModel>? CommodityCodes { get; set; }
 
         /// <summary>
         /// Please provide the reason for export
         /// </summary>
-        /// <example>temporary</example>
-        [JsonRequired]
         [JsonProperty("exportReasonType")]
+        [JsonConverter(typeof(ExportReasonToStringJsonConverter))]
         public ExportReason? ExportReasonType { get; set; }
 
         /// <summary>
         /// Please enter two letter ISO manufacturer country code
         /// </summary>
-        /// <example>CZ</example>
         [JsonRequired]
         [JsonProperty("manufacturerCountry")]
-        public CountryCode ManufacturerCountry { get; set; }
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
+        public CountryCode? ManufacturerCountry { get; set; }
 
         /// <summary>
-        /// Please enter the weight information for line item. 
-        /// Either a netValue or grossValue must be provided for the line item.
+        /// Please enter the weight information for line item
         /// </summary>
         [JsonRequired]
         [JsonProperty("weight")]
@@ -75,22 +73,28 @@ namespace DHLClient
         public bool IsTaxesPaid { get; set; }
 
         /// <summary>
+        /// Please provide the additional information
+        /// </summary>
+        [JsonProperty("additionalInformation")]
+        public IEnumerable<string>? AdditionalInformation { get; set; }
+
+        /// <summary>
         /// Please provide the Customer References for the line item
         /// </summary>
         [JsonProperty("customerReferences")]
-        public CustomerReferenceRequestModel? CustomerReferences { get; set; }
+        public IEnumerable<CustomerReferenceRequestModel>? CustomerReferences { get; set; }
 
         /// <summary>
-        /// Please provide the line item customs document type code.
+        /// Please provide the customs documents details
         /// </summary>
         [JsonProperty("customsDocuments")]
-        public CustomsDocumentRequestModel? CustomsDocuments { get; set; }
+        public IEnumerable<CustomsDocumentRequestModel>? CustomsDocuments { get; set; }
 
         /// <summary>
-        /// Please provide monetary value of the line item x quantity
+        /// Please provide the line item customs document ID
         /// </summary>
         [JsonProperty("preCalculatedLineItemTotalValue")]
-        public decimal PreCalculatedLineItemTotalValue { get; set; }
+        public double PreCalcucatedLineItemTotalValue { get; set; }
 
         #endregion
 
@@ -99,7 +103,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public InvoiceLineItemsRequestModel() : base()
+        public ShipmentDetailLineItemRequestModel() : base()
         {
 
         }

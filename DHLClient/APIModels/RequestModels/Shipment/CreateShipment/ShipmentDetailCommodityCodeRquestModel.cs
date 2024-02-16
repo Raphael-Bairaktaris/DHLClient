@@ -3,25 +3,23 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Requests used for creating or updating a customs document
+    /// Requests used for creating or updating a commodity code
     /// </summary>
-    public class CustomsDocumentRequestModel
+    public class ShipmentDetailCommodityCodeRquestModel
     {
         #region Public Properties
 
         /// <summary>
-        /// Please provide the customs documents details
+        /// Please provide type of the commodity code
         /// </summary>
-        /// <example>972</example>
         [JsonRequired]
         [JsonProperty("typeCode")]
-        [JsonConverter(typeof(CustomsDocumentTypeToStringJsonConverter))]
-        public CustomsDocumentType TypeCode { get; set; }
+        [JsonConverter(typeof(CommodityCodeToStringJsonConverter))]
+        public CommodityCode? TypeCode { get; set; }
 
         /// <summary>
-        /// Please provide the line item customs document ID
+        /// Please provide the commodity code
         /// </summary>
-        /// <example>custdoc445</example>
         [JsonRequired]
         [JsonProperty("value")]
         public string? Value { get; set; }
@@ -33,7 +31,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public CustomsDocumentRequestModel() : base()
+        public ShipmentDetailCommodityCodeRquestModel() : base()
         {
 
         }

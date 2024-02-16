@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating a line item quantity
     /// </summary>
-    public class LineItemQuantityRequestModel
+    public class ShipmentDetailLineItemQuantityRequestModel
     {
         #region Public Properties
 
@@ -15,14 +15,15 @@ namespace DHLClient
         /// <example>1</example>
         [JsonRequired]
         [JsonProperty("value")]
-        public double Value { get; set; }
+        public double? Value { get; set; }
 
         /// <summary>
         /// Please provide correct unit of measurement
         /// </summary>
         [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
-        public QuantityUnitOfMeasurement UnitOfMeasurement { get; set; }
+        [JsonConverter(typeof(QuantityUnitOfMeasurementToStringJsonConverter))]
+        public QuantityUnitOfMeasurement? UnitOfMeasurement { get; set; }
 
         #endregion
 
@@ -31,7 +32,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public LineItemQuantityRequestModel() : base()
+        public ShipmentDetailLineItemQuantityRequestModel() : base()
         {
 
         }

@@ -14,14 +14,23 @@ namespace DHLClient
         /// </summary>
         /// <example>10</example>
         [JsonProperty("value")]
-        public decimal Value { get; set; }
+        public decimal? Value { get; set; }
+
+        /// <summary>
+        /// Please enter charge caption
+        /// </summary>
+        /// <example>fee</example>
+        [JsonRequired]
+        [JsonProperty("caption")]
+        public string? Caption { get; set; }
 
         /// <summary>
         /// Please enter charge type
         /// </summary>
         [JsonRequired]
         [JsonProperty("typeCode")]
-        public ChargeType TypeCode { get; set; }
+        [JsonConverter(typeof(ChargeCategoryToStringJsonConverter))]
+        public ChargeType? TypeCode { get; set; }
 
         #endregion
 

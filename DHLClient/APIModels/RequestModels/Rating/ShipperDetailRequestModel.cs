@@ -44,6 +44,7 @@ namespace DHLClient
         /// Please enter address line 1
         /// </summary>
         /// <example>V Park 2308/10</example>
+        [JsonRequired]
         [JsonProperty("addressLine1")]
         public string? AddressLine1 { get; set; }
 

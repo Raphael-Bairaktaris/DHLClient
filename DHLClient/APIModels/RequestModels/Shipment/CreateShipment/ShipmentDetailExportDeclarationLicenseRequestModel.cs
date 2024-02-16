@@ -3,25 +3,23 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Requests used for creating or updating a customer reference
+    /// Requests used for creating or updating an export declaration license
     /// </summary>
-    public class CustomerReferenceRequestModel
+    public class ShipmentDetailExportDeclarationLicenseRequestModel
     {
         #region Public Properties
 
         /// <summary>
-        /// Please provide the line item reference type code.
+        /// Please provide type of the license
         /// </summary>
-        /// <example>AFE</example>
-        [JsonRequired]
         [JsonProperty("typeCode")]
-        [JsonConverter(typeof(LineItemReferenceTypeToStringJsonConverter))]
-        public LineItemReferenceType? TypeCode { get; set; }
+        [JsonConverter(typeof(FunctionTypeToStringJsonConverter))]
+        public FunctionType? TypeCode { get; set; }
 
         /// <summary>
-        /// Please provide the line item reference
+        /// Please provide the license
         /// </summary>
-        [JsonRequired]
+        /// <example>license</example>
         [JsonProperty("value")]
         public string? Value { get; set; }
 
@@ -32,7 +30,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public CustomerReferenceRequestModel() : base()
+        public ShipmentDetailExportDeclarationLicenseRequestModel() : base()
         {
 
         }

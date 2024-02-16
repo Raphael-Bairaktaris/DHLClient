@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 
-
 namespace DHLClient
 {
     /// <summary>

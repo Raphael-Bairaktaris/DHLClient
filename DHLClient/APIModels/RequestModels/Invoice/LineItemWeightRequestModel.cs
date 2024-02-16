@@ -12,12 +12,14 @@ namespace DHLClient
         /// <summary>
         /// Please enter the net weight value 
         /// </summary>
+        [JsonRequired]
         [JsonProperty("netValue")]
         public double NetValue { get; set; }
 
         /// <summary>
         /// Please enter the gross weight value
         /// </summary>
+        [JsonRequired]
         [JsonProperty("grossValue")]
         public double GrossValue { get; set; }
 

@@ -21,7 +21,6 @@
     <Folder Include="APIArguments\MyDHLExpressAPIArgs\ReferenceData\" />
     <Folder Include="APIArguments\MyDHLExpressAPIArgs\ServicePoint\" />
     <Folder Include="APIArguments\MyDHLExpressAPIArgs\Pickup\" />
-    <Folder Include="APIArguments\MyDHLExpressAPIArgs\Tracking\" />
   </ItemGroup>
 
 </Project>

@@ -9,6 +9,15 @@ namespace DHLClient
     public static class DHLClientConstants
     {
         /// <summary>
+        /// Maps the <see cref="BarcodePositionType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<BarcodePositionType, string> BarcodePositionTypeToStringMapper { get; } = new Dictionary<BarcodePositionType, string>()
+        {
+            { BarcodePositionType.Left, "left" },
+            { BarcodePositionType.Right, "right" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="BreakdownType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<BreakdownType, string> BreakdownTypeToStringMapper { get; } = new Dictionary<BreakdownType, string>()
@@ -510,22 +519,22 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<IncotermRule, string> IncotermRuleToStringMapper { get; } = new Dictionary<IncotermRule, string>()
         {
-            {IncotermRule.ExWorks, "EXW" },
-            {IncotermRule.FreeCarrier, "FCA" },
-            {IncotermRule.CarriagePaidTo, "CPT" },
-            {IncotermRule.CarriageAndInsurancePaidTo, "CIP" },
-            {IncotermRule.DeliveredAtPlaceUnloaded, "DPU" },
-            {IncotermRule.DeliveredAtPlace, "DAP" },
-            {IncotermRule.DeliveryDutyPaid, "DDP" },
-            {IncotermRule.FreeAlongsideShip, "FAS" },
-            {IncotermRule.FreeOnBoard, "FOB" },
-            {IncotermRule.CostAndFreight, "CFR" },
-            {IncotermRule.CostInsuranceAndFreight, "CIF" },
-            {IncotermRule.DeliveredAtFrontier, "DAF" },
-            {IncotermRule.DeliveredAtTerminal, "DAT" },
-            {IncotermRule.DeliveryDutyUnpaid, "DDU" },
-            {IncotermRule.DeliveryExQuay, "DEQ" },
-            {IncotermRule.DeliveredExShip, "DES" }
+            { IncotermRule.ExWorks, "EXW" },
+            { IncotermRule.FreeCarrier, "FCA" },
+            { IncotermRule.CarriagePaidTo, "CPT" },
+            { IncotermRule.CarriageAndInsurancePaidTo, "CIP" },
+            { IncotermRule.DeliveredAtPlaceUnloaded, "DPU" },
+            { IncotermRule.DeliveredAtPlace, "DAP" },
+            { IncotermRule.DeliveryDutyPaid, "DDP" },
+            { IncotermRule.FreeAlongsideShip, "FAS" },
+            { IncotermRule.FreeOnBoard, "FOB" },
+            { IncotermRule.CostAndFreight, "CFR" },
+            { IncotermRule.CostInsuranceAndFreight, "CIF" },
+            { IncotermRule.DeliveredAtFrontier, "DAF" },
+            { IncotermRule.DeliveredAtTerminal, "DAT" },
+            { IncotermRule.DeliveryDutyUnpaid, "DDU" },
+            { IncotermRule.DeliveryExQuay, "DEQ" },
+            { IncotermRule.DeliveredExShip, "DES" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -915,6 +924,16 @@ namespace DHLClient
             { StatusCodeType.Delivered, "delivered" },
             { StatusCodeType.Failure, "failure" },
             { StatusCodeType.Unknown, "unknown" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="SymbologyCode"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<SymbologyCode, int> SymbologyCodeToIntMapper { get; } = new Dictionary<SymbologyCode, int>()
+        {
+            { SymbologyCode.Code_93, 93 },
+            { SymbologyCode.Code_39, 39 },
+            { SymbologyCode.Code_128, 128 }
         }.ToImmutableDictionary();
 
         /// <summary>

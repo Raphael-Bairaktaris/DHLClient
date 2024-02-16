@@ -17,7 +17,7 @@ namespace DHLClient
         /// <example>2006-06-26T17:00:00 GMT+01:00</example>
         [JsonRequired]
         [JsonProperty("plannedShippingDateAndTime")]
-        public DateTimeOffset PlannedShippingDatimeAndTime { get; set; }
+        public DateTimeOffset? PlannedShippingDatimeAndTime { get; set; }
 
         /// <summary>
         /// The pickup
@@ -31,50 +31,66 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("productCode")]
         [JsonRequired]
-        public string ProductCode { get; set; }
+        public string? ProductCode { get; set; }
 
         /// <summary>
         /// Please enter DHL Express Local Product code. Important when shipping domestic products.
         /// </summary>
         [JsonProperty("localProductCode")]
-        public string LocalProductCode { get; set; }
+        public string? LocalProductCode { get; set; }
 
         /// <summary>
         /// Please advise if you want to get rate estimates for given shipment
         /// </summary>
         [JsonProperty("getRateEstimates")]
-        public bool ShouldGetRateEstimates { get; set; }
+        public bool? ShouldGetRateEstimates { get; set; }
 
         /// <summary>
         /// Please enter all the DHL Express accounts and types to be used for this shipment
         /// </summary>
         [JsonProperty("accounts")]
         [JsonRequired]
-        public IEnumerable<AccountRequestModel> Accounts { get; set; }
+        public IEnumerable<AccountRequestModel>? Accounts { get; set; }
 
         /// <summary>
         /// This section communicates additional shipping services, such as Insurance (or Shipment Value Protection).
         /// </summary>
         [JsonProperty("valueAddedServices")]
-        public IEnumerable<ValueAddedServiceRequestModel> ValueAddedServices { get; set; }
+        public IEnumerable<ValueAddedServiceRequestModel>? ValueAddedServices { get; set; }
+
+
 
         /// <summary>
         /// Here you can modify label, waybillDoc, invoice and shipment receipt properties
         /// </summary>
         [JsonProperty("outputImageProperties")]
-        public IEnumerable<ShipmentOutputImagePropertyRequestModel> OutputImageProperties { get; set; }
+        public IEnumerable<ShipmentOutputImagePropertyRequestModel>? OutputImageProperties { get; set; }
 
         /// <summary>
         /// Here you can declare your customer references
         /// </summary>
         [JsonProperty("customerReferences")]
-        public IEnumerable<ShipmentCustomerReferenceRequestModel> CustomerReferences { get; set; }
+        public IEnumerable<ShipmentCustomerReferenceRequestModel>? CustomerReferences { get; set; }
 
         /// <summary>
         /// Identifiers section is on the shipment level where you can optionally provide a DHL Express waybill number. This has to be enabled by your DHL Express IT contact.
         /// </summary>
         [JsonProperty("identifiers")]
-        public IEnumerable<ShipmentIdentifierRequestModel> Identifiers { get; set; }
+        public IEnumerable<ShipmentIdentifierRequestModel>? Identifiers { get; set; }
+
+        /// <summary>
+        /// Here you need to define all the parties needed to ship the package
+        /// </summary>
+        [JsonRequired]
+        [JsonProperty("customerDetails")]
+        public ShipmentCustomerDetailRequestModel? CustomerDetails { get; set; }
+
+        /// <summary>
+        /// Here you can define all the properties related to the content of the prospected shipment
+        /// </summary>
+        [JsonRequired]
+        [JsonProperty("content")]
+        public ShipmentDetailContentRequestModel? Content { get; set; }
 
         #endregion
 
