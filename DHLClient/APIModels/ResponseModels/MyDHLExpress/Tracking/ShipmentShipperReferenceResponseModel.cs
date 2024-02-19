@@ -32,6 +32,7 @@ namespace DHLClient
         /// The shipper's reference
         /// </summary>
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(ShipperReferenceToStringJsonConverter))]
         public ShipperReference TypeCode { get; set; }
 
         #endregion

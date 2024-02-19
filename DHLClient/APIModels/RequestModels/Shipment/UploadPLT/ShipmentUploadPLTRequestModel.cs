@@ -29,7 +29,7 @@ namespace DHLClient
         /// This section is to support multiple base64 encoded string with the image of export documentation
         /// for Paperless Trade images. When an invalid base64 encoded string is provided, an error message will be returned
         /// </summary>
-        public DocumentImageRequestModel? DocumentImages { get; set; }
+        public ShipmentDetailDocumentImageRequestModel? DocumentImages { get; set; }
 
         #endregion
 

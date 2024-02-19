@@ -1,4 +1,6 @@
-﻿namespace DHLClient
+﻿using DHLClient.QueryArgumentConverters;
+
+namespace DHLClient
 {
     /// <summary>
     /// Arguments used for getting a shipment image
@@ -25,6 +27,7 @@
         /// Please provide correct document type.
         /// </summary>
         [ArgumentName("typeCode")]
+        [QueryArgumentConverter<DocumentInvoiceTypeQueryArgumentConverter>]
         public DocumentInvoiceType? TypeCode { get; set; }
 
         /// <summary>
@@ -37,6 +40,7 @@
         /// Please provide the document image encoding format in pdf or tiff format
         /// </summary>
         [ArgumentName("encodingFormat")]
+        [QueryArgumentConverter<EncodingFormatQueryArgumentConverter>]
         public EncodingFormat? EncodingFormat { get; set; }
 
         /// <summary>

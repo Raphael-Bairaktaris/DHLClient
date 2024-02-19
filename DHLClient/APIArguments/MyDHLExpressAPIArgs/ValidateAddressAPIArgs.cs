@@ -13,7 +13,7 @@ namespace DHLClient
         /// The delivery option types
         /// </summary>
         [ArgumentName("type")]
-        public DeliveryOption? Type { get; set; }
+        public DeliveryService? Type { get; set; }
 
         /// <summary>
         /// A short text string code (see values defined in ISO 3166) specifying the shipment origin country

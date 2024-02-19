@@ -20,7 +20,6 @@
     <Folder Include="APIArguments\MyDHLExpressAPIArgs\Invoice\" />
     <Folder Include="APIArguments\MyDHLExpressAPIArgs\ReferenceData\" />
     <Folder Include="APIArguments\MyDHLExpressAPIArgs\ServicePoint\" />
-    <Folder Include="APIArguments\MyDHLExpressAPIArgs\Pickup\" />
   </ItemGroup>
 
 </Project>

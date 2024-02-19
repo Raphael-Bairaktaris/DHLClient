@@ -124,8 +124,8 @@ namespace DHLClient
         /// <summary>
         /// The breakdown
         /// </summary>
-        public IEnumerable<RetrieveProductDetailBreakdownResponseModel> Breakdown 
-        { 
+        public IEnumerable<RetrieveProductDetailBreakdownResponseModel> Breakdown
+        {
             get => mBreakdown ?? Enumerable.Empty<RetrieveProductDetailBreakdownResponseModel>();
             set => mBreakdown = value;
         }

@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating additional information
     /// </summary>
-    public class GetAdditionalInformationRequestModel
+    public class ShipmentDetailGetAdditionalInformationRequestModel
     {
         #region Public Properties
 
@@ -13,6 +13,7 @@ namespace DHLClient
         /// Provide type code of data that can be returned in response.
         /// </summary>
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(ValueAddedServiceToStringJsonConverter))]
         public ValueAddedService TypeCode { get; set; }
 
         /// <summary>
@@ -29,7 +30,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public GetAdditionalInformationRequestModel() : base()
+        public ShipmentDetailGetAdditionalInformationRequestModel() : base()
         {
 
         }

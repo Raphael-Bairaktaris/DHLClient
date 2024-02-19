@@ -13,7 +13,7 @@ namespace DHLClient
         /// The receiver's service area
         /// </summary>
         [JsonProperty("serviceArea")]
-        public ReceiverServicerAreaResponseModel ServiceArea { get; set; }
+        public ReceiverServiceAreaResponseModel ServiceArea { get; set; }
 
         #endregion
 

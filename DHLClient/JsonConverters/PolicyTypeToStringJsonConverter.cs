@@ -20,7 +20,7 @@
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<PolicyType, string> GetMapper() => DHLClientConstants.PolicyToStringMapper;
+        protected override IReadOnlyDictionary<PolicyType, string> GetMapper() => DHLClientConstants.PolicyTypeToStringMapper;
 
         #endregion
     }

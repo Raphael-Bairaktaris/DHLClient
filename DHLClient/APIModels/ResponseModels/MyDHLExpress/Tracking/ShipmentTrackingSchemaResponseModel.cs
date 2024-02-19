@@ -37,17 +37,17 @@ namespace DHLClient
         /// <summary>
         /// the member of the <see cref="ShipperReferences"/> property
         /// </summary>
-        private ShipmentShipperReferenceResponseModel? mShipperReferences;
+        private IEnumerable<ShipmentShipperReferenceResponseModel>? mShipperReferences;
 
         /// <summary>
         /// The member of the <see cref="Events"/> property
         /// </summary>
-        private ShipmentOccurrenceResponseModel? mEvents;
+        private IEnumerable<ShipmentOccurrenceResponseModel>? mEvents;
 
         /// <summary>
         /// The member of the <see cref="Pieces"/> property
         /// </summary>
-        private ShipmentPieceResponseModel? mPieces;
+        private IEnumerable<ShipmentPieceResponseModel>? mPieces;
 
         /// <summary>
         /// The member of the <see cref="ChildrenShipmentIdentificationNumbers"/> property
@@ -117,6 +117,7 @@ namespace DHLClient
         /// <summary>
         /// The receiver's details
         /// </summary>
+        [JsonProperty("receiverDetails")]
         public ShipmentReceiverDetailResponseModel ReceiverDetails
         {
             get => mReceiverDetails ??= new ShipmentReceiverDetailResponseModel();
@@ -134,30 +135,31 @@ namespace DHLClient
         /// </summary>
         /// <example>metric</example>
         [JsonProperty("unitOfMeasurement")]
+        [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
         public MeasurmentUnit UnitOfMeasurement { get; set; }
 
         /// <summary>
         /// The shipment's shipper references
         /// </summary>
         [JsonProperty("shipperReferences")]
-        public ShipmentShipperReferenceResponseModel ShipperReferences
+        public IEnumerable<ShipmentShipperReferenceResponseModel> ShipperReferences
         {
-            get => mShipperReferences ??= new ShipmentShipperReferenceResponseModel();
+            get => mShipperReferences ??= Enumerable.Empty<ShipmentShipperReferenceResponseModel>();
             set => mShipperReferences = value;
         }
 
         /// <summary>
-        /// the shipmen's events
+        /// The shipment's events
         /// </summary>
         [JsonProperty("events")]
-        public ShipmentOccurrenceResponseModel Events
+        public IEnumerable<ShipmentOccurrenceResponseModel> Events
         {
-            get => mEvents ??= new ShipmentOccurrenceResponseModel();
+            get => mEvents ??= Enumerable.Empty<ShipmentOccurrenceResponseModel>();
             set => mEvents = value;
         }
 
         /// <summary>
-        /// the shipment's number of pieces 
+        /// The shipment's number of pieces 
         /// </summary>
         /// <example>1</example>
         [JsonProperty("numberOfPieces")]
@@ -167,9 +169,9 @@ namespace DHLClient
         /// The shipment's piece details
         /// </summary>
         [JsonProperty("pieces")]
-        public ShipmentPieceResponseModel Pieces
+        public IEnumerable<ShipmentPieceResponseModel> Pieces
         {
-            get => mPieces ??= new ShipmentPieceResponseModel();
+            get => mPieces ??= Enumerable.Empty<ShipmentPieceResponseModel>();
             set => mPieces = value;
         }
 

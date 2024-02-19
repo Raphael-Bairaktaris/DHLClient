@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Xml.Linq;
 
 namespace DHLClient
 {
@@ -38,8 +37,8 @@ namespace DHLClient
         /// Breakdown name 
         /// </summary>
         [JsonProperty("name")]
-        public string Name 
-        { 
+        public string Name
+        {
             get => mName ?? string.Empty;
             set => mName = value;
         }
@@ -63,7 +62,7 @@ namespace DHLClient
             get => mLocalServiceCode ?? string.Empty;
             set => mLocalServiceCode = value;
         }
-    
+
 
         /// <summary>
         /// Breakdown type code
@@ -71,8 +70,8 @@ namespace DHLClient
         [JsonProperty("typeCode")]
         public string TypeCode
         {
-        get => mTypeCode ?? string.Empty;
-        set => mTypeCode = value;
+            get => mTypeCode ?? string.Empty;
+            set => mTypeCode = value;
         }
 
         /// <summary>

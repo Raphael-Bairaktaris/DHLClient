@@ -27,8 +27,8 @@ namespace DHLClient
         /// The product details
         /// </summary>
         [JsonProperty("products")]
-        public IEnumerable<RetrieveProductDetailResponseModel> Products 
-        { 
+        public IEnumerable<RetrieveProductDetailResponseModel> Products
+        {
             get => mProducts ?? Enumerable.Empty<RetrieveProductDetailResponseModel>();
             set => mProducts = value;
         }
@@ -37,8 +37,8 @@ namespace DHLClient
         /// The warnings
         /// </summary>
         [JsonProperty("warnings")]
-        public IEnumerable<string> Warnings 
-        { 
+        public IEnumerable<string> Warnings
+        {
             get => mWarnings ?? Enumerable.Empty<string>();
             set => mWarnings = value;
         }

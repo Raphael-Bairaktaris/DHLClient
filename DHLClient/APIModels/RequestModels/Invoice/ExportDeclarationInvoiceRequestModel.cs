@@ -23,50 +23,50 @@ namespace DHLClient
         /// <example>2021-03-18</example>
         [JsonRequired]
         [JsonProperty("dare")]
-        public DateOnly Date { get; set; }
+        public DateOnly? Date { get; set; }
 
         /// <summary>
         /// Please enter who has signed the invoice
         /// </summary>
         [JsonProperty("signatureName")]
-        public string SignatureName { get; set; }
+        public string? SignatureName { get; set; }
 
         /// <summary>
         /// Please provide title of person who has signed the invoice
         /// </summary>
         [JsonProperty("signatureTitle")]
-        public string SignatureTitle { get; set; }
+        public string? SignatureTitle { get; set; }
 
         /// <summary>
         /// Please provide the signature image
         /// </summary>
         [JsonProperty("signatureImage")]
-        public string SignatureImage { get; set; }
+        public string? SignatureImage { get; set; }
 
         /// <summary>
         /// Shipment instructions for customs invoice printing purposes. Printed only when using Customs Invoice template COMMERCIAL_INVOICE_04. 
         /// If using Customs Invoice template COMMERCIAL_INVOICE_04, recommended max length is 120 characters.
         /// </summary>
         [JsonProperty("instructions")]
-        public IEnumerable<string> Instructions { get; set; }
+        public IEnumerable<string>? Instructions { get; set; }
 
         /// <summary>
         /// Customer data text to be printed in customs invoice. Printed only when using Customs, Invoice template, COMMERCIAL_INVOICE_04.
         /// </summary>
         [JsonProperty("customerDataTextEntries")]
-        public IEnumerable<string> CustomerDataTextEntries { get; set; }
+        public IEnumerable<string>? CustomerDataTextEntries { get; set; }
 
         /// <summary>
         /// Please provide the total net weight
         /// </summary>
         [JsonProperty("totalNetWeight")]
-        public double TotalNetWeight { get; set; }
+        public double? TotalNetWeight { get; set; }
 
         /// <summary>
         /// Please provide the total gross weight
         /// </summary>
         [JsonProperty("totalGrossWeight")]
-        public double TotalGrossWeight { get; set; }
+        public double? TotalGrossWeight { get; set; }
 
         /// <summary>
         /// Please provide the customer references at invoice level. 
@@ -81,7 +81,7 @@ namespace DHLClient
         /// </summary>
         /// <example>100 days</example>
         [JsonProperty("termsOfPayment")]
-        public string TermsOfPayment { get; set; }
+        public string? TermsOfPayment { get; set; }
 
         /// <summary>
         /// Please provide Perfect Invoice related information

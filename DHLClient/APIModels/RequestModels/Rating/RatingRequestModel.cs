@@ -94,13 +94,13 @@ namespace DHLClient
         /// Estimated delivery date option for QDDF or QDDC.
         /// </summary>
         [JsonProperty("estimatedDeliveryDate")]
-        public EstimatedDeliveryDateRequestModel? EstimatedDeliveryDate { get; set; }
+        public ShipmentDetailEstimatedDeliveryDateRequestModel? EstimatedDeliveryDate { get; set; }
 
         /// <summary>
         /// Provides additional information in the response like all value added services, and rule groups
         /// </summary>
         [JsonProperty("getAdditionalInformation")]
-        public GetAdditionalInformationRequestModel? GetAdditionalInformation { get; set; }
+        public ShipmentDetailGetAdditionalInformationRequestModel? GetAdditionalInformation { get; set; }
 
         /// <summary>
         /// Please set this to true to filter out all products which needs DHL Express special customer agreement

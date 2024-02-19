@@ -75,6 +75,14 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
+        /// Maps the <see cref="ChannelType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<ChannelType, string> ChannelTypeToStringMapper { get; } = new Dictionary<ChannelType, string>()
+        {
+            { ChannelType.Email, "email" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="ChargeCategory"/> to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<ChargeCategory, string> ChargeCategoryToStringMapper { get; } = new Dictionary<ChargeCategory, string>()
@@ -293,8 +301,19 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<DeliveryOption, string> DeliveryOptionToStringMapper { get; } = new Dictionary<DeliveryOption, string>()
         {
-            { DeliveryOption.Delivery, "delivery" },
-            { DeliveryOption.Pickup, "pickup" }
+            { DeliveryOption.Servicepoint, "servicepoint" },
+            { DeliveryOption.Neighbour, "neighbour" },
+            { DeliveryOption.SignatureRelease, "signatureRelease" },
+            { DeliveryOption.Concierge, "concierge" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="DeliveryService"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<DeliveryService, string> DeliveryServiceToStringMapper { get; } = new Dictionary<DeliveryService, string>()
+        {
+            { DeliveryService.Delivery, "delivery" },
+            { DeliveryService.Pickup, "pickup" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -669,10 +688,18 @@ namespace DHLClient
         /// <summary>
         /// Maps the <see cref="PolicyType"/>s to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<PolicyType, string> PolicyToStringMapper { get; } = new Dictionary<PolicyType, string>()
+        public static IReadOnlyDictionary<PolicyType, string> PolicyTypeToStringMapper { get; } = new Dictionary<PolicyType, string>()
         {
             { PolicyType.None, "none" },
             { PolicyType.PostalCode, "postal-code" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="PrepaidCharge"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<PrepaidCharge, string> PrepaidChargeToStringMapper { get; } = new Dictionary<PrepaidCharge, string>()
+        {
+            { PrepaidCharge.Freight, "freight" }
         }.ToImmutableDictionary();
 
         /// <summary>

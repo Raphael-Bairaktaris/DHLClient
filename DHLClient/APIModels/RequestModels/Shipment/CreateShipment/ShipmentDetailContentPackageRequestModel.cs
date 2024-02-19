@@ -46,7 +46,7 @@ namespace DHLClient
         /// Please enter description of content for each package
         /// </summary>
         /// <example>Piece content description</example>
-        public string? Description { get;set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// This allows you to define up to two bespoke barcodes on the DHL Express Tranport label. 

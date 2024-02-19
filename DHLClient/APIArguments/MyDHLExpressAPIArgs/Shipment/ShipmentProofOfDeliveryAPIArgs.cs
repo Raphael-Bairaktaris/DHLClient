@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Arguments used for shipment

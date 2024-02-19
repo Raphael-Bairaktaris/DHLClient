@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating a document image
     /// </summary>
-    public class DocumentImageRequestModel
+    public class ShipmentDetailDocumentImageRequestModel
     {
         #region Public Properties
 
@@ -14,6 +14,7 @@ namespace DHLClient
         /// </summary>
         /// <example>INV</example>
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(DocumentTypeToStringJsonConverter))]
         public DocumentType? TypeCode { get; set; }
 
         /// <summary>
@@ -21,6 +22,7 @@ namespace DHLClient
         /// </summary>
         /// <example>PDF</example>
         [JsonProperty("imageFormat")]
+        [JsonConverter(typeof(ImageFormatToStringJsonConverter))]
         public ImageFormat? ImageFormat { get; set; }
 
         /// <summary>
@@ -37,7 +39,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public DocumentImageRequestModel() : base()
+        public ShipmentDetailDocumentImageRequestModel() : base()
         {
 
         }

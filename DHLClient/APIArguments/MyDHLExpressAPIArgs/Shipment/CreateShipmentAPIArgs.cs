@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Arguments used for creating shipment
@@ -17,7 +11,7 @@ namespace DHLClient
         /// If set to true, indicate strict DCT validation of address details, and validation of product and service(s) combination provided in request.
         /// </summary>
         [ArgumentName("strictValidation")]
-        public bool? HasStrictValidation { get; set; } 
+        public bool? HasStrictValidation { get; set; }
 
         /// <summary>
         /// Option to bypass PLT - WY service code lane capability validation

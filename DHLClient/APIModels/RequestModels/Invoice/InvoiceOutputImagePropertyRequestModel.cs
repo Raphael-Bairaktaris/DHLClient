@@ -13,7 +13,7 @@ namespace DHLClient
         /// Here the image options are defined for label, waybillDoc, invoice, receipt and QRcode
         /// </summary>
         [JsonProperty("imageOptions")]
-        public ImageOptionRequestModel? ImageOptions { get; set; }
+        public IEnumerable<ImageOptionRequestModel>? ImageOptions { get; set; }
 
         #endregion
 

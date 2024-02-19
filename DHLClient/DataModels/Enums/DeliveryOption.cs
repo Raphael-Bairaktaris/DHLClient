@@ -1,18 +1,28 @@
 ﻿namespace DHLClient
 {
     /// <summary>
-    /// Provides enumeration over the delivery option types
+    /// Provides enumeration over the delivery options
     /// </summary>
     public enum DeliveryOption
     {
         /// <summary>
-        /// Delivery
+        /// Service point
         /// </summary>
-        Delivery = 0,
+        Servicepoint = 0,
 
         /// <summary>
-        /// Pickup
+        /// Neighbour
         /// </summary>
-        Pickup = 1,
+        Neighbour = 1,
+
+        /// <summary>
+        /// Signature release
+        /// </summary>
+        SignatureRelease = 2,
+
+        /// <summary>
+        /// Concierge
+        /// </summary>
+        Concierge = 3
     }
 }

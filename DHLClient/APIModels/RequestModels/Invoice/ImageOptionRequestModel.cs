@@ -14,6 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("invoice")]
+        [JsonConverter(typeof(InvoiceToStringJsonConverter))]
         public Invoice? TypeCode { get; set; }
 
         /// <summary>

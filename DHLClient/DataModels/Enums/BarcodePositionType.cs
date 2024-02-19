@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the barcode position types
@@ -14,7 +8,7 @@ namespace DHLClient
         /// <summary>
         /// Left
         /// </summary>
-        Left = 0, 
+        Left = 0,
 
         /// <summary>
         /// Right

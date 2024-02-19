@@ -113,6 +113,13 @@ namespace DHLClient
         }
 
         /// <summary>
+        /// The measurement units
+        /// </summary>
+        [JsonProperty("unitOfMeasurements")]
+        [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
+        public MeasurmentUnit UnitOfMeasurements { get; set; }
+
+        /// <summary>
         /// The shipment's references
         /// </summary>
         [JsonProperty("shipmentReferences")]

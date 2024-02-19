@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a receiver service area response
     /// </summary>
-    public class ReceiverServicerAreaResponseModel
+    public class ReceiverServiceAreaResponseModel
     {
         #region Private Members
 
@@ -37,6 +37,7 @@ namespace DHLClient
         /// The service area code
         /// </summary>
         /// <example>BSA</example>
+        [JsonProperty("code")]
         public string Code
         {
             get => mCode ?? string.Empty;
@@ -82,7 +83,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ReceiverServicerAreaResponseModel() : base()
+        public ReceiverServiceAreaResponseModel() : base()
         {
 
         }

@@ -16,6 +16,10 @@ namespace DHLClient
         [JsonProperty("lineItems")]
         public IEnumerable<ShipmentDetailLineItemRequestModel>? LineItems { get; set; }
 
+        /// <summary>
+        /// Please provide invoice related information
+        /// </summary>
+        [JsonProperty("invoice")]
         public ExportDeclarationInvoiceRequestModel? Invoice { get; set; }
 
         /// <summary>
@@ -68,46 +72,47 @@ namespace DHLClient
         /// <summary>
         /// Please provide up to three declaration notes
         /// </summary>
-        public IEnumerable<ShipmentDetailExportDeclarationNoteRequestModel> DeclarationNotes { get; set; }
+        [JsonProperty("declarationNotes")]
+        public IEnumerable<ShipmentDetailExportDeclarationNoteRequestModel>? DeclarationNotes { get; set; }
 
         /// <summary>
         /// Please enter export reference
         /// </summary>
         [JsonProperty("exportReference")]
-        public string ExportReference { get; set; }
+        public string? ExportReference { get; set; }
 
         /// <summary>
         /// Please enter export reason
         /// </summary>
         /// <example>export reason</example>
         [JsonProperty("exportReason")]
-        public string ExportReason { get; set; }
+        public string? ExportReason { get; set; }
 
         /// <summary>
         /// Please provide the reason for export
         /// </summary>
         [JsonProperty("exportReasonType")]
         [JsonConverter(typeof(ExportReasonToStringJsonConverter))]
-        public ExportReason ExportReasonType { get; set; }
+        public ExportReason? ExportReasonType { get; set; }
 
         /// <summary>
         /// Please provide details about export and import licenses
         /// </summary>
         [JsonProperty("licenses")]
-        public IEnumerable<ShipmentDetailExportDeclarationLicenseRequestModel> Licenses { get; set; }
+        public IEnumerable<ShipmentDetailExportDeclarationLicenseRequestModel>? Licenses { get; set; }
 
         /// <summary>
         /// Please provide the shipment was sent for Personal (Gift) or Commercial (Sale) reasons
         /// </summary>
         [JsonProperty("shipmentType")]
         [JsonConverter(typeof(ShipmentPurposeToStringJsonConverter))]
-        public ShipmentPurpose ShipmetType { get; set; }
+        public ShipmentPurpose? ShipmetType { get; set; }
 
         /// <summary>
         /// Please provide the Customs Documents at invoice level
         /// </summary>
         [JsonProperty("customsDocuments")]
-        public IEnumerable<CustomsDocumentRequestModel> CustomsDocuments { get; set; }
+        public IEnumerable<CustomsDocumentRequestModel>? CustomsDocuments { get; set; }
 
         #endregion
 
