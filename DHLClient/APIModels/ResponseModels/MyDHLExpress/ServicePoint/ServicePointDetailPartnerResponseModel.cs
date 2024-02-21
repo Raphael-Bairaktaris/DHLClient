@@ -24,6 +24,11 @@ namespace DHLClient
         /// </summary>
         private string? mPartnerTypeCode;
 
+        /// <summary>
+        /// The member of the <see cref="Promotion"/> property
+        /// </summary>
+        private ServicePointPromotionResponseModel? mPromotion;
+
         #endregion
 
         #region Public Properties
@@ -61,8 +66,12 @@ namespace DHLClient
         /// <summary>
         /// Promotion on a SVP level
         /// </summary>
-        [JsonProperty("")]
-        public ServicePointPromotionResponseModel Promotion { get; set; }
+        [JsonProperty("promotion")]
+        public ServicePointPromotionResponseModel Promotion 
+        { 
+            get => mPromotion ??= new ServicePointPromotionResponseModel();
+            set => mPromotion = value;
+        }
 
         #endregion
 

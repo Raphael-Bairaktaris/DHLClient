@@ -811,15 +811,15 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="ServicePointStatus"/> to their related <see cref="string"/>s
+        /// Maps the <see cref="ServicepointStatus"/> to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<ServicePointStatus, string> ServicePointStatusToStringMapper { get; } = new Dictionary<ServicePointStatus, string>()
+        public static IReadOnlyDictionary<ServicepointStatus, string> ServicePointStatusToStringMapper { get; } = new Dictionary<ServicepointStatus, string>()
         {
-            { ServicePointStatus.ServiceAvailable, "A" },
-            { ServicePointStatus.ServiceSuspended, "S" },
-            { ServicePointStatus.ServiceUnavailable, "U" },
-            { ServicePointStatus.Closed, "X" },
-            { ServicePointStatus.NotYetOpen, "Y" },
+            { ServicepointStatus.ServiceAvailable, "A" },
+            { ServicepointStatus.ServiceSuspended, "S" },
+            { ServicepointStatus.ServiceUnavailable, "U" },
+            { ServicepointStatus.Closed, "X" },
+            { ServicepointStatus.NotYetOpen, "Y" },
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -1055,6 +1055,11 @@ namespace DHLClient
             { WeightUnit.Kg, "kg" },
             { WeightUnit.Lb, "lb" }
         }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="CurrencyCode"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<CurrencyCode, string > CurrencyCodeToStringMapper { get; } = Enum.GetValues<CurrencyCode>().ToImmutableDictionary(x => x, x => x.ToString());
 
         /// <summary>
         /// Maps the <see cref="CountryCode"/> to their related <see cref="string"/>s

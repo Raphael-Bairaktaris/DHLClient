@@ -3,9 +3,9 @@
 namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="ServicePointStatus"/> to <see cref="string"/>
+    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="ServicepointStatus"/> to <see cref="string"/>
     /// </summary>
-    public class ServicePointStatusToStringJsonConverter : BaseEnumJsonConverter<ServicePointStatus>
+    public class ServicePointStatusToStringJsonConverter : BaseEnumJsonConverter<ServicepointStatus>
     {
         #region Constructors
 
@@ -22,7 +22,7 @@ namespace DHLClient
         #region Protected Methods
 
         /// <inheritdoc/>
-        protected override IReadOnlyDictionary<ServicePointStatus, string> GetMapper() => DHLClientConstants.ServicePointStatusToStringMapper;
+        protected override IReadOnlyDictionary<ServicepointStatus, string> GetMapper() => DHLClientConstants.ServicePointStatusToStringMapper;
 
         #endregion
     }

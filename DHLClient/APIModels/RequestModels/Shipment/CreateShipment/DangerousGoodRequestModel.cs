@@ -14,13 +14,13 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("contentId")]
-        public string ContentId { get; set; }
+        public string? ContentId { get; set; }
 
         /// <summary>
         /// Please enter dry ice total net weight when shipping dry ice
         /// </summary>
         [JsonProperty("dryIceTotalWeight")]
-        public double DryIceTotalWeight { get; set; }
+        public double? DryIceTotalWeight { get; set; }
 
         /// <summary>
         /// The customDescription node contains the customized Dangerous Goods statement to declare contents accurately. 
@@ -28,13 +28,13 @@ namespace DHLClient
         /// replacing the default IATA Dangerous Goods statement constructed based on contentId node.
         /// </summary>
         [JsonProperty("customDescription")]
-        public string CustomDescription { get; set; }
+        public string? CustomDescription { get; set; }
 
         /// <summary>
         /// Please enter UN code(s)
         /// </summary>
         [JsonProperty("unCodes")]
-        public IEnumerable<string> UnCodes { get; set; }
+        public IEnumerable<string>? UnCodes { get; set; }
 
         #endregion
 

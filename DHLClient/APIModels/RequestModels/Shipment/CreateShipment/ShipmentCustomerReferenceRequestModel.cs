@@ -7,6 +7,15 @@ namespace DHLClient
     /// </summary>
     public class ShipmentCustomerReferenceRequestModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="Value"/> property
+        /// </summary>
+        private string? mValue;
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
@@ -14,12 +23,17 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("value")]
-        public string Value { get; set; }
+        public string Value 
+        { 
+            get => mValue ?? string.Empty;
+            set => mValue = value;
+        }
 
         /// <summary>
         /// Please provide reference type
         /// </summary>
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(CustomerReferenceToStringJsonConverter))]
         public CustomerReference TypeCode { get; set; }
 
         #endregion

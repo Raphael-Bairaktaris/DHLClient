@@ -3,7 +3,7 @@
     /// <summary>
     /// Arguments used for service point
     /// </summary>
-    public class ServicePointAPIArgs : BaseMyDHLAPIArgs
+    public class ServicepointAPIArgs : BaseMyDHLAPIArgs
     {
         #region Public Properties
 
@@ -54,6 +54,7 @@
         /// </summary>
         /// <example> for countryCode=GB will be time format AM/PM and distance unit will be mi.</example>
         [ArgumentName("countryCode")]
+        [QueryArgumentConverter<CountryCodeQueryArgymentConverter>]
         public CountryCode? CountryCode { get; set; }
 
         /// <summary>
@@ -61,6 +62,7 @@
         /// </summary>
         /// <example>‘eng’</example>
         [ArgumentName("languageCode")]
+        [QueryArgumentConverter<ThreeLetterLanguageCodeQueryArgumentConverter>]
         public LanguageCode? LanguageCode { get; set; }
 
         /// <summary>
@@ -86,7 +88,7 @@
         ///     <item>73: I will create a DHL shipping label at the DHL Service Point</item>
         ///     <item>74: I have printed a DHL label</item>
         ///     <item>75,76: I have a QR code</item>
-        ///     <item>78,79: Im collecting a DHL Express parcel</item>
+        ///     <item>78,79: I'm collecting a DHL Express parcel</item>
         ///     <item>86,87: I have directed a DHL Express parcel to a DHL Service Point</item>
         /// </list>
         /// Possible Combinations : 81,73 | 81,74 | 81,75,76 | 82,74 | 82,75,76 | 88,73 | 78,79 | 86,87
@@ -128,14 +130,16 @@
         /// </summary>
         /// <example>kg</example>
         [ArgumentName("weightUom")]
-        public WeightUnit? WeightUom { get; set; }
+        [QueryArgumentConverter<WeightUnitQueryArgumentConverter>]
+        public IEnumerable<WeightUnit>? WeightUom { get; set; }
 
         /// <summary>
         /// Distance uom to be used when returning response, it can be either km or mi. If not provided, default uom set for the country is returned.
         /// </summary>
         /// <example>Miles</example>
         [ArgumentName("resultUom")]
-        public DistanceUnit? ResultUom { get; set; }
+        [QueryArgumentConverter<DistanceUnitQueryArgumentConverter>]
+        public IEnumerable<DistanceUnit>? ResultUom { get; set; }
 
         /// <summary>
         /// Service Area Code of the search address
@@ -149,7 +153,7 @@
         /// </summary>
         /// <example>CTY,STN,247</example>
         [ArgumentName("servicePointTypes")]
-        public ServicePoint? ServicePointTypes { get; set; }
+        public IEnumerable<ServicePoint>? ServicePointTypes { get; set; }
 
         /// <summary>
         /// Maximum distance in kilometers between the geocoded address and the returned Service Points. 
@@ -166,8 +170,8 @@
         public IEnumerable<bool>? ImportChrges { get; set; }
 
         /// <summary>
-        /// Unique API key which required separate onboarding request to enable this service. 
-        /// Please approach your country representative for onboarding. 
+        /// Unique API key which required separate on boarding request to enable this service. 
+        /// Please approach your country representative for on boarding. 
         /// Once approval is granted, API key will be generated and used for authentication.
         /// </summary>
         /// <example>85fg600e-be39-4ef0-ac47-23ghj4756948g</example>
@@ -243,7 +247,8 @@
         /// By default active svpStatus 'A' is considered when this parameter is not sent in the request.
         /// </summary>
         [ArgumentName("svpStatus")]
-        public ServicePointStatus? SvpStatus { get; set; }
+        [QueryArgumentConverter<ServicepointStatusQueryArgumentConverter>]
+        public ServicepointStatus? ServicepointStatus { get; set; }
 
         #endregion
 
@@ -252,7 +257,7 @@
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointAPIArgs() : base()
+        public ServicepointAPIArgs() : base()
         {
 
         }

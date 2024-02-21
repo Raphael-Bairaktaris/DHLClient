@@ -21,8 +21,9 @@ namespace DHLClient
         /// Please enter commercial invoice date
         /// </summary>
         [JsonRequired]
-        [JsonProperty("2021-03-18")]
-        public DateOnly Date { get; set; }
+        [JsonProperty("date")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
+        public DateOnly? Date { get; set; }
 
         /// <summary>
         /// Please provide the purpose was the document details captured and are planned to be used. 
@@ -31,7 +32,7 @@ namespace DHLClient
         /// <example>import</example>
         [JsonRequired]
         [JsonProperty("function")]
-        public FunctionType Function { get; set; }
+        public FunctionType? Function { get; set; }
 
         /// <summary>
         /// Please provide the customer references at invoice level. 
@@ -39,19 +40,19 @@ namespace DHLClient
         /// It is recommended to provide less than 20 customer references of 'MRN' type code
         /// </summary>
         [JsonProperty("customerReference")]
-        public CustomerReferenceRequestModel CustomerReference { get; set; }
+        public CustomerReferenceRequestModel? CustomerReference { get; set; }
 
         /// <summary>
         /// Please provide Perfect Invoice related information
         /// </summary>
         [JsonProperty("indicativeCustomsValues")]
-        public IndicativeCustomsValueRequestModel IndicativeCustomsValues { get; set; }
+        public IndicativeCustomsValueRequestModel? IndicativeCustomsValues { get; set; }
 
         /// <summary>
         /// Please provide pre-calculated total values
         /// </summary>
         [JsonProperty("preCalculatedTotalValues")]
-        public PreCalculatedTotalValueRequestModel PreCalculatedTotalValues { get; set; }
+        public PreCalculatedTotalValueRequestModel? PreCalculatedTotalValues { get; set; }
 
         #endregion
 

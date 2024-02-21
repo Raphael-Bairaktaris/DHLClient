@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("lineItems")]
-        public InvoiceLineItemsRequestModel? LineItems { get; set; }
+        public IEnumerable<InvoiceLineItemsRequestModel>? LineItems { get; set; }
 
         /// <summary>
         /// Please provide invoice related information
@@ -26,7 +26,7 @@ namespace DHLClient
         /// Please enter up to three remarks
         /// </summary>
         [JsonProperty("remarks")]
-        public ExportDeclarationRemarkRequestModel? Remarks { get; set; }
+        public IEnumerable<ExportDeclarationRemarkRequestModel>? Remarks { get; set; }
 
         /// <summary>
         /// Please enter additional charge to appear on the invoice
@@ -57,6 +57,7 @@ namespace DHLClient
         /// </summary>
         /// <example>permanent</example>
         [JsonProperty("exportReasonType")]
+        [JsonConverter(typeof(ExportReasonToStringJsonConverter))]
         public ExportReason? ExportReasonType { get; set; }
 
         /// <summary>
@@ -64,13 +65,14 @@ namespace DHLClient
         /// </summary>
         /// <example>personal</example>
         [JsonProperty("shipmentType")]
-        public ShipmentPurpose ShipmentType { get; set; }
+        [JsonConverter(typeof(ShipmentPurposeToStringJsonConverter))]
+        public ShipmentPurpose? ShipmentType { get; set; }
 
         /// <summary>
         /// Please provide the Customs Documents at invoice level
         /// </summary>
         [JsonProperty("customsDocuments")]
-        public CustomsDocumentRequestModel? CustomsDocuments { get; set; }
+        public IEnumerable<CustomsDocumentRequestModel>? CustomsDocuments { get; set; }
 
         /// <summary>
         /// The Incoterms rules are a globally-recognized set of standards, used worldwide in international and domestic 
@@ -79,7 +81,8 @@ namespace DHLClient
         /// <example>DAP</example>
         [JsonRequired]
         [JsonProperty("incoterm")]
-        public IncotermRule Incoterm { get; set; }
+        [JsonConverter(typeof(IncotermRuleToStringJsonConverter))]
+        public IncotermRule? Incoterm { get; set; }
 
         /// <summary>
         /// For customs purposes please advise on currency code of the indicated amount in invoice.
@@ -87,7 +90,8 @@ namespace DHLClient
         /// <example>EUR</example>
         [JsonRequired]
         [JsonProperty("currency")]
-        public CurrencyCode Currency { get; set; }
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
+        public CurrencyCode? Currency { get; set; }
 
         /// <summary>
         /// Please enter Unit of measurement
@@ -95,7 +99,8 @@ namespace DHLClient
         /// <example>metric</example>
         [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
-        public MeasurmentUnit UnitOfMeasurement { get; set; }
+        [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
+        public MeasurmentUnit? UnitOfMeasurement { get; set; }
 
         #endregion
 

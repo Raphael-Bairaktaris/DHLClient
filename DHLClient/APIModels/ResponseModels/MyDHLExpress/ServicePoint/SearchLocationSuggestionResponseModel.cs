@@ -1,4 +1,6 @@
-﻿namespace DHLClient
+﻿using Newtonsoft.Json;
+
+namespace DHLClient
 {
     /// <summary>
     /// Represents a search location suggestion response
@@ -34,6 +36,7 @@
         /// <summary>
         /// Always holds null value
         /// </summary>
+        [JsonProperty("label")]
         public string Label
         {
             get => mLabel ?? string.Empty;
@@ -43,22 +46,29 @@
         /// <summary>
         /// Always holds null value
         /// </summary>
+        [JsonProperty("value")]
         public string Value
         {
             get => mValue ?? string.Empty;
             set => mValue = value;
         }
 
+        /// <summary>
+        /// The coordinates
+        /// </summary>
         public Coordinates Coordinates { get; set; }
 
         /// <summary>
         /// Country code of the search address
         /// </summary>
+        [JsonProperty("countryCode")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode CountryCode { get; set; }
 
         /// <summary>
         /// Place id of the search address
         /// </summary>
+        [JsonProperty("placeId")]
         public string PlaceId
         {
             get => mPlaceId ?? string.Empty;
@@ -68,6 +78,7 @@
         /// <summary>
         /// Provider id of the search address
         /// </summary>
+        [JsonProperty("providerId")]
         public string ProviderId
         {
             get => mProviderId ?? string.Empty;

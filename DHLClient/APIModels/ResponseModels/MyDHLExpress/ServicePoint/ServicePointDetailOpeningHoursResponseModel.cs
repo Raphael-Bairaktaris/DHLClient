@@ -36,6 +36,7 @@ namespace DHLClient
         /// <summary>
         /// Multiple opening hours entities can exist for the same week day.
         /// </summary>
+        [JsonProperty("openingHours")]
         public IEnumerable<ServicePointDetailOpeningHourResponseModel> OpeningHours
         {
             get => mOpeningHours ?? Enumerable.Empty<ServicePointDetailOpeningHourResponseModel>();

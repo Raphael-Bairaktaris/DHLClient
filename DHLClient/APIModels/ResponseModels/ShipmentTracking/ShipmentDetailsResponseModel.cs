@@ -45,6 +45,16 @@ namespace DHLClient
         private IEnumerable<string>? mPlaceIds;
 
         /// <summary>
+        /// The member of the <see cref="Weight"/> property
+        /// </summary>
+        private ShipmentDetailQuantityResponseModel? mWeight;
+
+        /// <summary>
+        /// The member of the <see cref="Volume"/> property
+        /// </summary>
+        private ShipmentDetailQuantityResponseModel? mVolume;
+
+        /// <summary>
         /// The member of the <see cref="Dimensions"/> property
         /// </summary>
         private ShipmentDetailDimensionResponseModel? mDimensions;
@@ -55,14 +65,19 @@ namespace DHLClient
         private IEnumerable<ShipmentDetailsReferencesResponseModel>? mReferences;
 
         /// <summary>
+        /// The member of the <see cref="ValueAddedServices"/> property
+        /// </summary>
+        private IEnumerable<ShipmentDetailValueAddedServicesResponseModel>? mValueAddedServices;
+
+        /// <summary>
         /// The member of the <see cref="ControlledDataCodes"/> property
         /// </summary>
-        private IEnumerable<string> mControlledDataCodes;
+        private IEnumerable<string>? mControlledDataCodes;
 
         /// <summary>
         /// The member of the <see cref="DGFRoutes"/> property
         /// </summary>
-        private ShipmentDetailsDGFRoutesResponseModel? mDGFRoutes;
+        private IEnumerable<ShipmentDetailsDGFRoutesResponseModel>? mDGFRoutes;
 
         #endregion
 
@@ -132,13 +147,13 @@ namespace DHLClient
         /// \'Yes\' if signer identification is available
         /// </summary>
         [JsonProperty("proofOfDeliverySignedAvailable")]
-        public bool IsProofOfDeliverySignedAvailable { get; set; }
+        public bool? IsProofOfDeliverySignedAvailable { get; set; }
 
         /// <summary>
         /// Total number of items or pieces in the shipment
         /// </summary>
         [JsonProperty("totalNumberOfPieces")]
-        public double TotalNumberOfPieces { get; set; }
+        public double? TotalNumberOfPieces { get; set; }
 
         /// <summary>
         /// Ids of all the items or pieces in the shipment
@@ -154,13 +169,21 @@ namespace DHLClient
         /// A point value or interval for product characteristics and other purposes
         /// </summary>
         [JsonProperty("weight")]
-        public ShipmentDetailQuantityResponseModel Weight { get; set; }
+        public ShipmentDetailQuantityResponseModel Weight 
+        { 
+            get => mWeight ?? new ShipmentDetailQuantityResponseModel();
+            set => mWeight = value;
+        }
 
         /// <summary>
         /// A point value or interval for product characteristics and other purposes
         /// </summary>
         [JsonProperty("volume")]
-        public ShipmentDetailQuantityResponseModel Volume { get; set; }
+        public ShipmentDetailQuantityResponseModel Volume
+        {
+            get => mVolume ?? new ShipmentDetailQuantityResponseModel();
+            set => mVolume = value;
+        }
 
         /// <summary>
         /// A loading meter standard unit of measurement for transport by truck
@@ -192,7 +215,11 @@ namespace DHLClient
         /// Services I booked together with my Tracking details
         /// </summary>
         [JsonProperty("valueAddedServices")]
-        public ShipmentDetailValueAddedServicesResponseModel ValueAddedServices { get; set; }
+        public IEnumerable<ShipmentDetailValueAddedServicesResponseModel> ValueAddedServices
+        {
+            get => mValueAddedServices ?? Enumerable.Empty<ShipmentDetailValueAddedServicesResponseModel>();
+            set => mValueAddedServices = value;
+        }
 
         /// <summary>
         /// Extra Controlled Access Data Codes
@@ -208,9 +235,9 @@ namespace DHLClient
         /// DHL Global Forwarding routing Details
         /// </summary>
         [JsonProperty("routes")]
-        public ShipmentDetailsDGFRoutesResponseModel DGFRoutes
+        public IEnumerable<ShipmentDetailsDGFRoutesResponseModel> DGFRoutes
         {
-            get => mDGFRoutes ??= new ShipmentDetailsDGFRoutesResponseModel();
+            get => mDGFRoutes ??= Enumerable.Empty<ShipmentDetailsDGFRoutesResponseModel>();
             set => mDGFRoutes = value;
         }
 

@@ -15,6 +15,7 @@ namespace DHLClient
         /// </summary>
         /// <example>2020-04-20</example>
         [JsonProperty("plannedShipDate")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly PlannedShipDate { get; set; }
 
         /// <summary>
@@ -28,7 +29,7 @@ namespace DHLClient
         /// Here you can define all the properties related to the content of the prospected shipment
         /// </summary>
         [JsonProperty("content")]
-        public UploadInvoiceContentRequestModel Content { get; set; }
+        public UploadInvoiceContentRequestModel? Content { get; set; }
 
         #endregion
 

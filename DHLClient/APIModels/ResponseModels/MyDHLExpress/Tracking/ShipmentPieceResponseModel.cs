@@ -10,16 +10,6 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="TypeCode"/> property
-        /// </summary>
-        private string? mTypeCode;
-
-        /// <summary>
-        /// The member of the <see cref="Description"/> property
-        /// </summary>
-        private string? mDescription;
-
-        /// <summary>
         /// The member of the <see cref="Dimensions"/> property
         /// </summary>
         private ShipmentDetailDimensionResponseModel? mDimensions;
@@ -48,55 +38,55 @@ namespace DHLClient
         /// </summary>
         /// <example>1</example>
         [JsonProperty("number")]
-        public double Number { get; set; }
+        public double? Number { get; set; }
 
         /// <summary>
         /// The type code
         /// </summary>
         [JsonProperty("typeCode")]
-        public string TypeCode { get; set; }
+        public string? TypeCode { get; set; }
 
         /// <summary>
         /// The shipment tracking number
         /// </summary>
         [JsonProperty("shipmentTrackingNumber")]
-        public double ShipmentTrackingNumber { get; set; }
+        public double? ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// The tracking number
         /// </summary>
         [JsonProperty("trackingNumber")]
-        public double TrackingNumber { get; set; }
+        public double? TrackingNumber { get; set; }
 
         /// <summary>
         /// the piece description
         /// </summary>
         [JsonProperty("description")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// The weight of the package
         /// </summary>
         [JsonProperty("weight")]
-        public double Weight { get; set; }
+        public double? Weight { get; set; }
 
         /// <summary>
         /// The dimensional weight of the package
         /// </summary>
         [JsonProperty("dimensionalWeight")]
-        public double DimensionalWeight { get; set; }
+        public double? DimensionalWeight { get; set; }
 
         /// <summary>
         /// The actual weight of the package
         /// </summary>
         [JsonProperty("actualWeight")]
-        public double ActualWeight { get; set; }
+        public double? ActualWeight { get; set; }
 
         /// <summary>
         /// The shipment's dimensions
         /// </summary>
         [JsonProperty("dimensions")]
-        public ShipmentDetailDimensionResponseModel Dimensions
+        public ShipmentDetailDimensionResponseModel? Dimensions
         {
             get => mDimensions ??= new ShipmentDetailDimensionResponseModel();
             set => mDimensions = value;
@@ -106,7 +96,7 @@ namespace DHLClient
         /// The shipment's actual dimensions 
         /// </summary>
         [JsonProperty("actualDimensions")]
-        public ShipmentActualDimensionResponseModel ActualDimensions
+        public ShipmentActualDimensionResponseModel? ActualDimensions
         {
             get => mActualDimensions ??= new ShipmentActualDimensionResponseModel();
             set => mActualDimensions = value;
@@ -117,13 +107,13 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("unitOfMeasurements")]
         [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
-        public MeasurmentUnit UnitOfMeasurements { get; set; }
+        public MeasurmentUnit? UnitOfMeasurements { get; set; }
 
         /// <summary>
         /// The shipment's references
         /// </summary>
         [JsonProperty("shipmentReferences")]
-        public ShipmentShipperReferenceResponseModel ShipmentReferences
+        public ShipmentShipperReferenceResponseModel? ShipmentReferences
         {
             get => mShipmentReferences ??= new ShipmentShipperReferenceResponseModel();
             set => mShipmentReferences = value;
@@ -133,7 +123,7 @@ namespace DHLClient
         /// The shipment's events
         /// </summary>
         [JsonProperty("events")]
-        public ShipmentOccurrenceResponseModel Events
+        public ShipmentOccurrenceResponseModel? Events
         {
             get => mEvents ??= new ShipmentOccurrenceResponseModel();
             set => mEvents = value;

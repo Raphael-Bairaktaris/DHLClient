@@ -12,7 +12,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Services"/> property
         /// </summary>
-        private ShipmentDetailServicesResponseModel mServices;
+        private ShipmentDetailServicesResponseModel? mServices;
 
         #endregion
 

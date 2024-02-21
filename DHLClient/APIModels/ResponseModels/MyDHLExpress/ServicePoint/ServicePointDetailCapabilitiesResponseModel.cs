@@ -179,7 +179,7 @@ namespace DHLClient
         public WeightUnit PieceWeightLimitUnit { get; set; }
 
         /// <summary>
-        /// Array of numbers L W H
+        /// Array of numbers Length Weight Height
         /// </summary>
         [JsonProperty("pieceDimensionsLimit")]
         public PieceDimensionLimitResponseModel PieceDimensionsLimit
@@ -192,6 +192,7 @@ namespace DHLClient
         /// Enumeration (CM or IN)
         /// </summary>
         [JsonProperty("pieceDimensionsLimitUnit")]
+        [JsonConverter(typeof(DimensionUnitToStringJsonConverter))]
         public DimensionUnit PieceDimensionsLimitUnit { get; set; }
 
         /// <summary>

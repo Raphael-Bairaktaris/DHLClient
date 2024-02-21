@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipper postal address response
     /// </summary>
-    public class ShipperPostalAddressResponseModel : AddressDetailsResponseModel
+    public class ShipperPostalAddressResponseModel : AddressDetailResponseModel
     {
         #region
 

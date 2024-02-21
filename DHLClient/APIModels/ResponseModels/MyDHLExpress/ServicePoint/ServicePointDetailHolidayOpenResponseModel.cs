@@ -12,6 +12,8 @@ namespace DHLClient
         /// <summary>
         /// Date – when is open during holidays
         /// </summary>
+        [JsonProperty("date")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly Date { get; set; }
 
         /// <summary>

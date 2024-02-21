@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="DHLDayOfWeekTypeToStringJsonConverter{T}"/> that converts a <see cref="DateOnly"/> to <see cref="string"/>
+    /// The <see cref="DateOnlyToStringJsonConverter"/> that converts a <see cref="DateOnly"/> to <see cref="string"/>
     /// </summary>
     public class DateOnlyToStringJsonConverter : JsonConverter<DateOnly>
     {

@@ -28,7 +28,7 @@ namespace DHLClient
         /// If set to true then the document is rendered otherwise not
         /// </summary>
         [JsonProperty("isRequested")]
-        public bool IsRequested { get; set; }
+        public bool? IsRequested { get; set; }
 
         #endregion
 

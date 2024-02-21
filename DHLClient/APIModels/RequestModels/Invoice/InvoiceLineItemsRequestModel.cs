@@ -42,7 +42,7 @@ namespace DHLClient
         /// Please provide Commodity codes for the shipment at item line level
         /// </summary>
         [JsonProperty("commodityCodes")]
-        public LineItemCommodityCodeRequestModel? CommodityCodes { get; set; }
+        public IEnumerable<LineItemCommodityCodeRequestModel>? CommodityCodes { get; set; }
 
         /// <summary>
         /// Please provide the reason for export
@@ -50,6 +50,7 @@ namespace DHLClient
         /// <example>temporary</example>
         [JsonRequired]
         [JsonProperty("exportReasonType")]
+        [JsonConverter(typeof(ExportReasonToStringJsonConverter))]
         public ExportReason? ExportReasonType { get; set; }
 
         /// <summary>
@@ -58,6 +59,7 @@ namespace DHLClient
         /// <example>CZ</example>
         [JsonRequired]
         [JsonProperty("manufacturerCountry")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode ManufacturerCountry { get; set; }
 
         /// <summary>
@@ -78,13 +80,13 @@ namespace DHLClient
         /// Please provide the Customer References for the line item
         /// </summary>
         [JsonProperty("customerReferences")]
-        public CustomerReferenceRequestModel? CustomerReferences { get; set; }
+        public IEnumerable<CustomerReferenceRequestModel>? CustomerReferences { get; set; }
 
         /// <summary>
         /// Please provide the line item customs document type code.
         /// </summary>
         [JsonProperty("customsDocuments")]
-        public CustomsDocumentRequestModel? CustomsDocuments { get; set; }
+        public IEnumerable<CustomsDocumentRequestModel>? CustomsDocuments { get; set; }
 
         /// <summary>
         /// Please provide monetary value of the line item x quantity

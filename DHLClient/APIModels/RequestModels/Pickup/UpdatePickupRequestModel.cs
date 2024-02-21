@@ -61,13 +61,13 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("accounts")]
-        public AccountRequestModel? Accounts { get; set; }
+        public IEnumerable<AccountRequestModel>? Accounts { get; set; }
 
         /// <summary>
         /// Please provide updated details related to shipment you want update the pickup for
         /// </summary>
         [JsonProperty("specialInstructions")]
-        public ShipmentSpecialInstructionRequestModel? SpecialInstructions { get; set; }
+        public IEnumerable<ShipmentSpecialInstructionRequestModel>? SpecialInstructions { get; set; }
 
         /// <summary>
         /// Please provide additional pickup remark
@@ -92,7 +92,7 @@ namespace DHLClient
         /// The shipment details
         /// </summary>
         [JsonProperty("shipmentDetails")]
-        public PickupShipmentDetailRequestModel? ShipmentDetails { get; set; }
+        public IEnumerable<PickupShipmentDetailRequestModel>? ShipmentDetails { get; set; }
 
         #endregion
 

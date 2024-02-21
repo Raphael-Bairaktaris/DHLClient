@@ -7,13 +7,26 @@ namespace DHLClient
     /// </summary>
     public class ShipmentEventsLocationResponseModel : ShipmentDetailOriginAddressResponseModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="ServicePoint"/> property
+        /// </summary>
+        private ShipmentEventsLocationServicePointResponseModel? mServicePoint;
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
         /// The service point
         /// </summary>
         [JsonProperty("servicePoint")]
-        public ShipmentEventsLocationServicePointResponseModel ServicePoint { get; set; }
+        public ShipmentEventsLocationServicePointResponseModel ServicePoint 
+        { 
+            get => mServicePoint ??= new ShipmentEventsLocationServicePointResponseModel();
+            set => mServicePoint = value;
+        }
 
         #endregion
 

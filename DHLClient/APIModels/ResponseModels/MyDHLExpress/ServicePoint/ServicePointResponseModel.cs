@@ -37,7 +37,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="ServicePoints"/> property
         /// </summary>
-        private ServicePointDetailResponseModel? mServicePoints;
+        private IEnumerable<ServicePointDetailResponseModel>? mServicePoints;
 
         /// <summary>
         /// The member of the <see cref="Messages"/> property
@@ -112,9 +112,9 @@ namespace DHLClient
         /// Array of the found Service Points. Each Service Point entity contains details about the service point.
         /// </summary>
         [JsonProperty("servicePoints")]
-        public ServicePointDetailResponseModel ServicePoints
+        public IEnumerable<ServicePointDetailResponseModel> ServicePoints
         {
-            get => mServicePoints ??= new ServicePointDetailResponseModel();
+            get => mServicePoints ??= Enumerable.Empty<ServicePointDetailResponseModel>();
             set => mServicePoints = value;
         }
 

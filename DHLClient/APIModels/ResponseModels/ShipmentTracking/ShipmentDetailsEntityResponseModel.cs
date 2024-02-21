@@ -12,17 +12,17 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="OrganizationName"/> property
         /// </summary>
-        private ShipmentDetailOrganizationNameResponseModel mOrganizationName;
+        private ShipmentDetailOrganizationNameResponseModel? mOrganizationName;
 
         /// <summary>
         /// The member of the <see cref="OrganizationName"/> property
         /// </summary>
-        private ShipmentDetailCompanyResponseModel mCompany;
+        private ShipmentDetailCompanyResponseModel? mCompany;
 
         /// <summary>
         /// The member of the <see cref="OrganizationName"/> property
         /// </summary>
-        private ShipmentDetailPersonResponseModel mPerson;
+        private ShipmentDetailPersonResponseModel? mPerson;
 
         #endregion
 
@@ -57,8 +57,6 @@ namespace DHLClient
             get => mPerson ??= new ShipmentDetailPersonResponseModel();
             set => mPerson = value;
         }
-
-        public
 
         #endregion
 

@@ -115,6 +115,7 @@ namespace DHLClient
         /// Shipment pickup date
         /// </summary>
         [JsonProperty("pickupDate")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly PickupDate { get; set; }
 
         /// <summary>
@@ -148,14 +149,14 @@ namespace DHLClient
         /// </summary>
         /// <remarks> http://www.dhl.de/de/privatkunden.html?piececode=7777777770 </remarks>
         [JsonProperty("serviceUrl")]
-        public Uri ServiceURL { get; set; }
+        public Uri? ServiceURL { get; set; }
 
         /// <summary>
         /// Custom link to BU rerouting service, if available for the current status of the shipment
         /// </summary>
         /// <remarks> https://www.dhl.de/de/privatkunden.html?piececode=7777777770&verfuegen_selected_tab=FIRST </remarks>
         [JsonProperty("rerouteUrl")]
-        public Uri RerouteURL { get; set; }
+        public Uri? RerouteURL { get; set; }
 
         /// <summary>
         /// Custom link to BU rerouting service, if available for the current status of the shipment

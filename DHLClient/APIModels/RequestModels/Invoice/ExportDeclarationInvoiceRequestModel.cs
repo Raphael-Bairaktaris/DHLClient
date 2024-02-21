@@ -23,6 +23,7 @@ namespace DHLClient
         /// <example>2021-03-18</example>
         [JsonRequired]
         [JsonProperty("dare")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly? Date { get; set; }
 
         /// <summary>
@@ -74,7 +75,7 @@ namespace DHLClient
         /// It is recommended to provide less than 20 customer references of 'MRN' type code
         /// </summary>
         [JsonProperty("customerReferences")]
-        public CustomerReferenceRequestModel? CustomerReferences { get; set; }
+        public IEnumerable<CustomerReferenceRequestModel>? CustomerReferences { get; set; }
 
         /// <summary>
         /// Please provide the terms of payment

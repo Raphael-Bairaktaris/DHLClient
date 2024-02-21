@@ -17,6 +17,7 @@
         /// Type of DHL express identifier to retrieve
         /// </summary>
         [ArgumentName("type")]
+        [QueryArgumentConverter<IdentifierTypeQueryArgumentConverter>]
         public IdentifierType Type { get; set; }
 
         /// <summary>

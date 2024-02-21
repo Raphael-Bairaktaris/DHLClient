@@ -3,7 +3,7 @@
     /// <summary>
     /// The arguments used for uploading an invoice
     /// </summary>
-    public class UploadCommercialInvoiceAPIArgs : BaseMyDHLAPIArgs
+    public class UploadCommercialInvoiceForShipmentAPIArgs : BaseMyDHLAPIArgs
     {
         #region Public Properties
 
@@ -20,7 +20,7 @@
         /// <summary>
         /// Default constructor
         /// </summary>
-        public UploadCommercialInvoiceAPIArgs() : base()
+        public UploadCommercialInvoiceForShipmentAPIArgs() : base()
         {
 
         }

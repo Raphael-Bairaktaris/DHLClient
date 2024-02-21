@@ -26,11 +26,14 @@ namespace DHLClient
         /// <summary>
         /// Language Code
         /// </summary>
+        [JsonProperty("languageCode")]
+        [JsonConverter(typeof(LanguageCodeToStringJsonConverter))]
         public LanguageCode LanguageCode { get; set; }
 
         /// <summary>
         /// Language Script Code
         /// </summary>
+        [JsonProperty("languageScriptCode")]
         public string LanguageScriptCode
         {
             get => mLanguageScriptCode ?? string.Empty;

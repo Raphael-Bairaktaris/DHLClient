@@ -7,6 +7,15 @@ namespace DHLClient
     /// </summary>
     public class ServicePointStatusResponseModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="StatusMessage"/> property
+        /// </summary>
+        private string? mStatusMessage;
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
@@ -19,7 +28,11 @@ namespace DHLClient
         /// Status/error message text of the response
         /// </summary>
         [JsonProperty("statusMessage")]
-        public string? StatusMessage { get; set; }
+        public string StatusMessage 
+        { 
+            get => mStatusMessage ?? string.Empty;
+            set => mStatusMessage = value;
+        }
 
         /// <summary>
         /// Indicates if the response is ok

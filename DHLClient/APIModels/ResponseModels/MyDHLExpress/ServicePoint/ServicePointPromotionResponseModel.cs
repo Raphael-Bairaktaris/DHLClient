@@ -73,6 +73,7 @@ namespace DHLClient
         /// The country code
         /// </summary>
         [JsonProperty("coutnryCode")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode CountryCode { get; set; }
 
         /// <summary>
@@ -119,12 +120,14 @@ namespace DHLClient
         /// Promotion Start Date
         /// </summary>
         [JsonProperty("startDate")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly StartDate { get; set; }
 
         /// <summary>
         /// The promotion end date
         /// </summary>
         [JsonProperty("endDate")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly EndDate { get; set; }
 
         /// <summary>
@@ -157,6 +160,7 @@ namespace DHLClient
         /// The promotion language code
         /// </summary>
         [JsonProperty("languageCode1")]
+        [JsonConverter(typeof(LanguageCodeToStringJsonConverter))]
         public LanguageCode LanguageCode1 { get; set; }
 
         /// <summary>
@@ -183,6 +187,7 @@ namespace DHLClient
         /// The promotion language code
         /// </summary>
         [JsonProperty("languageCode2")]
+        [JsonConverter(typeof(LanguageCodeToStringJsonConverter))]
         public LanguageCode LanguageCode2 { get; set; }
 
         /// <summary>
@@ -209,6 +214,7 @@ namespace DHLClient
         /// The promotion language code
         /// </summary>
         [JsonProperty("languageCode3")]
+        [JsonConverter(typeof(LanguageCodeToStringJsonConverter))]
         public LanguageCode LanguageCode3 { get; set; }
 
         /// <summary>
@@ -221,6 +227,7 @@ namespace DHLClient
         /// Promotion date created
         /// </summary>
         [JsonProperty("created")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly Created { get; set; }
 
         #endregion

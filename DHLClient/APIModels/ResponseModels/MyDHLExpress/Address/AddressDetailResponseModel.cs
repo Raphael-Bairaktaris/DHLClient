@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents an address detail response
     /// </summary>
-    public class AddressDetailsResponseModel : ShipmentOccurrenceServiceAreaResponseModel
+    public class AddressDetailResponseModel : ShipmentOccurrenceServiceAreaResponseModel
     {
         #region Private Members
 
@@ -80,7 +80,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public AddressDetailsResponseModel() : base()
+        public AddressDetailResponseModel() : base()
         {
 
         }

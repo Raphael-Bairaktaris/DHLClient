@@ -3,7 +3,7 @@
     /// <summary>
     /// Provides enumeration over the service point status types
     /// </summary>
-    public enum ServicePointStatus
+    public enum ServicepointStatus
     {
         /// <summary>
         /// Service Available (Open) (A)

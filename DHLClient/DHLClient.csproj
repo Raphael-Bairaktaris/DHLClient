@@ -14,12 +14,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="APIArguments\MyDHLExpressAPIArgs\Identifier\" />
-    <Folder Include="APIArguments\MyDHLExpressAPIArgs\Address\" />
-    <Folder Include="APIArguments\MyDHLExpressAPIArgs\Invoice\" />
-    <Folder Include="APIArguments\MyDHLExpressAPIArgs\ReferenceData\" />
-    <Folder Include="APIArguments\MyDHLExpressAPIArgs\ServicePoint\" />
-  </ItemGroup>
-
 </Project>

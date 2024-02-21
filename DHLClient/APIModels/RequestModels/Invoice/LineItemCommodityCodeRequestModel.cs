@@ -15,6 +15,7 @@ namespace DHLClient
         /// <example>outbound</example>
         [JsonRequired]
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(CommodityCodeTypeToStringJsonConverter))]
         public CommodityCodeType? TypeCode { get; set; }
 
         /// <summary>

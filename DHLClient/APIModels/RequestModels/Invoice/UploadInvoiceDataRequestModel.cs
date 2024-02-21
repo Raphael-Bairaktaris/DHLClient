@@ -28,7 +28,7 @@ namespace DHLClient
         /// Note: accounts/0/number with typeCode 'shipper' is mandatory if using POST method and no shipmentTrackingNumber is provided in request.
         /// </summary>
         [JsonProperty("accounts")]
-        public AccountRequestModel? Accounts { get; set; }
+        public IEnumerable<AccountRequestModel>? Accounts { get; set; }
 
         /// <summary>
         /// Here you can define all the properties related to the content of the prospected shipment
@@ -41,13 +41,13 @@ namespace DHLClient
         /// The output image properties
         /// </summary>
         [JsonProperty("outputImageProperties")]
-        public InvoiceOutputImagePropertyRequestModel? OutputImageProperties { get; set; }
+        public IEnumerable<InvoiceOutputImagePropertyRequestModel>? OutputImageProperties { get; set; }
 
         /// <summary>
         /// The customer details 
         /// </summary>
         [JsonProperty("customerDetails")]
-        public InvoiceCustomerDetailRequestModel? CustomerDetails { get; set; }
+        public IEnumerable<InvoiceCustomerDetailRequestModel>? CustomerDetails { get; set; }
 
         #endregion
 

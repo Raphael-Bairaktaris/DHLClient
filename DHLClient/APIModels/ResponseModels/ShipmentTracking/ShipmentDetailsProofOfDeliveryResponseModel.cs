@@ -7,6 +7,15 @@ namespace DHLClient
     /// </summary>
     public class ShipmentDetailsProofOfDeliveryResponseModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="Signed"/> property
+        /// </summary>
+        private ShipmentDetailsEntityResponseModel? mSigned;
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
@@ -26,13 +35,18 @@ namespace DHLClient
         /// A real organization or personal entity, if type is not specified, a Organization implementation is used
         /// </summary>
         [JsonProperty("signed")]
-        public ShipmentDetailsEntityResponseModel Signed { get; set; }
+        public ShipmentDetailsEntityResponseModel Signed 
+        { 
+            get => mSigned ??= new ShipmentDetailsEntityResponseModel();
+            set => mSigned = value;
+        }
 
         /// <summary>
         /// Date and time of related proof of delivery document
         /// </summary>
         /// <example>2022-10-21T12:30:00</example>
         [JsonProperty("timestamp")]
+        [JsonConverter(typeof(DateTimeOffsetToUnixTimeStampJsonConverter))]
         public DateTimeOffset? Timestamp { get; set; }
 
         #endregion

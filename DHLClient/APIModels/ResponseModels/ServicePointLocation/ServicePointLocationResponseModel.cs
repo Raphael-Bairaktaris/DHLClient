@@ -10,6 +10,11 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
+        /// The member of the <see cref="Location"/> property
+        /// </summary>
+        private ServicePointLocationByIdsResponseModel? mLocation;
+
+        /// <summary>
         /// The member of the <see cref="Keyword"/> property
         /// </summary>
         private string? mKeyword;
@@ -19,11 +24,6 @@ namespace DHLClient
         /// </summary>
         private string? mKeywordId;
 
-        /// <summary>
-        /// The member of the <see cref="Type"/> property
-        /// </summary>
-        private IEnumerable<LocationType>? mType;
-
         #endregion
 
         #region Public Properties
@@ -32,9 +32,9 @@ namespace DHLClient
         /// One location can be known within different business units (providerTypes). They will be known under a unique ID within each business unit domain, as provided.
         /// </summary>
         [JsonProperty("location")]
-        public IEnumerable<ServicePointLocationByIdsResponseModel> Location
+        public ServicePointLocationByIdsResponseModel Location
         {
-            get => mLocation ?? Enumerable.Empty<ServicePointLocationByIdsResponseModel>();
+            get => mLocation ?? new ServicePointLocationByIdsResponseModel();
             set => mLocation = value;
         }
 

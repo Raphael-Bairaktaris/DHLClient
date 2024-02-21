@@ -175,6 +175,7 @@ namespace DHLClient
         /// The type of the Service Point.
         /// </summary>
         [JsonProperty("servicePointType")]
+        [JsonConverter(typeof(ServicePointToStringJsonConverter))]
         public ServicePoint ServicePointType { get; set; }
 
         /// <summary>
