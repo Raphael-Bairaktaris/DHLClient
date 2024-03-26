@@ -1,4 +1,6 @@
-﻿namespace DHLClient
+﻿using System.Text.Json.Serialization;
+
+namespace DHLClient
 {
     /// <summary>
     /// The arguments used for receiving a DHL service point location by id
@@ -10,8 +12,9 @@
         /// <summary>
         /// ID of the DHL Service Point location.
         /// </summary>
+        [JsonRequired]
         [ArgumentName("id")]
-        public string? Id { get; set; }
+        public string? LocationId { get; set; }
 
         #endregion
 

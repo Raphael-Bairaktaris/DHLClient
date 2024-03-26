@@ -27,8 +27,8 @@ namespace DHLClient
         /// Array of objects: {date, from, to}, where date is date and from and to is time
         /// </summary>
         [JsonProperty("open")]
-        public ServicePointHolidayOpenResponseModel Open 
-        { 
+        public ServicePointHolidayOpenResponseModel Open
+        {
             get => mOpen ?? new ServicePointHolidayOpenResponseModel();
             set => mOpen = value;
         }

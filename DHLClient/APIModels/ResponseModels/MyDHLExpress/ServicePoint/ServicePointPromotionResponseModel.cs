@@ -87,7 +87,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// The service point Id
+        /// The service point LocationId
         /// </summary>
         [JsonProperty("servicePointId")]
         public string ServicePointId

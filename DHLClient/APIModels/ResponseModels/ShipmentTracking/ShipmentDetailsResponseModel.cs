@@ -169,8 +169,8 @@ namespace DHLClient
         /// A point value or interval for product characteristics and other purposes
         /// </summary>
         [JsonProperty("weight")]
-        public ShipmentDetailQuantityResponseModel Weight 
-        { 
+        public ShipmentDetailQuantityResponseModel Weight
+        {
             get => mWeight ?? new ShipmentDetailQuantityResponseModel();
             set => mWeight = value;
         }

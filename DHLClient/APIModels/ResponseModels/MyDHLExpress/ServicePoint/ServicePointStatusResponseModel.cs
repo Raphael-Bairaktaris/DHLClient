@@ -28,8 +28,8 @@ namespace DHLClient
         /// Status/error message text of the response
         /// </summary>
         [JsonProperty("statusMessage")]
-        public string StatusMessage 
-        { 
+        public string StatusMessage
+        {
             get => mStatusMessage ?? string.Empty;
             set => mStatusMessage = value;
         }

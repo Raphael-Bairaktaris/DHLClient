@@ -67,8 +67,8 @@ namespace DHLClient
         /// Promotion on a SVP level
         /// </summary>
         [JsonProperty("promotion")]
-        public ServicePointPromotionResponseModel Promotion 
-        { 
+        public ServicePointPromotionResponseModel Promotion
+        {
             get => mPromotion ??= new ServicePointPromotionResponseModel();
             set => mPromotion = value;
         }

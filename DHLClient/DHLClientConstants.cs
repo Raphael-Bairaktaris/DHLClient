@@ -1059,7 +1059,7 @@ namespace DHLClient
         /// <summary>
         /// Maps the <see cref="CurrencyCode"/>s to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<CurrencyCode, string > CurrencyCodeToStringMapper { get; } = Enum.GetValues<CurrencyCode>().ToImmutableDictionary(x => x, x => x.ToString());
+        public static IReadOnlyDictionary<CurrencyCode, string> CurrencyCodeToStringMapper { get; } = Enum.GetValues<CurrencyCode>().ToImmutableDictionary(x => x, x => x.ToString());
 
         /// <summary>
         /// Maps the <see cref="CountryCode"/> to their related <see cref="string"/>s

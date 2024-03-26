@@ -22,8 +22,8 @@ namespace DHLClient
         /// The receiver's service area
         /// </summary>
         [JsonProperty("serviceArea")]
-        public ReceiverServiceAreaResponseModel ServiceArea 
-        { 
+        public ReceiverServiceAreaResponseModel ServiceArea
+        {
             get => mServiceArea ??= new ReceiverServiceAreaResponseModel();
             set => mServiceArea = value;
         }

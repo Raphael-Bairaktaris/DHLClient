@@ -6,7 +6,7 @@
     public enum IdentifierType
     {
         /// <summary>
-        /// Shipment Id (SID)
+        /// Shipment LocationId (SID)
         /// </summary>
         ShipmentId = 0,
 

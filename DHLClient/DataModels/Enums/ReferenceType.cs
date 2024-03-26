@@ -41,12 +41,12 @@
         ContainerNumber = 6,
 
         /// <summary>
-        /// Shipment Id
+        /// Shipment LocationId
         /// </summary>
         ShipmentId = 7,
 
         /// <summary>
-        /// Domestic consignment Id
+        /// Domestic consignment LocationId
         /// </summary>
         DomesticConsignmentId = 8,
 

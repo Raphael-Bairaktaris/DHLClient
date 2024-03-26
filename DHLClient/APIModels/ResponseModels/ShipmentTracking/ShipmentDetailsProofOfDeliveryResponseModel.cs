@@ -35,8 +35,8 @@ namespace DHLClient
         /// A real organization or personal entity, if type is not specified, a Organization implementation is used
         /// </summary>
         [JsonProperty("signed")]
-        public ShipmentDetailsEntityResponseModel Signed 
-        { 
+        public ShipmentDetailsEntityResponseModel Signed
+        {
             get => mSigned ??= new ShipmentDetailsEntityResponseModel();
             set => mSigned = value;
         }

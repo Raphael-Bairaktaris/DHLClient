@@ -33,8 +33,8 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("content")]
-        public string Content 
-        { 
+        public string Content
+        {
             get => mContent ?? string.Empty;
             set => mContent = value;
         }

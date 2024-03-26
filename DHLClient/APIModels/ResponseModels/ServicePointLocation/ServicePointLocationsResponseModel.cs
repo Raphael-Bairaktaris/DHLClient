@@ -12,7 +12,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Locations"/> property
         /// </summary>
-        private IEnumerable<ServicePointLocationResponseModel>? mLocations;
+        private ServicePointLocationResponseModel? mLocations;
 
         /// <summary>
         /// The member of the <see cref="Name"/> property
@@ -32,7 +32,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="AverageCapacityDayOfWeek"/> property
         /// </summary>
-        private ServicePointLocationAverageCapacityDayOfWeekResponseModel? mAverageCapacityDayOfWeek;
+        private IEnumerable<ServicePointLocationAverageCapacityDayOfWeekResponseModel>? mAverageCapacityDayOfWeek;
 
         /// <summary>
         /// The member of the <see cref="OpeningHours"/> property
@@ -60,9 +60,9 @@ namespace DHLClient
         /// The locations
         /// </summary>
         [JsonProperty("locations")]
-        public IEnumerable<ServicePointLocationResponseModel> Locations
+        public ServicePointLocationResponseModel Locations
         {
-            get => mLocations ?? Enumerable.Empty<ServicePointLocationResponseModel>();
+            get => mLocations ?? new ServicePointLocationResponseModel();
             set => mLocations = value;
         }
 
@@ -108,9 +108,9 @@ namespace DHLClient
         /// only an aggregated average capacity indication based on the last weeks will be provided as availableCapacity.
         /// </summary>
         [JsonProperty("averageCapacityDayOfWeek")]
-        public ServicePointLocationAverageCapacityDayOfWeekResponseModel AverageCapacityDayOfWeek
+        public IEnumerable<ServicePointLocationAverageCapacityDayOfWeekResponseModel> AverageCapacityDayOfWeek
         {
-            get => mAverageCapacityDayOfWeek ??= new ServicePointLocationAverageCapacityDayOfWeekResponseModel();
+            get => mAverageCapacityDayOfWeek ??= Enumerable.Empty<ServicePointLocationAverageCapacityDayOfWeekResponseModel>();
             set => mAverageCapacityDayOfWeek = value;
         }
 

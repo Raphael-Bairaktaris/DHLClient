@@ -8,10 +8,10 @@
         #region Public Properties
 
         /// <summary>
-        /// Id belonging to keyword that builds the streetAddress for direct addressing to a service point or locker for pick up / drop off.
+        /// LocationId belonging to keyword that builds the streetAddress for direct addressing to a service point or locker for pick up / drop off.
         /// </summary>
         [ArgumentName("keywordId")]
-        public string? KeywordId { get; set; }
+        public string? LocationId { get; set; }
 
         /// <summary>
         /// A two-letter ISO 3166-1 alpha-2 code specifying the country.

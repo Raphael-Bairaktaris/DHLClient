@@ -59,13 +59,43 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
+        /// A link to current page
+        /// </summary>
+        [JsonProperty("url")]
+        public Uri? URL { get; set; }
+
+        /// <summary>
+        /// A link to current page
+        /// </summary>
+        [JsonProperty("prevUrl")]
+        public Uri? PreviousURL { get; set; }
+
+        /// <summary>
+        /// A link to current page
+        /// </summary>
+        [JsonProperty("nextUurl")]
+        public Uri? NextURL { get; set; }
+
+        /// <summary>
+        /// A link to current page
+        /// </summary>
+        [JsonProperty("firstUrl")]
+        public Uri? FirstURL { get; set; }
+
+        /// <summary>
+        /// A link to current page
+        /// </summary>
+        [JsonProperty("lastUrl")]
+        public Uri? LastURL { get; set; }
+
+        /// <summary>
         /// Define the TTL value in seconds of shipment between 30 and 365 days
         /// </summary>
         [JsonProperty("@ttl")]
         public double TTL { get; set; }
 
         /// <summary>
-        /// The Id
+        /// The LocationId
         /// </summary>
         [JsonProperty("id")]
         public string Id

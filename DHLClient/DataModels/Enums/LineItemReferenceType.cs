@@ -66,7 +66,7 @@
         SalesOrderNo = 11,
 
         /// <summary>
-        /// Order Id (OID)
+        /// Order LocationId (OID)
         /// </summary>
         OrderId = 12,
 

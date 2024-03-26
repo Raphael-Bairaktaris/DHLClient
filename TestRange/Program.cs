@@ -8,6 +8,8 @@ var pairs = DHLClientConstants.LanguageCodeToStringMapper;
 
 var countryCode = CountryCode.AD;
 
+var apiKey = File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "DHLClientCredentials.txt"));
+
 var name = countryCode.ToLocalizedString();
 
 var sb = new StringBuilder();

@@ -29,8 +29,8 @@ namespace DHLClient
         /// The service criteria
         /// </summary>
         [JsonProperty("serviceCriteria")]
-        public string ServiceCriteria 
-        { 
+        public string ServiceCriteria
+        {
             get => mServiceCriteria ?? string.Empty;
             set => mServiceCriteria = value;
         }

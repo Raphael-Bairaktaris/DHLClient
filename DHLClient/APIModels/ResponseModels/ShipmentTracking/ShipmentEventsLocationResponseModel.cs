@@ -22,8 +22,8 @@ namespace DHLClient
         /// The service point
         /// </summary>
         [JsonProperty("servicePoint")]
-        public ShipmentEventsLocationServicePointResponseModel ServicePoint 
-        { 
+        public ShipmentEventsLocationServicePointResponseModel ServicePoint
+        {
             get => mServicePoint ??= new ShipmentEventsLocationServicePointResponseModel();
             set => mServicePoint = value;
         }

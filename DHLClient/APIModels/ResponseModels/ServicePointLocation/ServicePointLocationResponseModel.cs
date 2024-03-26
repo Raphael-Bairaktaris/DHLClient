@@ -67,7 +67,7 @@ namespace DHLClient
         /// <example> servicepoint </example>
         [JsonProperty("type")]
         [JsonConverter(typeof(LocationTypeToStringJsonConverter))]
-        public LocationType Type { get; set; }
+        public LocationType LocationType { get; set; }
 
         /// <summary>
         /// Lean lockers can only be operated with a mobile phone.

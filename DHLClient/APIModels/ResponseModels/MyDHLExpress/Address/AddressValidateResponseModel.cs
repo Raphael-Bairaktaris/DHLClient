@@ -27,18 +27,18 @@ namespace DHLClient
         /// The warnings
         /// </summary>
         [JsonProperty("warnings")]
-        public IEnumerable<string> Warnings 
-        { 
+        public IEnumerable<string> Warnings
+        {
             get => mWarnings ?? Enumerable.Empty<string>();
-            set => mWarnings = value; 
+            set => mWarnings = value;
         }
 
         /// <summary>
         /// The address
         /// </summary>
         [JsonProperty("address")]
-        public IEnumerable<AddressDetailResponseModel> Address 
-        { 
+        public IEnumerable<AddressDetailResponseModel> Address
+        {
             get => mAddress ?? Enumerable.Empty<AddressDetailResponseModel>();
             set => mAddress = value;
         }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// A <see cref="QueryArgumentConverterAttribute{T}"/> that is used to convert an <see cref="IdentifierType"/> to <see cref="string"/>

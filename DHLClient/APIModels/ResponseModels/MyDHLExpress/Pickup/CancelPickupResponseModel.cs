@@ -47,8 +47,8 @@ namespace DHLClient
         /// The instance
         /// </summary>
         [JsonProperty("instance")]
-        public string Instance 
-        { 
+        public string Instance
+        {
             get => mInstance ?? string.Empty;
             set => mInstance = value;
         }
@@ -87,8 +87,8 @@ namespace DHLClient
         /// The additional details
         /// </summary>
         [JsonProperty("additionalDetails")]
-        public IEnumerable<string> AdditionalDetails 
-        { 
+        public IEnumerable<string> AdditionalDetails
+        {
             get => mAdditionalDetails ?? Enumerable.Empty<string>();
             set => mAdditionalDetails = value;
         }
@@ -98,7 +98,7 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("status")]
         public string Status
-        { 
+        {
             get => mStatus ?? string.Empty;
             set => mStatus = value;
         }
