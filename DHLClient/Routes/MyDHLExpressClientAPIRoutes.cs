@@ -114,7 +114,7 @@
         /// <summary>
         /// Create a DHL Express pickup booking request API route
         /// </summary>
-        public const string CreateDHLPickupRequest = $"{TestBaseRoute}/pickups";
+        public const string CreateDHLPickupAPIRoute = $"{TestBaseRoute}/pickups";
 
         #endregion
 

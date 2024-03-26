@@ -1,4 +1,5 @@
-﻿namespace DHLClient
+﻿
+namespace DHLClient
 {
     /// <summary>
     /// An agent that is capable of making requests to the MyDHL Express API
@@ -83,8 +84,8 @@
         public Task<WebRequestResult<ShipmentProofOfDeliveryDocumentResponseModel>> GetElectronicProofOfDeliveryAsync(string shipmentTrackingNumber)
             => Client.GetAsync<ShipmentProofOfDeliveryDocumentResponseModel>(MyDHLExpressClientAPIRoutes.GetElectronicProofOfDeliveryAPIRoute(shipmentTrackingNumber), Credentials.APIKey);
 
-        public Task<WebRequestResult<ShipmentUploadPLTRequestModel>> PatchPaperlessTradeShipmentAsync(string shipmentTrackingNumber)
-            => Client.PatchAsync<ShipmentUploadPLTRequestModel>(MyDHLExpressClientAPIRoutes.PatchPaperlessTradeShipmentAPIRoute(shipmentTrackingNumber), null, Credentials.APIKey);
+        public Task<WebRequestResult<UploadPaperLessTradeShipmentResponseModel>> PatchPaperlessTradeShipmentAsync(string shipmentTrackingNumber)
+            => Client.PatchAsync<UploadPaperLessTradeShipmentResponseModel>(MyDHLExpressClientAPIRoutes.PatchPaperlessTradeShipmentAPIRoute(shipmentTrackingNumber), null, Credentials.APIKey);
 
         /// <summary>
         /// Creates a DHL Express pickup request
@@ -95,6 +96,14 @@
         {
             return await Client.PostAsync<ShipmentResponseModel>(MyDHLExpressClientAPIRoutes.CreateShipmentAPIRoute, model, Credentials.APIKey);
         }
+
+        /// <summary>
+        /// Upload commercial invoice data for you DHL Express shipment
+        /// </summary>
+        /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
+        /// <returns></returns>
+        public Task<WebRequestResult<UploadCommercialInvoiceResponseModel>> AddCommercialInvoiceDataAsycn(string shipmentTrackingNumber)
+            => Client.PatchAsync<UploadCommercialInvoiceResponseModel>(MyDHLExpressClientAPIRoutes.PatchCommercialInvoiceDataAPIRoute(shipmentTrackingNumber), null, Credentials.APIKey);
 
         #endregion
 
@@ -133,8 +142,73 @@
         /// <param name="dispatchConfirmationNumber">The dispatch confirmation number</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public Task<WebRequestResult<UpdatePickupResponseModel>> UpdatePickupInformationAsync(string dispatchConfirmationNumber, UpdatePickupRequestModel model)
-            => Client.PutAsync<UpdatePickupRequestModel>(MyDHLExpressClientAPIRoutes.PatchPickupInformationForDHLPickupAPIRoute(dispatchConfirmationNumber), model, Credentials.APIKey);
+        public Task<WebRequestResult<UpdatePickupResponseModel>> UpdatePickupInformationAsync(string dispatchConfirmationNumber)
+            => Client.PatchAsync<UpdatePickupResponseModel>(MyDHLExpressClientAPIRoutes.PatchPickupInformationForDHLPickupAPIRoute(dispatchConfirmationNumber), null, Credentials.APIKey);
+
+        /// <summary>
+        /// Creates a DHL Express pickup booking request
+        /// </summary>
+        /// <param name="model">The model</param>
+        /// <returns></returns>
+        public async Task<WebRequestResult<CreatePickupResponseModel>> CreateDHLPickupAsycn(CreatePickupResponseModel model)
+        {
+            return await Client.PostAsync<CreatePickupResponseModel>(MyDHLExpressClientAPIRoutes.CreateDHLPickupAPIRoute, model, Credentials.APIKey); 
+        }
+
+        #endregion
+
+        #region Identifier
+
+        /// <summary>
+        /// Gets the identifiers upfront for DHL Express Breakbulk or Loose Break Bulk shipments
+        /// </summary>
+        /// <returns></returns>
+        public Task<WebRequestResult<IdentifierResponseModel>> IdentifierAsync()
+            => Client.GetAsync<IdentifierResponseModel>(MyDHLExpressClientAPIRoutes.IdentifiersAPIRoute, Credentials.APIKey);
+
+        #endregion
+
+        #region Address
+
+        /// <summary>
+        /// Gets the DHL Express pickup/delivery capabilities at origin/destination
+        /// </summary>
+        /// <returns></returns>
+        public Task<WebRequestResult<AddressValidateResponseModel>> GetAddressAsync()
+            => Client.GetAsync<AddressValidateResponseModel>(MyDHLExpressClientAPIRoutes.AddressAPIRoute, Credentials.APIKey);
+
+        #endregion
+
+        #region Invoice
+
+        /// <summary>
+        /// Upload commercial invoice data
+        /// </summary>
+        /// <returns></returns>
+        public Task<WebRequestResult<InvoiceStatusResponseModel>> InvoiceAsync()
+            => Client.PostAsync<InvoiceStatusResponseModel>(MyDHLExpressClientAPIRoutes.InvoiceAPIRoute, null, Credentials.APIKey);
+
+        #endregion
+
+        #region ServicePoint
+
+        /// <summary>
+        /// Gets the list of service points based on the given postal location address, service point Id or geocode details for DHL Express service points to pickup and drop-off shipments
+        /// </summary>
+        /// <returns></returns>
+        public Task<WebRequestResult<ServicePointResponseModel>> ServicePointAsync()
+            => Client.GetAsync<ServicePointResponseModel>(MyDHLExpressClientAPIRoutes.ServicePointsAPIRoute, Credentials.APIKey);
+
+        #endregion
+
+        #region Reference Data
+
+        /// <summary>
+        /// Gets the reference data currently used for MyDHL API services usage
+        /// </summary>
+        /// <returns></returns>
+        public Task<WebRequestResult<ReferenceDataResponseModel>> ReferenceDataAsync()
+            => Client.GetAsync<ReferenceDataResponseModel>(MyDHLExpressClientAPIRoutes.ReferenceDataAPIRoute, Credentials.APIKey);
 
         #endregion
 
