@@ -1,4 +1,6 @@
-﻿namespace DHLClient
+﻿using System.Net.NetworkInformation;
+
+namespace DHLClient
 {
     /// <summary>
     /// The API routes for DHL express client 
@@ -74,6 +76,13 @@
         /// <returns></returns>
         public static string PatchCommercialInvoiceDataAPIRoute(string shipmentTrackingNumber) => $"{TestBaseRoute}/shipments/{shipmentTrackingNumber}/upload-invoice-data";
 
+        /// <summary>
+        /// Gets the shipment image
+        /// </summary>
+        /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
+        /// <returns></returns>
+        public static string GetShipmentImageAPIRoute(string shipmentTrackingNumber) => $"/shipments/{shipmentTrackingNumber}/get-image";
+
         #endregion
 
         #region Tracking API routes
@@ -132,7 +141,7 @@
         /// <summary>
         /// Validate DHL Express pickup/delivery capabilities at origin/destination API route
         /// </summary>
-        public const string AddressAPIRoute = $"{TestBaseRoute}/address-validate";
+        public const string ValidateAddressAPIRoute = $"{TestBaseRoute}/address-validate";
 
         #endregion
 

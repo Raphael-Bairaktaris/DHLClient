@@ -210,7 +210,7 @@ namespace DHLClient
             /// <summary>
             /// The properties that define mappers
             /// </summary>
-            private static readonly IEnumerable<PropertyInfo> mMapperProperties = typeof(GoogleMapsClientConstants).GetProperties();
+            private static readonly IEnumerable<PropertyInfo> mMapperProperties = typeof(DHLClientConstants).GetProperties();
 
             #endregion
 

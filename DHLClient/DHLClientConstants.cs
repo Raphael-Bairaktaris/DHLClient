@@ -1015,6 +1015,7 @@ namespace DHLClient
         public static IReadOnlyDictionary<TrackingView, string> TrackingViewToStringMapper { get; } = new Dictionary<TrackingView, string>()
         {
             { TrackingView.AllCheckpoints, "all-checkpoints" },
+            {TrackingView.AllCheckPointsWithRemarks, "all-checkpoints-with-remarks" },
             { TrackingView.LastCheckpoint, "last-checkpoint" },
             { TrackingView.ShipmentDetailsOnly, "shipment-details-only" },
             { TrackingView.AdvanceShipment, "advance-shipment" },

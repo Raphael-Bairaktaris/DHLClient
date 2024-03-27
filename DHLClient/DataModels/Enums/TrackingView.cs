@@ -11,23 +11,28 @@
         AllCheckpoints = 0,
 
         /// <summary>
+        /// All checkpoints with remarks
+        /// </summary>
+        AllCheckPointsWithRemarks =1,
+
+        /// <summary>
         /// Last checkpoint
         /// </summary>
-        LastCheckpoint = 1,
+        LastCheckpoint = 2,
 
         /// <summary>
         /// Shipment details only
         /// </summary>
-        ShipmentDetailsOnly = 2,
+        ShipmentDetailsOnly = 3,
 
         /// <summary>
         /// Advance shipment
         /// </summary>
-        AdvanceShipment = 3,
+        AdvanceShipment = 4,
 
         /// <summary>
         /// Bbx children
         /// </summary>
-        BbxChildren = 4
+        BbxChildren = 5
     }
 }
