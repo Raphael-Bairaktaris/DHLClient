@@ -134,7 +134,8 @@ namespace DHLClient
         /// The promotion on specific day of the week
         /// </summary>
         [JsonProperty("dayOfWeek")]
-        public DayOfWeek DayOfWeek { get; set; }
+        [JsonConverter(typeof(DHLDayOfWeekTypeToIntJsonConverter))]
+        public DHLDayOfWeek DayOfWeek { get; set; }
 
         /// <summary>
         /// The promotion message

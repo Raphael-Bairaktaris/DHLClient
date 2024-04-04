@@ -5,7 +5,6 @@ namespace DHLClient
     /// <summary>
     /// Represents a description of the building/facility the service point is located in
     /// </summary>
-    /// <example> Lidl Markt </example>
     public class ServicePointLocationByContainedInPlaceResponseModel
     {
         #region Private Members
@@ -22,6 +21,7 @@ namespace DHLClient
         /// <summary>
         /// The name of the facility
         /// </summary>
+        /// <example>Lidl Markt</example>
         [JsonProperty("name")]
         public string Name
         {

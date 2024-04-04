@@ -58,5 +58,13 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Type: {Type}, From Date: {FromDate}, To Date: {ToDate}";
+
+
+        #endregion
     }
 }

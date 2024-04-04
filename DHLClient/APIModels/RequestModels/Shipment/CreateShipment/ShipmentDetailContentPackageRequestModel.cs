@@ -14,6 +14,7 @@ namespace DHLClient
         /// </summary>
         /// <example>2BP</example>
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(PackagingTypeToStringJsonConverter))]
         public PackagingType? TypeCode { get; set; }
 
         /// <summary>
@@ -26,14 +27,14 @@ namespace DHLClient
         /// <summary>
         /// Dimensions of the package
         /// </summary>
-        [JsonProperty("weight")]
+        [JsonProperty("dimensions")]
         public ShipmentDetailDimensionsRequestModel? Dimensions { get; set; }
 
         /// <summary>
         /// Here you can declare your customer references for each package
         /// </summary>
         [JsonProperty("customerReferences")]
-        public IEnumerable<CustomerReferenceRequestModel>? CustomerReferences { get; set; }
+        public IEnumerable<CustomerPackageReferenceRequestModel>? CustomerReferences { get; set; }
 
         /// <summary>
         /// Identifiers section is on the package level where you can optionaly provide a DHL Express waybill number. 
@@ -46,17 +47,18 @@ namespace DHLClient
         /// Please enter description of content for each package
         /// </summary>
         /// <example>Piece content description</example>
+        [JsonProperty("description")]
         public string? Description { get; set; }
 
         /// <summary>
-        /// This allows you to define up to two bespoke barcodes on the DHL Express Tranport label. 
+        /// This allows you to define up to two bespoke barcodes on the DHL Express Transport label. 
         /// To use this feature please set outputImageProperties/imageOptions/templateName as ECOM26_84CI_003 for typeCode=label
         /// </summary>
         [JsonProperty("labelBarcodes")]
         public IEnumerable<ShipmentDetailLabelBarcodeRequestModel>? LabelBarcodes { get; set; }
 
         /// <summary>
-        /// This allows you to enter up to two bespoke texts on the DHL Express Tranport label.
+        /// This allows you to enter up to two bespoke texts on the DHL Express Transport label.
         /// To use this feature please set outputImageProperties/imageOptions/templateName as ECOM26_84CI_003 for typeCode=label
         /// </summary>
         [JsonProperty("labelText")]

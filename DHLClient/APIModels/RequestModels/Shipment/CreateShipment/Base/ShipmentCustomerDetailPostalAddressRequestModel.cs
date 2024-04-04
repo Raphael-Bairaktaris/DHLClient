@@ -19,6 +19,7 @@ namespace DHLClient
         /// <summary>
         /// Please enter your country name
         /// </summary>
+        /// <example>Czech Republic</example>
         [JsonProperty("countryName")]
         public string? CountryName { get; set; }
 

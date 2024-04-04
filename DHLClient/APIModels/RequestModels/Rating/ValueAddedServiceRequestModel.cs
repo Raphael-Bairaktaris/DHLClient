@@ -17,18 +17,11 @@ namespace DHLClient
         public string? ServiceCode { get; set; }
 
         /// <summary>
-        /// Please enter DHL Express value added local service code. For detailed list of all available service codes for your prospect shipment please invoke /products or /rates
-        /// </summary>
-        [JsonRequired]
-        [JsonProperty("localServiceCode")]
-        public string? LocalServiceCode { get; set; }
-
-        /// <summary>
         /// Please enter monetary value of service (e.g. Insured Value)
         /// </summary>
         [JsonRequired]
-        [JsonProperty("number")]
-        public double? Number { get; set; }
+        [JsonProperty("value")]
+        public decimal? Value { get; set; }
 
         /// <summary>
         /// Please enter currency code (e.g. Insured Value currency code)

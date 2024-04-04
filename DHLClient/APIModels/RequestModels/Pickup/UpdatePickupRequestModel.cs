@@ -54,6 +54,7 @@ namespace DHLClient
         /// <example>residence</example>
         [JsonRequired]
         [JsonProperty("locationType")]
+        [JsonConverter(typeof(LocationTypeToStringJsonConverter))]
         public PickupLocation LocationType { get; set; }
 
         /// <summary>

@@ -176,6 +176,7 @@ namespace DHLClient
         /// Enumeration (KG or LB)
         /// </summary>
         [JsonProperty("pieceWeightLimitUnit")]
+        [JsonConverter(typeof(WeightUnitToStringJsonConverter))]
         public WeightUnit PieceWeightLimitUnit { get; set; }
 
         /// <summary>

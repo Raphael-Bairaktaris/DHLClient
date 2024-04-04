@@ -89,7 +89,8 @@ namespace DHLClient
         /// Pickup day of the week number
         /// </summary>
         [JsonProperty("pickupDayOfWeek")]
-        public DayOfWeek PickupDayOfWeek { get; set; }
+        [JsonConverter(typeof(DHLDayOfWeekTypeToIntJsonConverter))]
+        public DHLDayOfWeek PickupDayOfWeek { get; set; }
 
         #endregion
 

@@ -50,6 +50,7 @@ namespace DHLClient
         /// For customs purposes please advise on declared value currency code of the shipment
         /// </summary>
         [JsonProperty("declaredValueCurrency")]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode? DeclaredValueCurrency { get; set; }
 
         /// <summary>
@@ -57,6 +58,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
+        [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
         public MeasurmentUnit? UnitOfMeasurement { get; set; }
 
         /// <summary>

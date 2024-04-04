@@ -40,6 +40,7 @@ namespace DHLClient
         /// In as your deliveryOption is 'neighbour' please specify where to leave the package
         /// </summary>
         [JsonProperty("whereToLeave")]
+        [JsonConverter(typeof(DeliveryOptionToStringJsonConverter))]
         public DeliveryOption? WhereToLeave { get; set; }
 
         /// <summary>

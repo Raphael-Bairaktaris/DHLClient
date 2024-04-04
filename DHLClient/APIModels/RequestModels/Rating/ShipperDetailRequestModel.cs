@@ -31,6 +31,7 @@ namespace DHLClient
         /// <example>CZ</example>
         [JsonRequired]
         [JsonProperty("countryCode")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode? CountryCode { get; set; }
 
         /// <summary>

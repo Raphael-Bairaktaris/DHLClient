@@ -1,4 +1,6 @@
-﻿namespace DHLClient
+﻿using Newtonsoft.Json;
+
+namespace DHLClient
 {
     /// <summary>
     /// Requests used for creating or updating an image option
@@ -10,6 +12,8 @@
         /// <summary>
         /// Please enter the document type you want to wish set properties for
         /// </summary>
+        [JsonProperty("typeCode")]
+        [JsonConverter(typeof(DeliveryDocumentTypeToStringJsonConverter))]
         public DeliveryDocumentType TypeCode { get; set; }
 
         #endregion

@@ -2,6 +2,9 @@
 
 namespace DHLClient
 {
+    /// <summary>
+    /// Represents a service point average capacity day of week
+    /// </summary>
     public class ServicePointLocationAverageCapacityDayOfWeekResponseModel
     {
         #region Public Properties
@@ -11,7 +14,7 @@ namespace DHLClient
         /// </summary>
         /// <remarks> https://schema.org/DayOfWeek </remarks>
         [JsonProperty("dayOfWeek")]
-        [JsonConverter(typeof(DHLDayOfWeekTypeToStringJsonConverter))]
+        [JsonConverter(typeof(DHLDayOfWeekTypeToIntJsonConverter))]
         public DHLDayOfWeek DayOfWeek { get; set; }
 
         /// <summary>

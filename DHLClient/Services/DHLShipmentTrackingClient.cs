@@ -25,7 +25,6 @@
         /// Default constructor
         /// </summary>
         /// <param name="credentials">The credentials</param>
-        /// <exception cref="ArgumentNullException"></exception>
         public DHLShipmentTrackingClient(DHLClientCredentials credentials) : base()
         {
             Client = WebRequestsClient.Instance;
@@ -43,7 +42,7 @@
         /// <param name="args">The arguments</param>
         /// <returns></returns>
         public Task<WebRequestResult<ShipmentDetailResponseModel>> GetTrackingInfoAsync(ShipmentTrackingAPIArgs args)
-            => Client.GetAsync<ShipmentDetailResponseModel>(RouteHelpers.AttachParameters(DHLClientShipmentTrackingAPIRoutes.RetrieveTrackingInfoAPIRoute, args), Credentials.APIKey);
+            => Client.GetAsync<ShipmentDetailResponseModel>(RouteHelpers.AttachParameters(DHLClientShipmentTrackingAPIRoutes.RetrieveTrackingInfoAPIRoute, args), Credentials.Username);
 
         #endregion
     }

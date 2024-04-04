@@ -102,7 +102,7 @@ namespace DHLClient
         /// House number in facility address
         /// </summary>
         [JsonProperty("houseNumber")]
-        public double HouseNumber { get; set; }
+        public int HouseNumber { get; set; }
 
         /// <summary>
         /// Additional details in facility address
@@ -135,7 +135,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// State
+        /// The state
         /// </summary>
         [JsonProperty("state")]
         public string State
@@ -145,15 +145,17 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// Country
+        /// The country
         /// </summary>
         [JsonProperty("country")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode Country { get; set; }
 
         /// <summary>
-        /// DHL country
+        /// The dhl country
         /// </summary>
         [JsonProperty("dhlCountry")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode DHLCountry { get; set; }
 
         /// <summary>
@@ -170,6 +172,7 @@ namespace DHLClient
         /// Enumeration (State, Province)
         /// </summary>
         [JsonProperty("countryDivisionCodeType")]
+        [JsonConverter(typeof(CountryDivisionCodeToStringJsonConverter))]
         public CountryDivisionCode CountryDivisionCodeType { get; set; }
 
         #endregion

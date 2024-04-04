@@ -17,10 +17,11 @@ namespace DHLClient
         /// <example>2006-06-26T17:00:00 GMT+01:00</example>
         [JsonRequired]
         [JsonProperty("plannedShippingDateAndTime")]
+        [JsonConverter(typeof(DateTimeOffsetWithGMTPrefixToStringJsonConverter))]
         public DateTimeOffset? PlannedShippingDatimeAndTime { get; set; }
 
         /// <summary>
-        /// The pickup
+        /// The shipment pickup 
         /// </summary>
         [JsonRequired]
         [JsonProperty("pickup")]
@@ -29,8 +30,8 @@ namespace DHLClient
         /// <summary>
         /// Please enter DHL Express Global Product code
         /// </summary>
-        [JsonProperty("productCode")]
         [JsonRequired]
+        [JsonProperty("productCode")]
         public string? ProductCode { get; set; }
 
         /// <summary>
@@ -62,7 +63,7 @@ namespace DHLClient
         /// Here you can modify label, waybillDoc, invoice and shipment receipt properties
         /// </summary>
         [JsonProperty("outputImageProperties")]
-        public IEnumerable<ShipmentOutputImagePropertyRequestModel>? OutputImageProperties { get; set; }
+        public ShipmentOutputImagePropertyRequestModel? OutputImageProperties { get; set; }
 
         /// <summary>
         /// Here you can declare your customer references
@@ -104,8 +105,8 @@ namespace DHLClient
         public ShipmentDetailOnDemandDeliveryRequestModel? OnDemandDelivery { get; set; }
 
         /// <summary>
-        /// Determines whether to request the On Demand Delivery (ODD) link. When set to true it will provide an URL link for the specified Waybill Number, 
-        /// Shipper Account Number. The default value is false, no ODD link URL is provided in the response message.
+        /// Determines whether to request the On Demand Delivery (ODD) link. When set to true it will provide an URL link for the specified Waybill Value, 
+        /// Shipper Account Value. The default value is false, no ODD link URL is provided in the response message.
         /// </summary>
         [JsonProperty("requestOndemandDeliveryURL")]
         public bool ShouldGetRequestOnDemandDeliveryURL { get; set; }

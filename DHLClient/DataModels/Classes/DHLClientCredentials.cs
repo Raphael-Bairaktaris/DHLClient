@@ -8,9 +8,14 @@
         #region Public Properties
 
         /// <summary>
-        /// The API key
+        /// The username
         /// </summary>
-        public string APIKey { get; }
+        public string Username { get; }
+
+        /// <summary>
+        /// The password
+        /// </summary>
+        public string Password { get; }
 
         #endregion
 
@@ -19,11 +24,12 @@
         /// <summary>
         /// Default constructor
         /// </summary>
-        /// <param name="apiKey">The API key</param>
-        /// <param name="apiURL">The API url</param>
-        public DHLClientCredentials(string apiKey)
+        /// <param name="username">The username</param>
+        /// <param name="password">The password</param>
+        public DHLClientCredentials(string username, string password)
         {
-            APIKey = apiKey ?? string.Empty;
+            Username = username;
+            Password = password;
         }
 
         #endregion

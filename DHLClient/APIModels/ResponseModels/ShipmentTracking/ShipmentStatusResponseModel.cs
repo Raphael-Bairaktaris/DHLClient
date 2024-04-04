@@ -125,5 +125,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Timestamp: {Timestamp}, Remark: {Remark}";
+
+        #endregion
     }
 }

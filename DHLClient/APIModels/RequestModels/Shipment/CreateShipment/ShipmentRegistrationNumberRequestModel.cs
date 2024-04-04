@@ -14,6 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(TaxIdentifierToStringJsonConverter))]
         public TaxIdentifier? TypeCode { get; set; }
 
         /// <summary>
@@ -25,10 +26,11 @@ namespace DHLClient
         public string? RegistrationNumber { get; set; }
 
         /// <summary>
-        /// Please enter 2 character code of the country where the Registration Number has been issued by
+        /// Please enter 2 character code of the country where the Registration Value has been issued by
         /// </summary>
         [JsonRequired]
         [JsonProperty("issuerCountryCode")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode? IssuerCountryCode { get; set; }
 
         #endregion

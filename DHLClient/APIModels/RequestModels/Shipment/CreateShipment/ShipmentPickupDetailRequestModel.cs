@@ -21,7 +21,7 @@ namespace DHLClient
         /// </summary>
         /// <example>Czech Republic</example>
         [JsonProperty("countryName")]
-        public CountryCode? CountryName { get; set; }
+        public string? CountryName { get; set; }
 
         /// <summary>
         /// The contact information
@@ -47,6 +47,7 @@ namespace DHLClient
         /// Please enter the business party type related to the pickup.
         /// </summary>
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(BusinessPartyToStringJsonConverter))]
         public BusinessPartyType? TypeCode { get; set; }
 
         #endregion

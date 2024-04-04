@@ -2,6 +2,9 @@
 
 namespace DHLClient
 {
+    /// <summary>
+    /// Represents a location by address response
+    /// </summary>
     public class ServicePointLocationByAddressResponseModel
     {
         #region Private Members
@@ -79,5 +82,11 @@ namespace DHLClient
 
         #endregion
 
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Postal Code: {PostalCode}, Street Address: {StreetAddress}";
+
+        #endregion
     }
 }

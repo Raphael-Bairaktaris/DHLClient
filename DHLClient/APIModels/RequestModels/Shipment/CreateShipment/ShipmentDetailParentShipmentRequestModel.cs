@@ -16,7 +16,7 @@ namespace DHLClient
         public string? ProductCode { get; set; }
 
         /// <summary>
-        /// Please provide the parent (mother) shipment's Number of Packages
+        /// Please provide the parent (mother) shipment's Value of Packages
         /// </summary>
         [JsonProperty("packagesCount")]
         public int? PackagesCount { get; set; }

@@ -3,20 +3,18 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Requests used for creating or updating a customer reference
+    /// Requests used for creating a line item customer reference
     /// </summary>
-    public class CustomerReferenceRequestModel : BaseCustomerReferenceRequestModel<CustomerReference>
+    public class LineItemCustomerReferenceRequestModel : BaseCustomerReferenceRequestModel<LineItemReferenceType>
     {
         #region Public Properties
 
         /// <summary>
         /// Please provide the line item reference type code.
         /// </summary>
-        /// <example>AFE</example>
-        [JsonRequired]
         [JsonProperty("typeCode")]
-        [JsonConverter(typeof(CustomerReferenceToStringJsonConverter))]
-        public override CustomerReference? TypeCode { get; set; }
+        [JsonConverter(typeof(LineItemReferenceTypeToStringJsonConverter))]
+        public override LineItemReferenceType? TypeCode { get; set; } 
 
         #endregion
 
@@ -25,7 +23,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public CustomerReferenceRequestModel() : base()
+        public LineItemCustomerReferenceRequestModel() : base()
         {
 
         }

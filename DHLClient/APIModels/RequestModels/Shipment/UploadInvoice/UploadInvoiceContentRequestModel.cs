@@ -21,6 +21,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("currency")]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode? Currency { get; set; }
 
         /// <summary>
@@ -28,6 +29,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
+        [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
         public MeasurmentUnit? UnitOfMeasurement { get; set; }
 
         #endregion

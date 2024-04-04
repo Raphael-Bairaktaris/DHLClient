@@ -29,7 +29,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("typeCode")]
-        [JsonConverter(typeof(ChargeCategoryToStringJsonConverter))]
+        [JsonConverter(typeof(ChargeTypeToStringJsonConverter))]
         public ChargeType? TypeCode { get; set; }
 
         #endregion

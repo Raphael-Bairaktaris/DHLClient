@@ -14,6 +14,7 @@ namespace DHLClient
         /// </summary>
         /// <example> 2018-08-03T00:00:00Z </example>
         [JsonProperty("estimatedFrom")]
+        [JsonConverter(typeof(DateTimeOffsetToUnixTimestampJsonConverter))]
         public DateTimeOffset EstimatedFrom { get; set; }
 
         /// <summary>
@@ -21,6 +22,7 @@ namespace DHLClient
         /// </summary>
         /// <example> 2018-08-03T00:00:00Z </example>
         [JsonProperty("estimatedThrough")]
+        [JsonConverter(typeof(DateTimeOffsetToUnixTimestampJsonConverter))]
         public DateTimeOffset EstimatedThrough { get; set; }
 
         #endregion

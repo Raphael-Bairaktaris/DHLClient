@@ -21,7 +21,7 @@
         public IdentifierType Type { get; set; }
 
         /// <summary>
-        /// Number of identifiers to be retrieved
+        /// Value of identifiers to be retrieved
         /// </summary>
         [ArgumentName("size")]
         public double Size { get; set; }

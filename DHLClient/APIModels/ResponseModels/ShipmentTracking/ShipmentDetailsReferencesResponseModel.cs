@@ -9,13 +9,6 @@ namespace DHLClient
     {
         #region Public Properties
 
-        ///// <summary>
-        ///// A secret scope of protected or sensitive information
-        ///// </summary>
-        ///// <example>public</example>
-        //[JsonProperty("@scope")]
-        //public DataClassification Scope { get; set; }
-
         /// <summary>
         /// A value of reference
         /// </summary>

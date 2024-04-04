@@ -146,7 +146,7 @@
         NoUnitRequired = 27,
 
         /// <summary>
-        /// Number (NO)
+        /// Value (NO)
         /// </summary>
         Number = 28,
 

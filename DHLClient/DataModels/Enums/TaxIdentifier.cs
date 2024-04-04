@@ -11,7 +11,7 @@
         ValueAddedTax = 0,
 
         /// <summary>
-        /// Employer Identification Number (EIN)
+        /// Employer Identification Value (EIN)
         /// </summary>
         EmployerIdentificationNumber = 1,
 
@@ -21,7 +21,7 @@
         GoodsAndServiceTax = 2,
 
         /// <summary>
-        /// Social Security Number (SSN)
+        /// Social Security Value (SSN)
         /// </summary>
         SocialSecurityNumber = 3,
 
@@ -123,6 +123,6 @@
         /// <summary>
         /// Manufacturer ID (MID)
         /// </summary>
-        ManufacturersId = 23
+        ManufacturersId = 23,
     }
 }

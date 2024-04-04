@@ -53,6 +53,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("payerCountryCode")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode? PayerCountryCode { get; set; }
 
         /// <summary>
@@ -61,6 +62,8 @@ namespace DHLClient
         /// The date component must be in the format: YYYY-MM-DD; the time component must be in the format: HH:MM:SS using a 24 hour clock. The date and time parts are 
         /// separated by the letter T (e.g. 2006-06-26T17:00:00 GMT+01:00).
         /// </summary>
+        [JsonProperty("plannedShippingDateAndTime")]
+        [JsonConverter(typeof(DateTimeOffsetWithGMTPrefixToStringJsonConverter))]
         public DateTimeOffset? PlannedShippingDateAndTime { get; set; }
 
         /// <summary>
@@ -68,6 +71,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
+        [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
         public MeasurmentUnit? UnitOfMeasurement { get; set; }
 
         /// <summary>
@@ -118,6 +122,7 @@ namespace DHLClient
         /// Please select which type of products you are interested in
         /// </summary>
         [JsonProperty("productTypeCode")]
+        [JsonConverter(typeof(ProductTypeToStringJsonConverter))]
         public ProductType? ProductTypeCode { get; set; }
 
         /// <summary>

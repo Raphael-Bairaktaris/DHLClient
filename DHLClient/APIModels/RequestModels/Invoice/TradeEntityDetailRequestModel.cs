@@ -28,6 +28,7 @@ namespace DHLClient
         /// </summary>
         /// <example>business</example>
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(BusinessPartyToStringJsonConverter))]
         public BusinessPartyType? TypeCode { get; set; }
 
         /// <summary>

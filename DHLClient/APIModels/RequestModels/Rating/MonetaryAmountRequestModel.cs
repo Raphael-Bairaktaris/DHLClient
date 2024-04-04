@@ -14,6 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("typeCode")]
+        [JsonConverter(typeof(MonetaryAmountTypeToStringJsonConverter))]
         public MonetaryAmountType TypeCode { get; set; }
 
         /// <summary>
@@ -21,13 +22,14 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("value")]
-        public double? Value { get; set; }
+        public decimal? Value { get; set; }
 
         /// <summary>
         /// Please provide monetary amount currency code
         /// </summary>
         [JsonRequired]
         [JsonProperty("currency")]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode Currency { get; set; }
 
         #endregion

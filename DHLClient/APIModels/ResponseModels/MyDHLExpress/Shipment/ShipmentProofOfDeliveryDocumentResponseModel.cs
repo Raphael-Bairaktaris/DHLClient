@@ -28,6 +28,7 @@ namespace DHLClient
         /// </summary>
         /// <example>PDF</example>
         [JsonProperty("encodingFormat")]
+        [JsonConverter(typeof(EncodingFormatToStringJsonConverter))]
         public EncodingFormat EncodingFormat { get; set; }
 
         /// <summary>

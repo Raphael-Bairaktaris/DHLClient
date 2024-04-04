@@ -1,4 +1,6 @@
-﻿namespace DHLClient
+﻿using Newtonsoft.Json;
+
+namespace DHLClient
 {
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="CurrencyCode"/> to <see cref="string"/>

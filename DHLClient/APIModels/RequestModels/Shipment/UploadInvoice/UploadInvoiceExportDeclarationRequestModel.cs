@@ -60,6 +60,7 @@ namespace DHLClient
         /// </summary>
         /// <example>permanent</example>
         [JsonProperty("exportReasonType")]
+        [JsonConverter(typeof(ExportReasonToStringJsonConverter))]
         public ExportReason? ExportReasonType { get; set; }
 
         /// <summary>
@@ -67,6 +68,7 @@ namespace DHLClient
         /// </summary>
         /// <example>personal</example>
         [JsonProperty("shipmentType")]
+        [JsonConverter(typeof(ShipmentPurposeToStringJsonConverter))]
         public ShipmentPurpose? ShipmentType { get; set; }
 
         /// <summary>
@@ -81,6 +83,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("incoterm")]
+        [JsonConverter(typeof(IncotermRuleToStringJsonConverter))]
         public IncotermRule Incoterm { get; set; }
 
         /// <summary>

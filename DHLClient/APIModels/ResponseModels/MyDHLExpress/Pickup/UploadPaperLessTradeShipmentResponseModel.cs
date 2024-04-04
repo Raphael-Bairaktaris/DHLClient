@@ -24,6 +24,8 @@ namespace DHLClient
         /// <summary>
         /// The content language
         /// </summary>
+        [JsonProperty("contentLanguage")]
+        [JsonConverter(typeof(LanguageCodeToStringJsonConverter))]
         public LanguageCode? ContentLanguage { get; set; }
 
         #endregion

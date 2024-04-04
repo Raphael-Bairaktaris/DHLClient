@@ -3,9 +3,9 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Requests used for creating or updating a customer reference
+    /// Requests used for creating a customer package reference
     /// </summary>
-    public class ShipmentCustomerReferenceRequestModel : BaseCustomerReferenceRequestModel<CustomerReference>
+    public class CustomerPackageReferenceRequestModel : BaseCustomerReferenceRequestModel<CustomerReference>
     {
         #region Public Properties
 
@@ -23,7 +23,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentCustomerReferenceRequestModel() : base()
+        public CustomerPackageReferenceRequestModel() : base()
         {
 
         }

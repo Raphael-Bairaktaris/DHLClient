@@ -193,7 +193,7 @@ namespace DHLClient
             { CustomerReference.LocalReceiverAccountNumber, "ACR" },
             { CustomerReference.CustomsDeclarationNumber, "CDN" },
             { CustomerReference.EurologShipmentId, "STD" },
-            { CustomerReference.BuyersOrderNumber, "AAO" }
+            { CustomerReference.BuyersOrderNumber, "CO" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -371,18 +371,18 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="DHLDayOfWeek"/>s to their related <see cref="string"/>s
+        /// Maps the <see cref="DHLDayOfWeek"/>s to their related <see cref="int"/>s
         /// </summary>
-        public static IReadOnlyDictionary<DHLDayOfWeek, string> DayOfWeekTypeToStringMapper { get; } = new Dictionary<DHLDayOfWeek, string>()
+        public static IReadOnlyDictionary<DHLDayOfWeek, int> DHLDayOfWeekTypeToIntMapper { get; } = new Dictionary<DHLDayOfWeek, int>()
         {
-            { DHLDayOfWeek.Monday, "monday" },
-            { DHLDayOfWeek.Tuesday, "tuesday" },
-            { DHLDayOfWeek.Wednesday, "wednesday" },
-            { DHLDayOfWeek.Thursday, "thursday" },
-            { DHLDayOfWeek.Friday, "friday" },
-            { DHLDayOfWeek.Saturday, "saturday" },
-            { DHLDayOfWeek.Sunday, "sunday" },
-            { DHLDayOfWeek.PublicHolidays, "publicHolidays" }
+            { DHLDayOfWeek.Monday, 1 },
+            { DHLDayOfWeek.Tuesday, 2 },
+            { DHLDayOfWeek.Wednesday, 3 },
+            { DHLDayOfWeek.Thursday, 4 },
+            { DHLDayOfWeek.Friday, 5 },
+            { DHLDayOfWeek.Saturday, 6 },
+            { DHLDayOfWeek.Sunday, 7 },
+            { DHLDayOfWeek.PublicHolidays, 8 }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -531,6 +531,22 @@ namespace DHLClient
         public static IReadOnlyDictionary<Invoice, string> InvoiceToStringMapper { get; } = new Dictionary<Invoice, string>()
         {
             { Invoice.Invoice, "invoice" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="InvoiceCustomerReference"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<InvoiceCustomerReference, string> InvoiceCustomerReferenceToStringMapper { get; } = new Dictionary<InvoiceCustomerReference, string>()
+        {
+            { InvoiceCustomerReference.ParentShipmentId, "ACL" },
+            { InvoiceCustomerReference.CustomerIdentifier, "CID" },
+            { InvoiceCustomerReference.ContractNumber, "CN" },
+            { InvoiceCustomerReference.ConsignorReferenceNumber, "CU" },
+            { InvoiceCustomerReference.USExportDeclarationReferenceId, "ITN" },
+            { InvoiceCustomerReference.MovementReferenceNumber, "MRN" },
+            { InvoiceCustomerReference.UniqueReferenceOfAConsignment, "UCN" },
+            { InvoiceCustomerReference.PurchaseOrderNumber, "PON" },
+            { InvoiceCustomerReference.RMANumber, "RMA" },
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -1060,12 +1076,18 @@ namespace DHLClient
         /// <summary>
         /// Maps the <see cref="CurrencyCode"/>s to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<CurrencyCode, string> CurrencyCodeToStringMapper { get; } = Enum.GetValues<CurrencyCode>().ToImmutableDictionary(x => x, x => x.ToString());
+        public static IReadOnlyDictionary<CurrencyCode, string> CurrencyCodeToStringMapper { get; } = Enum.GetValues<CurrencyCode>().ToImmutableDictionary(x => x, x => 
+        {
+            if (x == CurrencyCode.CNH)
+                return "RMB";
+
+            return x.ToString(); 
+        });
 
         /// <summary>
         /// Maps the <see cref="CountryCode"/> to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<CountryCode, string> CountryCodeToStringMapper { get; } = Enum.GetValues<CountryCode>().ToImmutableDictionary(x => x, x => x.ToString().ToLower());
+        public static IReadOnlyDictionary<CountryCode, string> CountryCodeToStringMapper { get; } = Enum.GetValues<CountryCode>().ToImmutableDictionary(x => x, x => x.ToString());
 
         /// <summary>
         /// Maps the <see cref="LanguageCode"/> to their related <see cref="string"/>s

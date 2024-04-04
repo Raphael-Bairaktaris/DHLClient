@@ -46,7 +46,7 @@ namespace DHLClient
         /// </summary>
         /// <example>2022-10-21T12:30:00</example>
         [JsonProperty("timestamp")]
-        [JsonConverter(typeof(DateTimeOffsetToUnixTimeStampJsonConverter))]
+        [JsonConverter(typeof(DateTimeOffsetToUnixTimestampJsonConverter))]
         public DateTimeOffset? Timestamp { get; set; }
 
         #endregion

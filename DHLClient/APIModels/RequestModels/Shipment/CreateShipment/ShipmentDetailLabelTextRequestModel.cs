@@ -14,6 +14,7 @@ namespace DHLClient
         /// </summary>
         /// <example>left</example>
         [JsonProperty("position")]
+        [JsonConverter(typeof(BarcodePositionTypeToStringJsonConverter))]
         public BarcodePositionType? Position { get; set; }
 
         /// <summary>

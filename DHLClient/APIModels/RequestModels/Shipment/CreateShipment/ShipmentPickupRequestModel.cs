@@ -21,7 +21,7 @@ namespace DHLClient
         /// </summary>
         /// <example>HH:MM</example>
         [JsonProperty("closeTime")]
-        public DateTime? CloseTime { get; set; }
+        public TimeOnly? CloseTime { get; set; }
 
         /// <summary>
         /// Provides information on where the package should be picked up by DHL courier.
@@ -47,39 +47,6 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("pickupRequestorDetails")]
         public ShipmentPickupDetailRequestModel? PickupRequestorDetails { get; set; }
-
-        /// <summary>
-        /// Please enter DHL Express Global Product code
-        /// </summary>
-        [JsonRequired]
-        [JsonProperty("productCode")]
-        public string? ProductCode { get; set; }
-
-        /// <summary>
-        /// Please enter DHL Express Local Product code. Important when shipping domestic products.
-        /// </summary>
-        [JsonProperty("localProductCode")]
-        public string? LocalProductCode { get; set; }
-
-        /// <summary>
-        /// Please advise if you want to get rate estimates for given shipment
-        /// </summary>
-        [JsonProperty("getRateEstimates")]
-        public bool GetRateEstimates { get; set; }
-
-        /// <summary>
-        /// Please enter all the DHL Express accounts and types to be used for this shipment
-        /// </summary>
-        [JsonRequired]
-        [JsonProperty("accounts")]
-        public AccountRequestModel? Accounts { get; set; }
-
-        /// <summary>
-        /// This section communicates additional shipping services, such as Insurance (or Shipment Value Protection).
-        /// </summary>
-        [JsonRequired]
-        [JsonProperty("valueAddedServices")]
-        public ShipmentValueAddedServiceRequestModel? ValueAddedServices { get; set; }
 
         #endregion
 

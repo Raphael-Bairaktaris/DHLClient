@@ -65,7 +65,7 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// Voyage number for Ocean, Flight Carrier and Number for Air
+        /// Voyage number for Ocean, Flight Carrier and Value for Air
         /// </summary>
         /// <example>TR TRUCK</example>
         [JsonProperty("dgf:voyageFlightNumber")]
@@ -158,6 +158,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Vessel Name: {VesselName}, Voyage Flight Value: {VoyageFlightNumber}, Estimated Departure Date: {EstimatedDepartureDate}, Estimated Arrival Date: {EstimatedArrivalDate}";
 
         #endregion
     }

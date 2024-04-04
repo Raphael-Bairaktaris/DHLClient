@@ -17,7 +17,7 @@ namespace DHLClient
         public string? Name { get; set; }
 
         /// <summary>
-        /// To be mapped in commercial Invoice - Russia Bank Settlement Account Number in RUR field
+        /// To be mapped in commercial Invoice - Russia Bank Settlement Account Value in RUR field
         /// </summary>
         /// <example>RUB</example>
         [JsonProperty("settlementLocalCurrency")]
@@ -25,7 +25,7 @@ namespace DHLClient
         public CurrencyCode? SettlementLocalCurrency { get; set; }
 
         /// <summary>
-        /// To be mapped in commercial Invoice - Russia Bank Settlement Account Number in RUR field
+        /// To be mapped in commercial Invoice - Russia Bank Settlement Account Value in RUR field
         /// </summary>
         /// <example>USD</example>
         [JsonProperty("settlementForeignCurrency")]

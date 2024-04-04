@@ -52,7 +52,7 @@
         public double? Radius { get; set; }
 
         /// <summary>
-        /// Number specifying the maximum amount of locations included in the results. 
+        /// Value specifying the maximum amount of locations included in the results. 
         /// Maximum limit: 50 locations (any limit greater than 50 will be considered as 50). Default limit: 15 locations.
         /// </summary>
         [ArgumentName("limit")]

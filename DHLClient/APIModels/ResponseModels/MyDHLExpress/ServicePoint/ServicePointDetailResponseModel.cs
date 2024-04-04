@@ -334,10 +334,11 @@ namespace DHLClient
         }
 
         /// <summary>
-        /// Number of day when the work week starts. It starts from 0 to 6(Sunday to Saturday)
+        /// Value of day when the work week starts. It starts from 0 to 6(Sunday to Saturday)
         /// </summary>
         [JsonProperty("workWeekStart")]
-        public DayOfWeek WorkWeekStart { get; set; }
+        [JsonConverter(typeof(DHLDayOfWeekTypeToIntJsonConverter))]
+        public DHLDayOfWeek WorkWeekStart { get; set; }
 
         /// <summary>
         /// The service point location

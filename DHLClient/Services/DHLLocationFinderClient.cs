@@ -25,10 +25,9 @@
         /// Default constructor
         /// </summary>
         /// <param name="credentials">The credentials</param>
-        /// <exception cref="ArgumentNullException"></exception>
         public DHLLocationFinderClient(DHLClientCredentials credentials) : base()
         {
-            Client = WebRequestsClient.Instance;
+            Client = WebRequestsClient.Instance; 
 
             Credentials = credentials ?? throw new ArgumentNullException(nameof(credentials));
         }
@@ -43,22 +42,23 @@
         /// <param name="args">The arguments</param>
         /// <returns></returns>
         public Task<WebRequestResult<ServicePointLocationByAddressResponseModel>> GetLocationByAddressAsync(ServicePointLocationByAddressAPIArgs args)
-            => Client.GetAsync<ServicePointLocationByAddressResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.LocationByAddressAPIRoute, args), Credentials.APIKey);
+            => Client.GetAsync<ServicePointLocationByAddressResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.LocationByAddressAPIRoute, args), Credentials.Username);
 
         /// <summary>
-        /// Gets the location by geo coordinates
+        /// Gets the location by geographical coordinates
         /// </summary>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
         public Task<WebRequestResult<ServicePointLocationByGeoResponseModel>> GetLocationByGeoAsync(ServicePointLocationByGeoAPIArgs args)
-            => Client.GetAsync<ServicePointLocationByGeoResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.FindByGeoAPIRoute, args), Credentials.APIKey);
+            => Client.GetAsync<ServicePointLocationByGeoResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.FindByGeoAPIRoute, args), Credentials.Username);
 
         /// <summary>
         /// Gets the DHL service point location by keywordId
         /// </summary>
+        /// <param name="args">The arguments</param>
         /// <returns></returns>
         public Task<WebRequestResult<ServicePointLocationByIdResponseModel>> GetLocationByKeywordIdAsync(ServicePointLocationByKeywordIdAPIArgs args)
-            => Client.GetAsync<ServicePointLocationByIdResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.FindByKeywordIdAPIRoute, args), Credentials.APIKey);
+            => Client.GetAsync<ServicePointLocationByIdResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.FindByKeywordIdAPIRoute, args), Credentials.Username);
 
         /// <summary>
         /// Gets one DHL service point location by it's Id
@@ -67,7 +67,7 @@
         /// <param name="args">The arguments</param>
         /// <returns></returns>
         public Task<WebRequestResult<ServicePointLocationByIdResponseModel>> GetLocationByIdAsync(string keywordId, ServicePointLocationByIdAPIArgs args)
-            => Client.GetAsync<ServicePointLocationByIdResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.GetLocationByIdAPIRoute(keywordId), args), Credentials.APIKey);
+            => Client.GetAsync<ServicePointLocationByIdResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.GetLocationByIdAPIRoute(keywordId), args), Credentials.Username);
 
         #endregion
     }

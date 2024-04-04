@@ -32,6 +32,7 @@ namespace DHLClient
         /// <example>import</example>
         [JsonRequired]
         [JsonProperty("function")]
+        [JsonConverter(typeof(FunctionTypeToStringJsonConverter))]
         public FunctionType? Function { get; set; }
 
         /// <summary>

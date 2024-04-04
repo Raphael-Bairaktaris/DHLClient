@@ -26,7 +26,7 @@ namespace DHLClient
         /// The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.
         /// </summary>
         [JsonProperty("dayOfWeek")]
-        [JsonConverter(typeof(DHLDayOfWeekTypeToStringJsonConverter))]
+        [JsonConverter(typeof(DHLDayOfWeekTypeToIntJsonConverter))]
         public DHLDayOfWeek DayOfWeek { get; set; }
 
         #endregion
@@ -40,6 +40,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Closes: {Closes}, Opens: {Opens}, Day of week: {DayOfWeek}";
 
         #endregion
     }

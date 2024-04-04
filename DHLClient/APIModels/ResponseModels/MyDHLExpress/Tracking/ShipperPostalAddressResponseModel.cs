@@ -7,13 +7,14 @@ namespace DHLClient
     /// </summary>
     public class ShipperPostalAddressResponseModel : AddressDetailResponseModel
     {
-        #region
+        #region Public Properties
 
         /// <summary>
         /// The region in which the locality and which is in the country
         /// </summary>
         /// <example>CZ</example>
         [JsonProperty("provinceCode")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode ProvinceCode { get; set; }
 
         #endregion

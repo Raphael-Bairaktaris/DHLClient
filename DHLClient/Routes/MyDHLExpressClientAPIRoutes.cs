@@ -1,6 +1,4 @@
-﻿using System.Net.NetworkInformation;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// The API routes for DHL express client 
@@ -8,31 +6,31 @@ namespace DHLClient
     public class MyDHLExpressClientAPIRoutes
     {
         /// <summary>
-        /// The testing base route for DHL express client
+        /// Test environment to test your development against
         /// </summary>
-        public const string TestBaseRoute = "https://express.api.dhl.com/mydhlapi/test";
+        public const string TestEnvironment = "https://express.api.dhl.com/mydhlapi/test";
 
         /// <summary>
-        /// The testing base route for DHL express client
+        /// Production environment to create real transactions with DHL Express
         /// </summary>
-        public const string BaseRoute = "https://express.api.dhl.com/mydhlapi";
+        public const string ProductionEnvironment = "https://express.api.dhl.com/mydhlapi";
 
         #region Rating API routes
 
         /// <summary>
         /// Retrieve rates for a one piece shipment
         /// </summary>
-        public const string RetrieveOneShipmentRateAPIRoute = $"{TestBaseRoute}/rates";
+        public const string RetrieveOneShipmentRateAPIRoute = $"{TestEnvironment}/rates";
 
         /// <summary>
         /// Retrieve Rates for Multi-piece Shipments
         /// </summary>
-        public const string RetrieveMultipleShipmentRatesAPIRoute = $"{TestBaseRoute}/rates";
+        public const string RetrieveMultipleShipmentRatesAPIRoute = $"{TestEnvironment}/rates";
 
         /// <summary>
         /// The landed cost API route
         /// </summary>
-        public const string LandedCostAPIRoute = $"{TestBaseRoute}/landed-cost";
+        public const string LandedCostAPIRoute = $"{TestEnvironment}/landed-cost";
 
         #endregion
 
@@ -41,7 +39,7 @@ namespace DHLClient
         /// <summary>
         /// Retrieve available DHL Express products for a one piece Shipment
         /// </summary>
-        public const string RetrieveProductsForOnePieceShipmentAPIRoute = $"{TestBaseRoute}/products";
+        public const string RetrieveProductsForOnePieceShipmentAPIRoute = $"{TestEnvironment}/products";
 
         #endregion
 
@@ -53,7 +51,7 @@ namespace DHLClient
         /// <param name="baseRoute">The base route</param>
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <returns></returns>
-        public static string GetElectronicProofOfDeliveryAPIRoute(string shipmentTrackingNumber) => $"{TestBaseRoute}/shipments/{shipmentTrackingNumber}/proof-of-delivery";
+        public static string GetElectronicProofOfDeliveryAPIRoute(string shipmentTrackingNumber) => $"{TestEnvironment}/shipments/{shipmentTrackingNumber}/proof-of-delivery";
 
         /// <summary>
         /// Upload Paperless Trade shipment (PLT) images of previously created shipment API route.
@@ -61,12 +59,12 @@ namespace DHLClient
         /// <param name="baseRoute">The base route</param>
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <returns></returns>
-        public static string PatchPaperlessTradeShipmentAPIRoute(string shipmentTrackingNumber) => $"{TestBaseRoute}/shipments/{shipmentTrackingNumber}/upload-image";
+        public static string PatchPaperlessTradeShipmentAPIRoute(string shipmentTrackingNumber) => $"{TestEnvironment}/shipments/{shipmentTrackingNumber}/upload-image";
 
         /// <summary>
         /// The create shipment API route
         /// </summary>
-        public const string CreateShipmentAPIRoute = $"{TestBaseRoute}/shipments";
+        public const string CreateShipmentAPIRoute = $"{TestEnvironment}/shipments";
 
         /// <summary>
         /// Upload Commercial Invoice data for your DHL Express shipment API route
@@ -74,7 +72,7 @@ namespace DHLClient
         /// <param name="baseRoute">The base route</param>
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <returns></returns>
-        public static string PatchCommercialInvoiceDataAPIRoute(string shipmentTrackingNumber) => $"{TestBaseRoute}/shipments/{shipmentTrackingNumber}/upload-invoice-data";
+        public static string PatchCommercialInvoiceDataAPIRoute(string shipmentTrackingNumber) => $"{TestEnvironment}/shipments/{shipmentTrackingNumber}/upload-invoice-data";
 
         /// <summary>
         /// Gets the shipment image
@@ -93,12 +91,12 @@ namespace DHLClient
         /// <param name="baseRoute">The base route</param>
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <returns></returns>
-        public static string GetSingleDHLShipment(string shipmentTrackingNumber) => $"{TestBaseRoute}/shipments/{shipmentTrackingNumber}/tracking";
+        public static string GetSingleDHLShipment(string shipmentTrackingNumber) => $"{TestEnvironment}/shipments/{shipmentTrackingNumber}/tracking";
 
         /// <summary>
         /// Track a single or multiple DHL Express Shipments API route
         /// </summary>
-        public const string TrackDHLShipmentsAPIRoute = $"{TestBaseRoute}/tracking";
+        public const string TrackDHLShipmentsAPIRoute = $"{TestEnvironment}/tracking";
 
         #endregion
 
@@ -110,7 +108,7 @@ namespace DHLClient
         /// <param name="baseRoute"></param>
         /// <param name="dispatchConfirmationNumber"></param>
         /// <returns></returns>
-        public static string DeletePickupAPIRoute(string dispatchConfirmationNumber) => $"{TestBaseRoute}/pickups/{dispatchConfirmationNumber}";
+        public static string DeletePickupAPIRoute(string dispatchConfirmationNumber) => $"{TestEnvironment}/pickups/{dispatchConfirmationNumber}";
 
         /// <summary>
         /// Update pickup information for an existing DHL Express pickup booking request API route
@@ -118,12 +116,12 @@ namespace DHLClient
         /// <param name="baseRoute">The base route</param>
         /// <param name="dispatchConfirmationNumber">The dispatch confirmation number</param>
         /// <returns></returns>
-        public static string PatchPickupInformationForDHLPickupAPIRoute(string dispatchConfirmationNumber) => $"{TestBaseRoute}/pickups/{dispatchConfirmationNumber}";
+        public static string PatchPickupInformationForDHLPickupAPIRoute(string dispatchConfirmationNumber) => $"{TestEnvironment}/pickups/{dispatchConfirmationNumber}";
 
         /// <summary>
         /// Create a DHL Express pickup booking request API route
         /// </summary>
-        public const string CreateDHLPickupAPIRoute = $"{TestBaseRoute}/pickups";
+        public const string CreateDHLPickupAPIRoute = $"{TestEnvironment}/pickups";
 
         #endregion
 
@@ -132,7 +130,7 @@ namespace DHLClient
         /// <summary>
         /// Service to allocate identifiers upfront for DHL Express Break bulk or Loose Break Bulk shipments API route
         /// </summary>
-        public const string IdentifiersAPIRoute = $"{TestBaseRoute}/identifiers";
+        public const string IdentifiersAPIRoute = $"{TestEnvironment}/identifiers";
 
         #endregion
 
@@ -141,7 +139,7 @@ namespace DHLClient
         /// <summary>
         /// Validate DHL Express pickup/delivery capabilities at origin/destination API route
         /// </summary>
-        public const string ValidateAddressAPIRoute = $"{TestBaseRoute}/address-validate";
+        public const string ValidateAddressAPIRoute = $"{TestEnvironment}/address-validate";
 
         #endregion
 
@@ -150,7 +148,7 @@ namespace DHLClient
         /// <summary>
         /// Upload Commercial invoice data API route
         /// </summary>
-        public const string InvoiceAPIRoute = $"{TestBaseRoute}/invoices/upload-invoice-data";
+        public const string InvoiceAPIRoute = $"{TestEnvironment}/invoices/upload-invoice-data";
 
         #endregion
 
@@ -160,7 +158,7 @@ namespace DHLClient
         /// Returns list of service points based on the given postal location address, 
         /// service point ID or geocode details for DHL Express Service points to pick-up and drop-off shipments API route
         /// </summary>
-        public const string ServicePointsAPIRoute = $"{TestBaseRoute}/servicepoints";
+        public const string ServicePointsAPIRoute = $"{TestEnvironment}/servicepoints";
 
         #endregion
 
@@ -169,7 +167,7 @@ namespace DHLClient
         /// <summary>
         /// Provide reference data currently used for MyDHL API services usage API route.
         /// </summary>
-        public const string ReferenceDataAPIRoute = $"{TestBaseRoute}/reference-data";
+        public const string ReferenceDataAPIRoute = $"{TestEnvironment}/reference-data";
 
         #endregion
     }

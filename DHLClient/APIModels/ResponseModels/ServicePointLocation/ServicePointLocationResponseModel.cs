@@ -88,5 +88,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Keyword: {Keyword}, Keyword Id: {KeywordId}";
+
+        #endregion
     }
 }

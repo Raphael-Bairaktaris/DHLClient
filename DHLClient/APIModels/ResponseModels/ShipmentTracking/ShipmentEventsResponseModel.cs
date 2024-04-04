@@ -42,7 +42,8 @@ namespace DHLClient
         /// A combination of date and time of day
         /// </summary>
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; set; }
+        //[JsonConverter(typeof(DateTimeOffsetToUnixTimestampJsonConverter))]
+        public DateTimeOffset Timestamp { get; set; }
 
         /// <summary>
         /// The location of object
@@ -122,6 +123,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Timestamp {Timestamp}, Status Code: {StatusCode}, Remark: {Remark}";
 
         #endregion
     }

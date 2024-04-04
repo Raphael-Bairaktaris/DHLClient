@@ -7,7 +7,7 @@ namespace DHLClient
     /// </summary>
     public class RatingProductDeliveryCapabilityResponseModel
     {
-        #region private Members
+        #region Private Members
 
         /// <summary>
         /// the member of  the <see cref="DestinationServiceAreaCode"/> property
@@ -66,7 +66,8 @@ namespace DHLClient
         /// Delivery day of the week number
         /// </summary>
         [JsonProperty("deliveryDayOfWeek")]
-        public DayOfWeek DeliveryDayOfWeek { get; set; }
+        [JsonConverter(typeof(DHLDayOfWeekTypeToIntJsonConverter))]
+        public DHLDayOfWeek DeliveryDayOfWeek { get; set; }
 
         /// <summary>
         /// The number of transit days

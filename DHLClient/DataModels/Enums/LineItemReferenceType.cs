@@ -6,7 +6,7 @@
     public enum LineItemReferenceType
     {
         /// <summary>
-        /// Export Control Commodity Number (ECCN)
+        /// Export Control Commodity Value (ECCN)
         /// </summary>
         AFE = 0,
 
@@ -21,7 +21,7 @@
         DangerousGoodsContentIdentifier = 2,
 
         /// <summary>
-        /// Delivery Order Number (AAJ)
+        /// Delivery Order Value (AAJ)
         /// </summary>
         DeliveryOrderNumber = 3,
 
@@ -46,7 +46,7 @@
         PartNo = 7,
 
         /// <summary>
-        /// Purchase Order Number (PON)
+        /// Purchase Order Value (PON)
         /// </summary>
         PurchaseOrderNumber = 8,
 
@@ -56,7 +56,7 @@
         StockKeepingUnit = 9,
 
         /// <summary>
-        /// Serial Number (SE)
+        /// Serial Value (SE)
         /// </summary>
         SerialNumber = 10,
 

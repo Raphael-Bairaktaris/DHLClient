@@ -62,6 +62,7 @@ namespace DHLClient
         /// Country code of the search address
         /// </summary>
         [JsonProperty("countryCode")]
+        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode CountryCode { get; set; }
 
         /// <summary>

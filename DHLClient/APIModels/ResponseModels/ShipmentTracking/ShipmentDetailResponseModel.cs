@@ -95,7 +95,7 @@ namespace DHLClient
         public double TTL { get; set; }
 
         /// <summary>
-        /// The LocationId
+        /// The location Id
         /// </summary>
         [JsonProperty("id")]
         public string Id
@@ -152,6 +152,7 @@ namespace DHLClient
         /// The estimated time of delivery
         /// </summary>
         [JsonProperty("estimatedTimeOfDelivery")]
+        [JsonConverter(typeof(DateTimeOffsetToUnixTimestampJsonConverter))]
         public DateTimeOffset? EstimatedTimeOfDelivery { get; set; }
 
         /// <summary>
@@ -235,6 +236,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Location Id: {Id}, Pickup Date: {PickupDate}, Estimated Time of Delivery: {EstimatedTimeOfDelivery}";
 
         #endregion
     }

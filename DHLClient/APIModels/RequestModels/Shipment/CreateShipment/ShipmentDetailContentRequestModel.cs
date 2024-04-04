@@ -41,7 +41,7 @@ namespace DHLClient
         /// Here you can find all details related to export declaration
         /// </summary>
         [JsonProperty("exportDeclaration")]
-        public IEnumerable<ShipmentDetailExportDeclarationRequestModel>? ExportDeclaration { get; set; }
+        public ShipmentDetailExportDeclarationRequestModel? ExportDeclaration { get; set; }
 
         /// <summary>
         /// Please enter description of your shipment

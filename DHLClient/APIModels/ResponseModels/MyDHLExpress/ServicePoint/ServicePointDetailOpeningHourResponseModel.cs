@@ -10,6 +10,7 @@ namespace DHLClient
         /// Weekday for which this opening hours entity is valid.
         /// </summary>
         [JsonProperty("dayOfWeek")]
+        [JsonConverter(typeof(DHLDayOfWeekTypeToIntJsonConverter))]
         public DHLDayOfWeek DayOfWeek { get; set; }
 
         /// <summary>

@@ -39,7 +39,7 @@ namespace DHLClient
         /// Indicates whether the shipment has value added services
         /// </summary>
         [JsonProperty("serviceFlag")]
-        public bool ServiceFlag { get; set; }
+        public bool HasServiceFlag { get; set; }
 
         #endregion
 
@@ -52,6 +52,12 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        public override string ToString() => $"Service Type: {ServiceType}";
 
         #endregion
     }

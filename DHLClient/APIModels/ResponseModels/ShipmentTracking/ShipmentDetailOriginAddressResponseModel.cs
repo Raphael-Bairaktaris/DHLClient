@@ -38,12 +38,6 @@ namespace DHLClient
 
         #region Public Properties
 
-        ///// <summary>
-        ///// A secret policy protecting sensitive information
-        ///// </summary>
-        //[JsonProperty("@policy")]
-        //public PolicyType Policy { get; set; }
-
         /// <summary>
         /// Text specifying the name of the locality, for example a city
         /// </summary>
@@ -118,6 +112,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Address Locality: {AddressLocality}, Address Region: {AddressRegion}. Postal Code: {PostalCode}, Street Address: {StreetAddress}";
 
         #endregion
     }

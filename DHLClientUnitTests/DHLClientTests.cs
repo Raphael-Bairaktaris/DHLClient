@@ -33,14 +33,8 @@ namespace DHLClientTests
 
             var apiKey = File.ReadAllText(credentialsFilePath);
 
-            mClient = new DHLClient.DHLLocationFinderClient(apiKey);
+            //mClient = new DHLClient.DHLLocationFinderClient(apiKey);
         }
-
-        #endregion
-
-        #region Test Methods
-
-
 
         #endregion
     }

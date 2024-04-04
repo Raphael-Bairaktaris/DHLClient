@@ -28,6 +28,7 @@ namespace DHLClient
         /// </summary>
         /// <example>Insured Value currency code</example>
         [JsonProperty("currency")]
+        [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode? Currency { get; set; }
 
         /// <summary>
@@ -35,10 +36,11 @@ namespace DHLClient
         /// </summary>
         /// <example>Cash</example>
         [JsonProperty("method")]
+        [JsonConverter(typeof(PaymentMethodToStringJsonConverter))]
         public PaymentMethod? Method { get; set; }
 
         /// <summary>
-        /// 
+        /// The dangerous goods
         /// </summary>
         [JsonProperty("dangerousGoods")]
         public DangerousGoodRequestModel? DangerousGoods { get; set; }

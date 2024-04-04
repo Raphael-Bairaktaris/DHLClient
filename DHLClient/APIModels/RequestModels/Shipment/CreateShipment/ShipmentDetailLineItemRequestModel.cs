@@ -30,7 +30,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("price")]
-        public double? Price { get; set; }
+        public decimal? Price { get; set; }
 
         /// <summary>
         /// Please enter information about quantity for this line item
@@ -82,7 +82,7 @@ namespace DHLClient
         /// Please provide the Customer References for the line item
         /// </summary>
         [JsonProperty("customerReferences")]
-        public IEnumerable<CustomerReferenceRequestModel>? CustomerReferences { get; set; }
+        public IEnumerable<LineItemCustomerReferenceRequestModel>? CustomerReferences { get; set; }
 
         /// <summary>
         /// Please provide the customs documents details
