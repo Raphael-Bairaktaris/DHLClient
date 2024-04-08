@@ -27,7 +27,7 @@
         /// <param name="credentials">The credentials</param>
         public DHLLocationFinderClient(DHLClientCredentials credentials) : base()
         {
-            Client = WebRequestsClient.Instance; 
+            Client = WebRequestsClient.Instance;
 
             Credentials = credentials ?? throw new ArgumentNullException(nameof(credentials));
         }

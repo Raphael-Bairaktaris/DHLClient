@@ -15,8 +15,8 @@ namespace DHLClient
         /// <example>AFE</example>
         [JsonRequired]
         [JsonProperty("typeCode")]
-        [JsonConverter(typeof(CustomerReferenceToStringJsonConverter))]
-        public override CustomerReference? TypeCode { get; set; }
+        [JsonConverter(typeof(LineItemReferenceTypeToStringJsonConverter))]
+        public override LineItemReferenceType? TypeCode { get; set; }
 
         #endregion
 

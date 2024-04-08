@@ -31,6 +31,18 @@ namespace DHLClient
         [JsonProperty("content")]
         public UploadInvoiceContentRequestModel? Content { get; set; }
 
+        /// <summary>
+        /// Here you can set invoice properties
+        /// </summary>
+        [JsonProperty("outputImageProperties")]
+        public IEnumerable<InvoiceOutputImagePropertyRequestModel>? OutputImageProperties { get; set; }
+
+        /// <summary>
+        /// Here you need to define all the parties needed to ship the package
+        /// </summary>
+        [JsonProperty("customerDetails")]
+        public CustomerDetailRequestModel? CustomerDetails { get; set; }
+
         #endregion
 
         #region Constructors

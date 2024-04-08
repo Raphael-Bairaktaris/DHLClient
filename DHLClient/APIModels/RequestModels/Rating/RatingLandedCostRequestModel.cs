@@ -5,16 +5,22 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating a rating landed cost
     /// </summary>
-    public class RatingLandedCostRequestModel : CustomerDetailRequestModel
+    public class RatingLandedCostRequestModel
     {
         #region Public Properties
+
+        /// <summary>
+        /// Here you need to define all the parties needed to ship the package
+        /// </summary>
+        [JsonProperty("customerDetails")]
+        public CustomerDetailRequestModel CustomerDetails { get; set; }
 
         /// <summary>
         /// Please enter all the DHL Express accounts and types to be used for this shipment
         /// </summary>
         [JsonRequired]
         [JsonProperty("accounts")]
-        public AccountRequestModel? Accounts { get; set; }
+        public IEnumerable<AccountRequestModel>? Accounts { get; set; }
 
         /// <summary>
         /// Please enter DHL Express Global Product code
@@ -33,7 +39,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
-        [JsonConverter(typeof(MeasurmentUnit))]
+        [JsonConverter(typeof(MeasurementUnitToStringJsonConverter))]
         public MeasurmentUnit? UnitOfMeasurement { get; set; }
 
         /// <summary>
@@ -120,7 +126,7 @@ namespace DHLClient
         /// <summary>
         /// Allowed values 'true' - quotation ID on shipment level will be returned, 'false' - quotation ID on shipment level will not be returned
         /// </summary>
-        [JsonProperty("getQuotation")]
+        [JsonProperty("getQuotationID")]
         public bool ShouldGetQuotation { get; set; }
 
         #endregion

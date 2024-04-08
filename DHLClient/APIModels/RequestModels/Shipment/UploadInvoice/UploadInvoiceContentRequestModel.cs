@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("exportDeclaration")]
-        public UploadInvoiceExportDeclarationRequestModel? ExportDeclaration { get; set; }
+        public IEnumerable<UploadInvoiceExportDeclarationRequestModel>? ExportDeclaration { get; set; }
 
         /// <summary>
         /// For customs purposes please advise on currency code of the indicated amount in invoice.

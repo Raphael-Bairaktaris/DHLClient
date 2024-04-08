@@ -12,7 +12,7 @@ namespace DHLClient
         /// <summary>
         /// Please enter DHL Express account type 
         /// </summary>
-        [JsonRequired]
+        /// <example>shipper</example>
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(ShippingRoleToStringJsonConverter))]
         public ShippingRole TypeCode { get; set; }
@@ -20,7 +20,7 @@ namespace DHLClient
         /// <summary>
         /// Please enter DHL Express account number
         /// </summary>
-        [JsonRequired]
+        /// <example>123456789</example>
         [JsonProperty("number")]
         public int Number { get; set; }
 

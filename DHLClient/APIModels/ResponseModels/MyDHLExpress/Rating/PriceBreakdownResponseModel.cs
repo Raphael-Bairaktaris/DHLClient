@@ -3,14 +3,23 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a price breakdown response
+    /// Represents a price breakdown 
     /// </summary>
     public class PriceBreakdownResponseModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="TypeCode"/> property
+        /// </summary>
+        private string? mTypeCode;
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
-        /// If a breakdown is provided, details can either be; 'TAX',<BR> 'DISCOUNT'
+        /// If a breakdown is provided, details can either be; 'TAX', 'DISCOUNT'
         /// </summary>
         [JsonProperty("priceType")]
         [JsonConverter(typeof(PriceTypeToStringJsonConverter))]
@@ -20,14 +29,17 @@ namespace DHLClient
         /// Discount or tax type codes as provided by DHL Express.
         /// </summary>
         [JsonProperty("typeCode")]
-        [JsonConverter(typeof(DiscountTypeToStringJsonConverter))]
-        public DiscountType TypeCode { get; set; }
+        public string TypeCode 
+        { 
+            get => mTypeCode ?? string.Empty;
+            set => mTypeCode = value;
+        }
 
         /// <summary>
         /// The actual amount of the discount/tax
         /// </summary>
-        [JsonProperty("number")]
-        public double Number { get; set; }
+        [JsonProperty("price")]
+        public decimal Price { get; set; }
 
         /// <summary>
         /// Percentage of the discount/tax

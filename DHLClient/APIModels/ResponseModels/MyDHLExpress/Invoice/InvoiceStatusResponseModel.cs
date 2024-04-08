@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -33,8 +28,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Some values provided may be invalid</example>
         [JsonProperty("warnings")]
-        public IEnumerable<string> Warnings 
-        { 
+        public IEnumerable<string> Warnings
+        {
             get => mWarnings ?? Enumerable.Empty<string>();
             set => mWarnings = value;
         }
@@ -44,8 +39,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Status Description</example>
         [JsonProperty("status")]
-        public string Status 
-        { 
+        public string Status
+        {
             get => mStatus ?? string.Empty;
             set => mStatus = value;
         }

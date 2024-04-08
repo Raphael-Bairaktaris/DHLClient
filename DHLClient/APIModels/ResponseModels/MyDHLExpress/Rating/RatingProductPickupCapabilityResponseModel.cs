@@ -34,8 +34,7 @@ namespace DHLClient
         /// </summary>
         /// <example>2019-09-18T15:00:00</example>
         [JsonProperty("localCutoffDateAndTime")]
-        [JsonConverter(typeof(DateTimeOffsetToUnixTimestampJsonConverter))]
-        public DateTimeOffset LocalCutoffDateAndTime { get; set; }
+        public DateTime LocalCutoffDateAndTime { get; set; }
 
         /// <summary>
         /// Pickup cut off time in GMT

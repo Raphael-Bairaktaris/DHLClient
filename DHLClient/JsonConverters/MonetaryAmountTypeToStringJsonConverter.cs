@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// The <see cref="BaseEnumJsonConverter{T}"/> that is used to convert a <see cref="MonetaryAmountType"/> to <see cref="string"/>

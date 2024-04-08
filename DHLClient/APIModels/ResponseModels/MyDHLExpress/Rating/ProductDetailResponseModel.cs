@@ -159,6 +159,7 @@ namespace DHLClient
         /// <summary>
         /// The detailed price breakdown
         /// </summary>
+        [JsonProperty("detailedPriceBreakdown")]
         public IEnumerable<RatingProductDetailedPriceBreakdownResponseModel> DetailedPriceBreakdown
         {
             get => mDetailedPriceBreakdown ?? Enumerable.Empty<RatingProductDetailedPriceBreakdownResponseModel>();
@@ -198,6 +199,7 @@ namespace DHLClient
         /// <summary>
         /// The delivery capabilities
         /// </summary>
+        [JsonProperty("deliveryCapabilities")]
         public RatingProductDeliveryCapabilityResponseModel DeliveryCapabilities
         {
             get => mDeliveryCapabilities ??= new RatingProductDeliveryCapabilityResponseModel();

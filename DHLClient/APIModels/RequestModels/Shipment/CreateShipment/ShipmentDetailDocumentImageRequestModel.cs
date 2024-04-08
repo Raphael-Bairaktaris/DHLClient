@@ -28,6 +28,7 @@ namespace DHLClient
         /// <summary>
         /// Please provide the base64 encoded document
         /// </summary>
+        /// <example>base64 encoded image</example>
         [JsonRequired]
         [JsonProperty("content")]
         public string? Content { get; set; }

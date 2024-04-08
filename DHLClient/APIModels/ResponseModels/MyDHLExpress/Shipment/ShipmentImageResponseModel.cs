@@ -22,8 +22,8 @@ namespace DHLClient
         /// Here you can find all document images from search query
         /// </summary>
         [JsonProperty("documents")]
-        public IEnumerable<ShipmentImageDocumentResponseModel> Documents 
-        { 
+        public IEnumerable<ShipmentImageDocumentResponseModel> Documents
+        {
             get => mDocuments ?? Enumerable.Empty<ShipmentImageDocumentResponseModel>();
             set => mDocuments = value;
         }

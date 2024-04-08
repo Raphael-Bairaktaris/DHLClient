@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// 
+    /// Represents a shipment tracking schema
     /// </summary>
     public class ShipmentTrackingSchemaResponseModel
     {

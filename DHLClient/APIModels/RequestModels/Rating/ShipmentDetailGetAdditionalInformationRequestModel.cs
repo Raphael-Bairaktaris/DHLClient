@@ -14,14 +14,14 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(ValueAddedServiceToStringJsonConverter))]
-        public ValueAddedService TypeCode { get; set; }
+        public ValueAddedService? TypeCode { get; set; }
 
         /// <summary>
         /// Indicates if additional information is requested 
         /// </summary>
         [JsonRequired]
         [JsonProperty("isRequested")]
-        public bool IsRequested { get; set; }
+        public bool? IsRequested { get; set; }
 
         #endregion
 

@@ -7,7 +7,7 @@ namespace DHLClient
     /// </summary>
     public class ProductTotalPriceBreakdownResponseModel
     {
-        #region private Members
+        #region Private Members
 
         /// <summary>
         /// The member of the <see cref="PriceBreakdown"/> property

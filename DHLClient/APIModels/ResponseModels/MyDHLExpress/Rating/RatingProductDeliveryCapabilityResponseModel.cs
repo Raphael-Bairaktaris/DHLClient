@@ -33,8 +33,9 @@ namespace DHLClient
         /// <summary>
         /// This is the estimated date/time the shipment will be delivered by for the rated shipment and product listed
         /// </summary>
+        /// <example>2019-09-20T12:00:00</example>
         [JsonProperty("estimatedDeliveryDateAndtime")]
-        public DateTimeOffset EstimatedDeliveryDateAndtime { get; set; }
+        public DateTime EstimatedDeliveryDateAndtime { get; set; }
 
         /// <summary>
         /// The DHL Service Area Code for the destination of the Shipment
@@ -73,7 +74,7 @@ namespace DHLClient
         /// The number of transit days
         /// </summary>
         [JsonProperty("totalTransitDays")]
-        public double TotalTransitDays { get; set; }
+        public int TotalTransitDays { get; set; }
 
         #endregion
 

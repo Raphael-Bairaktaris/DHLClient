@@ -5,13 +5,14 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating a product and service
     /// </summary>
-    public class ProductAndServiceRequestModel : ValueAddedServiceRequestModel
+    public class ProductAndServiceRequestModel
     {
         #region Public Properties
 
         /// <summary>
         /// Please enter DHL Express Global Product code
         /// </summary>
+        /// <example>P</example>
         [JsonRequired]
         [JsonProperty("productCode")]
         public string? ProductCode { get; set; }
@@ -19,6 +20,7 @@ namespace DHLClient
         /// <summary>
         /// Please enter DHL Express Global Local Product code
         /// </summary>
+        /// <example>P</example>
         [JsonRequired]
         [JsonProperty("localProductCode")]
         public string? LocalProductCode { get; set; }

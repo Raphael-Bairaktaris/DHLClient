@@ -8,16 +8,16 @@
         /// <summary>
         /// Duty
         /// </summary>
-        DUTY = 0,
+        Duty = 0,
 
         /// <summary>
         /// Tax
         /// </summary>
-        TAX = 1,
+        Tax = 1,
 
         /// <summary>
         /// Fee
         /// </summary>
-        FEE = 2
+        Fee = 2
     }
 }

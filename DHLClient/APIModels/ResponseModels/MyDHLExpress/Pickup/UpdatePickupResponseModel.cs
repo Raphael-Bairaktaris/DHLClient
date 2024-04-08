@@ -28,8 +28,8 @@ namespace DHLClient
         /// </summary>
         /// <example>PRG201220123456</example>
         [JsonProperty("dispatchConfirmationNumber")]
-        public string DispatchConfirmationNumber 
-        { 
+        public string DispatchConfirmationNumber
+        {
             get => mDispatchConfirmationNumber ?? string.Empty;
             set => mDispatchConfirmationNumber = value;
         }
@@ -53,8 +53,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Pickup has been updated but something went wrong</example>
         [JsonProperty("warnings")]
-        public IEnumerable<string> Warnings 
-        { 
+        public IEnumerable<string> Warnings
+        {
             get => mWarnings ?? Enumerable.Empty<string>();
             set => mWarnings = value;
         }

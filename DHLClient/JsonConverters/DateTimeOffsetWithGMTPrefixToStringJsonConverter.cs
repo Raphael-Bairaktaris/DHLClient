@@ -4,14 +4,26 @@ using System.Globalization;
 namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="DateTimeOffset"/> to a <see cref="string"/> and can be used when for date and times using the
+    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="DateTimeOffset"/> to a <see cref="string"/> and can be used for date and times using the
     /// following format: 2006-06-26T17:00:00 GMT+01:00
     /// </summary>
     public class DateTimeOffsetWithGMTPrefixToStringJsonConverter : JsonConverter<DateTimeOffset?>
     {
         #region Constants
 
-        public const string Format = "yyyy-MM-ddTHH:mm:ss \'GMT\'zzz";
+        /// <summary>
+        /// The date time offset format
+        /// </summary>
+        public static readonly string[] Formats = new[] { "yyyy-MM-ddTHH:mm:ss \'GMT\'zzz", "yyyy-MM-ddTHH:mm:ss\'GMT\'zzz" };
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// A flag indicating whether the time and GMT prefix should get separated by space
+        /// </summary>
+        public bool ShouldSeparateTimeAndGMTWithSpace { get; }
 
         #endregion
 
@@ -20,9 +32,9 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public DateTimeOffsetWithGMTPrefixToStringJsonConverter() : base()
+        public DateTimeOffsetWithGMTPrefixToStringJsonConverter(bool shouldSeparateTimeAndGMTWithSpace) : base()
         {
-
+            ShouldSeparateTimeAndGMTWithSpace = shouldSeparateTimeAndGMTWithSpace;
         }
 
         #endregion
@@ -37,7 +49,7 @@ namespace DHLClient
             if (readerValue.IsNullOrEmpty())
                 return null;
 
-            return DateTimeOffset.ParseExact(readerValue, Format, CultureInfo.InvariantCulture);
+            return DateTimeOffset.ParseExact(readerValue, Formats, CultureInfo.InvariantCulture);
         }
 
         /// <inheritdoc/>
@@ -46,7 +58,7 @@ namespace DHLClient
             if (value is null)
                 return;
 
-            writer.WriteValue(value.Value.ToString(Format, CultureInfo.InvariantCulture));
+            writer.WriteValue(value.Value.ToString(ShouldSeparateTimeAndGMTWithSpace? Formats[0] : Formats[1], CultureInfo.InvariantCulture));
         }
 
         #endregion

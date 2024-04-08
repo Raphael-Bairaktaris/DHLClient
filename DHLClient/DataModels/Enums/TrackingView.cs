@@ -13,7 +13,7 @@
         /// <summary>
         /// All checkpoints with remarks
         /// </summary>
-        AllCheckPointsWithRemarks =1,
+        AllCheckPointsWithRemarks = 1,
 
         /// <summary>
         /// Last checkpoint

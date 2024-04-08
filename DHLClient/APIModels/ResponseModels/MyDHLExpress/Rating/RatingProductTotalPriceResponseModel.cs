@@ -29,8 +29,8 @@ namespace DHLClient
         /// This is the total price of the rated shipment for the product listed. 
         /// </summary>
         /// <example>141.51</example>
-        [JsonProperty("number")]
-        public double Number { get; set; }
+        [JsonProperty("price")]
+        public decimal Price { get; set; }
 
         #endregion
 

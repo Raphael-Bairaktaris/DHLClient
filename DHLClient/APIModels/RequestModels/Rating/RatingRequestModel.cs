@@ -20,38 +20,25 @@ namespace DHLClient
         /// Please enter all the DHL Express accounts and types to be used for this shipment
         /// </summary>
         [JsonProperty("accounts")]
-        public AccountRequestModel? Accounts { get; set; }
-
-        /// <summary>
-        /// Please enter DHL Express Global Product code
-        /// </summary>
-        [JsonProperty("productCode")]
-        public string? ProductCode { get; set; }
-
-        /// <summary>
-        /// Please enter DHL Express Local Product code
-        /// </summary>
-        [JsonRequired]
-        [JsonProperty("localProductCode")]
-        public string? LocalProductCode { get; set; }
+        public IEnumerable<AccountRequestModel>? Accounts { get; set; }
 
         /// <summary>
         /// Please use if you wish to filter the response by value added services
         /// </summary>
         [JsonProperty("valueAddedServices")]
-        public ValueAddedServiceRequestModel? ValueAddedServices { get; set; }
+        public IEnumerable<ValueAddedServiceRequestModel>? ValueAddedServices { get; set; }
 
         /// <summary>
         /// Please use if you wish to filter the response by product(s) and/or value added services
         /// </summary>
         [JsonProperty("productsAndServices")]
-        public ProductAndServiceRequestModel? ProductsAndServices { get; set; }
+        public IEnumerable<ProductAndServiceRequestModel>? ProductsAndServices { get; set; }
 
         /// <summary>
         /// payerCountryCode is to be provided if your profile has been enabled to view rates without 
         /// an account number (this will provide DHL Express published rates for the payer country)
         /// </summary>
-        [JsonRequired]
+        /// <example>CZ</example>
         [JsonProperty("payerCountryCode")]
         [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode? PayerCountryCode { get; set; }
@@ -62,8 +49,10 @@ namespace DHLClient
         /// The date component must be in the format: YYYY-MM-DD; the time component must be in the format: HH:MM:SS using a 24 hour clock. The date and time parts are 
         /// separated by the letter T (e.g. 2006-06-26T17:00:00 GMT+01:00).
         /// </summary>
+        /// <example>2020-03-24T13:00:00GMT+00:00</example>
+        [JsonRequired]
         [JsonProperty("plannedShippingDateAndTime")]
-        [JsonConverter(typeof(DateTimeOffsetWithGMTPrefixToStringJsonConverter))]
+        [JsonConverter(typeof(DateTimeOffsetWithGMTPrefixToStringJsonConverter), false)]
         public DateTimeOffset? PlannedShippingDateAndTime { get; set; }
 
         /// <summary>
@@ -79,20 +68,20 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("isCustomsDeclarable")]
-        public bool IsCustomsDeclarable { get; set; }
+        public bool? IsCustomsDeclarable { get; set; }
 
         /// <summary>
         /// Please provide monetary amount related to your shipment, for example shipment declared value
         /// </summary>
         [JsonProperty("monetaryAmount")]
-        public MonetaryAmountRequestModel? MonetaryAmount { get; set; }
+        public IEnumerable<MonetaryAmountRequestModel>? MonetaryAmount { get; set; }
 
         /// <summary>
         /// Legacy field and replaced by newer field getAdditionalInformation. 
         /// Please set this to true to receive all value added services for each product available
         /// </summary>
         [JsonProperty("requestAllValueAddedServices")]
-        public bool ShouldRequestAllValueAddedServices { get; set; }
+        public bool? ShouldRequestAllValueAddedServices { get; set; }
 
         /// <summary>
         /// Estimated delivery date option for QDDF or QDDC.
@@ -104,19 +93,19 @@ namespace DHLClient
         /// Provides additional information in the response like all value added services, and rule groups
         /// </summary>
         [JsonProperty("getAdditionalInformation")]
-        public ShipmentDetailGetAdditionalInformationRequestModel? GetAdditionalInformation { get; set; }
+        public IEnumerable<ShipmentDetailGetAdditionalInformationRequestModel>? GetAdditionalInformation { get; set; }
 
         /// <summary>
         /// Please set this to true to filter out all products which needs DHL Express special customer agreement
         /// </summary>
         [JsonProperty("returnStandardProductsOnly")]
-        public bool ShouldReturnStandardProductsOnly { get; set; }
+        public bool? ShouldReturnStandardProductsOnly { get; set; }
 
         /// <summary>
         /// Please set this to true in case you want to receive products which are not available on planned shipping date but next available day
         /// </summary>
         [JsonProperty("nextBusinessDay")]
-        public bool ShouldDeliverNextBusinessDay { get; set; }
+        public bool? ShouldDeliverNextBusinessDay { get; set; }
 
         /// <summary>
         /// Please select which type of products you are interested in
@@ -130,14 +119,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("packages")]
-        public RatingLandedCostPackageRequestModel? Packages { get; set; }
-
-        /// <summary>
-        /// Dimensions of the package
-        /// </summary>
-        [JsonRequired]
-        [JsonProperty("dimensions")]
-        public ShipmentDetailDimensionResponseModel? Dimensions { get; set; }
+        public IEnumerable<RatingLandedCostPackageRequestModel>? Packages { get; set; }
 
         #endregion
 

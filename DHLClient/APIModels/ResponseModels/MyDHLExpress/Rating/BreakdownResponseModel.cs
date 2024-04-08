@@ -25,6 +25,11 @@ namespace DHLClient
         private string? mTypeCode;
 
         /// <summary>
+        /// The member of the <see cref="ServiceTypeCode"/> property
+        /// </summary>
+        private string mServiceTypeCode;
+
+        /// <summary>
         /// The member of the <see cref="PriceBreakdown"/> property
         /// </summary>
         private IEnumerable<PriceBreakdownResponseModel>? mPriceBreakdown;
@@ -41,9 +46,9 @@ namespace DHLClient
         /// <summary>
         /// When landed-cost is requested then following items name (Charge Types) might be returned
         /// </summary>
+        /// <example>12:00 PREMIUM</example>
         [JsonProperty("name")]
-        [JsonConverter(typeof(ChargeTypeToStringJsonConverter))]
-        public ChargeType Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Special service or extra charge code. This is the code you would have to use in the /shipment service if you wish to add an optional Service such as Saturday delivery
@@ -81,8 +86,11 @@ namespace DHLClient
         /// Special service charge code type for service.
         /// </summary>
         [JsonProperty("serviceTypeCode")]
-        [JsonConverter(typeof(SpecialServiceTypeCodeToStringJsonConverter))]
-        public SpecialServiceChargeCode ServiceTypeCode { get; set; }
+        public string ServiceTypeCode 
+        { 
+            get => mServiceTypeCode ?? string.Empty;
+            set => mServiceTypeCode = value;
+        }
 
         /// <summary>
         /// Price breakdown value

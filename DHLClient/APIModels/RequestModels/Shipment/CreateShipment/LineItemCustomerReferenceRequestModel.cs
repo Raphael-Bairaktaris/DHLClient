@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(LineItemReferenceTypeToStringJsonConverter))]
-        public override LineItemReferenceType? TypeCode { get; set; } 
+        public override LineItemReferenceType? TypeCode { get; set; }
 
         #endregion
 

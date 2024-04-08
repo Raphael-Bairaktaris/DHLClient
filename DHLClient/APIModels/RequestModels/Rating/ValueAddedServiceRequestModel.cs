@@ -10,23 +10,31 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
-        /// Please enter DHL Express value added global service code. For detailed list of all available service codes for your prospect shipment please invoke /products or /rates
+        /// Please enter DHL Express value added global service code. 
+        /// For detailed list of all available service codes for your prospect shipment please invoke /products or /rates
         /// </summary>
+        /// <example>II</example>
         [JsonRequired]
         [JsonProperty("serviceCode")]
         public string? ServiceCode { get; set; }
 
         /// <summary>
+        /// Please enter DHL Express value added local service code. 
+        /// For detailed list of all available service codes for your prospect shipment please invoke /products or /rates
+        /// </summary>
+        /// <example>II</example>
+        [JsonProperty("localServiceCode")]
+        public string? LocalServiceCode { get; set; }
+
+        /// <summary>
         /// Please enter monetary value of service (e.g. Insured Value)
         /// </summary>
-        [JsonRequired]
         [JsonProperty("value")]
         public decimal? Value { get; set; }
 
         /// <summary>
         /// Please enter currency code (e.g. Insured Value currency code)
         /// </summary>
-        [JsonRequired]
         [JsonProperty("currency")]
         [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode? Currency { get; set; }
@@ -37,12 +45,6 @@ namespace DHLClient
         [JsonProperty("method")]
         [JsonConverter(typeof(PaymentMethodToStringJsonConverter))]
         public PaymentMethod? Method { get; set; }
-
-        /// <summary>
-        /// The DangerousGoods section indicates if there is dangerous good content within the shipment.
-        /// </summary>
-        [JsonProperty("dangerousGoods")]
-        public IEnumerable<DangerousGoodRequestModel>? DangeroudGoods { get; set; }
 
         #endregion
 

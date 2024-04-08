@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// Provides enumeration over the invoice customer reference
@@ -22,7 +16,7 @@ namespace DHLClient
         CustomerIdentifier = 1,
 
         /// <summary>
-        /// Contract Number (CN)
+        /// Contract Price (CN)
         /// </summary>
         ContractNumber = 2,
 

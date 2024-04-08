@@ -113,7 +113,7 @@
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public async Task<WebRequestResult<ShipmentResponseModel>> CreateDHLShipmentAsync(CreateShipmentAPIArgs args ,CreateShipmentRequestModel model)
+        public async Task<WebRequestResult<ShipmentResponseModel>> CreateDHLShipmentAsync(CreateShipmentAPIArgs args, CreateShipmentRequestModel model)
         {
             return await Client.PostAsync<ShipmentResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.CreateShipmentAPIRoute, args), model, Credentials.Username);
         }
@@ -187,9 +187,9 @@
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public async Task<WebRequestResult<CreatePickupResponseModel>> CreateDHLPickupAsycn(CreatePickupAPIArgs args ,CreatePickupResponseModel model)
+        public async Task<WebRequestResult<CreatePickupResponseModel>> CreateDHLPickupAsycn(CreatePickupAPIArgs args, CreatePickupResponseModel model)
         {
-            return await Client.PostAsync<CreatePickupResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.CreateDHLPickupAPIRoute, args), model, Credentials.Username); 
+            return await Client.PostAsync<CreatePickupResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.CreateDHLPickupAPIRoute, args), model, Credentials.Username);
         }
 
         #endregion

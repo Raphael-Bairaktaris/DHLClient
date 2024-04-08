@@ -38,8 +38,8 @@ namespace DHLClient
         /// </summary>
         /// <example>1234567890</example>
         [JsonProperty("shipmentTrackingNumber")]
-        public string ShipmentTrackingNumber 
-        { 
+        public string ShipmentTrackingNumber
+        {
             get => mShipmentTrackingNumber ?? string.Empty;
             set => mShipmentTrackingNumber = value;
         }
@@ -49,8 +49,8 @@ namespace DHLClient
         /// </summary>
         /// <example>waybill</example>
         [JsonProperty("typeCode")]
-        public string TypeCode 
-        { 
+        public string TypeCode
+        {
             get => mTypeCode ?? string.Empty;
             set => mTypeCode = value;
         }
@@ -68,8 +68,8 @@ namespace DHLClient
         /// </summary>
         /// <example>PDF</example>
         [JsonProperty("encodingFormat")]
-        public string EncodingFormat 
-        { 
+        public string EncodingFormat
+        {
             get => mEncodingFormat ?? string.Empty;
             set => mEncodingFormat = value;
         }
@@ -78,8 +78,8 @@ namespace DHLClient
         /// Contains base64 encoded document image or archived zip
         /// </summary>
         [JsonProperty("content")]
-        public string Content 
-        { 
+        public string Content
+        {
             get => mContent ?? string.Empty;
             set => mContent = value;
         }

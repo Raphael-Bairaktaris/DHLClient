@@ -21,8 +21,8 @@ namespace DHLClient
         /// The amount price of DHL product and services
         /// </summary>
         /// <example>114.92</example>
-        [JsonProperty("number")]
-        public double Number { get; set; }
+        [JsonProperty("price")]
+        public decimal Price { get; set; }
 
         #endregion
 

@@ -9,6 +9,17 @@ namespace DHLClient
     public static class DHLClientConstants
     {
         /// <summary>
+        /// Maps the <see cref="AdditionalInformationType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<AdditionalInformationType, string> AdditionalInformationTypeToStringMapper { get; } = new Dictionary<AdditionalInformationType, string>()
+        {
+            { AdditionalInformationType.PickupDetails, "pickupDetails" },
+            { AdditionalInformationType.OptionalShipmentData, "optionalShipmentData" },
+            { AdditionalInformationType.BarcodeInformation, "barcodeInformation" },
+            { AdditionalInformationType.LiknkLabelsByPieces, "linkLabelsByPieces" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="BarcodePositionType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<BarcodePositionType, string> BarcodePositionTypeToStringMapper { get; } = new Dictionary<BarcodePositionType, string>()
@@ -24,7 +35,7 @@ namespace DHLClient
         {
             { BreakdownType.TotalTaxForTheShipment, "STTXA" },
             { BreakdownType.TotalDiscountForTheShipment, "STDIS" },
-            { BreakdownType.NetShipmentWeightCharge, "SPQRT" }
+            { BreakdownType.NetShipmentWeightCharge, "SPRQT" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -66,12 +77,12 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<CarrierName, string> CarrierNameToStringMapper { get; } = new Dictionary<CarrierName, string>()
         {
-            { CarrierName.DHL, "dhl" },
-            { CarrierName.UPS, "ups" },
-            { CarrierName.FEDEX, "fedex" },
-            { CarrierName.TNT, "tnt" },
-            { CarrierName.POST, "post" },
-            { CarrierName.OTHERS, "others" },
+            { CarrierName.DHL, "DHL" },
+            { CarrierName.UPS, "UPS" },
+            { CarrierName.FEDEX, "FEDEX" },
+            { CarrierName.TNT, "TNT" },
+            { CarrierName.POST, "POST" },
+            { CarrierName.OTHERS, "OTHERS" },
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -87,9 +98,9 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<ChargeCategory, string> ChargeCategoryToStringMapper { get; } = new Dictionary<ChargeCategory, string>()
         {
-            { ChargeCategory.TAX, "tax" },
-            { ChargeCategory.FEE, "fee" },
-            { ChargeCategory.DUTY, "duty" }
+            { ChargeCategory.Tax, "TAX" },
+            { ChargeCategory.Fee, "FEE" },
+            { ChargeCategory.Duty, "DUTY" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -518,11 +529,11 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<ImageFormat, string> ImageFormatToStringMapper { get; } = new Dictionary<ImageFormat, string>()
         {
-            { ImageFormat.PDF, "pdf" },
-            { ImageFormat.PNG, "png" },
-            { ImageFormat.JPEG, "jpeg" },
-            { ImageFormat.GIF, "gif" },
-            { ImageFormat.TIFF, "tiff" },
+            { ImageFormat.PDF, "PDF" },
+            { ImageFormat.PNG, "PNG" },
+            { ImageFormat.JPEG, "JPEG" },
+            { ImageFormat.GIF, "GIF" },
+            { ImageFormat.TIFF, "TIFF" },
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -1076,12 +1087,12 @@ namespace DHLClient
         /// <summary>
         /// Maps the <see cref="CurrencyCode"/>s to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<CurrencyCode, string> CurrencyCodeToStringMapper { get; } = Enum.GetValues<CurrencyCode>().ToImmutableDictionary(x => x, x => 
+        public static IReadOnlyDictionary<CurrencyCode, string> CurrencyCodeToStringMapper { get; } = Enum.GetValues<CurrencyCode>().ToImmutableDictionary(x => x, x =>
         {
             if (x == CurrencyCode.CNH)
                 return "RMB";
 
-            return x.ToString(); 
+            return x.ToString();
         });
 
         /// <summary>
@@ -1092,7 +1103,7 @@ namespace DHLClient
         /// <summary>
         /// Maps the <see cref="LanguageCode"/> to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<LanguageCode, string> LanguageCodeToStringMapper { get; } = Enum.GetValues<LanguageCode>().ToImmutableDictionary(x => x, x => x.ToString().ToLower());
+        public static IReadOnlyDictionary<LanguageCode, string> LanguageCodeToStringMapper { get; } = Enum.GetValues<LanguageCode>().ToImmutableDictionary(x => x, x => x.ToString());
 
         public static IReadOnlyDictionary<ThreeLetterLanguageCode, string> ThreeLetterLanguageCodeToStringMapper { get; } = new Dictionary<ThreeLetterLanguageCode, string>()
         {

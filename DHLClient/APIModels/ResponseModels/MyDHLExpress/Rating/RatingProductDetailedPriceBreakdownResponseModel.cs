@@ -7,7 +7,7 @@ namespace DHLClient
     /// </summary>
     public class RatingProductDetailedPriceBreakdownResponseModel
     {
-        #region private Members
+        #region Private Members
 
         /// <summary>
         /// the member of the <see cref="Breakdown"/> property
@@ -22,13 +22,13 @@ namespace DHLClient
         /// The breakdown type
         /// </summary>
         [JsonProperty("currencyType")]
-        [JsonConverter(typeof(BreakdownTypeToStringJsonConverter))]
-        public BreakdownType CurrencyType { get; set; }
+        [JsonConverter(typeof(CurrencyTypeToStringJsonConverter))]
+        public CurrencyType CurrencyType { get; set; }
 
         /// <summary>
         /// This the currency of the rated shipment for the prices listed.
         /// </summary>
-        [JsonProperty("priceVurrency")]
+        [JsonProperty("priceCurrency")]
         [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode PriceCurrency { get; set; }
 

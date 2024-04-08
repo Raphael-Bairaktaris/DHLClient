@@ -17,7 +17,7 @@ namespace DHLClient
         /// <example>2006-06-26T17:00:00 GMT+01:00</example>
         [JsonRequired]
         [JsonProperty("plannedShippingDateAndTime")]
-        [JsonConverter(typeof(DateTimeOffsetWithGMTPrefixToStringJsonConverter))]
+        [JsonConverter(typeof(DateTimeOffsetWithGMTPrefixToStringJsonConverter), true)]
         public DateTimeOffset? PlannedShippingDatimeAndTime { get; set; }
 
         /// <summary>

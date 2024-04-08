@@ -14,14 +14,14 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("isRequested")]
-        public bool IsRequested { get; set; }
+        public bool? IsRequested { get; set; }
 
         /// <summary>
         /// Please indicate the EDD type being requested
         /// </summary>
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(DeliveryTypeToStringJsonConverter))]
-        public DeliveryType TypeCode { get; set; }
+        public DeliveryType? TypeCode { get; set; }
 
         #endregion
 

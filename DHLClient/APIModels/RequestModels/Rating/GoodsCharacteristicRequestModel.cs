@@ -21,7 +21,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("value")]
-        public double Value { get; set; }
+        public string Value { get; set; }
 
         #endregion
 

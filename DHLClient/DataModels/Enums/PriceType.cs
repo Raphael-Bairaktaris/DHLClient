@@ -6,7 +6,7 @@
     public enum PriceType
     {
         /// <summary>
-        /// tax
+        /// Tax
         /// </summary>
         Tax = 0,
 

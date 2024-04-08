@@ -35,17 +35,9 @@ namespace DHLClient
         public CountryCode? CountryCode { get; set; }
 
         /// <summary>
-        /// Please enter your province or state code
-        /// </summary>
-        /// <example>CZ</example>
-        [JsonProperty("provinceCode")]
-        public string? ProvinceCode { get; set; }
-
-        /// <summary>
         /// Please enter address line 1
         /// </summary>
         /// <example>V Park 2308/10</example>
-        [JsonRequired]
         [JsonProperty("addressLine1")]
         public string? AddressLine1 { get; set; }
 
@@ -60,13 +52,6 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("addressLine3")]
         public string? AddressLine3 { get; set; }
-
-        /// <summary>
-        /// Please enter your suburb or county name
-        /// </summary>
-        /// <example>Central Bohemia</example>
-        [JsonProperty("countyName")]
-        public string? CountyName { get; set; }
 
         #endregion
 
