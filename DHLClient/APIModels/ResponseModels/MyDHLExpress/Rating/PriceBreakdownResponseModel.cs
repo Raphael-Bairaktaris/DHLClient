@@ -29,8 +29,8 @@ namespace DHLClient
         /// Discount or tax type codes as provided by DHL Express.
         /// </summary>
         [JsonProperty("typeCode")]
-        public string TypeCode 
-        { 
+        public string TypeCode
+        {
             get => mTypeCode ?? string.Empty;
             set => mTypeCode = value;
         }

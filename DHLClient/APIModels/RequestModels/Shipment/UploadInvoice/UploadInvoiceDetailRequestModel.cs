@@ -40,8 +40,8 @@ namespace DHLClient
         /// Note: customerReference/0/value with typeCode 'CU' is mandatory if using POST method and no shipmentTrackingNumber is provided in request.
         /// It is recommended to provide less than 20 customer references of 'MRN' type code
         /// </summary>
-        [JsonProperty("customerReference")]
-        public CustomerReferenceRequestModel? CustomerReference { get; set; }
+        [JsonProperty("customerReferences")]
+        public IEnumerable<LineItemCustomerReferenceRequestModel>? CustomerReferences { get; set; }
 
         /// <summary>
         /// Please provide Perfect Invoice related information

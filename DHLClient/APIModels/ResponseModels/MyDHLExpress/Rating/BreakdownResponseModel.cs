@@ -86,8 +86,8 @@ namespace DHLClient
         /// Special service charge code type for service.
         /// </summary>
         [JsonProperty("serviceTypeCode")]
-        public string ServiceTypeCode 
-        { 
+        public string ServiceTypeCode
+        {
             get => mServiceTypeCode ?? string.Empty;
             set => mServiceTypeCode = value;
         }

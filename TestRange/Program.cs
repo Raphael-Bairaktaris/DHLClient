@@ -14,39 +14,6 @@ var countryCode = CountryCode.AD;
 
 var client = new MyDHLExpressClient(new DHLClientCredentials("dmD3ZkqFTbXx2kgCnma63PABaiJWBAdt", "MxZWCZrWHaEc6I1H"), true);
 
-//var shipment = new CreateShipmentRequestModel()
-//{
-//    Pickup = new ShipmentPickupRequestModel()
-//    {
-//        IsRequested = true,
-//        CloseTime = 18:00,
-//        Location = "Reception",
-//        SpecialInstructions = new List<ShipmentSpecialInstructionRequestModel>()
-//        {
-//           new ShipmentSpecialInstructionRequestModel()
-//           {
-//               Value = "Παρακαλώ χτυπήστε κουδούνι"
-//           }
-//        },
-
-//        PickupDetails = new ShipmentPickupDetailRequestModel()
-//        {
-//            PostalCode = "59032",
-//            CityName = "Platy",
-//            CountryCode = CountryCode.GR,
-//            ProvinceCode = "GR",
-//            AddressLine1 = "Anoikseos 20",
-//            CountyName = "Hmathia",
-//            ProvinceName = "Hmathia",
-//            CountryName = "Greece"
-//        },
-
-//        ProductCode = "D",
-//        LocalProductCode = "D",
-//        GetRateEstimates = false,
-//    }
-//};
-
 var json = $$"""
 {
   "plannedShipDate": "2020-04-20",

@@ -80,7 +80,7 @@ namespace DHLClient
         /// Please provide the Customer References for the line item
         /// </summary>
         [JsonProperty("customerReferences")]
-        public IEnumerable<CustomerReferenceRequestModel>? CustomerReferences { get; set; }
+        public IEnumerable<LineItemCustomerReferenceRequestModel>? CustomerReferences { get; set; }
 
         /// <summary>
         /// Please provide the line item customs document type code.

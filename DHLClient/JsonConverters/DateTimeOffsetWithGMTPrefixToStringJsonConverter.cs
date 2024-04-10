@@ -58,7 +58,7 @@ namespace DHLClient
             if (value is null)
                 return;
 
-            writer.WriteValue(value.Value.ToString(ShouldSeparateTimeAndGMTWithSpace? Formats[0] : Formats[1], CultureInfo.InvariantCulture));
+            writer.WriteValue(value.Value.ToString(ShouldSeparateTimeAndGMTWithSpace ? Formats[0] : Formats[1], CultureInfo.InvariantCulture));
         }
 
         #endregion

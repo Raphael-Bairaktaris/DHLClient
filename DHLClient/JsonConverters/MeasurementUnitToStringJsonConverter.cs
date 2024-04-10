@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// A <see cref="BaseEnumJsonConverter{T}"/> that is used for converting a <see cref="MeasurmentUnit"/> to <see cref="string"/>
