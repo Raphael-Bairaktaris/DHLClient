@@ -33,11 +33,13 @@ namespace DHLClient
         /// <example>2019-08-04T14:00:31GMT+01:00</example>
         [JsonRequired]
         [JsonProperty("plannedPickupDateAndTime")]
+        [JsonConverter(typeof(DateTimeOffsetWithGMTPrefixToStringJsonConverter))]
         public DateTimeOffset PlannedPickupDateAndTime { get; set; }
 
         /// <summary>
         /// The latest time the location premises is available to dispatch the DHL Express shipment. (HH:MM)
         /// </summary>
+        /// <example>18:00</example>
         [JsonProperty("closeTime")]
         public DateTime CloseTime { get; set; }
 
@@ -54,7 +56,7 @@ namespace DHLClient
         /// <example>residence</example>
         [JsonRequired]
         [JsonProperty("locationType")]
-        [JsonConverter(typeof(LocationTypeToStringJsonConverter))]
+        [JsonConverter(typeof(PickupLocationToStringJsonConverter))]
         public PickupLocation LocationType { get; set; }
 
         /// <summary>

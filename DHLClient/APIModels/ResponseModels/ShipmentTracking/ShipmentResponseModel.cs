@@ -10,34 +10,9 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="URL"/> property
-        /// </summary>
-        private string? mURL;
-
-        /// <summary>
-        /// The member of the <see cref="PrevURL"/> property
-        /// </summary>
-        private string? mPrevURL;
-
-        /// <summary>
-        /// The member of the <see cref="NetxURL"/> property
-        /// </summary>
-        private string? mNextURL;
-
-        /// <summary>
-        /// The member of the <see cref="FirstURL"/> property
-        /// </summary>
-        private string? mFirstURL;
-
-        /// <summary>
-        /// The member of the <see cref="LastURL"/> property
-        /// </summary>
-        private string? mLastURL;
-
-        /// <summary>
         /// The member of the <see cref="Shipments"/> property
         /// </summary>
-        private ShipmentDetailResponseModel? mShipments;
+        private IEnumerable<ShipmentDetailResponseModel>? mShipments;
 
         /// <summary>
         /// The member of the <see cref="PossibleAdditionalShipmentsURL"/> property
@@ -51,59 +26,39 @@ namespace DHLClient
         /// The URL
         /// </summary>
         [JsonProperty("url")]
-        public string URL
-        {
-            get => mURL ?? string.Empty;
-            set => mURL = value;
-        }
+        public Uri? URL { get; set; }
 
         /// <summary>
         /// The previous URL
         /// </summary>
         [JsonProperty("prevUrl")]
-        public string PrevURL
-        {
-            get => mPrevURL ?? string.Empty;
-            set => mPrevURL = value;
-        }
+        public Uri? PreviousURL { get; set; }
 
         /// <summary>
         /// The next URL
         /// </summary>
         [JsonProperty("nextUrl")]
-        public string NextURL
-        {
-            get => mNextURL ?? string.Empty;
-            set => mNextURL = value;
-        }
+        public Uri? NextURL { get; set; }
 
         /// <summary>
         /// The first URL
         /// </summary>
         [JsonProperty("firstUrl")]
-        public string FirstURL
-        {
-            get => mFirstURL ?? string.Empty;
-            set => mFirstURL = value;
-        }
+        public Uri? FirstURL { get; set; }
 
         /// <summary>
         /// The last URL
         /// </summary>
         [JsonProperty("lastUrl")]
-        public string LastURL
-        {
-            get => mLastURL ?? string.Empty;
-            set => mLastURL = value;
-        }
+        public Uri? LastURL { get; set; }
 
         /// <summary>
         /// The shipments details
         /// </summary>
         [JsonProperty("shipments")]
-        public ShipmentDetailResponseModel Shipments
+        public IEnumerable<ShipmentDetailResponseModel> Shipments
         {
-            get => mShipments ??= new ShipmentDetailResponseModel();
+            get => mShipments ?? Enumerable.Empty<ShipmentDetailResponseModel>();
             set => mShipments = value;
         }
 
@@ -111,11 +66,7 @@ namespace DHLClient
         /// The possible additional shipments URL
         /// </summary>
         [JsonProperty("possibleAdditionalShipmentsURL")]
-        public IEnumerable<string> PossibleAdditionalShipmentsURL
-        {
-            get => mPossibleAdditionalShipmentsURL ?? Enumerable.Empty<string>();
-            set => mPossibleAdditionalShipmentsURL = value;
-        }
+        public IEnumerable<Uri>? PossibleAdditionalShipmentsURL { get; set; }
 
         #endregion
 

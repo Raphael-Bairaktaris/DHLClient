@@ -41,13 +41,13 @@ namespace DHLClient
         /// The output image properties
         /// </summary>
         [JsonProperty("outputImageProperties")]
-        public IEnumerable<InvoiceOutputImagePropertyRequestModel>? OutputImageProperties { get; set; }
+        public InvoiceOutputImagePropertyRequestModel? OutputImageProperties { get; set; }
 
         /// <summary>
         /// The customer details 
         /// </summary>
         [JsonProperty("customerDetails")]
-        public IEnumerable<InvoiceCustomerDetailRequestModel>? CustomerDetails { get; set; }
+        public InvoiceCustomerDetailRequestModel? CustomerDetails { get; set; }
 
         #endregion
 

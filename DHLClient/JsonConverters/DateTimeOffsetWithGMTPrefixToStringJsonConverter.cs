@@ -37,6 +37,14 @@ namespace DHLClient
             ShouldSeparateTimeAndGMTWithSpace = shouldSeparateTimeAndGMTWithSpace;
         }
 
+        /// <summary>
+        /// Parameterless constructor
+        /// </summary>
+        public DateTimeOffsetWithGMTPrefixToStringJsonConverter() : this(shouldSeparateTimeAndGMTWithSpace: false)
+        {
+
+        }
+
         #endregion
 
         #region Public Methods

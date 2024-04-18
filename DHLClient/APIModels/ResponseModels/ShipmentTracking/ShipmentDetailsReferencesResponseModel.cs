@@ -7,13 +7,26 @@ namespace DHLClient
     /// </summary>
     public class ShipmentDetailsReferencesResponseModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="Number"/> property
+        /// </summary>
+        private string? mNumber;
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
         /// A value of reference
         /// </summary>
         [JsonProperty("number")]
-        public double Number { get; set; }
+        public string Number 
+        { 
+            get => mNumber ?? string.Empty;
+            set => mNumber =value;
+        }
 
         /// <summary>
         /// Type of reference

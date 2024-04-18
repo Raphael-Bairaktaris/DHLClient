@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// One location can be known within different business units (providerTypes). They will be known under a unique ID within each business unit domain, as provided.
     /// </summary>
-    public class ServicePointLocationByIdResponseModel
+    public class LocationIdResponseModel
     {
         #region Private Members
 
@@ -50,7 +50,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointLocationByIdResponseModel() : base()
+        public LocationIdResponseModel() : base()
         {
 
         }

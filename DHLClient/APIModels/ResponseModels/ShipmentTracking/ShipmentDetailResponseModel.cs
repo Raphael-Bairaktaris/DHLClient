@@ -17,12 +17,12 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Origin"/> property
         /// </summary>
-        private ShipmentDetailOriginResponseModel? mOrigin;
+        private ShipmentDetailLocationResponseModel? mOrigin;
 
         /// <summary>
         /// The member of the <see cref="Destination"/> property
         /// </summary>
-        private ShipmentDetailOriginResponseModel? mDestination;
+        private ShipmentDetailLocationResponseModel? mDestination;
 
         /// <summary>
         /// The member of the <see cref="Status"/> property
@@ -59,44 +59,9 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
-        /// A link to current page
-        /// </summary>
-        [JsonProperty("url")]
-        public Uri? URL { get; set; }
-
-        /// <summary>
-        /// A link to current page
-        /// </summary>
-        [JsonProperty("prevUrl")]
-        public Uri? PreviousURL { get; set; }
-
-        /// <summary>
-        /// A link to current page
-        /// </summary>
-        [JsonProperty("nextUurl")]
-        public Uri? NextURL { get; set; }
-
-        /// <summary>
-        /// A link to current page
-        /// </summary>
-        [JsonProperty("firstUrl")]
-        public Uri? FirstURL { get; set; }
-
-        /// <summary>
-        /// A link to current page
-        /// </summary>
-        [JsonProperty("lastUrl")]
-        public Uri? LastURL { get; set; }
-
-        /// <summary>
-        /// Define the TTL value in seconds of shipment between 30 and 365 days
-        /// </summary>
-        [JsonProperty("@ttl")]
-        public double TTL { get; set; }
-
-        /// <summary>
         /// The location Id
         /// </summary>
+        /// <example>GMDBD8E9CCE94842E495B71</example>
         [JsonProperty("id")]
         public string Id
         {
@@ -115,9 +80,9 @@ namespace DHLClient
         /// The shipment origin
         /// </summary>
         [JsonProperty("origin")]
-        public ShipmentDetailOriginResponseModel Origin
+        public ShipmentDetailLocationResponseModel Origin
         {
-            get => mOrigin ??= new ShipmentDetailOriginResponseModel();
+            get => mOrigin ??= new ShipmentDetailLocationResponseModel();
             set => mOrigin = value;
         }
 
@@ -125,9 +90,9 @@ namespace DHLClient
         /// The shipment destination
         /// </summary>
         [JsonProperty("destination")]
-        public ShipmentDetailOriginResponseModel Destination
+        public ShipmentDetailLocationResponseModel Destination
         {
-            get => mDestination ??= new ShipmentDetailOriginResponseModel();
+            get => mDestination ??= new ShipmentDetailLocationResponseModel();
             set => mDestination = value;
         }
 

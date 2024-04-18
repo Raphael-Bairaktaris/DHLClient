@@ -5,8 +5,17 @@ namespace DHLClient
     /// <summary>
     /// Represents a service point average capacity day of week
     /// </summary>
-    public class ServicePointLocationAverageCapacityDayOfWeekResponseModel
+    public class LocationAverageCapacityDayOfWeekResponseModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="Capacity"/> property
+        /// </summary>
+        private string? mCapacity;
+
+        #endregion
+
         #region Public Properties
 
         /// <summary>
@@ -14,15 +23,19 @@ namespace DHLClient
         /// </summary>
         /// <remarks> https://schema.org/DayOfWeek </remarks>
         [JsonProperty("dayOfWeek")]
-        [JsonConverter(typeof(DHLDayOfWeekTypeToIntJsonConverter))]
+        [JsonConverter(typeof(DHLDayOfWeekTypeToStringJsonConverter))]
         public DHLDayOfWeek DayOfWeek { get; set; }
 
         /// <summary>
         /// Information on the average availability of locker capacity (only available in Germany).
         /// </summary>
         [JsonProperty("capacity")]
-        [JsonConverter(typeof(CapacityTypeToStringJsonConverter))]
-        public CapacityType Capacity { get; set; }
+        public string Capacity
+        {
+            get => mCapacity ?? string.Empty;
+            set => mCapacity = value;
+        }
+
         #endregion
 
         #region Constructors
@@ -30,7 +43,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointLocationAverageCapacityDayOfWeekResponseModel() : base()
+        public LocationAverageCapacityDayOfWeekResponseModel() : base()
         {
 
         }

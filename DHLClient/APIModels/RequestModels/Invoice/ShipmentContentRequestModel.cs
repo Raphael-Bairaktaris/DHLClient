@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("exportDeclaration")]
-        public ExportDeclarationDetailRequestModel? ExportDeclaration { get; set; }
+        public IEnumerable<ExportDeclarationDetailRequestModel>? ExportDeclaration { get; set; }
 
         #endregion
 

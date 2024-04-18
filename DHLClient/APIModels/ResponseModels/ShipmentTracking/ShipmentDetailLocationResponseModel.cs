@@ -5,14 +5,14 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipment origin response
     /// </summary>
-    public class ShipmentDetailOriginResponseModel
+    public class ShipmentDetailLocationResponseModel
     {
         #region Private Members
 
         /// <summary>
         /// The member of the <see cref="Address"/> property
         /// </summary>
-        private ShipmentDetailOriginAddressResponseModel? mAddress;
+        private ShipmentDetailAddressResponseModel? mAddress;
 
         /// <summary>
         /// The member of the <see cref="ServicePoint"/> property
@@ -26,9 +26,10 @@ namespace DHLClient
         /// <summary>
         /// The address
         /// </summary>
-        public ShipmentDetailOriginAddressResponseModel Address
+        [JsonProperty("address")]
+        public ShipmentDetailAddressResponseModel Address
         {
-            get => mAddress ?? new ShipmentDetailOriginAddressResponseModel();
+            get => mAddress ?? new ShipmentDetailAddressResponseModel();
             set => mAddress = value;
         }
 
@@ -49,7 +50,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentDetailOriginResponseModel() : base()
+        public ShipmentDetailLocationResponseModel() : base()
         {
 
         }

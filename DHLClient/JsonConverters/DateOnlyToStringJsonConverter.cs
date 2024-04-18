@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="DateOnlyToStringJsonConverter"/> that converts a <see cref="DateOnly"/> to <see cref="string"/>
+    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="DateOnly"/> to <see cref="string"/>
     /// </summary>
     public class DateOnlyToStringJsonConverter : JsonConverter<DateOnly>
     {
@@ -12,7 +12,7 @@ namespace DHLClient
         /// <summary>
         /// The format that is used for serializing and deserializing dates
         /// </summary>
-        public const string DateFormat = "yyyy-MM-dd";
+        public const string DateFormat = "M-d-yyyy";
 
         #endregion
 
@@ -21,7 +21,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public DateOnlyToStringJsonConverter() : base()
+        public DateOnlyToStringJsonConverter()
         {
 
         }

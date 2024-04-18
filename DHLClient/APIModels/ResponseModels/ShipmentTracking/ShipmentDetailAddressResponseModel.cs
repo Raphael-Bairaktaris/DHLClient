@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipment origin address response
     /// </summary>
-    public class ShipmentDetailOriginAddressResponseModel
+    public class ShipmentDetailAddressResponseModel
     {
         #region Private Members
 
@@ -108,7 +108,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentDetailOriginAddressResponseModel() : base()
+        public ShipmentDetailAddressResponseModel() : base()
         {
 
         }

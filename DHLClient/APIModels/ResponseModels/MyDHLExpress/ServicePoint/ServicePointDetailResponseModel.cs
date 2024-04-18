@@ -10,6 +10,11 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
+        /// The member of the <see cref="Id"/> property
+        /// </summary>
+        private string? mId;
+
+        /// <summary>
         /// the member of the <see cref="FacilityId"/> property
         /// </summary>
         private string? mFacilityId;
@@ -45,9 +50,14 @@ namespace DHLClient
         private ServicePointDetailGeograpgicalLocationResponseModel? mGeographicLocation;
 
         /// <summary>
+        /// The member of the <see cref="Distance"/> property
+        /// </summary>
+        private string? mDistance;
+
+        /// <summary>
         /// The member of the <see cref="OpeningHours"/> property
         /// </summary>
-        private IEnumerable<ServicePointDetailOpeningHoursResponseModel>? mOpeningHours;
+        private ServicePointDetailOpeningHoursResponseModel? mOpeningHours;
 
         /// <summary>
         /// The member of the <see cref="ServicePointCapabilities"/> property
@@ -117,7 +127,11 @@ namespace DHLClient
         /// The facility ID from GREF database
         /// </summary>
         [JsonProperty("id")]
-        public double Id { get; set; }
+        public string Id 
+        { 
+            get => mId ?? string.Empty;
+            set => mId = value;
+        }
 
         /// <summary>
         /// Service Point ID is a unique key with 6 characters, consisting of Service Area for first 3 characters
@@ -202,7 +216,11 @@ namespace DHLClient
         /// The distance from the search address to this Service Point (beeline).
         /// </summary>
         [JsonProperty("distance")]
-        public double Distance { get; set; }
+        public string Distance
+        {
+            get => mDistance ?? string.Empty;
+            set => mDistance = value;
+        }
 
         /// <summary>
         /// Time until which a shipment can be handed in at the Service Point, and is still shipped on the same day
@@ -214,9 +232,9 @@ namespace DHLClient
         /// Array of openingHours entities, each consisting of week day, opening time and closing time.
         /// </summary>
         [JsonProperty("openingHours")]
-        public IEnumerable<ServicePointDetailOpeningHoursResponseModel> OpeningHours
+        public ServicePointDetailOpeningHoursResponseModel OpeningHours
         {
-            get => mOpeningHours ?? Enumerable.Empty<ServicePointDetailOpeningHoursResponseModel>();
+            get => mOpeningHours ??= new ServicePointDetailOpeningHoursResponseModel();
             set => mOpeningHours = value;
         }
 
@@ -337,7 +355,7 @@ namespace DHLClient
         /// Value of day when the work week starts. It starts from 0 to 6(Sunday to Saturday)
         /// </summary>
         [JsonProperty("workWeekStart")]
-        [JsonConverter(typeof(DHLDayOfWeekTypeToIntJsonConverter))]
+        [JsonConverter(typeof(DHLDayOfWeekTypeToStringJsonConverter))]
         public DHLDayOfWeek WorkWeekStart { get; set; }
 
         /// <summary>

@@ -10,11 +10,6 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="TypeCode"/> property
-        /// </summary>
-        private string? mTypeCode;
-
-        /// <summary>
         /// The member of the <see cref="List"/> property
         /// </summary>
         private IEnumerable<string>? mList;
@@ -27,11 +22,8 @@ namespace DHLClient
         /// The type of identifier
         /// </summary>
         [JsonProperty("typeCode")]
-        public string TypeCode
-        {
-            get => mTypeCode ?? string.Empty;
-            set => mTypeCode = value;
-        }
+        [JsonConverter(typeof(IdentifierTypeToStringJsonConverter))]
+        public IdentifierType TypeCode { get; set; }
 
         /// <summary>
         /// List of identifiers

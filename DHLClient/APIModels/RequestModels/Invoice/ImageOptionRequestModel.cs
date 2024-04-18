@@ -13,7 +13,7 @@ namespace DHLClient
         /// Please enter the document type you want to wish set properties for
         /// </summary>
         [JsonRequired]
-        [JsonProperty("invoice")]
+        [JsonProperty("typeCode")]
         [JsonConverter(typeof(InvoiceToStringJsonConverter))]
         public Invoice? TypeCode { get; set; }
 

@@ -7,7 +7,7 @@ namespace DHLClient
     /// </summary>
     public class UpdatePickupResponseModel
     {
-        #region private Members
+        #region Private Members
 
         /// <summary>
         /// The member of the <see cref="DispatchConfirmationNumber"/> property
@@ -39,6 +39,7 @@ namespace DHLClient
         /// </summary>
         /// <example>10:00</example>
         [JsonProperty("readyByTime")]
+        [JsonConverter(typeof(TimeOnlyToStringJsonConverter))]
         public TimeOnly ReadyByTime { get; set; }
 
         /// <summary>

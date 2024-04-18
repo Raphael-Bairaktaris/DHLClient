@@ -5,24 +5,19 @@ namespace DHLClient
     /// <summary>
     /// Represents a service point location by place response
     /// </summary>
-    public class ServicePointLocationByPlaceResponseModel
+    public class LocationPlaceResponseModel
     {
         #region Private Members
 
         /// <summary>
         /// The member of the <see cref="Address"/> property
         /// </summary>
-        private ServicePointLocationByAddressResponseModel? mAddress;
-
-        /// <summary>
-        /// The member of the <see cref="GeometricCoordinates"/> property
-        /// </summary>
-        private ServicePointLocationByGeoResponseModel? mGeometricCoordinates;
+        private LocationAddressResponseModel? mAddress;
 
         /// <summary>
         /// The member of the <see cref="ContainedInPlace"/>
         /// </summary>
-        private ServicePointLocationByContainedInPlaceResponseModel? mContainedInPlace;
+        private LocationContainedInPlaceResponseModel? mContainedInPlace;
 
         #endregion
 
@@ -32,9 +27,9 @@ namespace DHLClient
         /// Address properties
         /// </summary>
         [JsonProperty("address")]
-        public ServicePointLocationByAddressResponseModel Address
+        public LocationAddressResponseModel Address
         {
-            get => mAddress ??= new ServicePointLocationByAddressResponseModel();
+            get => mAddress ??= new LocationAddressResponseModel();
             set => mAddress = value;
         }
 
@@ -42,19 +37,15 @@ namespace DHLClient
         /// Geometric coordinates
         /// </summary>
         [JsonProperty("geo")]
-        public ServicePointLocationByGeoResponseModel GeometricCoordinates
-        {
-            get => mGeometricCoordinates ??= new ServicePointLocationByGeoResponseModel();
-            set => mGeometricCoordinates = value;
-        }
+        public Coordinates GeometricCoordinates { get; set; }
 
         /// <summary>
         /// Contained in place
         /// </summary>
         [JsonProperty("containedInPlace")]
-        public ServicePointLocationByContainedInPlaceResponseModel ContainedInPlace
+        public LocationContainedInPlaceResponseModel ContainedInPlace
         {
-            get => mContainedInPlace ??= new ServicePointLocationByContainedInPlaceResponseModel();
+            get => mContainedInPlace ??= new LocationContainedInPlaceResponseModel();
             set => mContainedInPlace = value;
         }
 
@@ -65,7 +56,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointLocationByPlaceResponseModel() : base()
+        public LocationPlaceResponseModel() : base()
         {
 
         }

@@ -20,7 +20,6 @@ namespace DHLClient
         /// Please enter charge caption
         /// </summary>
         /// <example>fee</example>
-        [JsonRequired]
         [JsonProperty("caption")]
         public string? Caption { get; set; }
 

@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a description of the building/facility the service point is located in
     /// </summary>
-    public class ServicePointLocationByContainedInPlaceResponseModel
+    public class LocationContainedInPlaceResponseModel
     {
         #region Private Members
 
@@ -36,7 +36,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointLocationByContainedInPlaceResponseModel() : base()
+        public LocationContainedInPlaceResponseModel() : base()
         {
 
         }

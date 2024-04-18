@@ -12,14 +12,12 @@ namespace DHLClient
         /// <summary>
         /// Address definition for rating related services
         /// </summary>
-        [JsonRequired]
         [JsonProperty("shipperDetails")]
         public ShipperDetailRequestModel? ShipperDetails { get; set; }
 
         /// <summary>
         /// Address definition for rating related services
         /// </summary>
-        [JsonRequired]
         [JsonProperty("receiverDetails")]
         public ReceiverDetailsRequestModel? ReceiverDetails { get; set; }
 

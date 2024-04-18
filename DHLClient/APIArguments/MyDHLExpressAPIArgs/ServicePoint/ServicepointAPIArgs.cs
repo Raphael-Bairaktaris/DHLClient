@@ -195,7 +195,7 @@
         /// This is a Servicepoint Capacity Management System parameter.
         /// </summary>
         [ArgumentName("excludeFullyBooked")]
-        public IEnumerable<bool>? ExcludeFullyBooked { get; set; }
+        public IEnumerable<bool>? ShouldExcludeFullyBooked { get; set; }
 
         /// <summary>
         /// To specify the shipment ID. This is used for Servicepoint Capacity Management System parameter.

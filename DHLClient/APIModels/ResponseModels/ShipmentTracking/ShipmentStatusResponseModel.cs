@@ -17,7 +17,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Location"/> property
         /// </summary>
-        private ShipmentDetailOriginResponseModel? mLocation;
+        private ShipmentDetailLocationResponseModel? mLocation;
 
         /// <summary>
         /// The member of the <see cref="Status"/> property
@@ -47,19 +47,15 @@ namespace DHLClient
         /// The time stamp
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp
-        {
-            get => mTimestamp ?? string.Empty;
-            set => mTimestamp = value;
-        }
+        public DateTimeOffset Timestamp { get; set; }
 
         /// <summary>
         /// The location
         /// </summary>
         [JsonProperty("location")]
-        public ShipmentDetailOriginResponseModel Location
+        public ShipmentDetailLocationResponseModel Location
         {
-            get => mLocation ??= new ShipmentDetailOriginResponseModel();
+            get => mLocation ??= new ShipmentDetailLocationResponseModel();
             set => mLocation = value;
         }
 

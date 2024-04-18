@@ -30,6 +30,11 @@ namespace DHLClient
         private string? mStreet;
 
         /// <summary>
+        /// The member of the <see cref="HouseNumber"/> property
+        /// </summary>
+        private string mHouseNumber;
+
+        /// <summary>
         /// The member of the <see cref="AdditionalInfo"/> property
         /// </summary>
         private string? mAdditionalInfo;
@@ -50,9 +55,19 @@ namespace DHLClient
         private string? mState;
 
         /// <summary>
+        /// The member of the <see cref="Country"/> property
+        /// </summary>
+        private string? mCountry;
+
+        /// <summary>
         /// The member of the <see cref="CountryDivisionCode"/> property
         /// </summary>
         private string? mCountryDivisionCode;
+
+        /// <summary>
+        /// The member of the <see cref="CountryDivisionCodeType"/>
+        /// </summary>
+        private string? mCountryDivisionCodeType;
 
         #endregion
 
@@ -102,7 +117,11 @@ namespace DHLClient
         /// House number in facility address
         /// </summary>
         [JsonProperty("houseNumber")]
-        public int HouseNumber { get; set; }
+        public string HouseNumber
+        {
+            get => mHouseNumber ?? string.Empty;
+            set => mHouseNumber = value;
+        }
 
         /// <summary>
         /// Additional details in facility address
@@ -155,8 +174,11 @@ namespace DHLClient
         /// The dhl country
         /// </summary>
         [JsonProperty("dhlCountry")]
-        [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
-        public CountryCode DHLCountry { get; set; }
+        public string DHLCountry
+        {
+            get => mCountry ?? string.Empty;
+            set => mCountry = value;
+        }
 
         /// <summary>
         /// Country Division Code
@@ -172,8 +194,11 @@ namespace DHLClient
         /// Enumeration (State, Province)
         /// </summary>
         [JsonProperty("countryDivisionCodeType")]
-        [JsonConverter(typeof(CountryDivisionCodeToStringJsonConverter))]
-        public CountryDivisionCode CountryDivisionCodeType { get; set; }
+        public string CountryDivisionCodeType
+        {
+            get => mCountryDivisionCodeType ?? string.Empty;
+            set => mCountryDivisionCodeType = value;
+        }
 
         #endregion
 

@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents the closing periods of a DHL service point location
     /// </summary>
-    public class ServicePointLocationClosurePeriodResponseModel
+    public class LocationClosurePeriodResponseModel
     {
         #region Private Members
 
@@ -52,7 +52,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointLocationClosurePeriodResponseModel() : base()
+        public LocationClosurePeriodResponseModel() : base()
         {
 
         }

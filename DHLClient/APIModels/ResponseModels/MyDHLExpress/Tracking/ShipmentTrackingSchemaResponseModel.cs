@@ -178,6 +178,7 @@ namespace DHLClient
         /// <summary>
         /// The shipment's estimated delivery date
         /// </summary>
+        /// <example>2020-06-12</example>
         [JsonProperty("estimatedDeliveryDate")]
         public DateOnly EstimatedDeliveryDate { get; set; }
 

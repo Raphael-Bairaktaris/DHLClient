@@ -35,7 +35,7 @@ namespace DHLClient
         /// Here you can set invoice properties
         /// </summary>
         [JsonProperty("outputImageProperties")]
-        public IEnumerable<InvoiceOutputImagePropertyRequestModel>? OutputImageProperties { get; set; }
+        public InvoiceOutputImagePropertyRequestModel? OutputImageProperties { get; set; }
 
         /// <summary>
         /// Here you need to define all the parties needed to ship the package

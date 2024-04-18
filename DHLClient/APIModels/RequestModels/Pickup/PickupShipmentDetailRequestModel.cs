@@ -26,12 +26,13 @@ namespace DHLClient
         /// The account
         /// </summary>
         [JsonProperty("accounts")]
-        public AccountRequestModel? Accounts { get; set; }
+        public IEnumerable<AccountRequestModel>? Accounts { get; set; }
 
         /// <summary>
         /// The value added services
         /// </summary>
-        public ValueAddedServiceRequestModel? ValueAddedServices { get; set; }
+        [JsonProperty("valueAddedServices")]
+        public IEnumerable<ValueAddedServiceRequestModel>? ValueAddedServices { get; set; }
 
         /// <summary>
         /// For customs purposes please advise if your shipment is dutiable (true) or non dutiable (false)
@@ -73,7 +74,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("packages")]
-        public RatingLandedCostPackageRequestModel? Packages { get; set; }
+        public IEnumerable<RatingLandedCostPackageRequestModel>? Packages { get; set; }
 
         #endregion
 

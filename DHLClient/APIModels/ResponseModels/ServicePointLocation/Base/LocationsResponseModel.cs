@@ -5,14 +5,14 @@ namespace DHLClient
     /// <summary>
     /// Represents a DHL Service Point locations collection response
     /// </summary>
-    public class ServicePointLocationsResponseModel
+    public class LocationsResponseModel
     {
         #region Private Members
 
         /// <summary>
         /// The member of the <see cref="Locations"/> property
         /// </summary>
-        private ServicePointLocationResponseModel? mLocations;
+        private LocationsDetailResponseModel? mLocations;
 
         /// <summary>
         /// The member of the <see cref="Name"/> property
@@ -22,7 +22,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Place"/> property
         /// </summary>
-        private ServicePointLocationByPlaceResponseModel? mPlace;
+        private LocationPlaceResponseModel? mPlace;
 
         /// <summary>
         /// The member of the <see cref="ServiceTypes"/> property
@@ -32,17 +32,17 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="AverageCapacityDayOfWeek"/> property
         /// </summary>
-        private IEnumerable<ServicePointLocationAverageCapacityDayOfWeekResponseModel>? mAverageCapacityDayOfWeek;
+        private IEnumerable<LocationAverageCapacityDayOfWeekResponseModel>? mAverageCapacityDayOfWeek;
 
         /// <summary>
         /// The member of the <see cref="OpeningHours"/> property
         /// </summary>
-        private IEnumerable<ServicePointLocationOpeningHoursResponseModel>? mOpeningHours;
+        private IEnumerable<LocationOpeningHoursResponseModel>? mOpeningHours;
 
         /// <summary>
         /// The member of the <see cref="ClosurePeriods"/> property
         /// </summary>
-        private IEnumerable<ServicePointLocationClosurePeriodResponseModel>? mClosurePeriods;
+        private IEnumerable<LocationClosurePeriodResponseModel>? mClosurePeriods;
 
 
         #endregion
@@ -60,9 +60,9 @@ namespace DHLClient
         /// The locations
         /// </summary>
         [JsonProperty("locations")]
-        public ServicePointLocationResponseModel Locations
+        public LocationsDetailResponseModel Locations
         {
-            get => mLocations ?? new ServicePointLocationResponseModel();
+            get => mLocations ?? new LocationsDetailResponseModel();
             set => mLocations = value;
         }
 
@@ -86,9 +86,9 @@ namespace DHLClient
         /// The place
         /// </summary>
         [JsonProperty("place")]
-        public ServicePointLocationByPlaceResponseModel Place
+        public LocationPlaceResponseModel Place
         {
-            get => mPlace ??= new ServicePointLocationByPlaceResponseModel();
+            get => mPlace ??= new LocationPlaceResponseModel();
             set => mPlace = value;
         }
 
@@ -108,9 +108,9 @@ namespace DHLClient
         /// only an aggregated average capacity indication based on the last weeks will be provided as availableCapacity.
         /// </summary>
         [JsonProperty("averageCapacityDayOfWeek")]
-        public IEnumerable<ServicePointLocationAverageCapacityDayOfWeekResponseModel> AverageCapacityDayOfWeek
+        public IEnumerable<LocationAverageCapacityDayOfWeekResponseModel> AverageCapacityDayOfWeek
         {
-            get => mAverageCapacityDayOfWeek ??= Enumerable.Empty<ServicePointLocationAverageCapacityDayOfWeekResponseModel>();
+            get => mAverageCapacityDayOfWeek ??= Enumerable.Empty<LocationAverageCapacityDayOfWeekResponseModel>();
             set => mAverageCapacityDayOfWeek = value;
         }
 
@@ -126,9 +126,9 @@ namespace DHLClient
         /// </summary>
         /// <remarks>http://supermodel.io/schemaorg/OpeningHoursSpecification</remarks>
         [JsonProperty("openingHours")]
-        public IEnumerable<ServicePointLocationOpeningHoursResponseModel> OpeningHours
+        public IEnumerable<LocationOpeningHoursResponseModel> OpeningHours
         {
-            get => mOpeningHours ?? Enumerable.Empty<ServicePointLocationOpeningHoursResponseModel>();
+            get => mOpeningHours ?? Enumerable.Empty<LocationOpeningHoursResponseModel>();
             set => mOpeningHours = value;
         }
 
@@ -136,9 +136,9 @@ namespace DHLClient
         /// Periods where the DHL Service Point location is closed in the addition to opening hours.
         /// </summary>
         [JsonProperty("closurePeriods")]
-        public IEnumerable<ServicePointLocationClosurePeriodResponseModel> ClosurePeriods
+        public IEnumerable<LocationClosurePeriodResponseModel> ClosurePeriods
         {
-            get => mClosurePeriods ?? Enumerable.Empty<ServicePointLocationClosurePeriodResponseModel>();
+            get => mClosurePeriods ?? Enumerable.Empty<LocationClosurePeriodResponseModel>();
             set => mClosurePeriods = value;
         }
 
@@ -149,7 +149,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointLocationsResponseModel() : base()
+        public LocationsResponseModel() : base()
         {
 
         }

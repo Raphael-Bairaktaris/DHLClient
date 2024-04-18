@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a reference data detail response
+    /// Represents a reference data detail
     /// </summary>
     public class ReferenceDataDetailResponseModel
     {

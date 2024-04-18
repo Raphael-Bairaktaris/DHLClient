@@ -13,7 +13,6 @@ namespace DHLClient
         /// Please enter your postcode or leave empty if the address doesn't have a postcode
         /// </summary>
         /// <example>14800</example>
-        [JsonRequired]
         [JsonProperty("postalCode")]
         public string? PostalCode { get; set; }
 
@@ -21,7 +20,6 @@ namespace DHLClient
         /// Please enter the city
         /// </summary>
         /// <example>Prague</example>
-        [JsonRequired]
         [JsonProperty("cityName")]
         public string? CityName { get; set; }
 
@@ -29,7 +27,6 @@ namespace DHLClient
         /// Please enter ISO country code
         /// </summary>
         /// <example>CZ</example>
-        [JsonRequired]
         [JsonProperty("countryCode")]
         [JsonConverter(typeof(CountryCodeToStringJsonConverter))]
         public CountryCode? CountryCode { get; set; }

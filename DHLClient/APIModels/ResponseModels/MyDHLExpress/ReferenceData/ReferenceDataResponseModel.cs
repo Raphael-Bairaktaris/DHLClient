@@ -2,6 +2,9 @@
 
 namespace DHLClient
 {
+    /// <summary>
+    /// Represents a reference data
+    /// </summary>
     public class ReferenceDataResponseModel
     {
         #region Private Members

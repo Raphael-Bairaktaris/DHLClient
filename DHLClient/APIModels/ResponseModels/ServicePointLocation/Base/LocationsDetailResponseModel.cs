@@ -5,14 +5,14 @@ namespace DHLClient
     /// <summary>
     /// Represents a service point location by address response
     /// </summary>
-    public class ServicePointLocationResponseModel
+    public class LocationsDetailResponseModel
     {
         #region Private Members
 
         /// <summary>
         /// The member of the <see cref="Location"/> property
         /// </summary>
-        private ServicePointLocationByIdsResponseModel? mLocation;
+        private IEnumerable<LocationIdResponseModel>? mIds;
 
         /// <summary>
         /// The member of the <see cref="Keyword"/> property
@@ -31,11 +31,11 @@ namespace DHLClient
         /// <summary>
         /// One location can be known within different business units (providerTypes). They will be known under a unique ID within each business unit domain, as provided.
         /// </summary>
-        [JsonProperty("location")]
-        public ServicePointLocationByIdsResponseModel Location
+        [JsonProperty("ids")]
+        public IEnumerable<LocationIdResponseModel> Ids
         {
-            get => mLocation ?? new ServicePointLocationByIdsResponseModel();
-            set => mLocation = value;
+            get => mIds ?? Enumerable.Empty<LocationIdResponseModel>();
+            set => mIds = value;
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointLocationResponseModel() : base()
+        public LocationsDetailResponseModel() : base()
         {
 
         }

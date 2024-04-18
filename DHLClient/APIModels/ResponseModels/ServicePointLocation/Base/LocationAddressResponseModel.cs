@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a location by address response
     /// </summary>
-    public class ServicePointLocationByAddressResponseModel
+    public class LocationAddressResponseModel
     {
         #region Private Members
 
@@ -75,7 +75,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServicePointLocationByAddressResponseModel() : base()
+        public LocationAddressResponseModel() : base()
         {
 
         }

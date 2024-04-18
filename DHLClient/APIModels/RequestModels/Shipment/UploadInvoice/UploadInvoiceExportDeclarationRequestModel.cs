@@ -89,7 +89,6 @@ namespace DHLClient
         /// <summary>
         /// For customs purposes please advise on currency code of the indicated amount in invoice.
         /// </summary>
-        [JsonRequired]
         [JsonProperty("currency")]
         [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode Currency { get; set; }
@@ -97,7 +96,6 @@ namespace DHLClient
         /// <summary>
         /// Please enter Unit of measurement - metric,imperial
         /// </summary>
-        [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
         [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
         public MeasurmentUnit UnitOfMeasurement { get; set; }

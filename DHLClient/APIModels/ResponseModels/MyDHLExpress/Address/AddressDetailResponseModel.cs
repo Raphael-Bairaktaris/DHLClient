@@ -72,7 +72,7 @@ namespace DHLClient
         /// The time offset
         /// </summary>
         [JsonProperty("GMTOffset")]
-        public string? GMTOffset { get; set; }
+        public TimeSpan? GMTOffset { get; set; }
 
         #endregion
 

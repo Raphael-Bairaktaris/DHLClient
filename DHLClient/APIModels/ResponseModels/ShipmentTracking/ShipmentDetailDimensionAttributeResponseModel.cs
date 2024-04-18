@@ -13,8 +13,8 @@ namespace DHLClient
         /// A string or text indicating the unit of measurement
         /// </summary>
         [JsonProperty("unitText")]
-        [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
-        public MeasurmentUnit UnitText { get; set; }
+        [JsonConverter(typeof(WeightUnitToStringJsonConverter))]
+        public WeightUnit UnitText { get; set; }
 
         /// <summary>
         /// The value of the quantitative value or property value node

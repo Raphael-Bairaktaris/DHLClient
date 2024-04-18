@@ -58,7 +58,7 @@ namespace DHLClient
         {
             { CapacityType.High, "high" },
             { CapacityType.Low, "low" },
-            { CapacityType.VeryLow, "veryLow" },
+            { CapacityType.VeryLow, "very-low" },
             { CapacityType.Unknown, "unknown" }
         }.ToImmutableDictionary();
 
@@ -172,8 +172,8 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<CountryDivisionCode, string> CountryDivisionCodeToStringMapper { get; } = new Dictionary<CountryDivisionCode, string>()
         {
-            { CountryDivisionCode.State, "state"},
-            { CountryDivisionCode.Province, "province" }
+            { CountryDivisionCode.State, "State"},
+            { CountryDivisionCode.Province, "Province" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -382,18 +382,18 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="DHLDayOfWeek"/>s to their related <see cref="int"/>s
+        /// Maps the <see cref="DHLDayOfWeek"/>s to their related <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<DHLDayOfWeek, int> DHLDayOfWeekTypeToIntMapper { get; } = new Dictionary<DHLDayOfWeek, int>()
+        public static IReadOnlyDictionary<DHLDayOfWeek, string> DHLDayOfWeekTypeToStringMapper { get; } = new Dictionary<DHLDayOfWeek, string>()
         {
-            { DHLDayOfWeek.Monday, 1 },
-            { DHLDayOfWeek.Tuesday, 2 },
-            { DHLDayOfWeek.Wednesday, 3 },
-            { DHLDayOfWeek.Thursday, 4 },
-            { DHLDayOfWeek.Friday, 5 },
-            { DHLDayOfWeek.Saturday, 6 },
-            { DHLDayOfWeek.Sunday, 7 },
-            { DHLDayOfWeek.PublicHolidays, 8 }
+            { DHLDayOfWeek.Monday, "MONDAY" },
+            { DHLDayOfWeek.Tuesday, "TUESDAY" },
+            { DHLDayOfWeek.Wednesday, "WEDNESDAY" },
+            { DHLDayOfWeek.Thursday, "THURSDAY" },
+            { DHLDayOfWeek.Friday, "FRIDAY" },
+            { DHLDayOfWeek.Saturday, "SATURDAY" },
+            { DHLDayOfWeek.Sunday, "SUNDAY" },
+            { DHLDayOfWeek.PublicHolidays, "HOLIDAY" }
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -401,8 +401,8 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<DimensionUnit, string> DimensionUnitToStringMapper { get; } = new Dictionary<DimensionUnit, string>()
         {
-            { DimensionUnit.Inches, "in" },
-            { DimensionUnit.Centimeters, "cm" }
+            { DimensionUnit.Inches, "IN" },
+            { DimensionUnit.Centimeters, "CM" }
         };
 
         /// <summary>
@@ -831,10 +831,10 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<ServicePoint, string> ServicePointToStringMapper { get; } = new Dictionary<ServicePoint, string>()
         {
-            { ServicePoint. City, "CTY"},
-            { ServicePoint. Station, "STN"},
-            { ServicePoint. Partner, "PRT"},
-            { ServicePoint. TwentyFourSeven, "247"},
+            { ServicePoint. City, "CITY"},
+            { ServicePoint. Station, "STATION"},
+            { ServicePoint. Partner, "PARTNER"},
+            { ServicePoint. TwentyFourSeven, "TWENTYFOURSEVEN"},
         }.ToImmutableDictionary();
 
         /// <summary>
@@ -1080,8 +1080,8 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<WeightUnit, string> WeightUnitToStringMapper { get; } = new Dictionary<WeightUnit, string>()
         {
-            { WeightUnit.Kg, "kg" },
-            { WeightUnit.Lb, "lb" }
+            { WeightUnit.Kg, "KG" },
+            { WeightUnit.Lb, "LB" }
         }.ToImmutableDictionary();
 
         /// <summary>

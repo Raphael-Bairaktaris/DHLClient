@@ -1,4 +1,6 @@
-﻿namespace DHLClient
+﻿using Newtonsoft.Json;
+
+namespace DHLClient
 {
     /// <summary>
     /// Requests used for pickup customer details
@@ -10,6 +12,7 @@
         /// <summary>
         /// The booking requestor details
         /// </summary>
+        [JsonProperty("bookingRequestorDetails")]
         public BookingRequestorDetailRequestModel? BookingRequestorDetails { get; set; }
 
         #endregion

@@ -16,277 +16,164 @@ var client = new MyDHLExpressClient(new DHLClientCredentials("dmD3ZkqFTbXx2kgCnm
 
 var json = $$"""
 {
-  "plannedShipDate": "2020-04-20",
-  "accounts": [
+  "url": "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&limit=10",
+  "firstUrl": "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&limit=10",
+  "prevUrl": "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&limit=10",
+  "nextUrl": "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&limit=10",
+  "lastUrl": "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&limit=10",
+  "shipments": [
     {
-      "typeCode": "shipper",
-      "number": "123456789"
+      "id": "GMDBD8E9CCE94842E495B7",
+      "service": "ecommerce",
+      "origin": {
+        "address": {
+          "countryCode": "US",
+          "postalCode": "84003",
+          "addressLocality": "AMERICAN FORK"
+        }
+      },
+      "destination": {
+        "address": {
+          "countryCode": "GB",
+          "postalCode": "S87FA",
+          "addressLocality": "SHEFFIELD"
+        }
+      },
+      "status": {
+        "timestamp": "2023-01-29T16:02:00",
+        "location": {
+          "address": {
+            "countryCode": "GB",
+            "postalCode": "HEATHROW",
+            "addressLocality": "HEATHROW, GB"
+          }
+        },
+        "statusCode": "transit",
+        "status": "ARRIVED AT CUSTOMS"
+      },
+      "details": {
+        "product": {
+          "productName": "DHL Parcel Intl Standard"
+        },
+        "weight": {
+          "value": 0.831,
+          "unitText": "LB"
+        },
+        "references": [
+          {
+            "number": "GMDBD8E9CCE94842E495B7",
+            "type": "customer-confirmation-number"
+          },
+          {
+            "number": "2042200157621303",
+            "type": "ecommerce-number"
+          },
+          {
+            "number": "H01PQA0010751022",
+            "type": "local-tracking-number"
+          }
+        ]
+      },
+      "events": [
+        {
+          "timestamp": "2023-01-29T16:02:00",
+          "location": {
+            "address": {
+              "countryCode": "GB",
+              "postalCode": "HEATHROW",
+              "addressLocality": "HEATHROW, GB"
+            }
+          },
+          "statusCode": "transit",
+          "status": "ARRIVED AT CUSTOMS"
+        },
+        {
+          "timestamp": "2023-01-23T08:52:15",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "90601",
+              "addressLocality": "Whittier, CA, US"
+            }
+          },
+          "statusCode": "unknown",
+          "status": "SCANNED INTO SACK/CONTAINER"
+        },
+        {
+          "timestamp": "2023-01-23T08:52:14",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "90601",
+              "addressLocality": "Whittier, CA, US"
+            }
+          },
+          "statusCode": "transit",
+          "status": "PROCESSING COMPLETED AT ORIGIN"
+        },
+        {
+          "timestamp": "2023-01-23T08:50:36",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "90601",
+              "addressLocality": "Whittier, CA, US"
+            }
+          },
+          "statusCode": "unknown",
+          "status": "CLOSE BAG"
+        },
+        {
+          "timestamp": "2023-01-20T14:04:18",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "90601",
+              "addressLocality": "Whittier, CA, US"
+            }
+          },
+          "statusCode": "transit",
+          "status": "PROCESSED"
+        },
+        {
+          "timestamp": "2023-01-20T10:21:25",
+          "statusCode": "pre-transit",
+          "status": "DHL ECOMMERCE CURRENTLY AWAITING SHIPMENT AND TRACKING WILL BE UPDATED WHEN RECEIVED"
+        },
+        {
+          "timestamp": "2023-01-18T09:39:28",
+          "location": {
+            "address": {
+              "countryCode": "US",
+              "postalCode": "90601",
+              "addressLocality": "Whittier, CA, US"
+            }
+          },
+          "statusCode": "transit",
+          "status": "PACKAGE RECEIVED AT DHL ECOMMERCE DISTRIBUTION CENTER"
+        },
+        {
+          "timestamp": "2023-01-11T11:58:34",
+          "statusCode": "unknown",
+          "status": "LABEL CREATED"
+        }
+      ]
     }
   ],
-  "content": {
-    "exportDeclaration": [
-      {
-        "lineItems": [
-          {
-            "number": 1,
-            "description": "line item description",
-            "price": 150,
-            "quantity": {
-              "value": 1,
-              "unitOfMeasurement": "BOX"
-            },
-            "commodityCodes": [
-              {
-                "typeCode": "outbound",
-                "value": "851713"
-              }
-            ],
-            "exportReasonType": "permanent",
-            "manufacturerCountry": "CZ",
-            "weight": {
-              "netValue": 10,
-              "grossValue": 10
-            },
-            "isTaxesPaid": true,
-            "customerReferences": [
-              {
-                "typeCode": "AFE",
-                "value": "customerref1"
-              }
-            ],
-            "customsDocuments": [
-              {
-                "typeCode": "972",
-                "value": "custdoc456"
-              }
-            ],
-            "preCalculatedLineItemTotalValue": 150
-          }
-        ],
-        "invoice": {
-          "number": "12345-ABC",
-          "date": "2021-03-18",
-          "function": "import",
-          "customerReferences": [
-            {
-              "typeCode": "CU",
-              "value": "custref112"
-            }
-          ],
-          "indicativeCustomsValues": {
-            "importCustomsDutyValue": 150.57,
-            "importTaxesValue": 49.43,
-            "totalWithImportDutiesAndTaxes": 350.57
-          },
-          "preCalculatedTotalValues": {
-            "preCalculatedTotalGoodsValue": 49.43,
-            "preCalculatedTotalInvoiceValue": 150.57
-          }
-        },
-        "remarks": [
-          {
-            "value": "declaration remark"
-          }
-        ],
-        "additionalCharges": [
-          {
-            "value": 10,
-            "typeCode": "admin"
-          }
-        ],
-        "placeOfIncoterm": "port of departure or destination details",
-        "recipientReference": "recipient reference",
-        "exporter": {
-          "id": "123",
-          "code": "EXPCZ"
-        },
-        "exportReasonType": "permanent",
-        "shipmentType": "personal",
-        "customsDocuments": [
-          {
-            "typeCode": "972",
-            "value": "custdoc445"
-          }
-        ],
-        "incoterm": "DAP"
-      }
-    ],
-    "currency": "EUR",
-    "unitOfMeasurement": "metric"
-  },
-  "outputImageProperties": {
-    "imageOptions": [
-      {
-        "typeCode": "invoice",
-        "templateName": "COMMERCIAL_INVOICE_P_10",
-        "isRequested": true
-      }
-    ]
-  },
-  "customerDetails": {
-    "sellerDetails": {
-      "postalAddress": {
-        "postalCode": "14800",
-        "cityName": "Prague",
-        "countryCode": "CZ",
-        "provinceCode": "CZ",
-        "addressLine1": "V Parku 2308/10",
-        "addressLine2": "addres2",
-        "addressLine3": "addres3",
-        "countyName": "Central Bohemia"
-      },
-      "contactInformation": {
-        "email": "that@before.de",
-        "phone": "+1123456789",
-        "mobilePhone": "+60112345678",
-        "companyName": "Company Name",
-        "fullName": "John Brew"
-      },
-      "typeCode": "business",
-      "registrationNumbers": [
-        {
-          "typeCode": "VAT",
-          "number": "CZ123456789",
-          "issuerCountryCode": "CZ"
-        }
-      ]
-    },
-    "buyerDetails": {
-      "postalAddress": {
-        "postalCode": "14800",
-        "cityName": "Prague",
-        "countryCode": "CZ",
-        "provinceCode": "CZ",
-        "addressLine1": "V Parku 2308/10",
-        "addressLine2": "addres2",
-        "addressLine3": "addres3",
-        "countyName": "Central Bohemia"
-      },
-      "contactInformation": {
-        "email": "that@before.de",
-        "phone": "+1123456789",
-        "mobilePhone": "+60112345678",
-        "companyName": "Company Name",
-        "fullName": "John Brew"
-      },
-      "registrationNumbers": [
-        {
-          "typeCode": "VAT",
-          "number": "CZ123456789",
-          "issuerCountryCode": "CZ"
-        }
-      ],
-      "typeCode": "business"
-    },
-    "importerDetails": {
-      "postalAddress": {
-        "postalCode": "14800",
-        "cityName": "Prague",
-        "countryCode": "CZ",
-        "provinceCode": "CZ",
-        "addressLine1": "V Parku 2308/10",
-        "addressLine2": "addres2",
-        "addressLine3": "addres3",
-        "countyName": "Central Bohemia"
-      },
-      "contactInformation": {
-        "email": "that@before.de",
-        "phone": "+1123456789",
-        "mobilePhone": "+60112345678",
-        "companyName": "Company Name",
-        "fullName": "John Brew"
-      },
-      "registrationNumbers": [
-        {
-          "typeCode": "VAT",
-          "number": "CZ123456789",
-          "issuerCountryCode": "CZ"
-        }
-      ],
-      "typeCode": "business"
-    },
-    "exporterDetails": {
-      "postalAddress": {
-        "postalCode": "14800",
-        "cityName": "Prague",
-        "countryCode": "CZ",
-        "provinceCode": "CZ",
-        "addressLine1": "V Parku 2308/10",
-        "addressLine2": "addres2",
-        "addressLine3": "addres3",
-        "countyName": "Central Bohemia"
-      },
-      "contactInformation": {
-        "email": "that@before.de",
-        "phone": "+1123456789",
-        "mobilePhone": "+60112345678",
-        "companyName": "Company Name",
-        "fullName": "John Brew"
-      },
-      "registrationNumbers": [
-        {
-          "typeCode": "VAT",
-          "number": "CZ123456789",
-          "issuerCountryCode": "CZ"
-        }
-      ],
-      "typeCode": "business"
-    },
-    "ultimateConsigneeDetails": {
-      "postalAddress": {
-        "postalCode": "14800",
-        "cityName": "Prague",
-        "countryCode": "CZ",
-        "provinceCode": "CZ",
-        "addressLine1": "V Parku 2308/10",
-        "addressLine2": "addres2",
-        "addressLine3": "addres3",
-        "countyName": "Central Bohemia"
-      },
-      "contactInformation": {
-        "email": "that@before.de",
-        "phone": "+1123456789",
-        "mobilePhone": "+60112345678",
-        "companyName": "Company Name",
-        "fullName": "John Brew"
-      },
-      "typeCode": "business",
-      "registrationNumbers": [
-        {
-          "typeCode": "VAT",
-          "number": "CZ123456789",
-          "issuerCountryCode": "CZ"
-        }
-      ]
-    },
-    "brokerDetails": {
-      "postalAddress": {
-        "postalCode": "14800",
-        "cityName": "Prague",
-        "countryCode": "CZ",
-        "provinceCode": "CZ",
-        "addressLine1": "V Parku 2308/10",
-        "addressLine2": "addres2",
-        "addressLine3": "addres3",
-        "countyName": "Central Bohemia"
-      },
-      "contactInformation": {
-        "email": "that@before.de",
-        "phone": "+1123456789",
-        "mobilePhone": "+60112345678",
-        "companyName": "Company Name",
-        "fullName": "John Brew"
-      },
-      "typeCode": "business",
-      "registrationNumbers": [
-        {
-          "typeCode": "VAT",
-          "number": "CZ123456789",
-          "issuerCountryCode": "CZ"
-        }
-      ]
-    }
-  }
+  "possibleAdditionalShipmentsUrl": [
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=freight",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=dgf",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=parcel-de",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=parcel-nl",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=parcel-pl",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=express",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=post-de",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=sameday",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=parcel-uk",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=ecommerce-apac",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=ecommerce-europe",
+    "/track/shipments?trackingNumber=GMDBD8E9CCE94842E495B7&service=post-international"
+  ]
 }
 """;
 
@@ -313,7 +200,7 @@ var json = $$"""
 //    return missingProperties;
 //}
 
-var shipment = JsonConvert.DeserializeObject<UploadInvoiceRequestModel>(json);
+var shipment = JsonConvert.DeserializeObject<ShipmentResponseModel>(json);
 
 var t = typeof(RatingRequestModel);
 

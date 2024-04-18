@@ -32,7 +32,7 @@ namespace DHLClient
         /// Please enter additional charge to appear on the invoice
         /// </summary>
         [JsonProperty("additionalCharges")]
-        public ExportDeclarationAdditionalChargeRequestModel? AdditionalCharges { get; set; }
+        public IEnumerable<ExportDeclarationAdditionalChargeRequestModel>? AdditionalCharges { get; set; }
 
         /// <summary>
         /// Name of port of departure, shipment or destination as required under the applicable delivery term.
@@ -88,7 +88,6 @@ namespace DHLClient
         /// For customs purposes please advise on currency code of the indicated amount in invoice.
         /// </summary>
         /// <example>EUR</example>
-        [JsonRequired]
         [JsonProperty("currency")]
         [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode? Currency { get; set; }
@@ -97,7 +96,6 @@ namespace DHLClient
         /// Please enter Unit of measurement
         /// </summary>
         /// <example>metric</example>
-        [JsonRequired]
         [JsonProperty("unitOfMeasurement")]
         [JsonConverter(typeof(MeasurmentUnitToStringJsonConverter))]
         public MeasurmentUnit? UnitOfMeasurement { get; set; }

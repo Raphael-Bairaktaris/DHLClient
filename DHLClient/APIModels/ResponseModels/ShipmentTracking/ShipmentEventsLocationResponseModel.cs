@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipment event location response 
     /// </summary>
-    public class ShipmentEventsLocationResponseModel : ShipmentDetailOriginAddressResponseModel
+    public class ShipmentEventsLocationResponseModel : ShipmentDetailAddressResponseModel
     {
         #region Private Members
 

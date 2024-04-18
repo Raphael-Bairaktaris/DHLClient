@@ -14,11 +14,6 @@ namespace DHLClient
         /// </summary>
         private string? mLanguageScriptCode;
 
-        /// <summary>
-        /// The member of the <see cref="LanguageCountryCode"/> property
-        /// </summary>
-        private string? mLanguageCountryCode;
-
         #endregion
 
         #region Public Properties
@@ -26,13 +21,15 @@ namespace DHLClient
         /// <summary>
         /// Language Code
         /// </summary>
+        /// <example>eng</example>
         [JsonProperty("languageCode")]
-        [JsonConverter(typeof(LanguageCodeToStringJsonConverter))]
-        public LanguageCode LanguageCode { get; set; }
+        [JsonConverter(typeof(ThreeLetterLanguageCodeToStringJsonConverter))]
+        public ThreeLetterLanguageCode LanguageCode { get; set; }
 
         /// <summary>
         /// Language Script Code
         /// </summary>
+        /// <example>Latn</example>
         [JsonProperty("languageScriptCode")]
         public string LanguageScriptCode
         {
@@ -44,14 +41,11 @@ namespace DHLClient
         /// Language Country Code
         /// </summary>
         [JsonProperty("languageCountryCode")]
-        public string LanguageCountryCode
-        {
-            get => mLanguageCountryCode ?? string.Empty;
-            set => mLanguageCountryCode = value;
-        }
+        [JsonConverter(typeof(LanguageCodeToStringJsonConverter))]
+        public LanguageCode LanguageCountryCode { get; set; }
 
         /// <summary>
-        /// Language valid
+        /// A flag indicating whether the language is valid
         /// </summary>
         [JsonProperty("languageOk")]
         public bool IsLanguageOk { get; set; }
