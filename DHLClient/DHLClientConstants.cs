@@ -561,6 +561,15 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
+        /// Maps the <see cref="InvoiceType"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<InvoiceType, string> InvoiceTypeToStringMapper { get; } = new Dictionary<InvoiceType, string>()
+        {
+            { InvoiceType.Commercial, "commercial" },
+            { InvoiceType.Proforma, "proforma" },
+            { InvoiceType.Returns, "returns" },
+        }.ToImmutableDictionary();
+        /// <summary>
         /// Maps the <see cref="IncotermRule"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<IncotermRule, string> IncotermRuleToStringMapper { get; } = new Dictionary<IncotermRule, string>()
@@ -1430,6 +1439,16 @@ namespace DHLClient
             { CountryCode.ZM, "Zambia" },
             { CountryCode.ZW, "Zimbabwe" },
         }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="CountryCode"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<CountryCode, string> CountryCodeToLowerStringMapper { get; } = Enum.GetValues<CountryCode>().ToImmutableDictionary(x => x, x => x.ToString().ToLower());
+
+        /// <summary>
+        /// Maps the <see cref="FourLetterLanguageScript"/>s to their related <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<FourLetterLanguageScript, string> FourLetterLanguageScriptToStringMapper { get; } = Enum.GetValues<FourLetterLanguageScript>().ToImmutableDictionary(x => x, x => x.ToString());
 
         /// <summary>
         /// Returns the localized representation of the specified <paramref name="value"/>

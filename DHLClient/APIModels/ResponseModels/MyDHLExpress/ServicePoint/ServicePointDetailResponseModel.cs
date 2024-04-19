@@ -127,8 +127,8 @@ namespace DHLClient
         /// The facility ID from GREF database
         /// </summary>
         [JsonProperty("id")]
-        public string Id 
-        { 
+        public string Id
+        {
             get => mId ?? string.Empty;
             set => mId = value;
         }

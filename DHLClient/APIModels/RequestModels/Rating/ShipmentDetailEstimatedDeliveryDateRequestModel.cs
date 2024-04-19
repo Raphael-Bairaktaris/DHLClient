@@ -21,7 +21,7 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(DeliveryTypeToStringJsonConverter))]
-        public DeliveryType? TypeCode { get; set; }
+        public DeliveryType? DeliveryType { get; set; }
 
         #endregion
 

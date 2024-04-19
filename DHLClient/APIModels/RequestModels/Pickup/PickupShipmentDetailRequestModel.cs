@@ -74,7 +74,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("packages")]
-        public IEnumerable<RatingLandedCostPackageRequestModel>? Packages { get; set; }
+        public IEnumerable<PackageRequestModel>? Packages { get; set; }
 
         #endregion
 

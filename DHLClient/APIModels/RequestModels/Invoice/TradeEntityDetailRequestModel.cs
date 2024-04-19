@@ -35,7 +35,7 @@ namespace DHLClient
         /// The registration number details
         /// </summary>
         [JsonProperty("registrationNumbers")]
-        public IEnumerable<ShipmentRegistrationNumberRequestModel>? RegistrationNumbers { get; set; }
+        public IEnumerable<EntityProfileRegistrationNumberRequestModel>? RegistrationNumbers { get; set; }
 
         #endregion
 

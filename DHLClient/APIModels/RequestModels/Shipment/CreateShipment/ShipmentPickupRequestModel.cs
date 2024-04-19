@@ -40,13 +40,13 @@ namespace DHLClient
         /// Please enter address and contact details related to your pickup
         /// </summary>
         [JsonProperty("pickupDetails")]
-        public ShipmentPickupDetailRequestModel? PickupDetails { get; set; }
+        public EntityProfileDetailRequestModel? PickupDetails { get; set; }
 
         /// <summary>
         /// Please enter address and contact details of the individual requesting the pickup
         /// </summary>
         [JsonProperty("pickupRequestorDetails")]
-        public ShipmentPickupDetailRequestModel? PickupRequestorDetails { get; set; }
+        public EntityProfileDetailRequestModel? PickupRequestorDetails { get; set; }
 
         #endregion
 

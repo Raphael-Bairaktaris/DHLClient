@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(ValueAddedServiceToStringJsonConverter))]
-        public ValueAddedService? TypeCode { get; set; }
+        public ValueAddedService? ValueAddedService { get; set; }
 
         /// <summary>
         /// Indicates if additional information is requested 

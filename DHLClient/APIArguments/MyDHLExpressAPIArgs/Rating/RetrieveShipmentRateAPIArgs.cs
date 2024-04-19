@@ -93,7 +93,7 @@ namespace DHLClient
         public bool? IsCustomsDeclarable { get; set; }
 
         /// <summary>
-        /// The UnitOfMeasurement node conveys the unit of measurements used in the operation. 
+        /// The MeasurementUnit node conveys the unit of measurements used in the operation. 
         /// This single value corresponds to the units of weight and measurement which are used throughout the message processing.
         /// </summary>
         [ArgumentName("unitOfMeasurement")]

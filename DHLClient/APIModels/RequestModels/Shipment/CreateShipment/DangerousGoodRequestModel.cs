@@ -27,6 +27,7 @@ namespace DHLClient
         /// The customDescription node value will be displayed in the Transport Label and Waybill Document, 
         /// replacing the default IATA Dangerous Goods statement constructed based on contentId node.
         /// </summary>
+        /// <example>1 package Lithium ion batteries in compliance with Section II of P.I. 9661</example>
         [JsonProperty("customDescription")]
         public string? CustomDescription { get; set; }
 

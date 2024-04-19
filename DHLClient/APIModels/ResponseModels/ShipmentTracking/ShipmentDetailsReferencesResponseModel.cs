@@ -22,10 +22,10 @@ namespace DHLClient
         /// A value of reference
         /// </summary>
         [JsonProperty("number")]
-        public string Number 
-        { 
+        public string Number
+        {
             get => mNumber ?? string.Empty;
-            set => mNumber =value;
+            set => mNumber = value;
         }
 
         /// <summary>

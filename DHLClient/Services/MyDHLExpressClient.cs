@@ -50,16 +50,16 @@
         /// </summary>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<RatingProductResponseModel>> GetOneShipmentRateAsync(RetrieveShipmentRateAPIArgs args)
-            => Client.GetAsync<RatingProductResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.RetrieveOneShipmentRateAPIRoute, args), Credentials.Username);
+        public Task<WebRequestResult<ProductResponseModel>> GetOneShipmentRateAsync(RetrieveShipmentRateAPIArgs args)
+            => Client.GetAsync<ProductResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.RetrieveOneShipmentRateAPIRoute, args), Credentials.Username);
 
         /// <summary>
         /// Retrieve rates for multiple piece shipments
         /// </summary>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<RatingProductResponseModel>> GetMultipleShipmentRatesAsync(RetrieveMultipleShipmentRateAPIArgs args, RatingRequestModel model)
-            => Client.PostAsync<RatingProductResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.RetrieveMultipleShipmentRatesAPIRoute, args), model, Credentials.Username);
+        public Task<WebRequestResult<ProductResponseModel>> GetMultipleShipmentRatesAsync(RetrieveMultipleShipmentRateAPIArgs args, RatingRequestModel model)
+            => Client.PostAsync<ProductResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.RetrieveMultipleShipmentRatesAPIRoute, args), model, Credentials.Username);
 
         /// <summary>
         /// Gets the landed cost
@@ -67,8 +67,8 @@
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public Task<WebRequestResult<RatingProductResponseModel>> CalculateLandedCostAsync(LandedCostAPIArgs args, RatingLandedCostRequestModel model)
-            => Client.PostAsync<RatingProductResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.LandedCostAPIRoute, args), model, Credentials.Username);
+        public Task<WebRequestResult<ProductResponseModel>> CalculateLandedCostAsync(LandedCostAPIArgs args, RatingLandedCostRequestModel model)
+            => Client.PostAsync<ProductResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.LandedCostAPIRoute, args), model, Credentials.Username);
 
         #endregion
 
@@ -79,8 +79,8 @@
         /// </summary>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<RatingProductResponseModel>> GetProductsForOnePieceShipmentAsync(ProductAPIArgs args)
-            => Client.GetAsync<RatingProductResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.RetrieveProductsForOnePieceShipmentAPIRoute, args), Credentials.Username);
+        public Task<WebRequestResult<ProductResponseModel>> GetProductsForOnePieceShipmentAsync(ProductAPIArgs args)
+            => Client.GetAsync<ProductResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.RetrieveProductsForOnePieceShipmentAPIRoute, args), Credentials.Username);
 
         #endregion
 
@@ -92,8 +92,8 @@
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<ShipmentProofOfDeliveryDocumentResponseModel>> GetElectronicProofOfDeliveryAsync(string shipmentTrackingNumber, ShipmentProofOfDeliveryAPIArgs args)
-            => Client.GetAsync<ShipmentProofOfDeliveryDocumentResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetElectronicProofOfDeliveryAPIRoute(shipmentTrackingNumber), args), Credentials.Username);
+        public Task<WebRequestResult<ElectronicProofOfDeliveryResponseModel>> GetElectronicProofOfDeliveryAsync(string shipmentTrackingNumber, ShipmentProofOfDeliveryAPIArgs args)
+            => Client.GetAsync<ElectronicProofOfDeliveryResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetElectronicProofOfDeliveryAPIRoute(shipmentTrackingNumber), args), Credentials.Username);
 
         /// <summary>
         /// Upload paperless trade shipment (PLT) images of previously created shipment.

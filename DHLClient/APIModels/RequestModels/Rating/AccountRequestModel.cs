@@ -15,7 +15,7 @@ namespace DHLClient
         /// <example>shipper</example>
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(ShippingRoleToStringJsonConverter))]
-        public ShippingRole TypeCode { get; set; }
+        public ShippingRole ShippingRole { get; set; }
 
         /// <summary>
         /// Please enter DHL Express account number

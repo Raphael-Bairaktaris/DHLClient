@@ -29,8 +29,8 @@ namespace DHLClient
         /// DHL Service Point location collection
         /// </summary>
         [JsonProperty("locations")]
-        public IEnumerable<LocationResponseModel> Locations 
-        { 
+        public IEnumerable<LocationResponseModel> Locations
+        {
             get => mLocations ?? Enumerable.Empty<LocationResponseModel>();
             set => mLocations = value;
         }

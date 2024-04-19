@@ -110,7 +110,7 @@ namespace DHLClient
         /// Here you need to define all the parties needed to ship the package
         /// </summary>
         [JsonProperty("customerDetails")]
-        public IEnumerable<ShipmentCustomerDetailLineRequestModel>? CustomerDetails { get; set; }
+        public IEnumerable<EntityProfileDetailRequestModel>? CustomerDetails { get; set; }
 
         #endregion
 

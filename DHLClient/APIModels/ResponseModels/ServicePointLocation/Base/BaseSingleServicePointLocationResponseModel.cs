@@ -22,8 +22,8 @@ namespace DHLClient
         /// The location
         /// </summary>
         [JsonProperty("location")]
-        public LocationResponseModel? Location 
-        { 
+        public LocationResponseModel? Location
+        {
             get => mLocation ??= new LocationResponseModel();
             set => mLocation = value;
         }

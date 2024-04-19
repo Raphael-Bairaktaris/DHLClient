@@ -60,6 +60,12 @@ namespace DHLClient
         public IEnumerable<ValueAddedServiceRequestModel>? ValueAddedServices { get; set; }
 
         /// <summary>
+        /// The DangerousGoods section indicates if there is dangerous good content within the shipment.
+        /// </summary>
+        [JsonProperty("dangerousGoods")]
+        public IEnumerable<DangerousGoodRequestModel>? DangerousGoods { get; set; }
+
+        /// <summary>
         /// Here you can modify label, waybillDoc, invoice and shipment receipt properties
         /// </summary>
         [JsonProperty("outputImageProperties")]
@@ -82,7 +88,7 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("customerDetails")]
-        public ShipmentCustomerDetailRequestModel? CustomerDetails { get; set; }
+        public EntityProfileRequestModel? CustomerDetails { get; set; }
 
         /// <summary>
         /// Here you can define all the properties related to the content of the prospected shipment

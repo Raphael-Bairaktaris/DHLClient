@@ -25,6 +25,12 @@ namespace DHLClient
         [JsonProperty("localProductCode")]
         public string? LocalProductCode { get; set; }
 
+        /// <summary>
+        /// Please use if you wish to filter the response by value added services
+        /// </summary>
+        [JsonProperty("valueAddedServices")]
+        public IEnumerable<ValueAddedServiceRequestModel>? ValueAddedServices { get; set; }
+
         #endregion
 
         #region Constructors

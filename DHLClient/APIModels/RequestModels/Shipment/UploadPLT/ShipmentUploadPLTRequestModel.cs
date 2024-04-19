@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests for creating or updating an upload paperless trade 
     /// </summary>
-    public class ShipmentUploadPLTRequestModel : AccountRequestModel
+    public class ShipmentUploadPLTRequestModel
     {
         #region Public Properties
 
@@ -16,6 +16,12 @@ namespace DHLClient
         [JsonRequired]
         [JsonProperty("originalPlannedShippingDate")]
         public DateOnly OriginallyPlannedShippingDate { get; set; }
+
+        /// <summary>
+        /// Please enter all the DHL Express accounts and types to be used for this shipment
+        /// </summary>
+        [JsonProperty("accounts")]
+        public IEnumerable<AccountRequestModel>? Accounts { get; set; }
 
         /// <summary>
         /// Please enter DHL Express Global Product code

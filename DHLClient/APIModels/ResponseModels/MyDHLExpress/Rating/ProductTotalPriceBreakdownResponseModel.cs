@@ -12,7 +12,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="PriceBreakdown"/> property
         /// </summary>
-        private IEnumerable<RatingProductPriceBreakdownResponseModel>? mPriceBreakdown;
+        private IEnumerable<RatingBreakdownResponseModel>? mPriceBreakdown;
 
         #endregion
 
@@ -36,9 +36,9 @@ namespace DHLClient
         /// The price breakdown
         /// </summary>
         [JsonProperty("priceBreakdown")]
-        public IEnumerable<RatingProductPriceBreakdownResponseModel> PriceBreakdown
+        public IEnumerable<RatingBreakdownResponseModel> PriceBreakdown
         {
-            get => mPriceBreakdown ?? Enumerable.Empty<RatingProductPriceBreakdownResponseModel>();
+            get => mPriceBreakdown ?? Enumerable.Empty<RatingBreakdownResponseModel>();
             set => mPriceBreakdown = value;
         }
 
