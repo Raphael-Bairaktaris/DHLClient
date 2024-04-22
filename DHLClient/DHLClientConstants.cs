@@ -534,6 +534,7 @@ namespace DHLClient
             { ImageFormat.JPEG, "JPEG" },
             { ImageFormat.GIF, "GIF" },
             { ImageFormat.TIFF, "TIFF" },
+            { ImageFormat.JPG, "JPG" }
         }.ToImmutableDictionary();
 
         /// <summary>

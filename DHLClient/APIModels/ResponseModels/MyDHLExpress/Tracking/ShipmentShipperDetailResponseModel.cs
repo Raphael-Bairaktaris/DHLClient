@@ -31,6 +31,7 @@ namespace DHLClient
         /// <summary>
         /// The shipper's name
         /// </summary>
+        [JsonProperty("name")]
         public string Name
         {
             get => mName ?? string.Empty;

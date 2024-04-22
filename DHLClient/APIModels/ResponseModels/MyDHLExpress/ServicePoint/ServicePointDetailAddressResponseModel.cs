@@ -32,7 +32,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="HouseNumber"/> property
         /// </summary>
-        private string mHouseNumber;
+        private string? mHouseNumber;
 
         /// <summary>
         /// The member of the <see cref="AdditionalInfo"/> property

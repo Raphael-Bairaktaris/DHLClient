@@ -28,6 +28,11 @@
         /// <summary>
         /// JPEG
         /// </summary>
-        JPEG = 4
+        JPEG = 4,
+
+        /// <summary>
+        /// JPG
+        /// </summary>
+        JPG = 5
     }
 }
