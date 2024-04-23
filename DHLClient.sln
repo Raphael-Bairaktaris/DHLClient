@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRange", "TestRange\TestRange.csproj", "{2411E387-CF4D-4B11-B4BA-7A09A738F6C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHLClientUnitTests", "DHLClientUnitTests\DHLClientUnitTests.csproj", "{2E3ADE9B-C82B-4352-BF18-93AF201742AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DHLClientUnitTests", "DHLClientUnitTests\DHLClientUnitTests.csproj", "{2E3ADE9B-C82B-4352-BF18-93AF201742AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

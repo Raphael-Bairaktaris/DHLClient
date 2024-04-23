@@ -85,8 +85,8 @@ namespace DHLClient
         /// Please provide the format of the QR Code output format.
         /// </summary>
         [JsonProperty("encodingFormat")]
-        public EncodingFormat? EncodingFormat 
-        { 
+        public EncodingFormat? EncodingFormat
+        {
             get { return mEncodingFormat; }
             set
             {
@@ -113,7 +113,7 @@ namespace DHLClient
         /// Additional customer label free text that can be printed in certain label.
         /// </summary>
         [JsonProperty("labelFreeText")]
-        public string? LabelFreeText{ get; set; }
+        public string? LabelFreeText { get; set; }
 
         /// <summary>
         /// Additional customer label text that can be printed in certain label

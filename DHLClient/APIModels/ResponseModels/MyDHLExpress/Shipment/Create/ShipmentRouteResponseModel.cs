@@ -48,8 +48,8 @@ namespace DHLClient
         /// The service area code 
         /// </summary>
         [JsonProperty("serviceAreaCode")]
-        public string ServiceAreaCode 
-        { 
+        public string ServiceAreaCode
+        {
             get => mServiceAreaCode ?? string.Empty;
             set => mServiceAreaCode = value;
         }

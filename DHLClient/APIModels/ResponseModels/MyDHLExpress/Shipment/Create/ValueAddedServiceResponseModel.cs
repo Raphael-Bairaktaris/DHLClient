@@ -27,8 +27,8 @@ namespace DHLClient
         /// The service code
         /// </summary>
         [JsonProperty("serviceCode")]
-        public string ServiceCode 
-        { 
+        public string ServiceCode
+        {
             get => mServiceCode ?? string.Empty;
             set => mServiceCode = value;
         }
@@ -37,8 +37,8 @@ namespace DHLClient
         /// The description
         /// </summary>
         [JsonProperty("description")]
-        public string Description 
-        { 
+        public string Description
+        {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }

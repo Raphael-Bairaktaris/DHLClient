@@ -54,7 +54,7 @@
         /// Telugu script
         /// </summary>
         Telu = 9,
-        
+
         /// <summary>
         /// Greek script
         /// </summary>

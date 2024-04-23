@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -24,14 +19,16 @@ namespace DHLClient
         /// </summary>
         private ShippingEntityResponseModel? mReceiverDetails;
 
+        #endregion
+
         #region Public Properties
 
         /// <summary>
         /// The shipper details
         /// </summary>
         [JsonProperty("shipperDetails")]
-        public ShippingEntityResponseModel ShipperDetails 
-        { 
+        public ShippingEntityResponseModel ShipperDetails
+        {
             get => mShipperDetails ??= new ShippingEntityResponseModel();
             set => mShipperDetails = value;
         }
@@ -40,8 +37,8 @@ namespace DHLClient
         /// The receiver details
         /// </summary>
         [JsonProperty("receiverDetails")]
-        public ShippingEntityResponseModel ReceiverDetails 
-        { 
+        public ShippingEntityResponseModel ReceiverDetails
+        {
             get => mReceiverDetails ??= new ShippingEntityResponseModel();
             set => mReceiverDetails = value;
         }

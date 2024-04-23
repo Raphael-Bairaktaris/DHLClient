@@ -3,16 +3,16 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a base product price breakdown response
+    /// Represents a shipment charge
     /// </summary>
-    public class ProductTotalPriceBreakdownResponseModel
+    public class ShipmentChargeResponseModel
     {
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="PriceBreakdown"/> property
+        /// The member of the <see cref="ServiceBreakdown"/> property
         /// </summary>
-        private IEnumerable<ProductPriceBreakdownResponseModel>? mPriceBreakdown;
+        private IEnumerable<ServiceBreakdownResponseModel>? mServiceBreakdown;
 
         #endregion
 
@@ -21,6 +21,8 @@ namespace DHLClient
         /// <summary>
         /// The currency type
         /// </summary>
+        /// <example>BILLC</example>
+        [JsonRequired]
         [JsonProperty("currencyType")]
         [JsonConverter(typeof(CurrencyTypeToStringJsonConverter))]
         public CurrencyType CurrencyType { get; set; }
@@ -28,20 +30,28 @@ namespace DHLClient
         /// <summary>
         /// This the currency of the rated shipment for the prices listed.
         /// </summary>
+        /// <example>USD</example>
+        [JsonRequired]
         [JsonProperty("priceCurrency")]
         [JsonConverter(typeof(CurrencyCodeToStringJsonConverter))]
         public CurrencyCode PriceCurrency { get; set; }
 
         /// <summary>
-        /// The price breakdown
+        /// The amount price of DHL product and services
         /// </summary>
-        [JsonProperty("priceBreakdown")]
-        public IEnumerable<ProductPriceBreakdownResponseModel> PriceBreakdown
-        {
-            get => mPriceBreakdown ?? Enumerable.Empty<ProductPriceBreakdownResponseModel>();
-            set => mPriceBreakdown = value;
-        }
+        /// <example>147</example>
+        [JsonProperty("price")]
+        public decimal Price { get; set; }
 
+        /// <summary>
+        /// The service breakdown
+        /// </summary>
+        [JsonProperty("serviceBreakdown")]
+        public IEnumerable<ServiceBreakdownResponseModel> ServiceBreakdown
+        {
+            get => mServiceBreakdown ?? Enumerable.Empty<ServiceBreakdownResponseModel>();
+            set => mServiceBreakdown = value;
+        }
 
         #endregion
 
@@ -50,7 +60,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ProductTotalPriceBreakdownResponseModel() : base()
+        public ShipmentChargeResponseModel() : base()
         {
 
         }

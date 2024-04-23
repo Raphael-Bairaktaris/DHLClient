@@ -93,8 +93,8 @@ namespace DHLClient
         /// </summary>
         /// <example>CZ</example>
         [JsonProperty("provinceCode")]
-        public string ProvinceCode 
-        { 
+        public string ProvinceCode
+        {
             get => mProvinceCode ?? string.Empty;
             set => mProvinceCode = value;
         }
@@ -135,8 +135,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Kralupy</example>
         [JsonProperty("cityDistrictName")]
-        public string CityDistrictName 
-        { 
+        public string CityDistrictName
+        {
             get => mCityDistrictName ?? string.Empty;
             set => mCityDistrictName = value;
         }
@@ -146,8 +146,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Central Bohemia</example>
         [JsonProperty("provinceName")]
-        public string ProvinceName 
-        { 
+        public string ProvinceName
+        {
             get => mProvinceName ?? string.Empty;
             set => mProvinceName = value;
         }
@@ -157,8 +157,8 @@ namespace DHLClient
         /// </summary>
         /// <example>Czech Republic</example>
         [JsonProperty("countryName")]
-        public string CountryName 
-        { 
+        public string CountryName
+        {
             get => mCountryName ?? string.Empty;
             set => mCountryName = value;
         }

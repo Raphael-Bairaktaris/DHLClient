@@ -69,6 +69,11 @@ namespace DHLClient
         /// </summary>
         private IEnumerable<ValueAddedServiceResponseModel>? mValueAddedService;
 
+        /// <summary>
+        /// The member of the <see cref="PickupDetails"/> property
+        /// </summary>
+        private PickupDetailResponseModel? mPickupDetails;
+
         #endregion
 
         #region Public Properties
@@ -77,8 +82,8 @@ namespace DHLClient
         /// This array contains all the DHL Express special handling feature codes
         /// </summary>
         [JsonProperty("serviceHandlingFeatureCodes")]
-        public IEnumerable<string> ServiceHandlingFeatureCodes 
-        { 
+        public IEnumerable<string> ServiceHandlingFeatureCodes
+        {
             get => mServiceHandlingFeatureCodes ?? Enumerable.Empty<string>();
             set => mServiceHandlingFeatureCodes = value;
         }
@@ -95,8 +100,8 @@ namespace DHLClient
         /// </summary>
         /// <example>IMP</example>
         [JsonProperty("billingCode")]
-        public string BillingCode 
-        { 
+        public string BillingCode
+        {
             get => mBillingCode ?? string.Empty;
             set => mBillingCode = value;
         }
@@ -106,8 +111,8 @@ namespace DHLClient
         /// </summary>
         /// <example>WPX</example>
         [JsonProperty("serviceContentCode")]
-        public string ServiceContentCode 
-        { 
+        public string ServiceContentCode
+        {
             get => mServiceContentCode ?? string.Empty;
             set => mServiceContentCode = value;
         }
@@ -116,8 +121,8 @@ namespace DHLClient
         /// Here you need to define all the parties needed to ship the package
         /// </summary>
         [JsonProperty("customerDetails")]
-        public ShippingCustomerDetailResponseModel CustomerDetails 
-        { 
+        public ShippingCustomerDetailResponseModel CustomerDetails
+        {
             get => mCustomerDetails ??= new ShippingCustomerDetailResponseModel();
             set => mCustomerDetails = value;
         }
@@ -126,8 +131,8 @@ namespace DHLClient
         /// The origin service area
         /// </summary>
         [JsonProperty("originServiceArea")]
-        public ShipmentRouteResponseModel OriginServiceArea 
-        { 
+        public ShipmentRouteResponseModel OriginServiceArea
+        {
             get => mOriginServiceArea ??= new ShipmentRouteResponseModel();
             set => mOriginServiceArea = value;
         }
@@ -136,8 +141,8 @@ namespace DHLClient
         /// The destination service area
         /// </summary>
         [JsonProperty("destinationServiceArea")]
-        public ShipmentRouteResponseModel DestinationServiceArea 
-        { 
+        public ShipmentRouteResponseModel DestinationServiceArea
+        {
             get => mDestinationServiceArea ??= new ShipmentRouteResponseModel();
             set => mDestinationServiceArea = value;
         }
@@ -146,8 +151,8 @@ namespace DHLClient
         /// Here you can find DHL Routing Code which was applied on your shipment
         /// </summary>
         [JsonProperty("dhlRoutingCode")]
-        public string DHLRoutingCode 
-        { 
+        public string DHLRoutingCode
+        {
             get => mDHLRoutingCode ?? string.Empty;
             set => mDHLRoutingCode = value;
         }
@@ -156,8 +161,8 @@ namespace DHLClient
         /// Here you can find DHL Routing Data ID which was applied on your shipment
         /// </summary>
         [JsonProperty("dhlRoutingDataId")]
-        public string DHLRoutingDataId 
-        { 
+        public string DHLRoutingDataId
+        {
             get => mDHLRoutingDataId ?? string.Empty;
             set => mDHLRoutingDataId = value;
         }
@@ -166,8 +171,8 @@ namespace DHLClient
         /// Here you can find Delivery Date Code which was applied on your shipment
         /// </summary>
         [JsonProperty("deliveryDateCode")]
-        public string DeliveryDateCode 
-        { 
+        public string DeliveryDateCode
+        {
             get => mDeliveryDateCode ?? string.Empty;
             set => mDeliveryDateCode = value;
         }
@@ -176,8 +181,8 @@ namespace DHLClient
         /// Here you can find Delivery Time Code which was applied on your shipment
         /// </summary>
         [JsonProperty("deliveryTimeCode")]
-        public string DeliveryTimeCode 
-        { 
+        public string DeliveryTimeCode
+        {
             get => mDeliveryTimeCode ?? string.Empty;
             set => mDeliveryTimeCode = value;
         }
@@ -186,8 +191,8 @@ namespace DHLClient
         /// Here you can find the product short name of your shipment
         /// </summary>
         [JsonProperty("productShortName")]
-        public string ProductShortName 
-        { 
+        public string ProductShortName
+        {
             get => mProductShortName ?? string.Empty;
             set => mProductShortName = value;
         }
@@ -196,10 +201,20 @@ namespace DHLClient
         /// The value added services
         /// </summary>
         [JsonProperty("valueAddedService")]
-        public IEnumerable<ValueAddedServiceResponseModel> ValueAddedService 
-        { 
+        public IEnumerable<ValueAddedServiceResponseModel> ValueAddedService
+        {
             get => mValueAddedService ?? Enumerable.Empty<ValueAddedServiceResponseModel>();
             set => mValueAddedService = value;
+        }
+
+        /// <summary>
+        /// Here you can find pickup details
+        /// </summary>
+        [JsonProperty("pickupDetails")]
+        public PickupDetailResponseModel PickupDetails
+        {
+            get => mPickupDetails ??= new PickupDetailResponseModel();
+            set => mPickupDetails = value;
         }
 
         #endregion

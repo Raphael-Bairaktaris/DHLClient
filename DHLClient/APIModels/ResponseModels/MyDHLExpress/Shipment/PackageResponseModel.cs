@@ -31,8 +31,8 @@ namespace DHLClient
         /// <example>JD914600003889482921</example>
         [JsonRequired]
         [JsonProperty("trackingNumber")]
-        public string TrackingNumber 
-        { 
+        public string TrackingNumber
+        {
             get => mTrackingNumber ?? string.Empty;
             set => mTrackingNumber = value;
         }

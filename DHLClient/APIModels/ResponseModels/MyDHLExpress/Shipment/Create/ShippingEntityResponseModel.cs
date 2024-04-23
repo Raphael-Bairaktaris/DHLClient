@@ -27,8 +27,8 @@ namespace DHLClient
         /// The postal address details
         /// </summary>
         [JsonProperty("postalAddress")]
-        public PostalAddressResponseModel PostalAddress 
-        { 
+        public PostalAddressResponseModel PostalAddress
+        {
             get => mPostalAddress ??= new PostalAddressResponseModel();
             set => mPostalAddress = value;
         }
@@ -37,8 +37,8 @@ namespace DHLClient
         /// The contact information details
         /// </summary>
         [JsonProperty("contactInformation")]
-        public ContactInformationResponseModel ContactInformation 
-        { 
+        public ContactInformationResponseModel ContactInformation
+        {
             get => mContactInformation ??= new ContactInformationResponseModel();
             set => mContactInformation = value;
         }

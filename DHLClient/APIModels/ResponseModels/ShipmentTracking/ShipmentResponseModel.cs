@@ -14,10 +14,6 @@ namespace DHLClient
         /// </summary>
         private IEnumerable<ShipmentDetailResponseModel>? mShipments;
 
-        /// <summary>
-        /// The member of the <see cref="PossibleAdditionalShipmentsURL"/> property
-        /// </summary>
-        private IEnumerable<string>? mPossibleAdditionalShipmentsURL;
         #endregion
 
         #region Public Property

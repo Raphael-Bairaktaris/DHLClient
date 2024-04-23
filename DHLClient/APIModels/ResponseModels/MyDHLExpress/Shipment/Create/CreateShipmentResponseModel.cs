@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DHLClient
 {
@@ -28,6 +23,31 @@ namespace DHLClient
         /// The member of the <see cref="Documents"/> property
         /// </summary>
         private IEnumerable<DocumentResponseModel>? mDocuments;
+
+        /// <summary>
+        /// The member of the <see cref="ShipmentDetails"/> property
+        /// </summary>
+        private IEnumerable<CreateShipmentDetailResponseModel>? mShipmentDetails;
+
+        /// <summary>
+        /// The member of the <see cref="ShipmentCharges"/> property
+        /// </summary>
+        private IEnumerable<ShipmentChargeResponseModel>? mShipmentCharges;
+
+        /// <summary>
+        /// The member of the <see cref="BarcodeInfo"/> property
+        /// </summary>
+        private BarcodeInformationResponseModel? mBarcodeInfo;
+
+        /// <summary>
+        /// The member of the <see cref="EstimatedDeliveryDate"/> property
+        /// </summary>
+        private EstimatedDeliveryDateResponseModel? mEstimatedDeliveryDate;
+
+        /// <summary>
+        /// The member of the <see cref="Warnings"/> property
+        /// </summary>
+        private IEnumerable<string>? mWarnings;
 
         #endregion
 
@@ -61,8 +81,8 @@ namespace DHLClient
         /// If you asked for pickup service here you will find Dispatch Confirmation Number which identifies your pickup booking
         /// </summary>
         [JsonProperty("dispatchConfirmationNumber")]
-        public string DispatchConfirmationNumber 
-        { 
+        public string DispatchConfirmationNumber
+        {
             get => mDispatchConfirmationNumber ?? string.Empty;
             set => mDispatchConfirmationNumber = value;
         }
@@ -71,8 +91,8 @@ namespace DHLClient
         /// Here you can find information for all pieces your shipment is having like Piece Identification Number
         /// </summary>
         [JsonProperty("packages")]
-        public IEnumerable<PackageResponseModel> Packages 
-        { 
+        public IEnumerable<PackageResponseModel> Packages
+        {
             get => mPackages ?? Enumerable.Empty<PackageResponseModel>();
             set => mPackages = value;
         }
@@ -81,8 +101,8 @@ namespace DHLClient
         /// Here you can find all documents created for the shipment like Transport and WaybillDoc labels, Invoice, Receipt
         /// </summary>
         [JsonProperty("documents")]
-        public IEnumerable<DocumentResponseModel> Documents 
-        { 
+        public IEnumerable<DocumentResponseModel> Documents
+        {
             get => mDocuments ?? Enumerable.Empty<DocumentResponseModel>();
             set => mDocuments = value;
         }
@@ -98,7 +118,52 @@ namespace DHLClient
         /// Here you can find additional information related to your shipment when you ask for it in the request
         /// </summary>
         [JsonProperty("shipmentDetails")]
-        public IEnumerable<CreateShipmentDetailResponseModel> ShipmentDetails { get; set; }
+        public IEnumerable<CreateShipmentDetailResponseModel> ShipmentDetails
+        {
+            get => mShipmentDetails ?? Enumerable.Empty<CreateShipmentDetailResponseModel>();
+            set => mShipmentDetails = value;
+        }
+
+        /// <summary>
+        /// Here you can find rates related to your shipment
+        /// </summary>
+        [JsonProperty("shipmentCharges")]
+        public IEnumerable<ShipmentChargeResponseModel> ShipmentCharges
+        {
+            get => mShipmentCharges ?? Enumerable.Empty<ShipmentChargeResponseModel>();
+            set => mShipmentCharges = value;
+        }
+
+        /// <summary>
+        /// Here you can find barcode details in base64
+        /// </summary>
+        [JsonProperty("barcodeInfo")]
+        public BarcodeInformationResponseModel BarcodeInfo
+        {
+            get => mBarcodeInfo ??= new BarcodeInformationResponseModel();
+            set => mBarcodeInfo = value;
+        }
+
+        /// <summary>
+        ///Here you can find details of estimated delivery date
+        /// </summary>
+        [JsonProperty("estimatedDeliveryDate")]
+        public EstimatedDeliveryDateResponseModel EstimatedDeliveryDate
+        {
+            get => mEstimatedDeliveryDate ??= new EstimatedDeliveryDateResponseModel();
+            set => mEstimatedDeliveryDate = value;
+        }
+
+        /// <summary>
+        /// The warnings
+        /// </summary>
+        /// <example>Can't return prices</example>
+        [JsonProperty("warnings")]
+        public IEnumerable<string> Warnings
+        {
+            get => mWarnings ?? Enumerable.Empty<string>();
+            set => mWarnings = value;
+        }
 
         #endregion
 

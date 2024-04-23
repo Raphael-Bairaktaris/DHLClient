@@ -22,8 +22,8 @@ namespace DHLClient
         /// The document details
         /// </summary>
         [JsonProperty("documents")]
-        public IEnumerable<ElectronicProofOfDeliveryDetailResponseModel> Documents 
-        { 
+        public IEnumerable<ElectronicProofOfDeliveryDetailResponseModel> Documents
+        {
             get => mDocuments ?? Enumerable.Empty<ElectronicProofOfDeliveryDetailResponseModel>();
             set => mDocuments = value;
         }

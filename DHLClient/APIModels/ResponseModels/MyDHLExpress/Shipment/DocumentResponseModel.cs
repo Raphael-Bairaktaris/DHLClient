@@ -34,8 +34,8 @@ namespace DHLClient
         /// Contains base64 encoded document image
         /// </summary>
         [JsonProperty("content")]
-        public string Content 
-        { 
+        public string Content
+        {
             get => mContent ?? string.Empty;
             set => mContent = value;
         }
@@ -45,8 +45,8 @@ namespace DHLClient
         /// </summary>
         /// <example>label</example>
         [JsonProperty("typeCode")]
-        public string TypeCode 
-        { 
+        public string TypeCode
+        {
             get => mTypeCode ?? string.Empty;
             set => mTypeCode = value;
         }

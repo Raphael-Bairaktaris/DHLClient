@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a price breakdown 
+    /// Represents a price breakdown
     /// </summary>
     public class RatingBreakdownResponseModel
     {

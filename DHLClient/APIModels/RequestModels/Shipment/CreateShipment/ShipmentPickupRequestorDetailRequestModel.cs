@@ -3,7 +3,7 @@
     /// <summary>
     /// Requests used for creating or updating a requestor detail
     /// </summary>
-    public class ShipmentPickupRequestorDetailRequestModel : ShipmentPickupDetailRequestModel
+    public class ShipmentPickupRequestorDetailRequestModel : EntityProfileDetailRequestModel
     {
         #region Constructors
 

@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a product price breakdown response
     /// </summary>
-    public class RatingBreakdownResponseModel
+    public class ProductPriceBreakdownResponseModel
     {
         #region Public Properties
 
@@ -31,7 +31,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public RatingBreakdownResponseModel() : base()
+        public ProductPriceBreakdownResponseModel() : base()
         {
 
         }
