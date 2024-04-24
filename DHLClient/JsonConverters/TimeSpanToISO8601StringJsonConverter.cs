@@ -6,7 +6,7 @@ namespace DHLClient
     /// <summary>
     /// A <see cref="JsonConverter{T}"/> that is used to convert a <see cref="TimeSpan"/> to <see cref="string"/>
     /// </summary>
-    public class TimespanDurationToStringJsonConverter : JsonConverter<TimeSpan>
+    public class TimeSpanToISO8601StringJsonConverter : JsonConverter<TimeSpan>
     {
         #region Constants
 
@@ -22,7 +22,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public TimespanDurationToStringJsonConverter() : base()
+        public TimeSpanToISO8601StringJsonConverter() : base()
         {
 
         }
@@ -40,7 +40,7 @@ namespace DHLClient
         }
 
         /// <inheritdoc/>
-        public override void WriteJson(JsonWriter writer, TimeSpan value, JsonSerializer serializer) 
+        public override void WriteJson(JsonWriter writer, TimeSpan value, JsonSerializer serializer)
             => writer.WriteValue(value.ToString(TimespanDurationFormat));
 
         #endregion

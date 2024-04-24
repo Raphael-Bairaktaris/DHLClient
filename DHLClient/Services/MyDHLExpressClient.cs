@@ -67,7 +67,7 @@
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public Task<WebRequestResult<ProductResponseModel>> CalculateLandedCostAsync(LandedCostAPIArgs args, RatingLandedCostRequestModel model)
+        public Task<WebRequestResult<ProductResponseModel>> CalculateLandedCostAsync(LandedCostAPIArgs args, LandedCostRequestModel model)
             => Client.PostAsync<ProductResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.LandedCostAPIRoute, args), model, Credentials.Username);
 
         #endregion
@@ -102,7 +102,7 @@
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public async Task<WebRequestResult> PatchPaperlessTradeShipmentAsync(string shipmentTrackingNumber, ShipmentUploadPLTAPIArgs args, ShipmentUploadPLTRequestModel model)
+        public async Task<WebRequestResult> PatchPaperlessTradeShipmentAsync(string shipmentTrackingNumber, ShipmentUploadPLTAPIArgs args, UploadPLTRequestModel model)
         {
             return await Client.PatchAsync<object>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.PatchPaperlessTradeShipmentAPIRoute(shipmentTrackingNumber), args), model, Credentials.Username);
         }
@@ -113,9 +113,9 @@
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public async Task<WebRequestResult<ShipmentResponseModel>> CreateDHLShipmentAsync(CreateShipmentAPIArgs args, CreateShipmentRequestModel model)
+        public async Task<WebRequestResult<CreateShipmentResponseModel>> CreateDHLShipmentAsync(CreateShipmentAPIArgs args, CreateShipmentRequestModel model)
         {
-            return await Client.PostAsync<ShipmentResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.CreateShipmentAPIRoute, args), model, Credentials.Username);
+            return await Client.PostAsync<CreateShipmentResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.CreateShipmentAPIRoute, args), model, Credentials.Username);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public Task<WebRequestResult<UploadCommercialInvoiceResponseModel>> AddCommercialInvoiceDataAsycn(string shipmentTrackingNumber, UploadCommercialInvoiceForShipmentAPIArgs args, UploadInvoiceDataRequestModel model)
+        public Task<WebRequestResult<UploadCommercialInvoiceResponseModel>> AddCommercialInvoiceDataAsycn(string shipmentTrackingNumber, UploadCommercialInvoiceForShipmentAPIArgs args, UploadCommercialInvoiceRequestModel model)
             => Client.PatchAsync<UploadCommercialInvoiceResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.PatchCommercialInvoiceDataAPIRoute(shipmentTrackingNumber), args), model, Credentials.Username);
 
         /// <summary>
@@ -134,7 +134,7 @@
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<ShipmentImageResponseModel>> GetShipmentImageAsync(string shipmentTrackingNumber, ShipmentGetImageAPIArgs args)
+        public Task<WebRequestResult<ShipmentImageResponseModel>> GetShipmentImageAsync(string shipmentTrackingNumber, ShipmentImageAPIArgs args)
             => Client.GetAsync<ShipmentImageResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetShipmentImageAPIRoute(shipmentTrackingNumber), args), Credentials.Username);
 
         #endregion
@@ -147,16 +147,16 @@
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<ShipmentTrackingSchemaResponseModel>> GetSingleDHLShipmentAsync(string shipmentTrackingNumber, TrackSingleShipmentAPIArgs args)
-            => Client.GetAsync<ShipmentTrackingSchemaResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetSingleDHLShipment(shipmentTrackingNumber), args), Credentials.Username);
+        public Task<WebRequestResult<ShipmentPieceResponseModel>> GetSingleDHLShipmentAsync(string shipmentTrackingNumber, TrackSingleShipmentAPIArgs args)
+            => Client.GetAsync<ShipmentPieceResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetSingleDHLShipment(shipmentTrackingNumber), args), Credentials.Username);
 
         /// <summary>
         /// Get a single or multiple DHL Express shipments
         /// </summary>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<ShipmentTrackingSchemaResponseModel>> GetMultipleDHLShipmentsAsync(TrackMultipleShipmentAPIArgs args)
-            => Client.GetAsync<ShipmentTrackingSchemaResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.TrackDHLShipmentsAPIRoute, args), Credentials.Username);
+        public Task<WebRequestResult<MultipleShipmentTrackingResponseModel>> GetMultipleDHLShipmentsAsync(TrackMultipleShipmentAPIArgs args)
+            => Client.GetAsync<MultipleShipmentTrackingResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.TrackDHLShipmentsAPIRoute, args), Credentials.Username);
 
         #endregion
 
@@ -187,7 +187,7 @@
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public async Task<WebRequestResult<CreatePickupResponseModel>> CreateDHLPickupAsycn(CreatePickupAPIArgs args, CreatePickupResponseModel model)
+        public async Task<WebRequestResult<CreatePickupResponseModel>> CreateDHLPickupAsync(CreatePickupAPIArgs args, CreatePickupRequestModel model)
         {
             return await Client.PostAsync<CreatePickupResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.CreateDHLPickupAPIRoute, args), model, Credentials.Username);
         }

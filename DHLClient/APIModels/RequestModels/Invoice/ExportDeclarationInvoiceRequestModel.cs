@@ -23,7 +23,6 @@ namespace DHLClient
         /// <example>2021-03-18</example>
         [JsonRequired]
         [JsonProperty("date")]
-        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly? Date { get; set; }
 
         /// <summary>

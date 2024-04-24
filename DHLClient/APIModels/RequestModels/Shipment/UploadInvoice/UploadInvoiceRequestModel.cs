@@ -15,7 +15,6 @@ namespace DHLClient
         /// </summary>
         /// <example>2020-04-20</example>
         [JsonProperty("plannedShipDate")]
-        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly PlannedShipDate { get; set; }
 
         /// <summary>

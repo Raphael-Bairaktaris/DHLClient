@@ -17,7 +17,7 @@ namespace DHLClient
         /// <summary>
         /// The member of the <see cref="Identifiers"/> property
         /// </summary>
-        private IEnumerable<IdentifiersResponseModel>? mIdentifiers;
+        private IEnumerable<IdentifierDetailResponseModel>? mIdentifiers;
 
         #endregion
 
@@ -37,9 +37,9 @@ namespace DHLClient
         /// The identifiers
         /// </summary>
         [JsonProperty("identifiers")]
-        public IEnumerable<IdentifiersResponseModel> Identifiers
+        public IEnumerable<IdentifierDetailResponseModel> Identifiers
         {
-            get => mIdentifiers ?? Enumerable.Empty<IdentifiersResponseModel>();
+            get => mIdentifiers ?? Enumerable.Empty<IdentifierDetailResponseModel>();
             set => mIdentifiers = value;
         }
 

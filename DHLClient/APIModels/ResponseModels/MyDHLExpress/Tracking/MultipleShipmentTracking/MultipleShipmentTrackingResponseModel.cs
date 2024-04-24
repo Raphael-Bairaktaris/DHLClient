@@ -1,16 +1,16 @@
 ﻿namespace DHLClient
 {
     /// <summary>
-    /// Represents a receiver detail response
+    /// Represents multiple shipment tracking
     /// </summary>
-    public class ShipmentReceiverDetailResponseModel : ShipperPostalAddressResponseModel
+    public class MultipleShipmentTrackingResponseModel : ShipmentPieceResponseModel
     {
         #region Constructors
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentReceiverDetailResponseModel() : base()
+        public MultipleShipmentTrackingResponseModel() : base()
         {
 
         }

@@ -28,7 +28,7 @@ namespace DHLClient
         /// </summary>
         /// <example>PT30M</example>
         [JsonProperty("cutoffTimeOffset")]
-        [JsonConverter(typeof(TimespanDurationToStringJsonConverter))]
+        [JsonConverter(typeof(TimeSpanToISO8601StringJsonConverter))]
         public TimeSpan CutoffTimeOffset { get; set; }
 
         /// <summary>
@@ -70,14 +70,16 @@ namespace DHLClient
         /// </summary>
         /// <example>1</example>
         [JsonProperty("pickupDayOfWeek")]
-        public DayOfWeek PickupDayOfWeek { get; set; }
+        [JsonConverter(typeof(DHLDayOfWeekToIntJsonConverter))]
+        public DHLDayOfWeek PickupDayOfWeek { get; set; }
 
         /// <summary>
         /// Destination day of the week number
         /// </summary>
         /// <example>2</example>
         [JsonProperty("deliveryDayOfWeek")]
-        public DayOfWeek DeliveryDayOfWeek { get; set; }
+        [JsonConverter(typeof(DHLDayOfWeekToIntJsonConverter))]
+        public DHLDayOfWeek DeliveryDayOfWeek { get; set; }
 
         #endregion
 

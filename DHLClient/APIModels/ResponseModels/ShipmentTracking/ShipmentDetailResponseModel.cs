@@ -7,7 +7,7 @@ namespace DHLClient
     /// </summary>
     public class ShipmentDetailResponseModel
     {
-        #region MyRegion
+        #region Private Members
 
         /// <summary>
         /// The member of the <see cref="Id"/> property

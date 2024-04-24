@@ -14,54 +14,9267 @@ var pairs = DHLClientConstants.LanguageCodeToStringMapper;
 
 var client = new MyDHLExpressClient(new DHLClientCredentials("dmD3ZkqFTbXx2kgCnma63PABaiJWBAdt", "MxZWCZrWHaEc6I1H"), true);
 
-var json = $$"""
+var json = $$$"""
 {
-  "shipmentTrackingNumber": "1103733901",
-  "trackingUrl": "https://expressapi.dhl.com/mydhlapi/shipments/1103733901/tracking",
-  "packages": [
+  "referenceData": [
     {
-      "referenceNumber": 1,
-      "trackingNumber": "JD014600004617230770",
-      "trackingUrl": "https://expressapi.dhl.com/mydhlapi/shipments/1103733901/tracking?pieceTrackingNumber=JD014600004617230770"
+      "datasetName": "country",
+      "data": [
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GD"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GRENADA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AD"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ANDORRA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BULGARIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CK"
+          },
+          {
+            "attribute": "countryName",
+            "value": "COOK ISLANDS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ANTIGUA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AL"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ALBANIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AU"
+          },
+          {
+            "attribute": "countryName",
+            "value": "AUSTRALIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "STATE"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ARGENTINA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BD"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BANGLADESH"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "AUSTRIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "90"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BHUTAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "30"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "DZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ALGERIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GP"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GUADELOUPE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "IR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "IRAN (ISLAMIC REPUBLIC OF)"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "JP"
+          },
+          {
+            "attribute": "countryName",
+            "value": "JAPAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "STATE"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "30"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "LIBERIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MOROCCO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NIGERIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PF"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TAHITI"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "PORTUGAL"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "0"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "RU"
+          },
+          {
+            "attribute": "countryName",
+            "value": "RUSSIAN FEDERATION, THE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "210"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SV"
+          },
+          {
+            "attribute": "countryName",
+            "value": "EL SALVADOR"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "30"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TD"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CHAD"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TH"
+          },
+          {
+            "attribute": "countryName",
+            "value": "THAILAND"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "VE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "VENEZUELA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "90"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "VI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "VIRGIN ISLANDS (US)"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "WS"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SAMOA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "XC"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CURACAO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "IL"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ISRAEL"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "180"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "UZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "UZBEKISTAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AS"
+          },
+          {
+            "attribute": "countryName",
+            "value": "AMERICAN SAMOA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "UNITED ARAB EMIRATES"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BJ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BENIN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ANGUILLA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BF"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BURKINA FASO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "DO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "DOMINICAN REPUBLIC"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "JE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "JERSEY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LV"
+          },
+          {
+            "attribute": "countryName",
+            "value": "LATVIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MP"
+          },
+          {
+            "attribute": "countryName",
+            "value": "COMMONWEALTH NO. MARIANA ISLANDS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NAMIBIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SOMALIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "XS"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SOMALILAND, REP OF (NORTH SOMALIA)"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TL"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TIMOR LESTE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MONTENEGRO, REPUBLIC OF"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GH"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GHANA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GAMBIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "JO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "JORDAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PH"
+          },
+          {
+            "attribute": "countryName",
+            "value": "PHILIPPINES, THE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PK"
+          },
+          {
+            "attribute": "countryName",
+            "value": "PAKISTAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TURKEY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "US"
+          },
+          {
+            "attribute": "countryName",
+            "value": "UNITED STATES OF AMERICA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "STATE"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ZM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ZAMBIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ZW"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ZIMBABWE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "AZERBAIJAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "210"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "UA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "UKRAINE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "STATE"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ET"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ETHIOPIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "HU"
+          },
+          {
+            "attribute": "countryName",
+            "value": "HUNGARY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "IS"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ICELAND"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "COMOROS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LU"
+          },
+          {
+            "attribute": "countryName",
+            "value": "LUXEMBOURG"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "LIBYA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NICARAGUA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NP"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NEPAL"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SL"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SIERRA LEONE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ARMENIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BRUNEI"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "30"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BELIZE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CAMEROON"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "DE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GERMANY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "90"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "FI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "FINLAND"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GABON"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GL"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GREENLAND"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ST. KITTS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PL"
+          },
+          {
+            "attribute": "countryName",
+            "value": "POLAND"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SWAZILAND"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TONGA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TV"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TUVALU"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "XB"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BONAIRE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "XN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NEVIS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "XY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ST. BARTHELEMY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ZA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SOUTH AFRICA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "90"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CZECH REPUBLIC, THE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BRAZIL"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "VA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "VATICAN CITY STATE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MAURITANIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MOZAMBIQUE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SK"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SLOVAKIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "VC"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ST. VINCENT"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "KAZAKHSTAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NU"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NIUE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BELGIUM"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "90"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BS"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BAHAMAS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CF"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CENTRAL AFRICAN REPUBLIC"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CONGO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "FK"
+          },
+          {
+            "attribute": "countryName",
+            "value": "FALKLAND ISLANDS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "JM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "JAMAICA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MYANMAR"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MS"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MONTSERRAT"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MV"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MALDIVES"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "30"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MALAYSIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "30"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NORWAY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "PANAMA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "90"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "UY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "URUGUAY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "VG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "VIRGIN ISLANDS (BRITISH)"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "XM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ST. MAARTEN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "YE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "YEMEN, REPUBLIC OF"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MK"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NORTH MACEDONIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "FM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MICRONESIA, FEDERATED STATES OF"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BERMUDA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CANADA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "P"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "PROVINCE"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CV"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CAPE VERDE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "DJ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "DJIBOUTI"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "DK"
+          },
+          {
+            "attribute": "countryName",
+            "value": "DENMARK"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "EE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ESTONIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "EG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "EGYPT"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GUERNSEY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GIBRALTAR"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GUATEMALA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "IT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ITALY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MACAO SAR, CHINA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NL"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NETHERLANDS, THE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "PARAGUAY"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SOLOMON ISLANDS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SWEDEN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SLOVENIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SURINAME"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SYRIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "P"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "PROVINCE"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TC"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TURKS AND CAICOS ISLANDS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TOGO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "VU"
+          },
+          {
+            "attribute": "countryName",
+            "value": "VANUATU"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "RS"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SERBIA, REPUBLIC OF"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "KENYA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NIGER"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NEW ZEALAND"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "R"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country region"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "OM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "OMAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MD"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MOLDOVA, REPUBLIC OF"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "210"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PW"
+          },
+          {
+            "attribute": "countryName",
+            "value": "PALAU"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "FR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "FRANCE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GUINEA REPUBLIC"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GUYANA (BRITISH)"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "IC"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CANARY ISLANDS, THE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "A"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Autonomous community"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "IN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "INDIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SH"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SAINT HELENA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "D"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "District"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "LITHUANIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "PAPUA NEW GUINEA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "P"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "PROVINCE"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SINGAPORE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "STATE"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KP"
+          },
+          {
+            "attribute": "countryName",
+            "value": "KOREA, THE D.P.R OF (NORTH K.)"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "CN"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "IQ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "IRAQ"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BOSNIA AND HERZEGOVINA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "90"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BOLIVIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CH"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SWITZERLAND"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CYPRUS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "FO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "FAROE ISLANDS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SS"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SOUTH SUDAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CAYMAN ISLANDS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MC"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MONACO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MADAGASCAR"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MQ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MARTINIQUE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MU"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MAURITIUS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MW"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MALAWI"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "RE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "REUNION, ISLAND OF"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "UG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "UGANDA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KG"
+          },
+          {
+            "attribute": "countryName",
+            "value": "KYRGYZSTAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "210"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BH"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BAHRAIN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CL"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CHILE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CU"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CUBA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GB"
+          },
+          {
+            "attribute": "countryName",
+            "value": "UNITED KINGDOM"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GQ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GUINEA-EQUATORIAL"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LS"
+          },
+          {
+            "attribute": "countryName",
+            "value": "LESOTHO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MALTA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NAURU, REPUBLIC OF"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "RW"
+          },
+          {
+            "attribute": "countryName",
+            "value": "RWANDA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SAUDI ARABIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "VN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "VIETNAM"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "XE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ST. EUSTATIUS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "YT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MAYOTTE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SAN MARINO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BW"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BOTSWANA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "DM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "DOMINICA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "HT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "HAITI"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ID"
+          },
+          {
+            "attribute": "countryName",
+            "value": "INDONESIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "IE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "IRELAND, REPUBLIC OF"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "KIRIBATI"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "LAO PEOPLES DEMOCRATIC REPUBLIC"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "PERU"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "180"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "PR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "PUERTO RICO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TW"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TAIWAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AF"
+          },
+          {
+            "attribute": "countryName",
+            "value": "AFGHANISTAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TM"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TURKMENISTAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BURUNDI"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CHINA, PEOPLES REPUBLIC"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "CN"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ES"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SPAIN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "0"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "FJ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "FIJI"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GF"
+          },
+          {
+            "attribute": "countryName",
+            "value": "FRENCH GUYANA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GREECE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GU"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GUAM"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GW"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GUINEA-BISSAU"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KW"
+          },
+          {
+            "attribute": "countryName",
+            "value": "KUWAIT"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LC"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ST. LUCIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "LIECHTENSTEIN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LK"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SRI LANKA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MH"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MARSHALL ISLANDS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "RO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ROMANIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SC"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SEYCHELLES"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TZ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TANZANIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CD"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CONGO, THE DEMOCRATIC REPUBLIC OF"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "GE"
+          },
+          {
+            "attribute": "countryName",
+            "value": "GEORGIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AW"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ARUBA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BB"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BARBADOS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CI"
+          },
+          {
+            "attribute": "countryName",
+            "value": "COTE D IVOIRE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ER"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ERITREA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "HK"
+          },
+          {
+            "attribute": "countryName",
+            "value": "HONG KONG SAR, CHINA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "HN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "HONDURAS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "HR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CROATIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KH"
+          },
+          {
+            "attribute": "countryName",
+            "value": "CAMBODIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "LB"
+          },
+          {
+            "attribute": "countryName",
+            "value": "LEBANON"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MX"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MEXICO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "180"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "NC"
+          },
+          {
+            "attribute": "countryName",
+            "value": "NEW CALEDONIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "QA"
+          },
+          {
+            "attribute": "countryName",
+            "value": "QATAR"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SENEGAL"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ST"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SAO TOME AND PRINCIPE"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "BY"
+          },
+          {
+            "attribute": "countryName",
+            "value": "BELARUS"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "210"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TJ"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TAJIKISTAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "County"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KV"
+          },
+          {
+            "attribute": "countryName",
+            "value": "KOSOVO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "EU"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "AO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ANGOLA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CO"
+          },
+          {
+            "attribute": "countryName",
+            "value": "COLOMBIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "60"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "CR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "COSTA RICA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "EC"
+          },
+          {
+            "attribute": "countryName",
+            "value": "ECUADOR"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "KR"
+          },
+          {
+            "attribute": "countryName",
+            "value": "KOREA, REPUBLIC OF (SOUTH K.)"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AP"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          },
+          {
+            "attribute": "pickupWindowLeadTime",
+            "value": "120"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "ML"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MALI"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "MN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "MONGOLIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "CN"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "SD"
+          },
+          {
+            "attribute": "countryName",
+            "value": "SUDAN"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "O"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "Country-use when no divtype identif"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "C"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "SB"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TT"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TRINIDAD AND TOBAGO"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "S"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "Suburb"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "AM"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "LB"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "IN"
+          }
+        ],
+        [
+          {
+            "attribute": "countryCode",
+            "value": "TN"
+          },
+          {
+            "attribute": "countryName",
+            "value": "TUNISIA"
+          },
+          {
+            "attribute": "divisionTypeCode",
+            "value": "X"
+          },
+          {
+            "attribute": "divisionTypeName",
+            "value": "MIGRATION"
+          },
+          {
+            "attribute": "postalLocationTypeCode",
+            "value": "CP"
+          },
+          {
+            "attribute": "postalLocationDescription",
+            "value": "City Postcode"
+          },
+          {
+            "attribute": "regionCode",
+            "value": "ME"
+          },
+          {
+            "attribute": "unitOfMeasureWeight",
+            "value": "KG"
+          },
+          {
+            "attribute": "unitOfMeasureDimension",
+            "value": "CM"
+          }
+        ]
+      ]
     }
-  ],
-  "documents": [
-    {
-      "imageFormat": "PDF",
-      "content": "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",
-      "typeCode": "label"
-    },
-    {
-      "imageFormat": "PDF",
-      "content": "JVBERi0xLjQKJeLjz9MKNCAwIG9iago8PC9GaWx0ZXIvRmxhdGVEZWNvZGUvTGVuZ3RoIDUxPj5zdHJlYW0KeJwr5HIK4TJQMDUz07M0VghJ4XIN4QrkKlQwVDAAQgiZnKugH5FmqOCSrxDIBQD9nwpWCmVuZHN0cmVhbQplbmRvYmoKNiAwIG9iago8PC9Db250ZW50cyA0IDAgUi9UeXBlL1BhZ2UvUmVzb3VyY2VzPDwvUHJvY1NldCBbL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSV0vWE9iamVjdDw8L1hmMSAxIDAgUj4+Pj4vUGFyZW50IDUgMCBSL01lZGlhQm94WzAgMCAyODAuNjMgNTY2LjkzXT4+CmVuZG9iagoyIDAgb2JqCjw8L1N1YnR5cGUvVHlwZTEvVHlwZS9Gb250L0Jhc2VGb250L0hlbHZldGljYS1Cb2xkL0VuY29kaW5nL1dpbkFuc2lFbmNvZGluZz4+CmVuZG9iagozIDAgb2JqCjw8L1N1YnR5cGUvVHlwZTEvVHlwZS9Gb250L0Jhc2VGb250L0hlbHZldGljYS9FbmNvZGluZy9XaW5BbnNpRW5jb2Rpbmc+PgplbmRvYmoKMSAwIG9iago8PC9TdWJ0eXBlL0Zvcm0vRmlsdGVyL0ZsYXRlRGVjb2RlL1R5cGUvWE9iamVjdC9NYXRyaXggWzEgMCAwIDEgMCAwXS9Gb3JtVHlwZSAxL1Jlc291cmNlczw8L1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldL0ZvbnQ8PC9GMSAyIDAgUi9GMiAzIDAgUj4+Pj4vQkJveFswIDAgMjgwLjYzIDU2Ni45M10vTGVuZ3RoIDE1NzMxPj5zdHJlYW0KeJytfV2TZLdx5fv8inrakBzB0sU3wKeVSMqmg5JocbS013I4xqOmON5qkh6OWnbE/vhF5jkJ5K1ub8gbSz5MnQaQSACJzETi4/7bq+NSar2OdHmcP4/L7VXsx7Um/5MZbq++ffX1q+9ehcufX8XL387s//oqHJdfvfrHfzouf3j1b1r+uLz/46tfvH71s1+Gy7i2fHn9zSwgfw+XeO2TWCnXEi6vZ3XXUEebP9+++slfff3zf/jF5198cfn0N5/81U9f/+ukNf/82WsjVa4pPSeV2zVFkIq156Gkfv39h8uH7y//8nB58+HDm7ffPvxB4A9v3v6vN398uHx0+Zs33+lfPvn+T+/fPbx/VlmcldXyvLI0rrWxsl6PrpXFI8aPQvzoaJdf/cenf/PF5edffn4J1+Pys8tff/HV5e3D+w/vvnk3Wbi9+ZeHm69LO+t6HGlE6bKQ+nXsoQgjXlvdPW945ipdMLIb/PaVcCv/796P+Zqqb0aYLYizdTkKzdmQj8I1ZG3G11/+/TPehFQMx7WUOWb92tpkKx7NxvCQemOM15o9Ttc0DCvqE+VrG4qOoChd3u6iCYnxekzeyuQtThSQFq85aN5wzUVxKJoqdGaergVjMSRZ+zWt1NsdjnF2gXCULjEdV3ATopRL4RqDcl6RGK3ZMVbtN6C3d51ym10fj3ptIo9VJH52U5iMDhCvwkSYo1U9nlMjGFakHdGbgpQUJW2PFY1I7UiN0pUxtOtA24tmbSojE8asiVnqOLQNs2CphqSbms5sYOmmeu2zY/KQhsQpO3m1J8Ypp9nQ27vWavvTZKQbtdn+NMff5ZDaVPIMS9/3XbuIb5xVj2wD9ah5enEDmer1aLvXY9b+cvjQFoiwKZxi1hxsMht27jnOwWHjIDbXismuiM7muovm2jhPqWznVoQxtdvQfgydE+ZY+KZ9l2e9WcfxtvMTexqLj6NP9ebG6sDYSYcFT4P4xEeTf4RGkYlFfFPsBmhlJ9buoPIHa5NE1TYsVgV31zLLTnwiYfOidlUBqwcnlnm+uLL8xEqjHdfhR4V5Vm/serX1kj/lc2/EWkDD1Fidhb1siaLpHrdruxOOmdaDY+OEI+acVjqV2fyjzNmJqqov+TN6LiJVBJuTawroUdzkmhq/dN9F41qya+6pXpl8UxnVOhX6n6fa/luq7t/+tdh1WIfdZWYtvjITMauKJwtBI3OI9oaFTqGphfjq23c//PDw/vKxtxOhqESIPlajpeqMMKRrjQqmrniaBktn79TW02IbSNccXdpUOmOVKzJvnpRmVzhHZtYnOhrgSaqfpsPSZmOagqzlCLOI/U2yVpCJSciEYUCryAtKfVpsyody1gCn1TAwuXZJUeoJakUEBBCUIRMjFpXnakB5Fq3FNDIZRGo2z0FUhPI8h9W603f10xTJqd75hyhTy6Aq7tsrmoJ7qJlv57I3R6zI9Hx0UKehlX4Gj+CIEX47dcu1583Zhl0F+tCpJg2Z/TZEiglmB4xrXEndOqpo33T0qRq+DSBbhOk67brYy6gtPwJJjiVb47p+Pykn1aBxOYtVpCnU0RKDLZL6DLL/Tg32PZDEY9QeSN1oB+gCq2jC6dLsNAVR5HqnqVaaoHcDymBqBq2+6Qo53rV2ZSfbVExF7Zqac3Sz5Mp7BGJcMieODyZGEO2haUemkO/fvbikJAIsxRKaxGI9rm5OloYh0FGytCy6QcsxrbIZ/WJA3cOdFs2/uIeU9ioVNs5FlAuWsDqlB1JcfaSdFmUVINXDkOsAEd4WzKK5VCPwt7a3pZXkqci0nSKUhpschJynEXbqHibpQbEF6o+wt+rKqr3V1IwwrYljr6AjLaAnR1ELid9Kow8DT0o/r7RVdxJ1Z9BE3jdDu2uot7naRUiVMS1KyQ4Gp18mKEmBVjRh76b/DWQoT4NJBHzSHGC+yACmiA7Qnjag1man6VhPItQrCSRTMb4nybpa9XRukzRSDCNt2myjOLGFSJvYLW0StXwDdUAEZ/fzdxSNsFKmxHQthAbotJn0aG2m/pKqhoGnxYfC24ktz2aCJy1rmWDw5ghPKJ3IHiWnEVKk/cTfubukIpZOSC6w+VF4O9evDCXTXUE7LqE1CpM2ftnHFKEro8yeDXp2aZPuKqbe09MiqeKfEsSaUyNl9W2ZVlyhgvFVevxtVS141AsFpAZHDLz7dj2dGlqlnflqgD+NOpDqkM2s2oPZrrGggd3+MYygq0lrbrBz1sVV2DU2K80qepheE3p4AWt2G9YjKGV9RYLoxOYU0UzrTotPkH25jmmhFPnbKlvwqKuYdTNJgn/ftnNjtZs75DugihhOVcSwenNxjZ6u12Xw+dtK1auZDF+T1jzgM1DNGaRfkLFQvodRhmrCYG6AKvccV68lZFazEaGkZ2p0+naWLc7FcJR9RUw9MSnzby6VWVr99AmDoUxjHaApN9Swk+Q0Szp/17S6Iqcti3OpzQFQdZfzotEvBiI014aTISkH4WsRafR+hlTWaG4jast1KzyJYFGm5s9KE9nJPxVYu2xQsksr0lkTdBioxObsZUamz8BlhrC5YM625lDzYTDLgu+mTYAinEsJIdMua5lhbbA0KtCD1R8Qxq7VE9R0SpsTJC89FwvSEoV4LLYTfLKczZ6oG5jp4CSxdxPQRVSXJRdbnM3GbKAmymCQySpEoAyz9cxaoZyETObKXMLWulVSRhQNMC93QleAEzbO/n4xEDn2hCpwN4ESAbuHNouY+Q5ybSIBHev0hSzr9pk8tGqQ94yitH4hnQlVl/Y2R6qGAZDSpFv0tw7OgpjPs9zqqlO/aUcO57DPjuzmskjmplEzU+4SOcmm3DdQtWYwgZ2Rt5Y2kqrBpboFnqT2tpZJ5YBCYLkJSyNJ+83aNjzqKkbtbiTRAt+6c3NFu0vsZHUif1uDCFWFb64xo7pbVxmwcn2tqy6+MqlcAjlbvxNRJiZq/Tmkdy7B6bW0Kcs90T6U6G11acM5VgbpnRcqJurX63LWNWeoK2nVrm6zQQqUb4ZYgFJAlUvAUtbEnfSzea46AIU6DGkJcRMuASeMkPxw2b9V3RjUJWBhEIdLwOKXeSVbGrqmXBfC1tBaAQrTy480wBXghrrkK+keDhvhWd/YdkuqM7u1O0WXgKc+0k5LpiV1CShF1wrjtqCu88ryMVWhSv1xpXkyTwjPJl3qhizz4HHBud7XiEpSju9hEf2pYSHx/O6hkrqdKWtoR7XTqgmoQdYCgv730Ei5ko5SF8u3KBmPLHoHNe/tVFIpDfV5F1OEaoslGH3NWVPnYmwWat2AhnokjL/SAto6NFjXXMdsUKtLs5Z2dQXuYUGIasNy4b5J4Op0wgoYtP4RDGi4RlxYpq02daYpZIUSemrPoXW87x5dXAdUxP6a2Zvr7Ai/ckF4jtJyjVUlCebuVHUHNszW1BaxrJdlz0otqHdnro4vkW4nLqKJgo6ysVGcIJ6aoG1iJ2dxYR8lRtGbDewEeY2yxiXaggyCBN2/0bhEZ2vjxUCV2NhO0y0Y2cSrCkoBTfFkgq4zZHuqGtB4iUxYpsFYzHJquoRtkIkX+11FXneSVqTRmjtYIBBTZmcNpRnQCjnDA6hiSFIi1dVP2nFVA6iTrvWbodtCun8irUoGtMWlrjRH5Anhm+gUkkGTT93puUM2sL7kzZGinjBoMoTCZ0TFcCrJQEZ3cm+QhVPAEBqEjRVRFi6TGpGdmpF6B8l10gD/MziVjaAESnQbZz3FoaAeuGUlMjqef22QiuluECE7dq47w3gOjZgv64mxow1aC1n6DrJvT2VvXFJ7ztpJACbsL6Ckq83uJo8cS0h7JiVsZjNt6M4Wtg80raOKctm/ETQgtJYP1HAH1WfeUDlOw2araoAE707qUN66/UZooK0ktKjK4YYna59V1+4EPCNKKBtA4p9iK3EmR6zTxSkQkz0926ALMgBdf8pihGkExSWIvdHFLURo6qCsCyKCJ6EeVtIBpajbS0/CRk6m9Q1QDxpsIgqZMtlEG4DksBGaoO/Bm4zswTMem4zhZpkSIevQZ6hIUH6hLDZNlr3oy8KlbUDfYbWuopNkZaI1FPTkzCo9ucBmGmluOHT5sHpTDcvmNDB0kJK1Y9IZrk1BfdCVZFLFblJBqtLCDdJwaeoiCKftsvyFvIxxypcTZ3QEdZFfDt2lejQYDtUmAQdmniGNqlpWCYWoF6i2+Iw00qtQrc0zmE55HQI/tzN76rkl9JGSAr++IsJoDO+8dCBFka7GAhrP6jc8RyXCgawvwHDl5qaa+TM6eHCKWc9wtc9zpCx29VoWi4BkavpdJb2AwNPQIy/3MMCnjQcsyh3Uow078xlOJnAa4dDdrecwsqc2x9x8HH03gdCYDrD7RBpPk3rNN4zDJ6r2OiGrRrJ6GOA3Rh4DA1ypniNlsWnXHV0E8VF9sa5wqt8JWDRuF27CoFtS5EH97Vism4JuHop3M0HjBiFGfWpj/g7XsBOCRA5YZnKd26YXIre/2jAA56mttGYZUa5BzkFzgaPvtMkWmkYeNeYYsXE+oZyVaxo5mn0wSHP30A37hg2ZcaQDW3WA0n8Ao4NXWfwG3XU2wNYvtErNVkQmJcA5QXbr4fTiDAPTNNa5yyEkCJLrt0+Z1scKHYPdCYJk3zftCeLRTRXI6RVobMoh0SGseCibrR2dpt6Des4trUqGhjOskgnLcGmtuXLD+m86IxtUlwRepnuXwzNEzgiFaL3grKHUlkClL7kdGmdcMg1vn2ldI0rHQPya3SJ9eLEuOrg173pMvbkA2RFPDj+x9Rd0RTBh053ISN3OfdfoVH0Kz35z57a+hFJ1UIV2sWD7YlslLdToitOuzSanJTNN/TfEboLup6rXqksqOe+4f+uEMaj7DBNEzNZckUbjODtrkmzNgNaQVxL21ELEymtDPWmVcKAQKkDWD0tXaA2prLSCNnBbY0LOl7lKNBBWOcKqW5AwETkgyeaSJqnfNH03tocyyZVOhsULutGYVueiguz6ekEMrBsWFZuqDsoaJ0CTby4nz0hjD7oIoGI5QeYdWMKe0OIBWe9gOBBpt2rOcGX2/KprHsz4V40dB9NbGirLsJxIvZ0z3+A5Ztd82aBD3dh0Oq7lhLznIIfDHSfmEqLFsnlXN4q69bGy+kqVi2ykwsBm3baAsocUtpXL0TorqnfpNP1Go1oxM1gkCWnN2cyASmQuS6fpVhAzohxNBGguEFzSIT2dl9FWGSRJtsC37unUXDVsGWfzAHMx6zm4FdXNrmWbLGEnYIsKZTDmT0YPpmu3FdsQ2ZxMSdO5YFZNNrNo1NZP93cxadkmzxibFvn2bbKtMOf5EppAwA+4Q7qNdpO9CufmZ1iLnbVxCDoSkxPJrFp+w003bLhSPYM3bMJUm/uPspkTNheGaOk2lGD3YY6J2tKCgz/oibL8QO2WoodfmBSQwYoFLG4PKDoD1SWRFR2ve2SMAcIEFwQgzQYX3QCAGApfZctkOcw5CboZRo1ZuOXEkdWkGrcN9j2muwfx2pcVXkDtcMGWLuywAdphB9mk/gIaoJLDC0htscGOXbjFiu5xVfMrVBrLmiJKp3jZnFlztIGYsPlFWmkIaRJ1hD4OrAEK9uMs8WQCZtbs29hOVmlCyNrRwIFfgp54124e5vShMcOv0WpAEOEe6RKtHsbhCXKJVsM1PUNcoFnWM7QFWlVr/gKM7IlyakBVX2A1gNBYRrDRAyt5KqeEsHxbhE6rucqQ5kLDeqnSt4g47VALa5yuE3+rvl8pauLn74B1lAbsJr0GMZn/1Gx2U41UTVhLHNhiIFyt8EyzFW2YnnoUykfYaqvS11FotfLsijQKaXOqbjCCS4syyepyAfWEw4SlmxxU7H4CbOZNRjxzym3xji2Q9TE3Kk5oNbucPa/arsHRUWQl23XruzpsPqI7CFei2fWNVo1D3dcFcRjAVuyELjV49trhfLZHg6yIFzTuED3BFqFO7iDzJq95iKxWZr2D5glaNWe4Mh8nH/Nbod2M48l/tvWBZiai1dhw6p8GeTO7NGFdq8hWnMmfacUmNtJacOUKdvRUUWxQXRJ5Watwj4yzteif9mwC2gm1Z1LhCoa0FcVTgza5pmMgadiTNoPGjlEjYp1Eg+b7TPuw6qb2EgJAY7Vh0/aE1nD4kkKqHycL1MZJDoaXkc7gNS1QD94C9eDmRo8nA9STN0A92fqQWT1/k8w4Q2eAeHlmJR53BqjrAWQTrZ717KvVQ8QB3HBSniDGLSIdJ+MgPh3bUyZavZiSlLRyEslebMU8W7tBdUnkpTqlQmB8WcxtVtqL6WeVq75c8DlCHatek6uOA3tMS5amcsVeUbmyHqJc+Q7TDmT4j8JAaIw2LxpEZlo7TpA+h5FtrCcl28cp/kxopIeFmB1apMZdnHgcKxgwKY3DIgWSaoidu+Ec9BGMkA7ehHtgR3DxqpkWrXclDdsWq1y0Hp2DvkF1SeQlWvDBI+MsWlBujvsEdFN03KXCNbaTszr2uEsj1oJuHJam486O0XG3TuK4+z7TPixugfJoUGMck7fsPbeZ5tYfo+qZsmlTokzQ0fzex2ingtWUed/IhvHEgHLU9tpiMtS9y2TI+m5BGdWuUfU1Ot0ET0ZuqEOxRnW4BdEYFr9AOb2exEG133UncGvkOHAG5g6SMcMYVUH0TTGsw5osQ7ekGsParysSOX/TgmBU0TEY1baWY2knrVENR1zperjngBxbECYcuO9hYZdzflBIzlcChQG1iR2PSSENj8/7C4KL3+Q5wvZ2UaHzXqS2Xn3udPLUhB9c9tn8AC8C2Yd3wlFN6nEUyvBO7ukZ3LVXm+hxEd9uGqFPPeqZ125/mSL1qDgsLIg2R11zwdxoKpcNNNiz4VxDLzKdNxWlmmgr2HA0BNA7b01u3PV41YF76sBalvseVhFD8xGpROqcO5wdHwNBUqU1fCobn8kG1/VZeeT6X2PCgjsnYrw4dJcox8x20dW80Xyf7h7Xm5nBuxOPC9uQh+SDOAKryUdgQtOmh2w7H3NmCOIyJVmqRfjSxaFwSj1E4wVecZUWWOqxLKUxBPR0x79KVYjmT+uNIi0RtuEV3BdW6kuRoTYuWjLakbFq03PiDjdwSv+Oqcm8zGmOtK8YS7fUtJZnwmVfC7mnxbUt3s6tQLuaitPSVXID1+sqXsFduuqU3yg0r6tCw/lL0028o+xx8rpKxsnrqlD9bpfA7nRVQIxl5/a1gx8cwPH8uHCCJGcPh+0rqHMteLhNeDmX6FCwqAd0kZybdbzJucN6yu13iIVWu8NhO9lSc/Z679QObVnM57GSk8Z+rHh1dY3VKb9ROI0VL5yuscH9hxM+jVUM57HC2evd4nTuj7XHydz5fqwi9qw2P8WvUQQOD6FUl10xbMndb88Y3LU3cy7jIu7sCqBPzWe7wluaUMtyYvlw2xKC0kJz5sn26vIQBe342JPyVnjsYGoLQwiwOzhYlBN+EV77blZt4N6FYFuSSmowT7jjBYKF9Xy35G5rV9vRqoE17S1wQbmZsCE1IPQuJmCjo/tU3anQsozaWmpfHqHUm5ebjzY0l7pcbXQdcThoWdNypk4Yw8SnQHB0AU7Qoz2acMhlUT6EoL+f7PkGpOAA/3SVIupF0EDvmxlIbA+hHoi0cgXXXPh6w3Rqpi6w2ioC3XIMqqw0Mll5K55QF5/r9YZDWTcyhZfkadqQpqc75G2TcFlPNBx6Xs5AQjBzw6Clkrau8j0IUSzit2oXJfutPFeXMgD0hJhBXnq1FtzBYA9pBYaBNSyhB40aWpF4Av2olno7Z+YZH+1XvbmgB+jZGHuRobcTzJYXR/Ojg3g7YXZ8KKgplA0jniqxzKdqeUletTQuRPMNJ0URb+McvIEdD2TUXUkDFCCDBW8aoVzZbw5EExKpLW8BinTckQYvYpVDvJc0Caw+QuXdykWIjNHUJrjGPbnGRlzD4qWnyFcUKAs1owYxLIfeXtxgDJemQmnlyqq9mihbYynmYotWUrAOQ6kA2QLFYHKHti44JdzKRUxO3Mm0FvjGPeHRiOFELGIjCHT1ZsBRnZzwCI9BLmqyKFw9lT6iS+1XL2LYUjr0UQokJidxPPNiUM6rCxOFzyOU6hI9x7xicGoCoVXMI0B30Ij1O2LyhIEjZpCl+aLBgglrcHUoNtypfTyHrGrC6GpOCHjOwV4VuQ45ccXDyTqoB7S9HI5G+vwndWuiPpuS8DKaynfCLQfKuhyz6JZS4bfZoRi9FX5o5Ii/KWpEOuOkUNmzkbeoMVMT16CcxWlpHEnTl9CsWMYrAyBpgPrboD7clHiISo7z4vQ4mlmanQ6eIBvJ1T06rJ3twbV5PDoDKH2X9qROFBCd1BuM4dJ0Clo5Tk+jqVPXGs9ZnRqGD2kN29VWrmINCpoEu68J57SWcntWp4ZJgSa41j1BOtrS9no+JrmpaFCeM9lIwzM5oIE8USVHZ5a2kCPVbdeSsQpjGu5OHBFXZHAWXEjqgQsYAVwzBjJOkvkGJ0jGiDTQKUdbWBuoBLNAOULRQqQznD+kBOSyC8aHSXjBsXr0bPZpZATHVaoKEE6XE2pYVy9ZDwiitH2Bpm1fUKfqLnmCEaotc5l4BwPOfRCpEJ8Y0jFeU1kVlUHryoEQ6Ia6pKnIhBVLufIYxHblNtDwgkE5PJcZxLSrjwc8GZ4XBoi4nb+hCgz2YCIvex6ICinbmatB3sw8NemGNrble2kbKXJ61WqWpgMX9YIvsybeWKavp+JgYPg0XdblYe1QgcedxENFL3fzXzovT7dq8HbmzTObcadYSmeDt0VZ4e7LXFDrgFqpek96wEU8skvDqwTdgc1RgfN5YuCGS87JiUg5q4GCdwvuIYmVYC7LCWaebkhw3+5gwsVKy3wH2VOFdvAOctBPPGsjMoyqNSKfbGyhk3cHjZgvS2KqU3Q7+XFBPUqAq77BjMgEuW+LUgpUsaXRa8B16WrqSLJU0zq4sE1oDOJNzXvItapBeMp4ewlAGQhLG5zaoWd9mtk/9BKhVdO91iWyPvIleVBFG84lC99QtCWLHIIJl7VGOWXW0tFstDIip2LcGqUMGJQN/fgUXAI2WA/vQFZ6RAbjyWM8VcvzJSE5PgitdDoNQ8UFWPPjDFpqxdL9DlrNSzAAEbo0P87gTg3JsyknGND76sdVrvDEfNWxjdzTq8oIuKbwFAdX7fJ4MLXvTCOgB2FQ/fiKPTNbtU+SaKWclRkmpuqt1WG6YULjkYt2g1y017EXM0aFbk/ttliTNG4l0O2peNwUbo8BOn0bBi3GJVciyeV11OW5qUdSB67IWNq2FZrWIaeqzqwNd3At21uyJa5Kj0FKgJwWcTpIDogYagUye9GjGuimOVNbtWCGXkpsuJV86G2JDdSwGtTglpz+QCsyKJYl8y2bflLbeeKYTahp287GcwfUug1H5wFbsShQ4xkTilC82G++8LBh0+MnFQ6wnqWdMJtYtAJpLbiT3LKzLY3HCWjEjE8amhPb2o4BL4jqqOEpWVNHjXs21D+nzDyBcjg1MNNL3fpnlm7xBKOb2TISzpjMmpPTqc397odNW815qlS5CCcuDFrpeBKnnpyi62nJ0/y55EkOlWxx6tmJ0wYqTgZVnHr24mRnN5SrHk/idOKYTah5i1OPJ3HqXMwq7OkkTlzBxAuXOcf6o0pRTzagKkU9bSnq6SRFHY+tQFJ6PEmRsUcpOnGr7LeTFHVOMkpRLycpOmXW0h2HsGz8mkVbVGx6OUlR54aACQMuSy6oj46tsW6wpgb7WY58tTyO0mzBrgdbuqGOG9gWh+u0pOrxGqBJMKjLbSvHpbiRVL0vJ1q2SZBjK8tCDNx3tWIDT+eDpAFWZ1ADT1aOYTijKS3wbXtybeWSfeBpeMCBx5FtyT4i9o51VbiBukYG1c5YubKqz8XsE1tL0zXwkhFgHytqG9BJeYX2DFjnLjjtfB/WBLW3QjOvJvjmaXuTrfZ0xWmQK86RTBdJ2QV0xbmhiskueYJcYg6Ezs8I600CdTBP3DzxzIwN1aOgFTkavGsbsPgzGOEejIbDjGh0s3HTRg/u+SON6pULODlcQ0bzZYPu08Q/kNMsGG71hQYuCmLqDh44T9ARE9a1uFvniQ69lT6wAWsrMmkEhniqMANFYw8bVUmhd6WPFY1maxOZIisaiulDXwhp3VYtB0/kMIqNQekIXkEsebjB5LKZnkNa5uRl9Qw6zTZs4JM0dGpsZqj60WAG1FAY1xlxkcHtxYwn0Ea3xfLMJMeKIOqVR44YuEt6rIlhO11xbziFanRTCId1jEmSkzGVOR5tpto1aHsYB56YfoZN8H1pHJrhpoNtpxheBCIk4h5rKB/HcEJ+Aa/8+bSiXtj2YCz/PU52fob13eOV3/OPFvEwMgN9cqzozFG1GrKHGuvTM0j0BnAapprdlm2vo8HA2paYfI2g+VS61xlncLoFABsP6EBO1uGeY3i26MTdY2Ozm/UuIEabEcjH2tc8mkXJGxsQd9pa0wWcgWJXqUJZyJ6mP3UkuhavAm9hITaew3FaEyy8BsuXv/G80FG2hl+YKl5wSqbjHVIl7zDo79JnTM0ecNDmOQ7X4eGBY0WetfV2mbyfOQo+C7Fh5wMSSWJVQ59DCfrm2XOkL1MFOXX8HDFna44o0u5Rsmcx8ob6yoRExBZ/hFaNbkU8g40vfw19HfMeWmbdwX8GjRFmvoP6Eo2v6AQts+fZNlYldlmlCt1ZlXuVoiH5mJa+01i5Gecza+mkNxqtC6Ke75J0bJvJ8faNDunVVXXUfZUN9Xr1arI86uV6AN9F2Jl9tXyqKlX9Q4x47DwXg7JbhzG1HVM0YSoyA03vqxnSjUGW0j2jp0VQQ7yxmuQ1vq7AgW6Vryvscl3j1qCI36wLQAM5VsY4XCMmzPuGPZ1aWgde5TqSwQkSRiuQsVYUTl1mgI8SGdRX7qxcXwwozSHO5m5s4gMNbacV6zCU2wTLbig5qCt35QcAdM1inPtW6T3+iHmp3pC8LaB7Q0Oes5aTKZiy+jJt0lA/eyjpWeHVXXGgGLpyQLQLvyTQMRP0fTIDa3AUYdhYzEZ0gDGljGfclySkgNqRFk0HabkU0VylaaDxxXPCKm2r4DHbG+Vo6qGPjQf0wTCCq4e4b8yprZKB9+YJpf/CloyEV1shGQbaft6+2UBaOY6w0dTR343HLqIe7TPJGEgzyRjir5hwELCviSAiw8ZERSQdpnGrvky/m8enHrYCeVyQGiPp+YpnkBrjVFY7L9scBLFs0xil1/QHbBhnvWm3oaV2jNMdtJo1Arqh7rBJz1hFyem5E1d8OCBC8WVuq+Yl7lm/xrFkXzan17QY2KAqeNWhmzAk3SdWgNEwpN/vSbqDpxLMJ856NOm2yij5mXYCaWRyrBe8CPE0csCAq5xsMipDWffFTL70q35b9mjmIJfL5mECEar7mDhDKeuyEW9ik/X+9ZKhHLAVhjQ80ltwcJmo4a01tuCMik28rGEXmYmJ7ygQ6jWJnKDO9U1JA/aWWjoZZyt5ByvOzOYE1XsHVVVsqOrgxBFfOm7FyU2HsYXcdJO5yIed0xIjeS56yY28q11MbgxAbgyp3EihsOUGH0Qz2WBlJjfDTE3DBmpxcrMg5KbbhBa5WWQgNw37lkhr8BUoN1k/PUK5MUC5Mahyk/XV/i03zfpXxk2D/ltwNIBlaQNOj0kOIYVlmNn1aIlOOWze6Pd7SvCOKlHFh6UW0ttANkaD7xuUxY683Rw2qyWaRUQaVYTucpQElV11ib2A3mM2aLzoW953yDgzdCS+1azVxYs9R01hKnEZbj69EJeTVtTv13J805t+J970NifUpw376lDR166WC1sK/Ey6sEWN5/JZT5lv2LekW6Cav1RzmtRpLXpq3sPs1gDlbFXkVWnntJaKdx0MNgibZfb1KiPd9AoY6aY2UbrbpKp8CWCMbYIMWmqQfahnkFVVPby8GemmZ62ilk+p8eRq1wj9TTYNWlUJM9kgzm0oqvmKzsF993KlFWhyx58jqpF52fyEMsl6/39QzwyXVsVZqctaDl7L74vVuhZ2eprsxDWbMZLN2kduxxIq36UZrBn9VeFw1gKlrU8CGeBjvwb1wBvePhCguxDyGICps5pNfwU+GnDYWnZyQl8jgu+RLrZaPTGtrehmwXTdU5s0j7BWU1KqB2tFVl34GID2NqS+qRWj32okVUPXbj5W45ZmWMq8DlsZaLl2mBaeNA2gOkO6+LFixiVJogW+dU+n5qqLWzsmp8JKb4XqWzaFYS2r7i0roItrUE2ClaO5MJpqSnZ7147xTmtm8qx7e180CVb3drS36g44hwE7xu261j2n1j1ha747jWCQc6uFPbd017I4hWDQUvWxiWeQs6HpNtyGtC591ZOcQjgxpdujHR9XoG/RuJjUQWvVLc7wdsAyB62s9djFHjygc2GA8kLU+d6BLccaKS4RtNoonvI2wJJW49LeUFhw7bsuf2KTSdwqPxaU+vagtwKXQQfdAH0Lg+pbtGK+mwpn05AdR1reLNijLpyslAZbRc/CIHwJa8EZLc/iG76KmrsGux8XHHYpReW863yT+3/2W68liAVYSRJ76oMX4egyDvtKpjB7QIsZFEclJMg879okLHCZogsgu8JCmPBqbqCE3MG4nqJVPXkHeXgqIGSjyKKDAdoo0CfQ1/42CDup63XNoC+IadPREQM9OPsjZLS8Mxoqe+GW5Hv6CZFBMT5dr6E+Lmhd3yROK3D6M3KxbigzuMfSMTMPSdNLE9r+gA8EsC/QcQtOjwSXK7RjSEWtnXpfeCyZQD9QoMYWaVRNUSeaoYRHEIM+ji8w6icIhOnBD8OFDhWKNNAb/Mxk4hClywbBJWlMIfDRq4AbtAMLFhWQDgYP3kTq0M/65QJlqqAvh7Qsd+vXJwuErm4mtLvBfkzs25kmlPIlbTiuGsKJAd7o/h5l3mn4dtEI8AZiwlTWtxc20E4ixBMP+GLImmRRT+dRgCLCLCZb8XByJ6/wolG83kLRueDn4OE8Iv3+YNSbiJwmejUjYOhwM6PyN5golkLfIuE+rEEdR43HbonC9Y4lUdaRSHO9yrssBcMXKuLLhBLuYfUHHPsYsfoPGq0LcEMDI3nBZAdpusQ5+ITtgSiJ3mfbIPWd1vEsri6h5u9CisXGIyK+6AYnLIVILvvgxxeiCWDTQd2te0JAvIc98w1SJO0jQTrzY0ZPcebHYrIz+N1Lilm52G/O/A2zfNYZHMRFJa3Jjnsqe5z0MXRLS3BqMfMNceZLTpvcuICzJn7Eu+9Mq1i+c+7L1R0TmfU77ASVcnzj3iZ+rAjxycjgU2dr4kcaUE58eeTXJF+v+6x5HxGQWJ1MyIl+GhG+CS2zuetR7scFB7+E2m2IgoaFc3Ri0c1UBH3L96BhZKg5YXojjqku04EN5g3l3WZUAGCfACG8LchPA8Vu3ZN4dSgWgwYiH/RdsFd+2mOPPF7WZ1q7IqlyI4Dml5eRNCNGt28pwFvCS+MbiOc0XWfGDlkKi6/RVuMXOMpOw9SKejIu4wUcTQtlKUG0ZylIdAvT/HhqYDiYtxEDAuEHZlLVt4iPsTttw6obC+y0wbQeqBwlED+W2kzRZos+5RsxPXSoE/1uDc5voM9wG1T28FlRMqlprZoOI+iDLw4vmLU+aqODWwdj9YRwuTsJXy2xJH2gVosxst5J8rJ/j7CT8NrOqSu5L5MLZ6/G3A+4J033J466ZWLDopx1gAam65LOFLHApKim6ETVhiDyjeGA9Zd+sGGDdEo6NIm6s3NbZtCa6wd7VwPYoCOZLVFhqXA+mn6YtqArCshkzNR0Wb/337suKhM+LNjxMIjUvPRHiohcUpmkiMCipQ1olsQRD5gXRaWIQOWbcGioPCV4ZYfJZV+ukjX0oDT4dvKjLktLPhqiCk0dzlDES4qJSvoO0keXh5Trc7gz13yiPOpzSOXseVIeqRKMScCRYBHygUjrHQzrM6ecfIHf2DBrlANMGFMGHM/Or2gESIcE8hZQj4jQuMNFtXto5tug7oAHBI8D79osV0Zvu5FnblXUYClszYFZSbg6yneM3RaDWogFt8WYvenVOFMEfJQ51p0GpcBHnhtgxGdjAGrZaUPvZeclgpnfBq3BdBe+u0qgd9HoIKk0GLS3gRcUfzXbryd+R9YSki0O7AIfocZ3c3LjnOEYcpz1EeaV0p1KkMeaST9cNghhp3U+3rJhwDvRZc/hXGwBgjTar8D3rSv9jgoye0AKZrQNSIZ+R5ofSD5bXZYueHQdmtGBySFdkw6+Gc0xifysLX2pQ9OoiFreaV1f4MK3Y01/kQqYyfrlw8VZ1hcXLM0zqVwjbIg24R3qJYIZ4cY+1sPZ9KrwSVauzXGNs5hjIUFohinty6bVrIju+aSyB75j70JTOhaxVqjbyi5qmunLvNPgwrHcYhIk2QDfON/aAY8jdzO2qCTWUyWxLskm2yb19bongQErV83KxHA51cePiUoUpTcERg2qX4Wto2H8cvtkCd9AHAgNw6PiS4Qxtli/EoipSTsNyjEzoMqvrpaDnV8Os8r6Z36FVVOCRYEq39ouGDG9m1+4EjxDtO52buxtt37oM33aenP4dPOoDtfFA44IuniYq5N3Uh84wgftzpeqSjBnX186tt7tjnW+ESgf89wWq/hWJOwOnaGp8F3KaMBDJw0aV6NxByOfIU/7t940NAVUcNPQPCTeNGTY5gRpPEvZqrNU6A4OYoVHyJRRt/EsCF3igXX7raYTaDWVLsEZmuU0qE+jVqwIaTnxRjjso22urY+t1mopbAotJ+GqzfcKt910aDUOp9tutJy4V9qNVzmdqJfLCJ5kHy0Egwbol29Y+EZ5w2DL1cmBJWbntUrsLTOtW8gosUsZP5AbkADjwGlZg/hEWV/dUUCTghGU67HHb+zxI5M2NwxSJCpnzhn2wde1CfUkQT2sU3X+V/1glfahdkxiL0XUrwsW3Uop2Cvv/OQluWaaHxfd/FldOngrlMzrvLN2YdIPhPNNuyylL2kdZiPwmnY3mZKLLgQHXiYsa/mfddTCWoVpO+qCJ9aU12yS0jJ2F2s3WOG/2PAbHAhi12RhwqjbhDFsPV+XlUVaG8tS17Ko6J4pwdhJ4roV3YSFybOXzOnWaRKjFI1JB6cl2MpruVqT6X59K6tyEaLneQ1Ebh8uODu9JqyiI9a1tlesEYWaEWBktKEyOIY0BvMZmjQY8ckq7qvqJR+hUgzsNiAtWcwC0p5w1E5viWyAy6cLHnHtJNN1rMnCG3VzHTAlazY7qDLJPW6NfNRiomWP39dC08PfnR/42FAkS7+fvdVKtmBWy5eTkKnU6auzS+MTmrGoK7rvoSnCU1k+FN89McBVmgdi7iA/YtAOs4knyMyNfsAZWs3MfAdNDFnPCa0meI51ZzKskLY+/o13N1a9hAecJEK16g3BGUaKcbGV064lM/64cootKKbhlHIf3AHMtuM2lTfBOKA+DBov5bSkNmisAXZ9bYK7od322fOO+XAf1wRCWrGSdvBBNyCDxRtkS5XdRLty6jXtxgLHn5JAuHilUT7DNXy+LPclCxYOvMeJx+AI8aqbAD2jixffctcjEQYyXgo2qCeNrFzFqASuTfQgWihQohWXjfAsnaVVaNSK40obqskLfPKi6pOg9CMqN5s4uEjLutIoiNDgxTeB9hicMp1cknxCNHD6Jr70lyF/uk2Ej60SYI+yrTQymXithDCKw6o868iiO31X68Zkw1zTc8WPC1Z+VbNB7O9glmbpfpqEpu8hM8cD66U7GHkLgZnvYMbZxV3RCcZ1g2HzzI+U67KEjTBoNQe48XeQpU9lef9hpz8uaKVxGGdBuMU9MRxPaKn11JsGrWaGBwzCFvayKlJoqfHE9bcrGq6Xl/WFMZ1lRfVgbPDFNPF2zsvCajWsjdyqSLCf2AFw6EiOkYoOMNjPTewngUkH9LFl9tXaV7alYl1kPDpY7cGxqLBpHDVAESRGfg02VOTFyWDCNabE9dkdjLhLbVCdlxNHTzgHnuLuKoPWwHJ10pD0shehxTkrliqp4thE1eguQUF0xKBOpFShszN8KcZWuz5snNR/wG/7RCHhbUHrA884T7Qze+EXwEM3qC1pKzVhG6/zOuaECcJ1aBpBSae06QQlnIzplXsRxeZO1O8PpmBgM1/xMtCJOX4VPLtuB7J+xsHz5zDyq+BHeA7zDpTGl+A5r0dRyGvWUV6CiVcAsu9tCQ4vK2bfAyTMB5Q+36bKB7LCWBPQqBksfFGuoWXBTqtXM1w5OguH58hWUsLKxIpxDQGSBFYdIc6vsJyxCZJogW/d06m5TWZyjjYfRajSlWaNgVzMxYoP3BUb9Z1WEK+M24IaPTWuu6mJ4fOy0+g7ltW13Qji5+7XfoHZzcG6P3IzoMTFum8Wg6/NyaVBSmIuiJ0ZrNelG3NDvJDqIONQHNSBAaoDg6oOcsWOEdVBpvrVOW8RZeqDjE99mz4wSJE8ca4SurKrPsgFAS7OwFyxEldosUbqg1xBCgcBFsAH0hccelugbHWQuaJA1Ba3vUwdGDOctCfebgioeotl0Dqa1u8OcqYWfV/5BYh+aXdGqRzO23hckLQL5PIeRYZVOagnSFVT4vUldM7pkfGbTJHfQeX3xK1F+Za/p1G+aEiigwCInhHqvqwGwuKS9YI4gAk+z8wzjZo84pS1HHIHmXDZv/M5Se5p43B259t18rIZpdUeDxOALxFC6sz/KwnHn5QnPAqnwsdrCQXyJoHYBWpzaep3lWRzUydSySaM8vxDNvXSGSFMC5aCZXFlIG1BnWRlrSXkiTjEUkwxWSssLRWb8JoWYP4OrV5BwTHVDeVJLS4hC/a6CnbTOp6Fy+Y149ZHMTevkTWuNOQJgoIoW1YlXOiJ4gsHC5Tg0vSdhFJMaTComrYweTl7Qty0OC/coM2UcfKjKz1DhfWw2axOV8UeaNczsQb4rItB3SGrB8YwI+KFowk2E+qBoyQ2T4b5NxGIVtYjy+obwg89Mjcu5egTcYR4Ey4aNEBVblA1QhnWIxByUjVt4SvhhYTDLUQMWgeu5eYdVGIzc23PIXWPxInGS/Cc1yMqn8pg+TOILvcc8xuFh1OlBo3nelqn1WUhmx6mpyrNvHTQks0eA9bHzUa2a5qJhIbOKo3+MeziiFnLWtYaiQ/sVbfeOnHOptRlHrUpwxmoWiHOCnlhwqxlbSBl790RqLXccOj9DGqhg+/k1eXH1mqjH7Nj3sbXM8drIGGZKb0Xwe5DTxMmHDHbMOkViwFtgKs3uOwMxV9xW82MQjucwWgaIs+dCRWafqquDUZxaWSl4ZTtPSRnG8oHEQ9bAqtylzigqR9hbKui2YQ+VlJnNkRZu4VY9C4Hfw+fRE6+lWjZ4VwOg8ZpMgVusC1fj7cpRHgrQ3tocrQ38lTXZ5eGZ/eSuWCVIcEKgU1arsJvzsWl6TEhhvx44nNSGcvRa7hQCvB0bhMbWZdzoY2kvtf53RJOvytsKxSnZr/RKGNsFijhlKafdmQrEGhMV0zWadkbTk53vuxjvNDqn1jzvGY+nBeva5bdNt2OkCxnHDntWFZMYdqguiQ8Khkd2Oxwjp1qZxQ0evlYngAEopzWqAatYxvE5RnUYTlRdjdqVlXnoEs7B10MGrF+Fy3r4eQg9sO6Wd7JOxBDZbi1DezbqdAZ4ArKoIZb+2GaHS/m4dUFOFA9mC3CM34Rfh/SEgINDLduqOHWHm2OTdep8/QinauOm9tMO+BpcdUnH8qEi5gv9pvxVoOy8OsHxITx1s5D9joFerAluk7THs3zkTRyyXirQcZbe4Sbi/4Md07SN69+8frVz345va4pf6+/eRUux/xfPgSS8blsCSi9fnwlqrVMzfD67auffPL9dx/evP3w8U9f/+urQ/7y2WujUqUFL5CRixABdEqJ08AJndBjCOkYRxqe1DHXn7oBLVFEDBzw7dVXqGfOKDGSvh48zS6X8xKqCaFN7SzV/Pbh7cO7p4f3lxPD8gDSn18NrAp1qflIJNed+OCLmBODX72KDfEOy254FSi4P7JLgKB8/mhRD2k9XCPUDW7qzG1w5SfxXYBd3sSje94V+oIxeqLHhoH7xZv/uD08XH715v2P37653V4Yv/+EGJ4R//9GTR9EUWr5iNPFUGGY2niSevfdw+XT989oyRtXItXPieEJDiXW4rQlQqvVyfHlr9+/+eb79394gVZ/gU7Ub0VSdIyp3/3689effXr56vXPX3/21eU3v7z8/Fef/fbzT37+l0t+bromULophDnn/99mUK56AYQzqE0FJnSG9F8stZb/AqWixyv/M0r1BUr6CawXKOFcILRDigOd//7h7bsf3j189+Gf375/ePPh4Z9//PbdD48Tv/nh3X//w7e3Dw8/fnh88+52ffv942naT5VZ57z5syiAoGcytgIAdgpAPpJ20gC6g570RMFk6CdXIe2kR49muuy4GJ+GvsM1CwRRMDo0v/7ok5//+qP/+Td/95IQ6mHc5z2RsEmvPVH7cWCUf/fVR5/85suPfvn665dIPWvANOijv9CEY/5NFwWrO5ItElZ33I81eqOposL4HKFgpL98//0f/vT2w+XThw9zFH58LoOiXVN4Tg3+v1I7Ympo4z9++U+Xz/7+y99+9tVXl69/89svPv36808/u/z+J7n//qcvUH6Zz6I7/eCzxAr18uWb/5g6m1z+BeJNUmpPOd1SB5O//O3rjy+jzMFKMb4k4C/TiurTQiWUQmvy6d98cfnFu9vt3Xd/vHz18P7p3duHjy+fvv7dC43VqM1J0+j92NT0iTPQbSNiWH4558qf3j/8ePmZkf1xdiN/Xj75/g8PL3SocH5vCFEH3mdnHXEaHuX9Tx/eTbL/7fL6zb/Pf3/33Q9v3v3h9z/59Kv/Eumi3/wE6dEqZv1XnOSXz7/78U/v33z39uH3P/n88zPdKchBX9/Yggz8fxHkLEvydGi0CQLSRs3nKv9zGbkXZKUW5SFTk5E5WTGuD//+w/fvP1zeP3zz8P5hsv8XU5se36CUpNZ7oM/xzeXX338s45BrS38xsaabm2hoDwHEPn14e3vz/uEPl//x5vanh8s0apdP/vTjh+8ff/z4Ih+PPI7L77769C+uo+qLkKyjt7Es0uzLjy+rV//35fJCxWt4P76oSX5W9TEr0NMga5CJ3SDrSaP76RaLRvhpTZalnA1VPiZjP3y4fP3HD3NW/O43v/r9T+dE+fTdo//LS+Y06N6Ml2I9ahez+H9a14gjYXrIAv5//fFFrXWeCbHo0/DCcSHHR24Fo/Xlu+lvviSMz1iJVU9GLl5+EpbGj7Jb6zQ+sXP79K26Z30Y9VwhvZg0oFp+/ZvPPvtcRCXlcjdUseL4u1UD7IZKr2k8r0bPJlK7dDb8128eH+ZQvPvu8sk09R/e3C5fPHz48PD+xxctwT1h0S7pjnQ5OJ2+evfH71Q9/gWEIr5rfCJUu/yUqTQdkstk8tNPr7/61fUf5n/3KioM9QdXlxBLlwR9Bjn0BmOM1wQIbwZL4mdckdmgnmyRby+u0hoU2qUBV2lkdqVxF99Ky7XeuksTrtLIvEvjOcpdWt9T2qUBLTszu9L69sQure9H79KAqzQyu9L6vYFVOrkuS66/mG2XS/q+0y6Xr8GVVGSZmdWV1TPgu6yGM3ZhwFUamV3prp8yXaX1keRdGnCVRuZdOuux7lUaF4VWaULLzsyutH7aepfWD6Ht0oCrNDK70nqgeZeefeoKK1plkXWXLXoVcJUtegZ2FSa07MzsSutntHfpIgm7NOAqjcyutH4BaJfGoxWrNOAqjcyutL49v0rXw020m8FVGpl36amEuy8d3US7GbTszOxKFzcRNbAduisNuEqX0zT99hW+zrJKN/2M9CpNuEqP0zTV+KNjvGlAexcGtNzI68o6MZlOR3WzknCVPElJ0zd3VtEe8PQGixKuosi8S/d0mhuIMu/SgJadmV1p3ZzcpZtTEDeDqzQyu9L96gvrEbRdGHAV7tdTWbmltsviZY1VltByI68rG69uiIeezNtlAVfZeD2NsDwc5np7NDfJbgZX4XKaot/Ks/GHt1eH3ojYJod4le+nSYrH4Js3WYe+P+wIAC+zw/yegj5X4yh08W8dBeBNAfk9BT1YvikEfbl8EQDc5ZHblQ967MyV17P5jgDwosD8noIeGHYUmuwsOQrAmwLyewpdX2nfFMbJehveFJDfUYjHyYDLB9a9BTe8KDC/p5BPRjzEevWyALjL5zsrzs+N7/LyuVXfC8SbAvI7Cng62FGITpXcFl4UmN9TSCezHlI+2XXDm0K6s+whlZNpD6mebLvhTaHcWfeQ2kmFBbnF7eyF4U2h3WmxkPWZZEchn2y84e1IIr+noIevHQX90oCjALwpIL+noHd7HIVxsvaGNwXkdxTkwqHvSbyd6bzheNImlt9TSCejH4p3r28Lbwrpzu6HUk+GP5ThtM1t4U2h3tn+UPUU+KYgt4F8TxIvCszvKejhGEehnDwAw5sC8nsK9eQEhNpPXoDhTaHe+QGhDu8IhHacPAHDm8A4+wKhJTeXhUA+OQSG9+Iknea6UCgntyA03ftzFIA3hXLnGQTZcvQjMVdf6bQ+At4UkN9RwBlpR0E/1+UoAC8KzO8pFO8iBBz4cQTqyUlgdl++eTch9OGUzW3hXb6dPYUwDqeN5Fv2eux1EyDey7zjpK2EQnbaSChoBNhRAN4U8klbuf1AfRbTx47gwmd9MYzBozYQpPn65//wi8+/+OISZmYJDKdxhLtVdT4H9IldPEOPqt0HGkT/Hmsba+pzre6Ld28fvvvx4fLlba7mf7x8/83lB425XN59d7HNhhd3MeY0elZDrCu0mFpkg/720yPkesz/cg0tpqO14y/ZYUGEtOydmtgYw/vo8sObPz7MPJPbcPnIE/u7+f//ARbsK2YKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCjw8L0tpZHNbNiAwIFJdL1R5cGUvUGFnZXMvQ291bnQgMS9JVFhUKDIuMS43KT4+CmVuZG9iago3IDAgb2JqCjw8L1R5cGUvQ2F0YWxvZy9QYWdlcyA1IDAgUj4+CmVuZG9iago4IDAgb2JqCjw8L01vZERhdGUoRDoyMDIyMTIwNzA2NDkwOFopL0NyZWF0aW9uRGF0ZShEOjIwMjIxMjA3MDY0OTA4WikvUHJvZHVjZXIoaVRleHQgMi4xLjcgYnkgMVQzWFQpPj4KZW5kb2JqCnhyZWYKMCA5CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDQ4MCAwMDAwMCBuIAowMDAwMDAwMjk5IDAwMDAwIG4gCjAwMDAwMDAzOTIgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDE2NDQ4IDAwMDAwIG4gCjAwMDAwMDAxMzIgMDAwMDAgbiAKMDAwMDAxNjUxMSAwMDAwMCBuIAowMDAwMDE2NTU2IDAwMDAwIG4gCnRyYWlsZXIKPDwvSW5mbyA4IDAgUi9JRCBbPGMxZTIzMjFkZjczZmNiYTc5YTNhNmEwZDI2YTY1M2M1Pjw5NTA5MjdjMTg5ZDVlM2QwZDg3NzNjNDU1NTIyZjNkMT5dL1Jvb3QgNyAwIFIvU2l6ZSA5Pj4Kc3RhcnR4cmVmCjE2NjY2CiUlRU9GCg==",
-      "typeCode": "label"
-    },
-    {
-      "imageFormat": "PDF",
-      "content": "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67mdYuA2t/reDs/LVMu6YbOKslXgMk+OLvYddT1uw5GcFhGgWKH5EB2aE1wOFy/RAx7Gk/LxN4+oNdef5g6MMXAGePYQxWlCOI8Tf+UyL69NIEUNkjEEE5HHmrn3ivg8/RA+K9iBrZhjHzIFBZKQK8oEvtoBDOaGxVuC+iKkYqZ7rixC5K3ZU3yiGsEiBibmjVAT9OiothZ8D1JBViYUkZDIX8JFLLU95N7RWRbycH4ach9pAJ9/AHU4hysKZW5kc3RyZWFtCmVuZG9iago3IDAgb2JqCjw8L0tpZHNbOCAwIFIgMTIgMCBSXS9UeXBlL1BhZ2VzL0NvdW50IDIvSVRYVCgyLjEuNyk+PgplbmRvYmoKMjUgMCBvYmoKPDwvVHlwZS9DYXRhbG9nL1BhZ2VzIDcgMCBSPj4KZW5kb2JqCjI2IDAgb2JqCjw8L01vZERhdGUoRDoyMDIyMTIwNzA2NDkwOFopL0NyZWF0aW9uRGF0ZShEOjIwMjIxMjA3MDY0OTA4WikvUHJvZHVjZXIoaVRleHQgMi4xLjcgYnkgMVQzWFQpPj4KZW5kb2JqCnhyZWYKMCAyNwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwNDg4OTQgMDAwMDAgbiAKMDAwMDAwMDU4NiAwMDAwMCBuIAowMDAwMDE3OTM0IDAwMDAwIG4gCjAwMDAwNDAxMzggMDAwMDAgbiAKMDAwMDA0MDI2NyAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwNTY5MDYgMDAwMDAgbiAKMDAwMDAwMDEzMiAwMDAwMCBuIAowMDAwMDU0OTM1IDAwMDAwIG4gCjAwMDAwNDg3NTcgMDAwMDAgbiAKMDAwMDAwMDI5OSAwMDAwMCBuIAowMDAwMDAwNDE3IDAwMDAwIG4gCjAwMDAwMDA2NzkgMDAwMDAgbiAKMDAwMDAxNjg2NiAwMDAwMCBuIAowMDAwMDE3MDU3IDAwMDAwIG4gCjAwMDAwMTc0NDggMDAwMDAgbiAKMDAwMDAxODA2OCAwMDAwMCBuIAowMDAwMDM4ODMxIDAwMDAwIG4gCjAwMDAwMzkwMTMgMDAwMDAgbiAKMDAwMDAzOTUwNSAwMDAwMCBuIAowMDAwMDQwMzU1IDAwMDAwIG4gCjAwMDAwNDc5NDggMDAwMDAgbiAKMDAwMDA0ODEzOSAwMDAwMCBuIAowMDAwMDQ4NDEyIDAwMDAwIG4gCjAwMDAwNTY5NzYgMDAwMDAgbiAKMDAwMDA1NzAyMiAwMDAwMCBuIAp0cmFpbGVyCjw8L0luZm8gMjYgMCBSL0lEIFs8OTE4NWU5ZTJjM2Y2NDAyZDNmMWY4NzZlYjI3NWNjYjc+PDc3OTcxMzY3MTMxMWU5MzRiYmVmYzU3OTg4NjBjMzY5Pl0vUm9vdCAyNSAwIFIvU2l6ZSAyNz4+CnN0YXJ0eHJlZgo1NzEzMwolJUVPRgo=",
-      "typeCode": "invoice"
-    }
-  ],
-  "shipmentDetails": [
-    {
-      "pickupDetails": {
-        "localCutoffDateAndTime": "2022-12-13T17:00:00",
-        "gmtCutoffTime": "18:00:00",
-        "cutoffTimeOffset": "PT1H",
-        "pickupEarliest": "10:00:00",
-        "pickupLatest": "18:00:00",
-        "totalTransitDays": "3",
-        "pickupAdditionalDays": "10",
-        "deliveryAdditionalDays": "1",
-        "pickupDayOfWeek": "2",
-        "deliveryDayOfWeek": "3"
-      }
-    }
-  ],
-  "estimatedDeliveryDate": {
-    "estimatedDeliveryDate": "2022-12-28",
-    "estimatedDeliveryType": "QDDC"
-  }
+  ]
 }
 """;
 
@@ -88,7 +9301,7 @@ var json = $$"""
 //    return missingProperties;
 //}
 
-var shipment = JsonConvert.DeserializeObject<CreateShipmentResponseModel>(json);
+var shipment = JsonConvert.DeserializeObject<ReferenceDataResponseModel>(json);
 
 var t = typeof(CreateShipmentRequestModel);
 

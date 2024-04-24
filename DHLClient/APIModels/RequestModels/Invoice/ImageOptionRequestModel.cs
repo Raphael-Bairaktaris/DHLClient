@@ -23,8 +23,8 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("typeCode")]
-        [JsonConverter(typeof(InvoiceToStringJsonConverter))]
-        public Invoice? TypeCode { get; set; }
+        [JsonConverter(typeof(DeliveryDocumentTypeToStringJsonConverter))]
+        public DeliveryDocumentType? TypeCode { get; set; }
 
         /// <summary>
         /// Please enter DHL Express document template name.

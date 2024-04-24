@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for creating or updating a rating landed cost
     /// </summary>
-    public class RatingLandedCostRequestModel : BaseRatingRequestModel
+    public class LandedCostRequestModel : BaseRatingRequestModel
     {
         #region Public Properties
 
@@ -104,7 +104,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public RatingLandedCostRequestModel() : base()
+        public LandedCostRequestModel() : base()
         {
 
         }

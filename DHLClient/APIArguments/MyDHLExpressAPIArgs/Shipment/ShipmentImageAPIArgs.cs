@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Arguments used for getting a shipment image
     /// </summary>
-    public class ShipmentGetImageAPIArgs : BaseMyDHLAPIArgs
+    public class ShipmentImageAPIArgs : BaseMyDHLAPIArgs
     {
         #region Public Properties
 
@@ -62,7 +62,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentGetImageAPIArgs() : base()
+        public ShipmentImageAPIArgs() : base()
         {
 
         }

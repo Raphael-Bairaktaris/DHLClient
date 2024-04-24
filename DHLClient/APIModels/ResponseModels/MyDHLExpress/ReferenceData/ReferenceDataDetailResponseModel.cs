@@ -19,6 +19,11 @@ namespace DHLClient
         /// </summary>
         private string? mDataSetCaptions;
 
+        /// <summary>
+        /// The member of the <see cref="Data"/> property
+        /// </summary>
+        private IEnumerable<IEnumerable<DataResponseModel>>? mData;
+
         #endregion
 
         #region Public Properties
@@ -46,10 +51,13 @@ namespace DHLClient
 
         /// <summary>
         /// The data
-        /// TODO
         /// </summary>
         [JsonProperty("data")]
-        public object Data { get; set; }
+        public IEnumerable<IEnumerable<DataResponseModel>> Data
+        {
+            get => mData ?? Enumerable.Empty<IEnumerable<DataResponseModel>>();
+            set => mData = value;
+        }
 
         #endregion
 

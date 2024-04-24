@@ -20,17 +20,20 @@
         /// <summary>
         /// Retrieve rates for a one piece shipment
         /// </summary>
-        public const string RetrieveOneShipmentRateAPIRoute = $"{TestEnvironment}/rates";
+        /// <param name="baseRoute">The base route</param>
+        public static string GetRetrieveOneShipmentRateAPIRoute(string? baseRoute) => Combine(baseRoute, "rates");
 
         /// <summary>
         /// Retrieve Rates for Multi-piece Shipments
         /// </summary>
-        public const string RetrieveMultipleShipmentRatesAPIRoute = $"{TestEnvironment}/rates";
+        /// <param name="baseRoute">The base route</param>
+        public static string GetRetrieveMultipleShipmentRatesAPIRoute(string? baseRoute) => Combine(baseRoute, "rates");
 
         /// <summary>
         /// The landed cost API route
         /// </summary>
-        public const string LandedCostAPIRoute = $"{TestEnvironment}/landed-cost";
+        /// <param name="baseRoute">The base route</param>
+        public static string LandedCostAPIRoute = $"{TestEnvironment}/landed-cost";
 
         #endregion
 
@@ -168,6 +171,22 @@
         /// Provide reference data currently used for MyDHL API services usage API route.
         /// </summary>
         public const string ReferenceDataAPIRoute = $"{TestEnvironment}/reference-data";
+
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Combines the specified <paramref name="parts"/> while ensuring a correct URL structure
+        /// </summary>
+        /// <returns></returns>
+        public static string Combine(params string?[] parts)
+        {
+            var Parts = parts
+                .Where(x => !string.IsNullOrEmpty(x));
+
+            return string.Join("/", Parts);
+        }
 
         #endregion
     }

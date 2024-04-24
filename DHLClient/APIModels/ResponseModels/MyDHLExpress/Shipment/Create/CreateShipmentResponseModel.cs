@@ -10,11 +10,6 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="DispatchConfirmationNumber"/> property
-        /// </summary>
-        private string? mDispatchConfirmationNumber;
-
-        /// <summary>
         /// The member of the <see cref="Packages"/> property
         /// </summary>
         private IEnumerable<PackageResponseModel>? mPackages;
@@ -63,7 +58,7 @@ namespace DHLClient
         /// Here you will receive Shipment Identification Number of your package
         /// </summary>
         [JsonProperty("shipmentTrackingNumber")]
-        public int ShipmentTrackingNumber { get; set; }
+        public long ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// If you requested pickup for your shipment you can use this URL to cancel the pickup
@@ -81,11 +76,7 @@ namespace DHLClient
         /// If you asked for pickup service here you will find Dispatch Confirmation Number which identifies your pickup booking
         /// </summary>
         [JsonProperty("dispatchConfirmationNumber")]
-        public string DispatchConfirmationNumber
-        {
-            get => mDispatchConfirmationNumber ?? string.Empty;
-            set => mDispatchConfirmationNumber = value;
-        }
+        public string? DispatchConfirmationNumber { get; set; }
 
         /// <summary>
         /// Here you can find information for all pieces your shipment is having like Piece Identification Number

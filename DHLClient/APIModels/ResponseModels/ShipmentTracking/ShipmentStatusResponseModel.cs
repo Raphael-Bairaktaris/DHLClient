@@ -10,11 +10,6 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="Timestamp"/> property
-        /// </summary>
-        private string? mTimestamp;
-
-        /// <summary>
         /// The member of the <see cref="Location"/> property
         /// </summary>
         private ShipmentDetailLocationResponseModel? mLocation;

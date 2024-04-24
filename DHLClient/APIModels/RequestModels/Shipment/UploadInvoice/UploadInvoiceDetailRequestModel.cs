@@ -22,7 +22,6 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("date")]
-        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly? Date { get; set; }
 
         /// <summary>
@@ -41,7 +40,7 @@ namespace DHLClient
         /// It is recommended to provide less than 20 customer references of 'MRN' type code
         /// </summary>
         [JsonProperty("customerReferences")]
-        public IEnumerable<LineItemCustomerReferenceRequestModel>? CustomerReferences { get; set; }
+        public IEnumerable<InvoiceCustomerReferenceRequestModel>? CustomerReferences { get; set; }
 
         /// <summary>
         /// Please provide Perfect Invoice related information

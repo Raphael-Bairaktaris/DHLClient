@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents an identifier response
     /// </summary>
-    public class IdentifiersResponseModel
+    public class IdentifierDetailResponseModel
     {
         #region Private Members
 
@@ -42,7 +42,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public IdentifiersResponseModel() : base()
+        public IdentifierDetailResponseModel() : base()
         {
 
         }

@@ -397,6 +397,20 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
+        /// Maps the <see cref="DHLDayOfWeek"/>s to their related <see cref="int"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<DHLDayOfWeek, int> DHLDayOfWeekTypeToIntMapper { get; } = new Dictionary<DHLDayOfWeek, int>()
+        {
+            { DHLDayOfWeek.Sunday, 0 },
+            { DHLDayOfWeek.Monday, 1 },
+            { DHLDayOfWeek.Tuesday, 2 },
+            { DHLDayOfWeek.Wednesday, 3 },
+            { DHLDayOfWeek.Thursday, 4 },
+            { DHLDayOfWeek.Friday, 5 },
+            { DHLDayOfWeek.Saturday, 6 },
+        }.ToImmutableDictionary();
+
+        /// <summary>
         /// Maps the <see cref="DimensionUnit"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<DimensionUnit, string> DimensionUnitToStringMapper { get; } = new Dictionary<DimensionUnit, string>()
@@ -452,10 +466,10 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<EncodingFormat, string> EncodingFormatToStringMapper { get; } = new Dictionary<EncodingFormat, string>()
         {
-            { EncodingFormat.PDF, "pdf" },
-            { EncodingFormat.ZPL, "zpl" },
-            { EncodingFormat.LP2, "lp2" },
-            { EncodingFormat.Tiff, "tiff" },
+            { EncodingFormat.PDF, "PDF" },
+            { EncodingFormat.ZPL, "ZPL" },
+            { EncodingFormat.LP2, "LP2" },
+            { EncodingFormat.Tiff, "TIFF" },
         }.ToImmutableDictionary();
 
         /// <summary>

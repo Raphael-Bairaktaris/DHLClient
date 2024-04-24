@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DHLClient.JsonConverters;
+using Newtonsoft.Json;
 
 namespace DHLClient
 {
@@ -13,8 +14,8 @@ namespace DHLClient
         /// Provide type code of data that can be returned in response.
         /// </summary>
         [JsonProperty("typeCode")]
-        [JsonConverter(typeof(ValueAddedServiceToStringJsonConverter))]
-        public ValueAddedService? ValueAddedService { get; set; }
+        [JsonConverter(typeof(AdditionalInformationTypeStringJsonConverter))]
+        public AdditionalInformationType? AdditionalInformation { get; set; }
 
         /// <summary>
         /// Indicates if additional information is requested 

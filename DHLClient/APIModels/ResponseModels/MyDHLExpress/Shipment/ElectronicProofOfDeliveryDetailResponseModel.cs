@@ -2,6 +2,9 @@
 
 namespace DHLClient
 {
+    /// <summary>
+    /// Represents an electronic proof of delivery detail
+    /// </summary>
     public class ElectronicProofOfDeliveryDetailResponseModel
     {
         #region Private Members

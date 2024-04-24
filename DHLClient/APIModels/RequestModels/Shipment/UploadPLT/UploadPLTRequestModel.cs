@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests for creating or updating an upload paperless trade 
     /// </summary>
-    public class ShipmentUploadPLTRequestModel
+    public class UploadPLTRequestModel
     {
         #region Public Properties
 
@@ -45,7 +45,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentUploadPLTRequestModel() : base()
+        public UploadPLTRequestModel() : base()
         {
 
         }

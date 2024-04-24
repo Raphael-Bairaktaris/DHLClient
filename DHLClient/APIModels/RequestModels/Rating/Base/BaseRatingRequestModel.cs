@@ -38,7 +38,7 @@ namespace DHLClient
         /// Here you can define properties per package
         /// </summary>
         [JsonProperty("packages")]
-        public PackageRequestModel? Packages { get; set; }
+        public IEnumerable<PackageRequestModel>? Packages { get; set; }
 
         #endregion
 

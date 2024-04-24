@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents an address detail response
     /// </summary>
-    public class AddressDetailResponseModel : ShipmentOccurrenceServiceAreaResponseModel
+    public class AddressDetailResponseModel
     {
         #region Private Members
 
@@ -23,6 +23,11 @@ namespace DHLClient
         /// The member of the <see cref="PostalCode"/> property
         /// </summary>
         private string? mPostalCode;
+
+        /// <summary>
+        /// The member of the <see cref="ServiceArea"/> property
+        /// </summary>
+        private AddressServiceAreaResponseModel? mServiceArea;
 
         #endregion
 
@@ -69,10 +74,14 @@ namespace DHLClient
         public CountryCode CountryCode { get; set; }
 
         /// <summary>
-        /// The time offset
+        /// The service area
         /// </summary>
-        [JsonProperty("GMTOffset")]
-        public TimeSpan? GMTOffset { get; set; }
+        [JsonProperty("serviceArea")]
+        public AddressServiceAreaResponseModel ServiceArea
+        {
+            get => mServiceArea ??= new AddressServiceAreaResponseModel();
+            set => mServiceArea = value;
+        }
 
         #endregion
 

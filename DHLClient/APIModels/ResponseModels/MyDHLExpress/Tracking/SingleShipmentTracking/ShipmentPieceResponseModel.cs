@@ -29,6 +29,21 @@ namespace DHLClient
         /// </summary>
         private ShipmentOccurrenceResponseModel? mEvents;
 
+        /// <summary>
+        /// The member of the <see cref="Pieces"/> property
+        /// </summary>
+        private IEnumerable<ShipmentPieceResponseModel>? mPieces;
+
+        /// <summary>
+        /// The member of the <see cref="ChildrenShipmentIdentificationNumbers"/> property
+        /// </summary>
+        private IEnumerable<string>? mChildrenShipmentIdentificationNumbers;
+
+        /// <summary>
+        /// The member of the <see cref="ControlledAccessDataCodes"/> property
+        /// </summary>
+        private IEnumerable<string>? mControlledAccessDataCodes;
+
         #endregion
 
         #region Public Properties
@@ -127,6 +142,50 @@ namespace DHLClient
         {
             get => mEvents ??= new ShipmentOccurrenceResponseModel();
             set => mEvents = value;
+        }
+
+        /// <summary>
+        /// The number of pieces
+        /// </summary>
+        [JsonProperty("numberOfPieces")]
+        public int NumberOfPieces { get; set; }
+
+        /// <summary>
+        /// Here you can find the piece details
+        /// </summary>
+        [JsonProperty("pieces")]
+        public IEnumerable<ShipmentPieceResponseModel> Pieces
+        {
+            get => mPieces ?? Enumerable.Empty<ShipmentPieceResponseModel>();
+            set => mPieces = value;
+        }
+
+        /// <summary>
+        /// The estimated delivery date
+        /// </summary>
+        /// <example>2020-06-12</example>
+        [JsonProperty("estimatedDeliveryDate")]
+        public DateOnly EstimatedDeliveryDate { get; set; }
+
+        /// <summary>
+        /// The children shipment identification numbers
+        /// </summary>
+        [JsonProperty("childrenShipmentIdentificationNumbers")]
+        public IEnumerable<string> ChildrenShipmentIdentificationNumbers
+        {
+            get => mChildrenShipmentIdentificationNumbers ?? Enumerable.Empty<string>();
+            set => mChildrenShipmentIdentificationNumbers = value;
+        }
+
+        /// <summary>
+        /// Controlled access data codes such as 'SHPR_CTY' for shipper's city, 'CNSGN_CTY' for consignee's city, 'SVP_URL' for service point URL, 
+        /// 'SVP_FAC' for service point facility code and 'SIGN_NM' for signatory name.
+        /// </summary>
+        [JsonProperty("controlledAccessDataCodes")]
+        public IEnumerable<string> ControlledAccessDataCodes
+        {
+            get => mControlledAccessDataCodes ?? Enumerable.Empty<string>();
+            set => mControlledAccessDataCodes = value;
         }
 
         #endregion

@@ -13,8 +13,9 @@ namespace DHLClient
         /// Date – start when it is closed
         /// </summary>
         /// <example>7-4-2023</example>
+        /// TODO
         [JsonProperty("from")]
-        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter), false)]
         public DateOnly From { get; set; }
 
         /// <summary>
@@ -22,7 +23,7 @@ namespace DHLClient
         /// </summary>
         /// <example>7-4-2023</example>
         [JsonProperty("to")]
-        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter), false)]
         public DateOnly To { get; set; }
 
         #endregion

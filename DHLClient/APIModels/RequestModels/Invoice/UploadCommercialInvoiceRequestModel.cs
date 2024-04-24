@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Requests used for uploading an invoice
     /// </summary>
-    public class UploadInvoiceDataRequestModel
+    public class UploadCommercialInvoiceRequestModel
     {
         #region Public Properties
 
@@ -56,7 +56,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public UploadInvoiceDataRequestModel() : base()
+        public UploadCommercialInvoiceRequestModel() : base()
         {
 
         }
