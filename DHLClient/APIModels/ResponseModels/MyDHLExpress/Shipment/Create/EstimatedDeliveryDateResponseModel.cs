@@ -37,5 +37,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Estimated Delivery Date: {EstimatedDeliveryDate}, Estimated Delivery Type: {EstimatedDeliveryType}";
+
+        #endregion
     }
 }

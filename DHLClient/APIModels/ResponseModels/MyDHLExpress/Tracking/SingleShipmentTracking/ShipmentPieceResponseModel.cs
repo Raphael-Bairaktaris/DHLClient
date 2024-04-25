@@ -10,6 +10,11 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
+        /// The member of the <see cref="Description"/> property
+        /// </summary>
+        private string? mDescription;
+
+        /// <summary>
         /// The member of the <see cref="Dimensions"/> property
         /// </summary>
         private ShipmentDetailDimensionResponseModel? mDimensions;
@@ -65,7 +70,7 @@ namespace DHLClient
         /// The shipment tracking number
         /// </summary>
         [JsonProperty("shipmentTrackingNumber")]
-        public double? ShipmentTrackingNumber { get; set; }
+        public long? ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// The tracking number
@@ -77,7 +82,11 @@ namespace DHLClient
         /// the piece description
         /// </summary>
         [JsonProperty("description")]
-        public string? Description { get; set; }
+        public string Description 
+        { 
+            get => mDescription ?? string.Empty;
+            set => mDescription = value;
+        }
 
         /// <summary>
         /// The weight of the package
@@ -199,6 +208,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Number: {Number}, Shipment Tracking Number: {ShipmentTrackingNumber}, Number Of Pieces: {NumberOfPieces}";
 
         #endregion
     }

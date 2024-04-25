@@ -21,7 +21,8 @@ namespace DHLClient
         /// <summary>
         /// The geographical latitude and longitude
         /// </summary>
-        public Coordinates Coordinates { get; set; }
+        [JsonProperty("searchLocation")]
+        public SearchLocationCoordinatesResponseModel SearchLocation { get; set; }
 
         /// <summary>
         /// Suggestion for the search address
@@ -44,6 +45,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Search Location: {SearchLocation}, Suggestion: {Suggestion}";
 
         #endregion
     }

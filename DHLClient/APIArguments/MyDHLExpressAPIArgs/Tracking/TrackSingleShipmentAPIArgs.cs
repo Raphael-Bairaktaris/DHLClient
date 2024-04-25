@@ -13,7 +13,7 @@ namespace DHLClient
         /// DHL Express shipment identification number
         /// </summary>
         [ArgumentName("shipmentTrackingNumber")]
-        public double? ShipmentTrackingNumber { get; set; }
+        public long? ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// The tracking view

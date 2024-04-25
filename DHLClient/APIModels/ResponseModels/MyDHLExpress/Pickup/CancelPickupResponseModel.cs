@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents a cancel pickup response
+    /// Represents a pickup cancellation
     /// </summary>
     public class CancelPickupResponseModel
     {
@@ -114,6 +114,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Instance: {Instance}, Detail: {Detail}, Title: {Title}, Message: {Message}, Status: {Status}";
 
         #endregion
     }

@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         /// <example>9356579890</example>
         [ArgumentName("shipmentTrackingNumber")]
-        public IEnumerable<string>? ShipmentTrackingNumber { get; set; }
+        public IEnumerable<long>? ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// DHL Express shipment piece tracking number

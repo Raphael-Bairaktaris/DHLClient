@@ -64,5 +64,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Tracking Number: {TrackingNumber}, Tracking URL: {TrackingURL}";
+
+        #endregion
     }
 }

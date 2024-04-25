@@ -11,7 +11,7 @@
         /// DHL Express shipment identification number
         /// </summary>
         [ArgumentName("shipmentTrackingNumber")]
-        public int ShipmentTrackingNumber { get; set; }
+        public long ShipmentTrackingNumber { get; set; }
 
         #endregion
 

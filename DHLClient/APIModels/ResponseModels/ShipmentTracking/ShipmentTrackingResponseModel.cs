@@ -5,14 +5,14 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipment tracking response
     /// </summary>
-    public class ShipmentResponseModel
+    public class ShipmentTrackingResponseModel
     {
         #region Private Members
 
         /// <summary>
         /// The member of the <see cref="Shipments"/> property
         /// </summary>
-        private IEnumerable<ShipmentDetailResponseModel>? mShipments;
+        private IEnumerable<ShipmentTrackingDetailResponseModel>? mShipments;
 
         #endregion
 
@@ -52,9 +52,9 @@ namespace DHLClient
         /// The shipments details
         /// </summary>
         [JsonProperty("shipments")]
-        public IEnumerable<ShipmentDetailResponseModel> Shipments
+        public IEnumerable<ShipmentTrackingDetailResponseModel> Shipments
         {
-            get => mShipments ?? Enumerable.Empty<ShipmentDetailResponseModel>();
+            get => mShipments ?? Enumerable.Empty<ShipmentTrackingDetailResponseModel>();
             set => mShipments = value;
         }
 
@@ -71,7 +71,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentResponseModel() : base()
+        public ShipmentTrackingResponseModel() : base()
         {
 
         }

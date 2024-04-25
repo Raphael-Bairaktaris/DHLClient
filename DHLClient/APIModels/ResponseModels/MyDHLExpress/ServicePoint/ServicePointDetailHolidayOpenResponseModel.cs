@@ -13,7 +13,7 @@ namespace DHLClient
         /// Date – when is open during holidays
         /// </summary>
         [JsonProperty("date")]
-        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter), true)]
         public DateOnly Date { get; set; }
 
         /// <summary>
@@ -39,6 +39,14 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Date: {Date}, From: {From}, To: {To}";
 
         #endregion
     }

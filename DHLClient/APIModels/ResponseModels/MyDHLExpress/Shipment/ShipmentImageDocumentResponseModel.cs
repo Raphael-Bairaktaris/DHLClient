@@ -10,11 +10,6 @@ namespace DHLClient
         #region Private Members
 
         /// <summary>
-        /// The member of the <see cref="ShipmentTrackingNumber"/> property
-        /// </summary>
-        private string? mShipmentTrackingNumber;
-
-        /// <summary>
         /// The member of the <see cref="TypeCode"/> property
         /// </summary>
         private string? mTypeCode;
@@ -38,11 +33,7 @@ namespace DHLClient
         /// </summary>
         /// <example>1234567890</example>
         [JsonProperty("shipmentTrackingNumber")]
-        public string ShipmentTrackingNumber
-        {
-            get => mShipmentTrackingNumber ?? string.Empty;
-            set => mShipmentTrackingNumber = value;
-        }
+        public long ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// Identifies type of the document like commercial invoice or waybill, or archived zip documents

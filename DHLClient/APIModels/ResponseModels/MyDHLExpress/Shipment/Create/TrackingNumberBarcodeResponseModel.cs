@@ -47,5 +47,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Reference Number: {ReferenceNumber}, Tracking Number Barcode Content: {TrackingNumberBarcodeContent}";
+
+        #endregion
     }
 }

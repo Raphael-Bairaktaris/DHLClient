@@ -5,7 +5,7 @@ namespace DHLClient
     /// <summary>
     /// Represents a shipment tracking detail response
     /// </summary>
-    public class ShipmentDetailResponseModel
+    public class ShipmentTrackingDetailResponseModel
     {
         #region Private Members
 
@@ -197,7 +197,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ShipmentDetailResponseModel() : base()
+        public ShipmentTrackingDetailResponseModel() : base()
         {
 
         }

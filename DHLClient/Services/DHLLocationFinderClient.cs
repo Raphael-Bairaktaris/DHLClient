@@ -43,8 +43,8 @@ namespace DHLClient
         /// </summary>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<LocationAddressResponseModel>> GetLocationByAddressAsync(ServicePointLocationByAddressAPIArgs args)
-            => Client.GetAsync<LocationAddressResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.LocationByAddressAPIRoute, args), Credentials.Username);
+        public Task<WebRequestResult<ServicePointLocationByAddressResponseModel>> GetLocationByAddressAsync(ServicePointLocationByAddressAPIArgs args)
+            => Client.GetAsync<ServicePointLocationByAddressResponseModel>(RouteHelpers.AttachParameters(DHLClientLocationAPIRoutes.LocationByAddressAPIRoute, args), Credentials.Username);
 
         /// <summary>
         /// Gets the location by geographical coordinates

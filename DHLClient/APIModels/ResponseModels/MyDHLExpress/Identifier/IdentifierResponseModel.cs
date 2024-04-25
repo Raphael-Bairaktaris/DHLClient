@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents an identifier response
+    /// Represents an identifier 
     /// </summary>
     public class IdentifierResponseModel
     {
@@ -54,6 +54,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Warnings: {Warnings}";
 
         #endregion
     }

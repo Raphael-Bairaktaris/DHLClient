@@ -169,5 +169,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Shipment Tracking Number: {ShipmentTrackingNumber}, Dispatch Confirmation Number: {DispatchConfirmationNumber}, Warnings: {Warnings}";
+
+        #endregion
     }
 }

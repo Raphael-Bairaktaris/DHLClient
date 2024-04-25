@@ -65,5 +65,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Status Code: {StatusCode}, Status Message: {StatusMessage}";
+
+        #endregion
     }
 }

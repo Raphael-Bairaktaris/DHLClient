@@ -73,5 +73,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Dispatch Confirmation Number: {DispatchConfirmationNumber}, Ready By Time: {ReadyByTime}, Next Pickup Date: {NextPickupDate}";
+
+        #endregion
     }
 }

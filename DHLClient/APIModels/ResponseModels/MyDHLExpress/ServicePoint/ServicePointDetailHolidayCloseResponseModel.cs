@@ -15,7 +15,7 @@ namespace DHLClient
         /// <example>7-4-2023</example>
         /// TODO
         [JsonProperty("from")]
-        [JsonConverter(typeof(DateOnlyToStringJsonConverter), false)]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter), true)]
         public DateOnly From { get; set; }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace DHLClient
         /// </summary>
         /// <example>7-4-2023</example>
         [JsonProperty("to")]
-        [JsonConverter(typeof(DateOnlyToStringJsonConverter), false)]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter), true)]
         public DateOnly To { get; set; }
 
         #endregion
@@ -37,6 +37,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"From: {From}, To: {To}";
 
         #endregion
     }

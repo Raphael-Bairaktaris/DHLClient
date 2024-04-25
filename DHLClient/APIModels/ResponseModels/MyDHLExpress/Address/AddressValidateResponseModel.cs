@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents an address validation response
+    /// Represents an address validation 
     /// </summary>
     public class AddressValidateResponseModel
     {
@@ -54,6 +54,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Warnings: {Warnings}";
 
         #endregion
     }

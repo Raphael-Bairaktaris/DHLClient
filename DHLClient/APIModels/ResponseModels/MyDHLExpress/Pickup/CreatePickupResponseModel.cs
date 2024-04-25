@@ -1,7 +1,7 @@
 ﻿namespace DHLClient
 {
     /// <summary>
-    /// Represents a create pickup response
+    /// Represents a pickup creation
     /// </summary>
     public class CreatePickupResponseModel : UpdatePickupResponseModel
     {

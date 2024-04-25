@@ -35,5 +35,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Unit Text: {UnitText}, Value: {Value}";
+
+        #endregion
     }
 }

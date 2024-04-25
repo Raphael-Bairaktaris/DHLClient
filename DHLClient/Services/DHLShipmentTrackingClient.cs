@@ -41,8 +41,8 @@
         /// </summary>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<ShipmentResponseModel>> GetTrackingInfoAsync(ShipmentTrackingAPIArgs args)
-            => Client.GetAsync<ShipmentResponseModel>(RouteHelpers.AttachParameters(DHLClientShipmentTrackingAPIRoutes.RetrieveTrackingInfoAPIRoute, args), Credentials.Username);
+        public Task<WebRequestResult<ShipmentTrackingResponseModel>> GetTrackingInfoAsync(ShipmentTrackingAPIArgs args)
+            => Client.GetAsync<ShipmentTrackingResponseModel>(RouteHelpers.AttachParameters(DHLClientShipmentTrackingAPIRoutes.RetrieveTrackingInfoAPIRoute, args), Credentials.Username);
 
         #endregion
     }

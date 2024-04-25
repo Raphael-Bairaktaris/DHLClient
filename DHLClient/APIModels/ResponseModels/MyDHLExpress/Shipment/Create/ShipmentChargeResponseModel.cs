@@ -66,5 +66,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Currency Type: {CurrencyType}, Price Currency: {PriceCurrency}";
+
+        #endregion
     }
 }

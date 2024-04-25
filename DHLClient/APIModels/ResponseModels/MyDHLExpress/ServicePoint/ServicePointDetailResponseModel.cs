@@ -391,5 +391,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Id: {Id}, Facility Id: {FacilityId}, Service Point Name: {ServicePointName}, ";
+
+        #endregion
     }
 }

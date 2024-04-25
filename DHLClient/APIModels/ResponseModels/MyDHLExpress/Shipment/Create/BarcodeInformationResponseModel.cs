@@ -86,5 +86,11 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        public override string ToString() => $"Shipment Identification Number Barcode Content: {ShipmentIdentificationNumberBarcodeContent}, Origin Destination Service Type Barcode Content: {OriginDestinationServiceTypeBarcodeContent}, Routing Barcode Content: {RoutingBarcodeContent}";
+
+        #endregion
     }
 }

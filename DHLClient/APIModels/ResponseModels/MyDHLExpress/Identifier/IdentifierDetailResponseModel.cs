@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents an identifier response
+    /// Represents an identifier 
     /// </summary>
     public class IdentifierDetailResponseModel
     {
@@ -23,7 +23,7 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(IdentifierTypeToStringJsonConverter))]
-        public IdentifierType TypeCode { get; set; }
+        public IdentifierType IdentifierType { get; set; }
 
         /// <summary>
         /// List of identifiers
@@ -46,6 +46,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Identifier Type: {IdentifierType}, List: {List}";
 
         #endregion
     }

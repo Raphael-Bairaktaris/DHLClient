@@ -72,5 +72,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Data Set Name: {DataSetName}, Data Set Captions: {DataSetCaptions}";
+
+        #endregion
     }
 }

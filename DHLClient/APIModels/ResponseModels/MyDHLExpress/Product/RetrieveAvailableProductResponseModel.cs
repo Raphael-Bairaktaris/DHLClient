@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents an available product response
+    /// Represents an available product 
     /// </summary>
     public class RetrieveAvailableProductResponseModel
     {

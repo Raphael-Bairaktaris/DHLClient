@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         /// <example>123456790</example>
         [JsonProperty("shipmentTrackingNumber")]
-        public double ShipmentTrackingNumber { get; set; }
+        public long ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// The planned shipment date for the provided shipmentTrackingNumber. 

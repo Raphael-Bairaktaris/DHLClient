@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Represents an address detail response
+    /// Represents an address detail 
     /// </summary>
     public class AddressDetailResponseModel
     {
@@ -94,6 +94,13 @@ namespace DHLClient
         {
 
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"City Name: {CityName}, :County Name: {CountyName}, Postal Code: {PostalCode}";
 
         #endregion
     }

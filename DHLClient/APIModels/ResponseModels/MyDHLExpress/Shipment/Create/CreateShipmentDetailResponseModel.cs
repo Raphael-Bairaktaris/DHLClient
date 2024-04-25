@@ -230,5 +230,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Customer Details: {CustomerDetails}, DHL Routing Code: {DHLRoutingCode}, Billing Code: {BillingCode}, Service Content Code: {ServiceContentCode}";
+
+        #endregion
     }
 }

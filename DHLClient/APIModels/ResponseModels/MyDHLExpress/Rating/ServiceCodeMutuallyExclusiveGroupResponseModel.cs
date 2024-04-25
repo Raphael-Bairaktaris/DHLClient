@@ -73,5 +73,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Service Code Rule Name: {ServiceCodeRuleName}, Description: {Description}";
+
+        #endregion
     }
 }

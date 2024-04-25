@@ -87,5 +87,12 @@ namespace DHLClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Facility Code: {FacilityCode}, Service Area Code: {ServiceAreaCode}, Inbound Sort Code: {InboundSortCode}, Outbound Sort Code: {OutboundSortCode}";
+
+        #endregion
     }
 }

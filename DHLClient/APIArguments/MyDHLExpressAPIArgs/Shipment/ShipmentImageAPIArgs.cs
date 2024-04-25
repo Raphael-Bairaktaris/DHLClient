@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         /// <example>9356579890</example>
         [ArgumentName("shipmentTrackingNumber")]
-        public double? ShipmentTrackingNumber { get; set; }
+        public long? ShipmentTrackingNumber { get; set; }
 
         /// <summary>
         /// DHL Express customer shipper account number
