@@ -462,14 +462,25 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="EncodingFormat"/>s to their related <see cref="string"/>s
+        /// Maps the <see cref="EncodingFormat"/>s to their related upper <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<EncodingFormat, string> EncodingFormatToStringMapper { get; } = new Dictionary<EncodingFormat, string>()
+        public static IReadOnlyDictionary<EncodingFormat, string> EncodingFormatToUpperStringMapper { get; } = new Dictionary<EncodingFormat, string>()
         {
             { EncodingFormat.PDF, "PDF" },
             { EncodingFormat.ZPL, "ZPL" },
             { EncodingFormat.LP2, "LP2" },
             { EncodingFormat.Tiff, "TIFF" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="EncodingFormat"/>s to their related lower <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<EncodingFormat, string> EncodingFormatToLowerStringMapper { get; } = new Dictionary<EncodingFormat, string>()
+        {
+            { EncodingFormat.PDF, "pdf" },
+            { EncodingFormat.ZPL, "zpl" },
+            { EncodingFormat.LP2, "lp2" },
+            { EncodingFormat.Tiff, "tiff" },
         }.ToImmutableDictionary();
 
         /// <summary>

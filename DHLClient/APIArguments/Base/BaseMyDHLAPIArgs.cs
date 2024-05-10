@@ -18,7 +18,7 @@
         /// </summary>
         /// <remarks>https://tools.ietf.org/html/rfc7231#section-7.1.1.2</remarks>
         [ArgumentName("Message-Reference-Date")]
-        public DateTimeOffset MessageReferenceDate { get; set; }
+        public DateTimeOffset? MessageReferenceDate { get; set; }
 
         /// <summary>
         /// Please provide name of the plugin (applicable to 3PV only)

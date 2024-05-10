@@ -20,7 +20,7 @@
         #region Public Methods
 
         /// <inheritdoc/>
-        public override string Convert(EncodingFormat value) => DHLClientConstants.EncodingFormatToStringMapper[value];
+        public override string Convert(EncodingFormat value) => DHLClientConstants.EncodingFormatToUpperStringMapper[value];
 
         #endregion
     }

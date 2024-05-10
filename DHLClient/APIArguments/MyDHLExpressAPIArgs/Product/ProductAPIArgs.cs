@@ -10,12 +10,14 @@
         /// <summary>
         /// DHL Express customer account number
         /// </summary>
+        /// <example>123456789</example>
         [ArgumentName("accountNumber")]
-        public double? AccountNumber { get; set; }
+        public int? AccountNumber { get; set; }
 
         /// <summary>
         /// A short text string code (see values defined in ISO 3166) specifying the shipment origin country.
         /// </summary>
+        /// <example>CZ</example>
         [ArgumentName("originCountryCode")]
         [QueryArgumentConverter<CountryCodeQueryArgymentConverter>]
         public CountryCode? OriginCountryCode { get; set; }
@@ -23,18 +25,21 @@
         /// <summary>
         /// Text specifying the postal code for an address.
         /// </summary>
+        /// <example>14800</example>
         [ArgumentName("originPostalCode")]
         public string? OriginPostalCode { get; set; }
 
         /// <summary>
         /// Text specifying the city name
         /// </summary>
+        /// <example>Prague</example>
         [ArgumentName("originCityName")]
         public string? OriginCityName { get; set; }
 
         /// <summary>
         /// A short text string code (see values defined in ISO 3166) specifying the shipment destination country.
         /// </summary>
+        /// <example>CZ</example>
         [ArgumentName("destinationCountryCode")]
         [QueryArgumentConverter<CountryCodeQueryArgymentConverter>]
         public CountryCode? DestinationCountryCode { get; set; }
@@ -42,6 +47,7 @@
         /// <summary>
         /// Text specifying the postal code for an address.
         /// </summary>
+        /// <example>14800</example>
         [ArgumentName("destinationPostalCode")]
         public string? DestinationPostalCode { get; set; }
 
@@ -54,24 +60,28 @@
         /// <summary>
         /// Gross weight of the shipment including packaging.
         /// </summary>
+        /// <example>5</example>
         [ArgumentName("weight")]
         public double? Weight { get; set; }
 
         /// <summary>
         /// Total length of the shipment including packaging.
         /// </summary>
+        /// <example>15</example>
         [ArgumentName("length")]
         public double? Length { get; set; }
 
         /// <summary>
         /// Total width of the shipment including packaging.
         /// </summary>
+        /// <example>10</example>
         [ArgumentName("width")]
         public double? Width { get; set; }
 
         /// <summary>
         /// Total height of the shipment including packaging.
         /// </summary>
+        /// <example>5</example>
         [ArgumentName("height")]
         public double? Height { get; set; }
 

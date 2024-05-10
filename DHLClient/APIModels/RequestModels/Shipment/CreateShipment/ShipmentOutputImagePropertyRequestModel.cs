@@ -31,7 +31,7 @@ namespace DHLClient
         /// Please provide the format of the output documents. Note that invoice and shipment receipt will always come back as PDF
         /// </summary>
         [JsonProperty("encodingFormat")]
-        [JsonConverter(typeof(EncodingFormatToStringJsonConverter))]
+        [JsonConverter(typeof(EncodingFormatToLowerStringJsonConverter))]
         public EncodingFormat? EncodingFormat { get; set; }
 
         /// <summary>

@@ -11,20 +11,20 @@
         /// DHL Express customer account number
         /// </summary>
         [ArgumentName("accountNumber")]
-        public double AccountNumber { get; set; }
+        public long AccountNumber { get; set; }
 
         /// <summary>
         /// Type of DHL express identifier to retrieve
         /// </summary>
         [ArgumentName("type")]
         [QueryArgumentConverter<IdentifierTypeQueryArgumentConverter>]
-        public IdentifierType Type { get; set; }
+        public IdentifierType IdentifierType { get; set; }
 
         /// <summary>
         /// Value of identifiers to be retrieved
         /// </summary>
         [ArgumentName("size")]
-        public double Size { get; set; }
+        public int Size { get; set; }
 
         #endregion
 

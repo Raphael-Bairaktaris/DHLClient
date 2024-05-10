@@ -5,8 +5,8 @@ namespace DHLClient
     /// <summary>
     /// The base for all the <see cref="JsonConverter{T}"/>s that are used for converting between an <see cref="Enum"/> and a <see cref="string"/>
     /// </summary>
-    public abstract class BaseEnumJsonConverter<T> : JsonConverter<T>
-        where T : Enum
+    public abstract class BaseEnumJsonConverter<T> : JsonConverter<T?>
+        where T : struct, Enum
     {
         #region Constructors
 
@@ -23,9 +23,12 @@ namespace DHLClient
         #region Public Methods
 
         /// <inheritdoc/>
-        public override sealed T ReadJson(JsonReader reader, Type objectType, T? existingValue, bool hasExistingValue, JsonSerializer serializer)
+        public override sealed T? ReadJson(JsonReader reader, Type objectType, T? existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
             var readerValue = serializer.Deserialize<string>(reader);
+
+            if (readerValue.IsNullOrEmpty())
+                return null;
 
             return GetMapper().First(x => x.Value == readerValue).Key;
         }
@@ -33,7 +36,10 @@ namespace DHLClient
         /// <inheritdoc/>
         public override sealed void WriteJson(JsonWriter writer, T? value, JsonSerializer serializer)
         {
-            writer.WriteValue(GetMapper()[value!]);
+            if (value is null)
+                return;
+
+            writer.WriteValue(GetMapper()[value.Value!]);
         }
 
         #endregion
