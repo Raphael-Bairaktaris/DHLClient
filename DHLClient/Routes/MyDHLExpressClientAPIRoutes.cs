@@ -13,7 +13,7 @@
         /// <summary>
         /// Production environment to create real transactions with DHL Express
         /// </summary>
-        public const string ProductionEnvironment = "https://express.api.dhl.com/mydhlapi";
+        public const string ProductionEnvironment = "https://api-mock.dhl.com/mydhlapi"; //https://express.api.dhl.com/mydhlapi";
 
         #region Rating API routes
 
@@ -55,7 +55,7 @@
         /// <param name="baseRoute">The base route</param>
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <returns></returns>
-        public static string GetElectronicProofOfDeliveryAPIRoute(string baseRoute, string shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber, "proof-of-delivery");
+        public static string GetElectronicProofOfDeliveryAPIRoute(string baseRoute, long shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber.ToString(), "proof-of-delivery");
 
         /// <summary>
         /// Upload Paperless Trade shipment (PLT) images of previously created shipment API route.
@@ -63,7 +63,7 @@
         /// <param name="baseRoute">The base route</param>
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <returns></returns>
-        public static string PatchPaperlessTradeShipmentAPIRoute(string baseRoute, string shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber, "upload-image");
+        public static string GetPaperlessTradeShipmentAPIRoute(string baseRoute, long shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber.ToString(), "upload-image");
 
         /// <summary>
         /// The create shipment API route
@@ -77,7 +77,7 @@
         /// <param name="baseRoute">The base route</param>
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <returns></returns>
-        public static string PatchCommercialInvoiceDataAPIRoute(string baseRoute,string shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber, "upload-invoice-data");
+        public static string GetCommercialInvoiceDataAPIRoute(string baseRoute, long shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber.ToString(), "upload-invoice-data");
 
         /// <summary>
         /// Gets the shipment image
@@ -85,7 +85,7 @@
         /// <param name="baseRoute">The base route</param>
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <returns></returns>
-        public static string GetShipmentImageAPIRoute(string baseRoute, string shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber, "get-image");
+        public static string GetShipmentImageAPIRoute(string baseRoute, long shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber.ToString(), "get-image");
 
         #endregion
 
@@ -97,7 +97,7 @@
         /// <param name="baseRoute">The base route</param>
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <returns></returns>
-        public static string GetSingleDHLShipment(string baseRoute, string shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber, "tracking");
+        public static string GetSingleDHLShipment(string baseRoute, long shipmentTrackingNumber) => Combine(baseRoute, "shipments", shipmentTrackingNumber.ToString(), "tracking");
 
         /// <summary>
         /// Track a single or multiple DHL Express Shipments API route

@@ -10,12 +10,6 @@ namespace DHLClient
         #region Public Properties
 
         /// <summary>
-        /// DHL Express shipment identification number
-        /// </summary>
-        [ArgumentName("shipmentTrackingNumber")]
-        public long? ShipmentTrackingNumber { get; set; }
-
-        /// <summary>
         /// The tracking view
         /// </summary>
         [ArgumentName("trackingView")]

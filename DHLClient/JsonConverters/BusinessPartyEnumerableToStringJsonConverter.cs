@@ -1,16 +1,16 @@
 ﻿namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="BaseEnumJsonConverter{T}"/> that converts a <see cref="BusinessPartyType"/> to <see cref="string"/>
+    /// A <see cref="BaseEnumEnumerableJsonConverter{T}"/> that converts a collection of <see cref="BusinessPartyType"/>s to <see cref="string"/>
     /// </summary>
-    public class BusinessPartyToStringJsonConverter : BaseEnumJsonConverter<BusinessPartyType>
+    public class BusinessPartyEnumerableToStringJsonConverter : BaseEnumEnumerableJsonConverter<BusinessPartyType>
     {
         #region Constructors
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public BusinessPartyToStringJsonConverter() : base()
+        public BusinessPartyEnumerableToStringJsonConverter() : base()
         {
 
         }

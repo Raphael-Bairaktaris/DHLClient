@@ -14,13 +14,14 @@ namespace DHLClient
         /// </summary>
         [JsonRequired]
         [JsonProperty("isRequested")]
-        public bool IsRequested { get; set; }
+        public bool? IsRequested { get; set; }
 
         /// <summary>
         /// The latest time the location premises is available to dispatch the DHL Express shipment.
         /// </summary>
         /// <example>HH:MM</example>
         [JsonProperty("closeTime")]
+        [JsonConverter(typeof(TimeOnlyToStringJsonConverter))]
         public TimeOnly? CloseTime { get; set; }
 
         /// <summary>
@@ -40,13 +41,13 @@ namespace DHLClient
         /// Please enter address and contact details related to your pickup
         /// </summary>
         [JsonProperty("pickupDetails")]
-        public EntityProfileDetailRequestModel? PickupDetails { get; set; }
+        public ShipmentPickupDetailRequestModel? PickupDetails { get; set; }
 
         /// <summary>
         /// Please enter address and contact details of the individual requesting the pickup
         /// </summary>
         [JsonProperty("pickupRequestorDetails")]
-        public EntityProfileDetailRequestModel? PickupRequestorDetails { get; set; }
+        public ShipmentPickupDetailRequestModel? PickupRequestorDetails { get; set; }
 
         #endregion
 

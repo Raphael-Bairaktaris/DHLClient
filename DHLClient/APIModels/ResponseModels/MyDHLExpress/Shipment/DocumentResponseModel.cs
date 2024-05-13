@@ -27,7 +27,7 @@ namespace DHLClient
         /// Identifies image format the document is created in, like PDF, JPG etc.
         /// </summary>
         [JsonProperty("imageFormat")]
-        [JsonConverter(typeof(ImageFormatToStringJsonConverter))]
+        [JsonConverter(typeof(ImageFormatToUpperStringJsonConverter))]
         public ImageFormat ImageFormat { get; set; }
 
         /// <summary>

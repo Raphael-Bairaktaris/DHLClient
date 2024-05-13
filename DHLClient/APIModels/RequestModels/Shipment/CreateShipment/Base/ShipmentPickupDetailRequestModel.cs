@@ -3,9 +3,9 @@
 namespace DHLClient
 {
     /// <summary>
-    /// Requests used for creating or updating a shipper detail
+    /// Request model used for sending shipment pickup information
     /// </summary>
-    public class EntityProfileDetailRequestModel
+    public class ShipmentPickupDetailRequestModel
     {
         #region Public Properties
 
@@ -31,14 +31,14 @@ namespace DHLClient
         /// The bank details
         /// </summary>
         [JsonProperty("bankDetails")]
-        public EntityProfileBankDetailRequestModel? BankDetails { get; set; }
+        public IEnumerable<EntityProfileBankDetailRequestModel>? BankDetails { get; set; }
 
         /// <summary>
         /// Please enter the business party role type of the shipper
         /// </summary>
         [JsonProperty("typeCode")]
         [JsonConverter(typeof(BusinessPartyToStringJsonConverter))]
-        public BusinessPartyType TypeCode { get; set; }
+        public BusinessPartyType? TypeCode { get; set; }
 
         #endregion
 
@@ -47,7 +47,7 @@ namespace DHLClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public EntityProfileDetailRequestModel() : base()
+        public ShipmentPickupDetailRequestModel() : base()
         {
 
         }

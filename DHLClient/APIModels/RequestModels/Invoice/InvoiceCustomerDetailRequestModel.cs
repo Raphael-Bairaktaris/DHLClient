@@ -13,31 +13,31 @@ namespace DHLClient
         /// Please enter address and contact details related to seller
         /// </summary>
         [JsonProperty("sellerDetails")]
-        public TradeEntityDetailRequestModel? SellerDetails { get; set; }
+        public EntityProfileDetailRequestModel? SellerDetails { get; set; }
 
         /// <summary>
         /// Please enter address and contact details related to buyer
         /// </summary>
         [JsonProperty("buyerDetails")]
-        public TradeEntityDetailRequestModel? BuyerDetails { get; set; }
+        public EntityProfileDetailRequestModel? BuyerDetails { get; set; }
 
         /// <summary>
         /// Please enter address and contact details related to importer
         /// </summary>
         [JsonProperty("importerDetails")]
-        public TradeEntityDetailRequestModel? ImporterDetails { get; set; }
+        public EntityProfileDetailRequestModel? ImporterDetails { get; set; }
 
         /// <summary>
         /// Please enter address and contact details related to exporter
         /// </summary>
         [JsonProperty("exporterDetails")]
-        public TradeEntityDetailRequestModel? ExporterDetails { get; set; }
+        public EntityProfileDetailRequestModel? ExporterDetails { get; set; }
 
         /// <summary>
         /// Please enter address and contact details related to ultimate consignee
         /// </summary>
         [JsonProperty("ultimateConsigneeDetails")]
-        public TradeEntityDetailRequestModel? UltimateConsigneeDetails { get; set; }
+        public EntityProfileDetailRequestModel? UltimateConsigneeDetails { get; set; }
 
         #endregion
 

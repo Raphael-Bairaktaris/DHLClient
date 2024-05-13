@@ -38,7 +38,7 @@ namespace DHLClient
         /// <param name="shouldUseTestEnvironment"></param>
         public MyDHLExpressClient(DHLClientCredentials credentials, bool shouldUseTestEnvironment = false) : base()
         {
-            Client = new DHLWebRequestsClient();
+            Client = DHLWebRequestsClient.Instance;
 
             Credentials = credentials ?? throw new ArgumentNullException(nameof(credentials));
             BaseRoute = shouldUseTestEnvironment ? MyDHLExpressClientAPIRoutes.TestEnvironment : MyDHLExpressClientAPIRoutes.ProductionEnvironment;
@@ -97,8 +97,8 @@ namespace DHLClient
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<ElectronicProofOfDeliveryResponseModel>> GetElectronicProofOfDeliveryAsync(string shipmentTrackingNumber, ShipmentProofOfDeliveryAPIArgs args)
-            => Client.GetAsync<ElectronicProofOfDeliveryResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetElectronicProofOfDeliveryAPIRoute(BaseRoute ,shipmentTrackingNumber), args), Credentials);
+        public Task<WebRequestResult<ElectronicProofOfDeliveryResponseModel>> GetElectronicProofOfDeliveryAsync(long shipmentTrackingNumber, ShipmentProofOfDeliveryAPIArgs args)
+            => Client.GetAsync<ElectronicProofOfDeliveryResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetElectronicProofOfDeliveryAPIRoute(BaseRoute, shipmentTrackingNumber), args), Credentials);
 
         /// <summary>
         /// Upload paperless trade shipment (PLT) images of previously created shipment.
@@ -107,9 +107,9 @@ namespace DHLClient
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public async Task<WebRequestResult> PatchPaperlessTradeShipmentAsync(string shipmentTrackingNumber, ShipmentUploadPLTAPIArgs args, UploadPLTRequestModel model)
+        public async Task<WebRequestResult> PatchPaperlessTradeShipmentAsync(long shipmentTrackingNumber, ShipmentUploadPLTAPIArgs args, UploadPLTRequestModel model)
         {
-            return await Client.PatchAsync<object>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.PatchPaperlessTradeShipmentAPIRoute(BaseRoute, shipmentTrackingNumber), args), model, Credentials);
+            return await Client.PatchAsync<object>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetPaperlessTradeShipmentAPIRoute(BaseRoute, shipmentTrackingNumber), args), model, Credentials);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace DHLClient
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public async Task<WebRequestResult<CreateShipmentResponseModel>> CreateDHLShipmentAsync(CreateShipmentAPIArgs args, CreateShipmentRequestModel model)
+        public async Task<WebRequestResult<CreateShipmentResponseModel>> CreateDHLShipmentAsync(CreateShipmentRequestModel model, CreateShipmentAPIArgs? args = null)
         {
             return await Client.PostAsync<CreateShipmentResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetCreateShipmentAPIRoute(BaseRoute), args), model, Credentials);
         }
@@ -130,8 +130,8 @@ namespace DHLClient
         /// <param name="args">The arguments</param>
         /// <param name="model">The model</param>
         /// <returns></returns>
-        public async Task<WebRequestResult> AddCommercialInvoiceDataAsycn(string shipmentTrackingNumber, UploadCommercialInvoiceForShipmentAPIArgs args, UploadCommercialInvoiceRequestModel model)
-            => await Client.PatchAsync<object>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.PatchCommercialInvoiceDataAPIRoute(BaseRoute, shipmentTrackingNumber), args), model, Credentials);
+        public async Task<WebRequestResult> AddCommercialInvoiceDataAsycn(long shipmentTrackingNumber, UploadCommercialInvoiceForShipmentAPIArgs args, UploadCommercialInvoiceRequestModel model)
+            => await Client.PatchAsync<object>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetCommercialInvoiceDataAPIRoute(BaseRoute, shipmentTrackingNumber), args), model, Credentials);
 
         /// <summary>
         /// Gets the shipment image
@@ -139,7 +139,7 @@ namespace DHLClient
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<ShipmentImageResponseModel>> GetShipmentImageAsync(string shipmentTrackingNumber, ShipmentImageAPIArgs args)
+        public Task<WebRequestResult<ShipmentImageResponseModel>> GetShipmentImageAsync(long shipmentTrackingNumber, ShipmentImageAPIArgs args)
             => Client.GetAsync<ShipmentImageResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetShipmentImageAPIRoute(BaseRoute, shipmentTrackingNumber), args), Credentials);
 
         #endregion
@@ -152,7 +152,7 @@ namespace DHLClient
         /// <param name="shipmentTrackingNumber">The shipment tracking number</param>
         /// <param name="args">The arguments</param>
         /// <returns></returns>
-        public Task<WebRequestResult<ShipmentPieceResponseModel>> GetSingleDHLShipmentAsync(string shipmentTrackingNumber, TrackSingleShipmentAPIArgs args)
+        public Task<WebRequestResult<ShipmentPieceResponseModel>> GetSingleDHLShipmentAsync(long shipmentTrackingNumber, TrackSingleShipmentAPIArgs args)
             => Client.GetAsync<ShipmentPieceResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetSingleDHLShipment(BaseRoute, shipmentTrackingNumber), args), Credentials);
 
         /// <summary>
@@ -258,42 +258,6 @@ namespace DHLClient
             => Client.GetAsync<ReferenceDataResponseModel>(RouteHelpers.AttachParameters(MyDHLExpressClientAPIRoutes.GetReferenceDataAPIRoute(BaseRoute), args), Credentials);
 
         #endregion
-
-        #endregion
-    }
-
-    public class DHLWebRequestsClient : WebRequestsClient<DHLClientCredentials>
-    {
-        #region Constructors
-
-        /// <summary>
-        /// Default constructor
-        /// </summary>
-        public DHLWebRequestsClient() : base()
-        {
-
-        }
-
-        #endregion
-
-        #region Protected Methods
-
-        /// <inheritdoc/>
-        protected override void ConfigureStringContent(StringContent stringContent)
-        {
-            base.ConfigureStringContent(stringContent);
-
-            stringContent.Headers.Add("Message-Reference", Guid.NewGuid().ToString());
-            stringContent.Headers.Add("Message-Reference-Date", DateTimeOffset.UtcNow.ToString("ddd, dd MMM yyyy hh:mm:ss", CultureInfo.InvariantCulture) + " GMT" );
-        }
-
-        /// <inheritdoc/>
-        protected override AuthenticationHeaderValue CreateAuthenticationHeader(DHLClientCredentials authenticationArgs)
-        {
-            string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(authenticationArgs.Username + ":" + authenticationArgs.Password));
-
-            return new AuthenticationHeaderValue("Basic", svcCredentials);
-        }
 
         #endregion
     }
