@@ -8,7 +8,7 @@
         /// <summary>
         /// Service point
         /// </summary>
-        Servicepoint = 0,
+        ServicePoint = 0,
 
         /// <summary>
         /// Neighbour

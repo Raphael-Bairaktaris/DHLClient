@@ -110,6 +110,8 @@ namespace DHLClient
 
             try
             {
+                ConfigureClientBeforeSendingRequest(Client);
+
                 // If there is content...
                 if (content is not null)
                     responseMessage = await Client.PostAsync(url, CreateStringContent(content));
@@ -197,6 +199,8 @@ namespace DHLClient
 
             try
             {
+                ConfigureClientBeforeSendingRequest(Client);
+
                 // Send it with the request
                 return await Client.GetAsync(url);
             }
@@ -230,6 +234,8 @@ namespace DHLClient
 
             try
             {
+                ConfigureClientBeforeSendingRequest(Client);
+
                 // Send it with the request
                 var response = await Client.GetAsync(url);
 
@@ -272,6 +278,8 @@ namespace DHLClient
 
             try
             {
+                ConfigureClientBeforeSendingRequest(Client);
+
                 // Send it with the request
                 var response = await Client.GetStreamAsync(url);
 
@@ -316,6 +324,8 @@ namespace DHLClient
 
             try
             {
+                ConfigureClientBeforeSendingRequest(Client);
+
                 // Send it with the request
                 return await Client.PutAsync(url, content is null ? null : CreateStringContent(content));
             }
@@ -354,6 +364,8 @@ namespace DHLClient
 
             try
             {
+                ConfigureClientBeforeSendingRequest(Client);
+
                 // Send it with the request
                 return await Client.PatchAsync(url, content is null ? null : CreateStringContent(content));
             }
@@ -391,6 +403,8 @@ namespace DHLClient
 
             try
             {
+                ConfigureClientBeforeSendingRequest(Client);
+
                 // Send it with the request
                 return await Client.DeleteAsync(url);
             }
@@ -761,6 +775,12 @@ namespace DHLClient
         /// </summary>
         /// <param name="client">The client</param>
         protected virtual void ConfigureClient(HttpClient client) => client.Timeout = new TimeSpan(0, 30, 0);
+
+        /// <summary>
+        /// Configures the <paramref name="client"/> before sending a request
+        /// </summary>
+        /// <param name="client">The client</param>
+        protected virtual void ConfigureClientBeforeSendingRequest(HttpClient client) { }
 
         /// <summary>
         /// Configures the specified <paramref name="stringContent"/>

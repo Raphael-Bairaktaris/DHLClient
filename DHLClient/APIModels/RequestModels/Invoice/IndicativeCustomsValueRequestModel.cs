@@ -28,7 +28,7 @@ namespace DHLClient
         /// </summary>
         /// <example>350.57</example>
         [JsonProperty("totalWithImportDutiesAndTaxes")]
-        public decimal TotalWithImportDutiesAndTaxes { get; set; }
+        public decimal[]? TotalWithImportDutiesAndTaxes { get; set; }
 
         #endregion
 

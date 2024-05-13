@@ -312,7 +312,7 @@ namespace DHLClient
         /// </summary>
         public static IReadOnlyDictionary<DeliveryOption, string> DeliveryOptionToStringMapper { get; } = new Dictionary<DeliveryOption, string>()
         {
-            { DeliveryOption.Servicepoint, "servicepoint" },
+            { DeliveryOption.ServicePoint, "servicepoint" },
             { DeliveryOption.Neighbour, "neighbour" },
             { DeliveryOption.SignatureRelease, "signatureRelease" },
             { DeliveryOption.Concierge, "concierge" }
@@ -550,9 +550,9 @@ namespace DHLClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="ImageFormat"/>s to their related <see cref="string"/>s
+        /// Maps the <see cref="ImageFormat"/>s to their related upper <see cref="string"/>s
         /// </summary>
-        public static IReadOnlyDictionary<ImageFormat, string> ImageFormatToStringMapper { get; } = new Dictionary<ImageFormat, string>()
+        public static IReadOnlyDictionary<ImageFormat, string> ImageFormatToUpperStringMapper { get; } = new Dictionary<ImageFormat, string>()
         {
             { ImageFormat.PDF, "PDF" },
             { ImageFormat.PNG, "PNG" },
@@ -560,6 +560,19 @@ namespace DHLClient
             { ImageFormat.GIF, "GIF" },
             { ImageFormat.TIFF, "TIFF" },
             { ImageFormat.JPG, "JPG" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="ImageFormat"/>s to their related lower <see cref="string"/>s
+        /// </summary>
+        public static IReadOnlyDictionary<ImageFormat, string> ImageFormatToLowerStringMapper { get; } = new Dictionary<ImageFormat, string>()
+        {
+            { ImageFormat.PDF, "pdf" },
+            { ImageFormat.PNG, "png" },
+            { ImageFormat.JPEG, "jpeg" },
+            { ImageFormat.GIF, "gif" },
+            { ImageFormat.TIFF, "tiff" },
+            { ImageFormat.JPG, "jpg" }
         }.ToImmutableDictionary();
 
         /// <summary>

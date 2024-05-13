@@ -13,13 +13,13 @@ namespace DHLClient
         /// Address definition for rating related services
         /// </summary>
         [JsonProperty("shipperDetails")]
-        public ShipperDetailRequestModel? ShipperDetails { get; set; }
+        public ShipmentPickupDetailRequestModel? ShipperDetails { get; set; }
 
         /// <summary>
         /// Address definition for rating related services
         /// </summary>
         [JsonProperty("receiverDetails")]
-        public ReceiverDetailsRequestModel? ReceiverDetails { get; set; }
+        public ShipmentPickupDetailRequestModel? ReceiverDetails { get; set; }
 
         #endregion
 

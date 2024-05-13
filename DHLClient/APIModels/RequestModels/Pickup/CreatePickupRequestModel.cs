@@ -18,14 +18,15 @@ namespace DHLClient
         [JsonRequired]
         [JsonProperty("plannedPickupDateAndTime")]
         [JsonConverter(typeof(DateTimeOffsetWithGMTPrefixToStringJsonConverter))]
-        public DateTimeOffset PlannedPickupDateAndTime { get; set; }
+        public DateTimeOffset? PlannedPickupDateAndTime { get; set; }
 
         /// <summary>
         /// The latest time the location premises is available to dispatch the DHL Express shipment. (HH:MM)
         /// </summary>
         /// <example>18:00</example>
         [JsonProperty("closeTime")]
-        public DateTime CloseTime { get; set; }
+        [JsonConverter(typeof(TimeOnlyToStringJsonConverter))]
+        public TimeOnly? CloseTime { get; set; }
 
         /// <summary>
         /// Provides information on where the package should be picked up by DHL courier.

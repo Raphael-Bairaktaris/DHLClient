@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         /// <example>2022-12-28T23:59:00Z</example>
         [JsonProperty("estimatedDeliveryDate")]
-        public DateTimeOffset EstimatedDeliveryDate { get; set; }
+        public DateTimeOffset? EstimatedDeliveryDate { get; set; }
 
         /// <summary>
         /// The estimated delivery type

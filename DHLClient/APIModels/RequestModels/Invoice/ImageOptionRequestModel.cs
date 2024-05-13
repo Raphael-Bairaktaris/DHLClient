@@ -7,15 +7,6 @@ namespace DHLClient
     /// </summary>
     public class ImageOptionsRequestModel
     {
-        #region Private Members
-
-        /// <summary>
-        /// The member of the <see cref="EncodingFormat"/> property
-        /// </summary>
-        private EncodingFormat? mEncodingFormat;
-
-        #endregion
-
         #region Public Properties
 
         /// <summary>
@@ -85,17 +76,8 @@ namespace DHLClient
         /// Please provide the format of the QR Code output format.
         /// </summary>
         [JsonProperty("encodingFormat")]
-        public EncodingFormat? EncodingFormat
-        {
-            get { return mEncodingFormat; }
-            set
-            {
-                if (value == DHLClient.EncodingFormat.PDF)
-                    mEncodingFormat = value;
-                else
-                    throw new ArgumentException("Invalid encoding format. Only PDF is allowed");
-            }
-        }
+        [JsonConverter(typeof(ImageFormatToLowerStringJsonConverter))]
+        public ImageFormat? EncodingFormat { get; set; }
 
         /// <summary>
         /// DHL Logo to be printed in Transport Label or Waybill Document

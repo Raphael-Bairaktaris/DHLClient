@@ -16,356 +16,730 @@ var pairs = DHLClientConstants.LanguageCodeToStringMapper;
 
 //var client = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "DHLClientCredentials.txt");
 
-var shipment2 = $$$"""
-{
-  "plannedShippingDateAndTime": "2022-10-19T19:19:40 GMT+00:00",
-  "pickup": {
-    "isRequested": false
-  },
-  "productCode": "P",
-  "localProductCode": "P",
-  "getRateEstimates": false,
-  "accounts": [
+
+
+var image = File.ReadAllBytes(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "logo.png"));
+var base64 = Convert.ToBase64String(image);
+var shipment2 =
+   $$$""" 
     {
-      "typeCode": "shipper",
-      "number": "123456789"
-    }
-  ],
-  "valueAddedServices": [
-    {
-      "serviceCode": "II",
-      "value": 10,
-      "currency": "USD"
-    }
-  ],
-  "outputImageProperties": {
-    "printerDPI": 300,
-    "encodingFormat": "pdf",
-    "imageOptions": [
-      {
-        "typeCode": "invoice",
-        "templateName": "COMMERCIAL_INVOICE_P_10",
-        "isRequested": true,
-        "invoiceType": "commercial",
-        "languageCode": "eng",
-        "languageCountryCode": "US"
-      },
-      {
-        "typeCode": "waybillDoc",
-        "templateName": "ARCH_8x4",
-        "isRequested": true,
-        "hideAccountNumber": false,
-        "numberOfCopies": 1
-      },
-      {
-        "typeCode": "label",
-        "templateName": "ECOM26_84_001",
-        "renderDHLLogo": true,
-        "fitLabelsToA4": false
-      }
-    ],
-    "splitTransportAndWaybillDocLabels": true,
-    "allDocumentsInOneImage": false,
-    "splitDocumentsByPages": false,
-    "splitInvoiceAndReceipt": true,
-    "receiptAndLabelsInOneImage": false
-  },
-  "customerDetails": {
-    "shipperDetails": {
-      "postalAddress": {
-        "postalCode": "526238",
-        "cityName": "Zhaoqing",
-        "countryCode": "CN",
-        "addressLine1": "4FENQU, 2HAOKU, WEIPINHUI WULIU YUAN，DAWANG",
-        "addressLine2": "GAOXIN QU, BEIJIANG DADAO, SIHUI,",
-        "addressLine3": "ZHAOQING, GUANDONG",
-        "countyName": "SIHUI",
-        "countryName": "CHINA, PEOPLES REPUBLIC"
-      },
-      "contactInformation": {
-        "email": "shipper_create_shipmentapi@dhltestmail.com",
-        "phone": "18211309039",
-        "mobilePhone": "18211309039",
-        "companyName": "Cider BookStore",
-        "fullName": "LiuWeiMing"
-      },
-      "registrationNumbers": [
-        {
-          "typeCode": "SDT",
-          "number": "CN123456789",
-          "issuerCountryCode": "CN"
-        }
-      ],
-      "bankDetails": [
-        {
-          "name": "Bank of China",
-          "settlementLocalCurrency": "RMB",
-          "settlementForeignCurrency": "USD"
-        }
-      ],
-      "typeCode": "business"
-    },
-    "receiverDetails": {
-      "postalAddress": {
-        "cityName": "Graford",
-        "countryCode": "US",
-        "postalCode": "76449",
-        "addressLine1": "116 Marine Dr",
-        "countryName": "UNITED STATES OF AMERICA"
-      },
-      "contactInformation": {
-        "email": "recipient_create_shipmentapi@dhltestmail.com",
-        "phone": "9402825665",
-        "mobilePhone": "9402825666",
-        "companyName": "Baylee Marshall",
-        "fullName": "Baylee Marshall"
-      },
-      "registrationNumbers": [
-        {
-          "typeCode": "SSN",
-          "number": "US123456789",
-          "issuerCountryCode": "US"
-        }
-      ],
-      "bankDetails": [
-        {
-          "name": "Bank of America",
-          "settlementLocalCurrency": "USD",
-          "settlementForeignCurrency": "USD"
-        }
-      ],
-      "typeCode": "business"
-    }
-  },
-  "content": {
-    "packages": [
-      {
-        "typeCode": "2BP",
-        "weight": 0.5,
-        "dimensions": {
-          "length": 1,
-          "width": 1,
-          "height": 1
-        },
-        "customerReferences": [
-          {
-            "value": "3654673",
-            "typeCode": "CU"
+       "plannedShippingDateAndTime":"2019-08-04T14:00:31GMT+01:00",
+       "pickup":{
+          "isRequested":false,
+          "closeTime":"18:00",
+          "location":"reception",
+          "specialInstructions":[
+             {
+                "value":"please ring door bell",
+                "typeCode":"TBD"
+             }
+          ],
+          "pickupDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":[
+                {
+                   "name":"Russian Bank Name",
+                   "settlementLocalCurrency":"RUB",
+                   "settlementForeignCurrency":"USD"
+                }
+             ],
+             "typeCode":"business"
+          },
+          "pickupRequestorDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":[
+                {
+                   "name":"Russian Bank Name",
+                   "settlementLocalCurrency":"RUB",
+                   "settlementForeignCurrency":"USD"
+                }
+             ],
+             "typeCode":"business"
           }
-        ],
-        "description": "Piece content description",
-        "labelDescription": "bespoke label description"
-      }
-    ],
-    "isCustomsDeclarable": true,
-    "declaredValue": 120,
-    "declaredValueCurrency": "USD",
-    "exportDeclaration": {
-      "lineItems": [
-        {
-          "number": 1,
-          "description": "Harry Steward biography first edition",
-          "price": 15,
-          "quantity": {
-            "value": 4,
-            "unitOfMeasurement": "GM"
-          },
-          "commodityCodes": [
-            {
-              "typeCode": "outbound",
-              "value": "84713000"
-            },
-            {
-              "typeCode": "inbound",
-              "value": "5109101110"
-            }
-          ],
-          "exportReasonType": "permanent",
-          "manufacturerCountry": "US",
-          "exportControlClassificationNumber": "US123456789",
-          "weight": {
-            "netValue": 0.1,
-            "grossValue": 0.7
-          },
-          "isTaxesPaid": true,
-          "additionalInformation": [
-            "450pages"
-          ],
-          "customerReferences": [
-            {
-              "typeCode": "AFE",
-              "value": "1299210"
-            }
-          ],
-          "customsDocuments": [
-            {
-              "typeCode": "COO",
-              "value": "MyDHLAPI - LN#1-CUSDOC-001"
-            }
-          ]
-        },
-        {
-          "number": 2,
-          "description": "Andromeda Chapter 394 - Revenge of Brook",
-          "price": 15,
-          "quantity": {
-            "value": 4,
-            "unitOfMeasurement": "GM"
-          },
-          "commodityCodes": [
-            {
-              "typeCode": "outbound",
-              "value": "6109100011"
-            },
-            {
-              "typeCode": "inbound",
-              "value": "5109101111"
-            }
-          ],
-          "exportReasonType": "permanent",
-          "manufacturerCountry": "US",
-          "exportControlClassificationNumber": "US123456789",
-          "weight": {
-            "netValue": 0.1,
-            "grossValue": 0.7
-          },
-          "isTaxesPaid": true,
-          "additionalInformation": [
-            "36pages"
-          ],
-          "customerReferences": [
-            {
-              "typeCode": "AFE",
-              "value": "1299211"
-            }
-          ],
-          "customsDocuments": [
-            {
-              "typeCode": "COO",
-              "value": "MyDHLAPI - LN#1-CUSDOC-001"
-            }
-          ]
-        }
-      ],
-      "invoice": {
-        "number": "2667168671",
-        "date": "2022-10-22",
-        "instructions": [
-          "Handle with care"
-        ],
-        "totalNetWeight": 0.4,
-        "totalGrossWeight": 0.5,
-        "customerReferences": [
+       },
+       "productCode":"D",
+       "localProductCode":"D",
+       "getRateEstimates":false,
+       "accounts":[
           {
-            "typeCode": "UCN",
-            "value": "UCN-783974937"
-          },
-          {
-            "typeCode": "CN",
-            "value": "CUN-76498376498"
-          },
-          {
-            "typeCode": "RMA",
-            "value": "MyDHLAPI-TESTREF-001"
+             "typeCode":"shipper",
+             "number":"123456789"
           }
-        ],
-        "termsOfPayment": "100 days",
-        "indicativeCustomsValues": {
-          "importCustomsDutyValue": 150.57,
-          "importTaxesValue": 49.43
-        }
-      },
-      "remarks": [
-        {
-          "value": "Right side up only"
-        }
-      ],
-      "additionalCharges": [
-        {
-          "value": 10,
-          "caption": "fee",
-          "typeCode": "freight"
-        },
-        {
-          "value": 20,
-          "caption": "freight charges",
-          "typeCode": "other"
-        },
-        {
-          "value": 10,
-          "caption": "ins charges",
-          "typeCode": "insurance"
-        },
-        {
-          "value": 7,
-          "caption": "rev charges",
-          "typeCode": "reverse_charge"
-        }
-      ],
-      "destinationPortName": "New York Port",
-      "placeOfIncoterm": "ShenZhen Port",
-      "payerVATNumber": "12345ED",
-      "recipientReference": "01291344",
-      "exporter": {
-        "id": "121233",
-        "code": "S"
-      },
-      "packageMarks": "Fragile glass bottle",
-      "declarationNotes": [
-        {
-          "value": "up to three declaration notes"
-        }
-      ],
-      "exportReference": "export reference",
-      "exportReason": "export reason",
-      "exportReasonType": "permanent",
-      "licenses": [
-        {
-          "typeCode": "export",
-          "value": "123127233"
-        }
-      ],
-      "shipmentType": "personal",
-      "customsDocuments": [
-        {
-          "typeCode": "INV",
-          "value": "MyDHLAPI - CUSDOC-001"
-        }
-      ]
-    },
-    "description": "Shipment",
-    "USFilingTypeValue": "12345",
-    "incoterm": "DAP",
-    "unitOfMeasurement": "metric"
-  },
-  "shipmentNotification": [
-    {
-      "typeCode": "email",
-      "receiverId": "shipmentnotification@mydhlapisample.com",
-      "languageCode": "eng",
-      "languageCountryCode": "UK",
-      "bespokeMessage": "message to be included in the notification"
+       ],
+       "valueAddedServices":[
+          {
+             "serviceCode":"II",
+             "value":100,
+             "currency":"GBP",
+             "method":"cash",
+             "dangerousGoods":[
+                {
+                   "contentId":"908",
+                   "dryIceTotalNetWeight":12,
+                   "customDescription":"1 package Lithium ion batteries in compliance with Section II of P.I. 9661",
+                   "unCodes":[
+                      1234
+                   ]
+                }
+             ]
+          }
+       ],
+       "outputImageProperties":{
+          "printerDPI":300,
+          "customerBarcodes":[
+             {
+                "content":"barcode content",
+                "textBelowBarcode":"text below barcode",
+                "symbologyCode":"93"
+             }
+          ],
+          "customerLogos":[
+             {
+                "fileFormat":"PNG",
+                "content":"{{{base64}}}"
+             }
+          ],
+          "encodingFormat":"pdf",
+          "imageOptions":[
+             {
+                "typeCode":"label",
+                "templateName":"ECOM26_84_001",
+                "isRequested":true,
+                "hideAccountNumber":false,
+                "numberOfCopies":1,
+                "invoiceType":"commercial",
+                "languageCode":"eng",
+                "languageCountryCode":"br",
+                "languageScriptCode":"Latn",
+                "encodingFormat":"png",
+                "renderDHLLogo":false,
+                "fitLabelsToA4":false,
+                "labelFreeText":"string",
+                "labelCustomerDataText":"string",
+                "shipmentReceiptCustomerDataText":"string"
+             }
+          ],
+          "splitTransportAndWaybillDocLabels":true,
+          "allDocumentsInOneImage":true,
+          "splitDocumentsByPages":true,
+          "splitInvoiceAndReceipt":true,
+          "receiptAndLabelsInOneImage":true
+       },
+       "customerReferences":[
+          {
+             "value":"Customer reference",
+             "typeCode":"CU"
+          }
+       ],
+       "identifiers":[
+          {
+             "typeCode":"shipmentId",
+             "value":"1234567890",
+             "dataIdentifier":"00"
+          }
+       ],
+       "customerDetails":{
+          "shipperDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":[
+                {
+                   "name":"Russian Bank Name",
+                   "settlementLocalCurrency":"RUB",
+                   "settlementForeignCurrency":"USD"
+                }
+             ],
+             "typeCode":"business"
+          },
+          "receiverDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":[
+                {
+                   "name":"Russian Bank Name",
+                   "settlementLocalCurrency":"RUB",
+                   "settlementForeignCurrency":"USD"
+                }
+             ],
+             "typeCode":"business"
+          },
+          "buyerDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"buyer@domain.com",
+                "phone":"+44123456789",
+                "mobilePhone":"+42123456789",
+                "companyName":"Customer Company Name",
+                "fullName":"Mark Companer"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":[
+                {
+                   "name":"Russian Bank Name",
+                   "settlementLocalCurrency":"RUB",
+                   "settlementForeignCurrency":"USD"
+                }
+             ],
+             "typeCode":"business"
+          },
+          "importerDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":[
+                {
+                   "name":"Russian Bank Name",
+                   "settlementLocalCurrency":"RUB",
+                   "settlementForeignCurrency":"USD"
+                }
+             ],
+             "typeCode":"business"
+          },
+          "exporterDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":[
+                {
+                   "name":"Russian Bank Name",
+                   "settlementLocalCurrency":"RUB",
+                   "settlementForeignCurrency":"USD"
+                }
+             ],
+             "typeCode":"business"
+          },
+          "sellerDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":[
+                {
+                   "name":"Russian Bank Name",
+                   "settlementLocalCurrency":"RUB",
+                   "settlementForeignCurrency":"USD"
+                }
+             ],
+             "typeCode":"business"
+          },
+          "payerDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":[
+                {
+                   "name":"Russian Bank Name",
+                   "settlementLocalCurrency":"RUB",
+                   "settlementForeignCurrency":"USD"
+                }
+             ],
+             "typeCode":"business"
+          },
+          "ultimateConsigneeDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":{
+                "typeCode":"VAT",
+                "number":"CZ123456789",
+                "issuerCountryCode":"CZ"
+             },
+             "typeCode":"business"
+          },
+          "brokerDetails":{
+             "postalAddress":{
+                "postalCode":"14800",
+                "cityName":"Prague",
+                "countryCode":"CZ",
+                "provinceCode":"CZ",
+                "addressLine1":"V Parku 2308/10",
+                "addressLine2":"addres2",
+                "addressLine3":"addres3",
+                "countyName":"Central Bohemia",
+                "provinceName":"Central Bohemia",
+                "countryName":"Czech Republic"
+             },
+             "contactInformation":{
+                "email":"that@before.de",
+                "phone":"+1123456789",
+                "mobilePhone":"+60112345678",
+                "companyName":"Company Name",
+                "fullName":"John Brew"
+             },
+             "registrationNumbers":[
+                {
+                   "typeCode":"VAT",
+                   "number":"CZ123456789",
+                   "issuerCountryCode":"CZ"
+                }
+             ],
+             "bankDetails":{
+                "typeCode":"VAT",
+                "number":"CZ123456789",
+                "issuerCountryCode":"CZ"
+             },
+             "typeCode":"business"
+          }
+       },
+       "content":{
+          "packages":[
+             {
+                "typeCode":"2BP",
+                "weight":22.501,
+                "dimensions":{
+                   "length":15.001,
+                   "width":15.001,
+                   "height":40.001
+                },
+                "customerReferences":[
+                   {
+                      "value":"Customer reference",
+                      "typeCode":"CU"
+                   }
+                ],
+                "identifiers":[
+                   {
+                      "typeCode":"shipmentId",
+                      "value":"1234567890",
+                      "dataIdentifier":"00"
+                   }
+                ],
+                "description":"Piece content description",
+                "labelBarcodes":[
+                   {
+                      "position":"left",
+                      "symbologyCode":"93",
+                      "content": "test",
+                      "textBelowBarcode":"text below left barcode"
+                   }
+                ],
+                "labelText":[
+                   {
+                      "position":"left",
+                      "caption":"text caption",
+                      "value":"text value"
+                   }
+                ],
+                "labelDescription":"bespoke label description",
+                "referenceNumber":1
+             }
+          ],
+          "isCustomsDeclarable":true,
+          "declaredValue":150,
+          "declaredValueCurrency":"CZK",
+          "exportDeclaration":{
+             "lineItems":[
+                {
+                   "number":1,
+                   "description":"line item description",
+                   "price":150,
+                   "quantity":{
+                      "value":1,
+                      "unitOfMeasurement":"BOX"
+                   },
+                   "commodityCodes":[
+                      {
+                         "typeCode":"outbound",
+                         "value":851713
+                      }
+                   ],
+                   "exportReasonType":"permanent",
+                   "manufacturerCountry":"CZ",
+                   "weight":{
+                      "netValue":10,
+                      "grossValue":10
+                   },
+                   "isTaxesPaid":true,
+                   "additionalInformation":null,
+                   "customerReferences":[
+                      {
+                         "typeCode":"AFE",
+                         "value":"custref123"
+                      }
+                   ],
+                   "customsDocuments":[
+                      {
+                         "typeCode":"972",
+                         "value":"custdoc456"
+                      }
+                   ],
+                   "preCalculatedLineItemTotalValue":150
+                }
+             ],
+             "invoice":{
+                "number":"12345-ABC",
+                "date":"2020-03-18",
+                "signatureName":"Brewer",
+                "signatureTitle":"Mr.",
+                "signatureImage":"Base64 encoded image",
+                "instructions":[
+                   "string"
+                ],
+                "customerDataTextEntries":[
+                   "string"
+                ],
+                "totalNetWeight":999999999999,
+                "totalGrossWeight":999999999999,
+                "customerReferences":[
+                   {
+                      "typeCode":"CU",
+                      "value":"custref112"
+                   }
+                ],
+                "termsOfPayment":"100 days",
+                "indicativeCustomsValues":{
+                   "importCustomsDutyValue":150.57,
+                   "importTaxesValue":49.43,
+                   "totalWithImportDutiesAndTaxes":[
+                      350.57
+                   ]
+                },
+                "preCalculatedTotalValues":{
+                   "preCalculatedTotalGoodsValue":49.43,
+                   "preCalculatedTotalInvoiceValue":150.57
+                }
+             },
+             "remarks":[
+                {
+                   "value":"declaration remark"
+                }
+             ],
+             "additionalCharges":[
+                {
+                   "value":10,
+                   "caption":"fee",
+                   "typeCode":"freight"
+                }
+             ],
+             "destinationPortName":"port details",
+             "placeOfIncoterm":"port of departure or destination details",
+             "payerVATNumber":"12345ED",
+             "recipientReference":"recipient reference",
+             "exporter":{
+                "id":"123",
+                "code":"EXPCZ"
+             },
+             "packageMarks":"marks",
+             "declarationNotes":[
+                {
+                   "value":"up to three declaration notes"
+                }
+             ],
+             "exportReference":"export reference",
+             "exportReason":"export reason",
+             "exportReasonType":"permanent",
+             "licenses":[
+                {
+                   "typeCode":"export",
+                   "value":"license"
+                }
+             ],
+             "shipmentType":"personal",
+             "customsDocuments":[
+                {
+                   "typeCode":"972",
+                   "value":"custdoc445"
+                }
+             ]
+          },
+          "description":"shipment description",
+          "USFilingTypeValue":"12345",
+          "incoterm":"DAP",
+          "unitOfMeasurement":"metric"
+       },
+       "documentImages":[
+          {
+             "typeCode":"INV",
+             "imageFormat":"PDF",
+             "content":"{{{base64}}}"
+          }
+       ],
+       "onDemandDelivery":{
+          "deliveryOption":"servicepoint",
+          "location":"front door",
+          "specialInstructions":"ringe twice",
+          "gateCode":"1234",
+          "whereToLeave":"concierge",
+          "neighbourName":"Mr.Dan",
+          "neighbourHouseNumber":"777",
+          "authorizerName":"Newman",
+          "servicePointId":"SPL123",
+          "requestedDeliveryDate":"2020-04-20"
+       },
+       "requestOndemandDeliveryURL":false,
+       "shipmentNotification":[
+          {
+             "typeCode":"email",
+             "receiverId":"receiver@email.com",
+             "languageCode":"eng",
+             "languageCountryCode":"UK",
+             "bespokeMessage":"message to be included in the notification"
+          }
+       ],
+       "prepaidCharges":[
+          {
+             "typeCode":"freight",
+             "currency":"CZK",
+             "value":200,
+             "method":"cash"
+          }
+       ],
+       "getTransliteratedResponse":false,
+       "estimatedDeliveryDate":{
+          "isRequested":false,
+          "typeCode":"QDDC"
+       },
+       "getAdditionalInformation":[
+          {
+             "typeCode":"pickupDetails",
+             "isRequested":true
+          }
+       ],
+       "parentShipment":{
+          "productCode":"s",
+          "packagesCount":1
+       }
     }
-  ],
-  "getTransliteratedResponse": false,
-  "estimatedDeliveryDate": {
-    "isRequested": true,
-    "typeCode": "QDDC"
-  },
-  "getAdditionalInformation": [
-    {
-      "typeCode": "pickupDetails",
-      "isRequested": true
-    }
-  ]
-}
-""";
+    """;
 
-var request = JsonConvert.DeserializeObject<CreateShipmentRequestModel>(shipment2);
+var request = JsonConvert.DeserializeObject<CreateShipmentRequestModel>(shipment2)!;
 
-var client = new MyDHLExpressClient(new DHLClientCredentials("dmD3ZkqFTbXx2kgCnma63PABaiJWBAdt", "MxZWCZrWHaEc6I1H"), true);
+//Test(shipment2);
 
-var response = await client.CreateDHLShipmentAsync(new CreateShipmentAPIArgs() {  }, request);
+var client = new MyDHLExpressClient(new DHLClientCredentials("dmD3ZkqFTbXx2kgCnma63PABaiJWBAdt", "MxZWCZrWHaEc6I1H"), false);
+
+var voucherResponse = await client.CreateDHLShipmentAsync(request);
+
+var trackResponse = await client.GetSingleDHLShipmentAsync(voucherResponse.Result.ShipmentTrackingNumber, new TrackSingleShipmentAPIArgs());
 
 var json = $$$"""
 {
@@ -599,31 +973,25 @@ var s = sbBuilder.ToString();
 
 Console.ReadLine();
 
-async void Test()
+async void Test(string b)
 {
     var client = new HttpClient();
     var request = new HttpRequestMessage
     {
         Method = HttpMethod.Post,
-        RequestUri = new Uri("https://api-mock.dhl.com/mydhlapi/pickups"),
+        RequestUri = new Uri("https://api-mock.dhl.com/mydhlapi/shipments"),
         Headers =
-    {
-        { "Message-Reference", Guid.NewGuid().ToString() },
-        { "Message-Reference-Date", DateTimeOffset.UtcNow.ToString("ddd, dd MMM yyyy hh:mm:ss", CultureInfo.InvariantCulture) + " GMT" },
-        //{ "Plugin-Name", "SOME_STRING_VALUE" },
-        //{ "Plugin-Version", "SOME_STRING_VALUE" },
-        //{ "Shipping-System-Platform-Name", "SOME_STRING_VALUE" },
-        //{ "Shipping-System-Platform-Version", "SOME_STRING_VALUE" },
-        //{ "Webstore-Platform-Name", "SOME_STRING_VALUE" },
-        //{ "Webstore-Platform-Version", "SOME_STRING_VALUE" },
-        { "Authorization", "Basic ZG1EM1prcUZUYlh4MmtnQ25tYTYzUEFCYWlKV0JBZHQ6TXhaV0NacldIYUVjNkkxSA==" },
-    },
-        Content = new StringContent("{\"plannedShippingDateAndTime\":\"2019-08-04T14:00:31GMT+01:00\",\"pickup\":{\"isRequested\":false,\"closeTime\":\"18:00\",\"location\":\"reception\",\"specialInstructions\":[{\"value\":\"please ring door bell\",\"typeCode\":\"TBD\"}],\"pickupDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":[{\"name\":\"Russian Bank Name\",\"settlementLocalCurrency\":\"RUB\",\"settlementForeignCurrency\":\"USD\"}],\"typeCode\":\"business\"},\"pickupRequestorDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":[{\"name\":\"Russian Bank Name\",\"settlementLocalCurrency\":\"RUB\",\"settlementForeignCurrency\":\"USD\"}],\"typeCode\":\"business\"}},\"productCode\":\"D\",\"localProductCode\":\"D\",\"getRateEstimates\":false,\"accounts\":[{\"typeCode\":\"shipper\",\"number\":\"123456789\"}],\"valueAddedServices\":[{\"serviceCode\":\"II\",\"value\":100,\"currency\":\"GBP\",\"method\":\"cash\",\"dangerousGoods\":[{\"contentId\":\"908\",\"dryIceTotalNetWeight\":12,\"customDescription\":\"1 package Lithium ion batteries in compliance with Section II of P.I. 9661\",\"unCodes\":[1234]}]}],\"outputImageProperties\":{\"printerDPI\":300,\"customerBarcodes\":[{\"content\":\"barcode content\",\"textBelowBarcode\":\"text below barcode\",\"symbologyCode\":\"93\"}],\"customerLogos\":[{\"fileFormat\":\"PNG\",\"content\":\"base64 encoded image\"}],\"encodingFormat\":\"pdf\",\"imageOptions\":[{\"typeCode\":\"label\",\"templateName\":\"ECOM26_84_001\",\"isRequested\":true,\"hideAccountNumber\":false,\"numberOfCopies\":1,\"invoiceType\":\"commercial\",\"languageCode\":\"eng\",\"languageCountryCode\":\"br\",\"languageScriptCode\":\"Latn\",\"encodingFormat\":\"png\",\"renderDHLLogo\":false,\"fitLabelsToA4\":false,\"labelFreeText\":\"string\",\"labelCustomerDataText\":\"string\",\"shipmentReceiptCustomerDataText\":\"string\"}],\"splitTransportAndWaybillDocLabels\":true,\"allDocumentsInOneImage\":true,\"splitDocumentsByPages\":true,\"splitInvoiceAndReceipt\":true,\"receiptAndLabelsInOneImage\":true},\"customerReferences\":[{\"value\":\"Customer reference\",\"typeCode\":\"CU\"}],\"identifiers\":[{\"typeCode\":\"shipmentId\",\"value\":\"1234567890\",\"dataIdentifier\":\"00\"}],\"customerDetails\":{\"shipperDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":[{\"name\":\"Russian Bank Name\",\"settlementLocalCurrency\":\"RUB\",\"settlementForeignCurrency\":\"USD\"}],\"typeCode\":\"business\"},\"receiverDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":[{\"name\":\"Russian Bank Name\",\"settlementLocalCurrency\":\"RUB\",\"settlementForeignCurrency\":\"USD\"}],\"typeCode\":\"business\"},\"buyerDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"buyer@domain.com\",\"phone\":\"+44123456789\",\"mobilePhone\":\"+42123456789\",\"companyName\":\"Customer Company Name\",\"fullName\":\"Mark Companer\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":[{\"name\":\"Russian Bank Name\",\"settlementLocalCurrency\":\"RUB\",\"settlementForeignCurrency\":\"USD\"}],\"typeCode\":\"business\"},\"importerDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":[{\"name\":\"Russian Bank Name\",\"settlementLocalCurrency\":\"RUB\",\"settlementForeignCurrency\":\"USD\"}],\"typeCode\":\"business\"},\"exporterDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":[{\"name\":\"Russian Bank Name\",\"settlementLocalCurrency\":\"RUB\",\"settlementForeignCurrency\":\"USD\"}],\"typeCode\":\"business\"},\"sellerDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":[{\"name\":\"Russian Bank Name\",\"settlementLocalCurrency\":\"RUB\",\"settlementForeignCurrency\":\"USD\"}],\"typeCode\":\"business\"},\"payerDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":[{\"name\":\"Russian Bank Name\",\"settlementLocalCurrency\":\"RUB\",\"settlementForeignCurrency\":\"USD\"}],\"typeCode\":\"business\"},\"ultimateConsigneeDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"},\"typeCode\":\"string\"},\"brokerDetails\":{\"postalAddress\":{\"postalCode\":\"14800\",\"cityName\":\"Prague\",\"countryCode\":\"CZ\",\"provinceCode\":\"CZ\",\"addressLine1\":\"V Parku 2308/10\",\"addressLine2\":\"addres2\",\"addressLine3\":\"addres3\",\"countyName\":\"Central Bohemia\",\"provinceName\":\"Central Bohemia\",\"countryName\":\"Czech Republic\"},\"contactInformation\":{\"email\":\"that@before.de\",\"phone\":\"+1123456789\",\"mobilePhone\":\"+60112345678\",\"companyName\":\"Company Name\",\"fullName\":\"John Brew\"},\"registrationNumbers\":[{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"}],\"bankDetails\":{\"typeCode\":\"VAT\",\"number\":\"CZ123456789\",\"issuerCountryCode\":\"CZ\"},\"typeCode\":\"string\"}},\"content\":{\"packages\":[{\"typeCode\":\"2BP\",\"weight\":22.501,\"dimensions\":{\"length\":15.001,\"width\":15.001,\"height\":40.001},\"customerReferences\":[{\"value\":\"Customer reference\",\"typeCode\":\"CU\"}],\"identifiers\":[{\"typeCode\":\"shipmentId\",\"value\":\"1234567890\",\"dataIdentifier\":\"00\"}],\"description\":\"Piece content description\",\"labelBarcodes\":[{\"position\":\"left\",\"symbologyCode\":\"93\",\"content\":\"string\",\"textBelowBarcode\":\"text below left barcode\"}],\"labelText\":[{\"position\":\"left\",\"caption\":\"text caption\",\"value\":\"text value\"}],\"labelDescription\":\"bespoke label description\",\"referenceNumber\":1}],\"isCustomsDeclarable\":true,\"declaredValue\":150,\"declaredValueCurrency\":\"CZK\",\"exportDeclaration\":{\"lineItems\":[{\"number\":1,\"description\":\"line item description\",\"price\":150,\"quantity\":{\"value\":1,\"unitOfMeasurement\":\"BOX\"},\"commodityCodes\":[{\"typeCode\":\"outbound\",\"value\":851713}],\"exportReasonType\":\"permanent\",\"manufacturerCountry\":\"CZ\",\"weight\":{\"netValue\":10,\"grossValue\":10},\"isTaxesPaid\":true,\"additionalInformation\":[\"string\"],\"customerReferences\":[{\"typeCode\":\"AFE\",\"value\":\"custref123\"}],\"customsDocuments\":[{\"typeCode\":\"972\",\"value\":\"custdoc456\"}],\"preCalculatedLineItemTotalValue\":150}],\"invoice\":{\"number\":\"12345-ABC\",\"date\":\"2020-03-18\",\"signatureName\":\"Brewer\",\"signatureTitle\":\"Mr.\",\"signatureImage\":\"Base64 encoded image\",\"instructions\":[\"string\"],\"customerDataTextEntries\":[\"string\"],\"totalNetWeight\":999999999999,\"totalGrossWeight\":999999999999,\"customerReferences\":[{\"typeCode\":\"CU\",\"value\":\"custref112\"}],\"termsOfPayment\":\"100 days\",\"indicativeCustomsValues\":{\"importCustomsDutyValue\":150.57,\"importTaxesValue\":49.43,\"totalWithImportDutiesAndTaxes\":[350.57]},\"preCalculatedTotalValues\":{\"preCalculatedTotalGoodsValue\":49.43,\"preCalculatedTotalInvoiceValue\":150.57}},\"remarks\":[{\"value\":\"declaration remark\"}],\"additionalCharges\":[{\"value\":10,\"caption\":\"fee\",\"typeCode\":\"freight\"}],\"destinationPortName\":\"port details\",\"placeOfIncoterm\":\"port of departure or destination details\",\"payerVATNumber\":\"12345ED\",\"recipientReference\":\"recipient reference\",\"exporter\":{\"id\":\"123\",\"code\":\"EXPCZ\"},\"packageMarks\":\"marks\",\"declarationNotes\":[{\"value\":\"up to three declaration notes\"}],\"exportReference\":\"export reference\",\"exportReason\":\"export reason\",\"exportReasonType\":\"permanent\",\"licenses\":[{\"typeCode\":\"export\",\"value\":\"license\"}],\"shipmentType\":\"personal\",\"customsDocuments\":[{\"typeCode\":\"972\",\"value\":\"custdoc445\"}]},\"description\":\"shipment description\",\"USFilingTypeValue\":\"12345\",\"incoterm\":\"DAP\",\"unitOfMeasurement\":\"metric\"},\"documentImages\":[{\"typeCode\":\"INV\",\"imageFormat\":\"PDF\",\"content\":\"base64 encoded image\"}],\"onDemandDelivery\":{\"deliveryOption\":\"servicepoint\",\"location\":\"front door\",\"specialInstructions\":\"ringe twice\",\"gateCode\":\"1234\",\"whereToLeave\":\"concierge\",\"neighbourName\":\"Mr.Dan\",\"neighbourHouseNumber\":\"777\",\"authorizerName\":\"Newman\",\"servicePointId\":\"SPL123\",\"requestedDeliveryDate\":\"2020-04-20\"},\"requestOndemandDeliveryURL\":false,\"shipmentNotification\":[{\"typeCode\":\"email\",\"receiverId\":\"receiver@email.com\",\"languageCode\":\"eng\",\"languageCountryCode\":\"UK\",\"bespokeMessage\":\"message to be included in the notification\"}],\"prepaidCharges\":[{\"typeCode\":\"freight\",\"currency\":\"CZK\",\"value\":200,\"method\":\"cash\"}],\"getTransliteratedResponse\":false,\"estimatedDeliveryDate\":{\"isRequested\":false,\"typeCode\":\"QDDC\"},\"getAdditionalInformation\":[{\"typeCode\":\"pickupDetails\",\"isRequested\":true}],\"parentShipment\":{\"productCode\":\"s\",\"packagesCount\":1}}")
+        {
+            { "Message-Reference", Guid.NewGuid().ToString() },
+            { "Message-Reference-Date", DateTimeOffset.UtcNow.ToString("ddd, dd MMM yyyy hh:mm:ss", CultureInfo.InvariantCulture) + " GMT" },
+            { "Authorization", "Basic ZG1EM1prcUZUYlh4MmtnQ25tYTYzUEFCYWlKV0JBZHQ6TXhaV0NacldIYUVjNkkxSA==" },
+        },
+        Content = new StringContent(b)
         {
             Headers =
-        {
-            ContentType = new MediaTypeHeaderValue("application/json")
-        }
+            {
+                ContentType = new MediaTypeHeaderValue("application/json")
+            }
         }
     };
     using (var response = await client.SendAsync(request))

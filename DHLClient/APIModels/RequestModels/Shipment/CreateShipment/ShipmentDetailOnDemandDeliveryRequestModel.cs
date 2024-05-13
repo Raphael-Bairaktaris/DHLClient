@@ -14,7 +14,7 @@ namespace DHLClient
         /// </summary>
         [JsonProperty("deliveryOption")]
         [JsonConverter(typeof(DeliveryOptionToStringJsonConverter))]
-        public DeliveryService? DeliveryOption { get; set; }
+        public DeliveryOption? DeliveryOption { get; set; }
 
         /// <summary>
         /// If delivery option is signatureDelivery please specify location where to leave the shipment

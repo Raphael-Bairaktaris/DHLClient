@@ -22,7 +22,7 @@ namespace DHLClient
         /// </summary>
         /// <example>PDF</example>
         [JsonProperty("imageFormat")]
-        [JsonConverter(typeof(ImageFormatToStringJsonConverter))]
+        [JsonConverter(typeof(ImageFormatToUpperStringJsonConverter))]
         public ImageFormat? ImageFormat { get; set; }
 
         /// <summary>

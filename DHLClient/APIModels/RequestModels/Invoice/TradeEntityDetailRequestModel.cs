@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// RRequests used for creating or updating a trade entity detail
+    /// Requests used for creating or updating a trade entity detail
     /// </summary>
     public class TradeEntityDetailRequestModel
     {

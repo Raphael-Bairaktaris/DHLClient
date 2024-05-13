@@ -174,7 +174,8 @@ namespace DHLClient
         /// </summary>
         /// <example>2020-06-12</example>
         [JsonProperty("estimatedDeliveryDate")]
-        public DateOnly EstimatedDeliveryDate { get; set; }
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
+        public DateOnly? EstimatedDeliveryDate { get; set; }
 
         /// <summary>
         /// The children shipment identification numbers

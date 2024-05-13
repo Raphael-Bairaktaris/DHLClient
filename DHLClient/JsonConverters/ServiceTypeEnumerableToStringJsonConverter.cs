@@ -3,14 +3,14 @@
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="ServiceType"/> to <see cref="srting"/>
     /// </summary>
-    public class ServiceTypeEnumEnumerableToStringJsonConverter : BaseEnumEnumerableJsonConverter<ServiceType>
+    public class ServiceTypeEnumerableToStringJsonConverter : BaseEnumEnumerableJsonConverter<ServiceType>
     {
         #region Constructors
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ServiceTypeEnumEnumerableToStringJsonConverter() : base()
+        public ServiceTypeEnumerableToStringJsonConverter() : base()
         {
 
         }

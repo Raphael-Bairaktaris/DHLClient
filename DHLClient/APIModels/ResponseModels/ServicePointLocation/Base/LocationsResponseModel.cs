@@ -96,7 +96,7 @@ namespace DHLClient
         /// The list of services available at the DHL Service Point location.
         /// </summary>
         [JsonProperty("serviceTypes")]
-        [JsonConverter(typeof(ServiceTypeEnumEnumerableToStringJsonConverter))]
+        [JsonConverter(typeof(ServiceTypeEnumerableToStringJsonConverter))]
         public IEnumerable<ServiceType> ServiceTypes
         {
             get => mServiceTypes ?? Enumerable.Empty<ServiceType>();
