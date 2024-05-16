@@ -1,4 +1,4 @@
-﻿namespace DHLClient
+﻿namespace DHLClient.LocationUnified
 {
     /// <summary>
     /// Arguments uses for receiving a DHL service point location by address

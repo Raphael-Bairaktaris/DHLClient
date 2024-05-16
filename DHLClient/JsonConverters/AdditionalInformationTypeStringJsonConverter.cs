@@ -1,4 +1,4 @@
-﻿namespace DHLClient.JsonConverters
+﻿namespace DHLClient
 {
     /// <summary>
     /// The <see cref="BaseEnumJsonConverter{T}"/> that is used to convert an <see cref="AdditionalInformationType"/> to <see cref="string"/>

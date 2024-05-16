@@ -1,9 +1,7 @@
-﻿using Newtonsoft.Json;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
-    /// A <see cref="JsonConverter{T}"/> that converts an <see cref="EstimatedTariffRate"/> to <see cref="string"/>
+    /// A <see cref="BaseEnumJsonConverter{T}"/> that converts an <see cref="EstimatedTariffRate"/> to <see cref="string"/>
     /// </summary>
     public class EstimatedTariffRateToStringJsonConverter : BaseEnumJsonConverter<EstimatedTariffRate>
     {

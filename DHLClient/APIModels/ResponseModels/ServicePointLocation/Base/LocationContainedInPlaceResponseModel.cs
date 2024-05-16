@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.LocationUnified
 {
     /// <summary>
     /// Represents a description of the building/facility the service point is located in

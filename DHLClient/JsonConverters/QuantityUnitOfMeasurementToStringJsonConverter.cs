@@ -3,7 +3,7 @@
 namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="QuantityUnitOfMeasurement"/> to <see cref="string"/>
+    /// The <see cref="BaseEnumJsonConverter{T}"/> that converts a <see cref="QuantityUnitOfMeasurement"/> to <see cref="string"/>
     /// </summary>
     public class QuantityUnitOfMeasurementToStringJsonConverter : BaseEnumJsonConverter<QuantityUnitOfMeasurement>
     {

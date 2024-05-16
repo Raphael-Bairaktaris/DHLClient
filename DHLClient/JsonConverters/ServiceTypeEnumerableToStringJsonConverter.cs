@@ -1,7 +1,7 @@
 ﻿namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="ServiceType"/> to <see cref="srting"/>
+    /// The <see cref="BaseEnumEnumerableJsonConverter{T}"/> that converts a <see cref="ServiceType"/> to <see cref="srting"/>
     /// </summary>
     public class ServiceTypeEnumerableToStringJsonConverter : BaseEnumEnumerableJsonConverter<ServiceType>
     {

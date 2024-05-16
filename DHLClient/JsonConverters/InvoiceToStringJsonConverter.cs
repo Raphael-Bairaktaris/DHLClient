@@ -1,6 +1,4 @@
-﻿// Ignore Spelling: Incoterm
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="Invoice"/> to <see cref="string"/>

@@ -4,9 +4,7 @@ using Newtonsoft.Json;
 using System.Globalization;
 using System.Net.Http.Headers;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Text;
-using static System.Net.Mime.MediaTypeNames;
 
 Console.WriteLine("Hello, World!");
 
@@ -735,11 +733,11 @@ var request = JsonConvert.DeserializeObject<CreateShipmentRequestModel>(shipment
 
 //Test(shipment2);
 
-var client = new MyDHLExpressClient(new DHLClientCredentials("dmD3ZkqFTbXx2kgCnma63PABaiJWBAdt", "MxZWCZrWHaEc6I1H"), false);
+//var client = new MyDHLExpressClient(new DHLClientCredentials("dmD3ZkqFTbXx2kgCnma63PABaiJWBAdt", "MxZWCZrWHaEc6I1H"), false);
 
-var voucherResponse = await client.CreateDHLShipmentAsync(request);
+//var voucherResponse = await client.CreateDHLShipmentAsync(request);
 
-var trackResponse = await client.GetSingleDHLShipmentAsync(voucherResponse.Result.ShipmentTrackingNumber, new TrackSingleShipmentAPIArgs());
+//var trackResponse = await client.GetSingleDHLShipmentAsync(voucherResponse.Result.ShipmentTrackingNumber, new TrackSingleShipmentAPIArgs());
 
 var json = $$$"""
 {
@@ -946,7 +944,7 @@ var json = $$$"""
 //    return missingProperties;
 //}
 
-var shipment = JsonConvert.DeserializeObject<ServicePointLocationByAddressResponseModel>(json);
+//var shipment = JsonConvert.DeserializeObject<ServicePointLocationByAddressResponseModel>(json);
 
 var t = typeof(CreateShipmentRequestModel);
 

@@ -1,7 +1,6 @@
-﻿using DHLClient.JsonConverters;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// Represents an address service area

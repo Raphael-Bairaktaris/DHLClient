@@ -1,4 +1,4 @@
-﻿namespace DHLClient
+﻿namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// Represents a pickup creation

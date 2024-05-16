@@ -3,16 +3,16 @@
 namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="BreakdownType"/> to <see cref="string"/>
+    /// The <see cref="BaseEnumJsonConverter{T}"/> that converts a <see cref="BreakdownType"/> to <see cref="string"/>
     /// </summary>
-    public class TypeCodeToStringJsonConverter : BaseEnumJsonConverter<BreakdownType>
+    public class BreadkdownTypeToStringJsonConverter : BaseEnumJsonConverter<BreakdownType>
     {
         #region Constructors
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public TypeCodeToStringJsonConverter() : base()
+        public BreadkdownTypeToStringJsonConverter() : base()
         {
 
         }

@@ -1,9 +1,7 @@
-﻿using Newtonsoft.Json;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
-    /// A <see cref="JsonConverter{T}"/> that converts a <see cref="SymbologyCode"/> to <see cref="int"/>
+    /// A <see cref="BaseEnumToIntJsonConverter{T}"/> that converts a <see cref="SymbologyCode"/> to <see cref="int"/>
     /// </summary>
     public class SymbologyCodeToIntJsonConverter : BaseEnumToIntJsonConverter<SymbologyCode>
     {

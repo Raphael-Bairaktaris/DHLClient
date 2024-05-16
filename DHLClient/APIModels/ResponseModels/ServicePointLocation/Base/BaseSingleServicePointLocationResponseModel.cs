@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.LocationUnified
 {
     /// <summary>
     /// The base for all the single service point location

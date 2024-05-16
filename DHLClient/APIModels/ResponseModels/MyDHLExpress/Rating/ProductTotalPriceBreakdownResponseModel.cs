@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// Represents a base product price breakdown response

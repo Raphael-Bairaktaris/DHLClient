@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.LocationUnified
 {
     /// <summary>
     /// One location can be known within different business units (providerTypes). They will be known under a unique ID within each business unit domain, as provided.

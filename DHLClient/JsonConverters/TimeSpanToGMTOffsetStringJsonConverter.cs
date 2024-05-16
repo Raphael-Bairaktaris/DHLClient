@@ -1,7 +1,10 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient.JsonConverters
+namespace DHLClient
 {
+    /// <summary>
+    /// A <see cref="JsonConverter{T}"/> that is used for converting a <see cref="TimeSpan"/> GMT offset <see cref="string"/>
+    /// </summary>
     internal class TimeSpanToGMTOffsetStringJsonConverter : JsonConverter<TimeSpan?>
     {
         #region Constructors

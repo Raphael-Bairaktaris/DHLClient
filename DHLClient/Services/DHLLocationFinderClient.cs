@@ -1,6 +1,4 @@
-﻿
-
-namespace DHLClient
+﻿namespace DHLClient.LocationUnified
 {
     /// <summary>
     /// An agent that is capable of making requests to the DHL Location Finder API

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// Represents a shipment piece response
@@ -82,8 +82,8 @@ namespace DHLClient
         /// the piece description
         /// </summary>
         [JsonProperty("description")]
-        public string Description 
-        { 
+        public string Description
+        {
             get => mDescription ?? string.Empty;
             set => mDescription = value;
         }

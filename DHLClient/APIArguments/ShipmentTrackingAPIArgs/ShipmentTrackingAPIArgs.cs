@@ -1,4 +1,4 @@
-﻿namespace DHLClient
+﻿namespace DHLClient.ShipmentTracking
 {
     /// <summary>
     /// Arguments uses for receiving a shipment tracking by number

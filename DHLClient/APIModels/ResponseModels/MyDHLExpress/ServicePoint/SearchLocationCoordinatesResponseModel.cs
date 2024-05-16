@@ -1,4 +1,4 @@
-﻿namespace DHLClient
+﻿namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// Represents location coordinates
@@ -21,7 +21,7 @@
         /// </summary>
         public SearchLocationCoordinatesResponseModel() : base()
         {
-             
+
         }
 
         #endregion

@@ -1,7 +1,7 @@
 ﻿namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="JsonConverter{T}"/> that converts <see cref="PolicyType"/> to <see cref="string"/>
+    /// The <see cref="BaseEnumJsonConverter{T}"/> that converts <see cref="PolicyType"/> to <see cref="string"/>
     /// </summary>
     public class PolicyTypeToStringJsonConverter : BaseEnumJsonConverter<PolicyType>
     {

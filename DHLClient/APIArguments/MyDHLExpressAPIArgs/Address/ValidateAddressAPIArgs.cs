@@ -1,4 +1,4 @@
-﻿namespace DHLClient
+﻿namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// Arguments used for validating an address

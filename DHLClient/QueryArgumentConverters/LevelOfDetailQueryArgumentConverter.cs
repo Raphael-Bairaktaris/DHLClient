@@ -1,6 +1,4 @@
-﻿using DHLClient.DataModels.Enums;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
     /// A <see cref="BaseQueryArgumentConverter{Tvalue}"/> that is used for converting a <see cref="LevelOfDetail"/> to a <see cref="string"/>

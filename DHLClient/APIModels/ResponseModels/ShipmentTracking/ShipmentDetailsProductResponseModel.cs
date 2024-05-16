@@ -1,7 +1,10 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.ShipmentTracking
 {
+    /// <summary>
+    /// Represents a shipment detail product
+    /// </summary>
     public class ShipmentDetailsProductResponseModel
     {
         #region Private Members

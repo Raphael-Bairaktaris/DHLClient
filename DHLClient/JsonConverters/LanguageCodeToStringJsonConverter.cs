@@ -1,9 +1,7 @@
-﻿using Newtonsoft.Json;
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
-    /// A <see cref="JsonConverter{T}"/> that converts a <see cref="LanguageCode"/> to <see cref="string"/>
+    /// A <see cref="BaseEnumJsonConverter{T}"/> that converts a <see cref="LanguageCode"/> to <see cref="string"/>
     /// </summary>
     public class LanguageCodeToStringJsonConverter : BaseEnumJsonConverter<LanguageCode>
     {

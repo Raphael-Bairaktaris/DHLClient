@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.MyDHLExpress
 {
     public class ServicePointDetailOpeningHourResponseModel
     {

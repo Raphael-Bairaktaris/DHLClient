@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.LocationUnified
 {
     /// <summary>
     /// Represents a location by address response

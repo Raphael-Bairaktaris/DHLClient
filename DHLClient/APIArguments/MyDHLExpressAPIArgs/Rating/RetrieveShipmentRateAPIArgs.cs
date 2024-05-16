@@ -1,5 +1,4 @@
-﻿
-namespace DHLClient
+﻿namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// The arguments used for rating a piece of shipment

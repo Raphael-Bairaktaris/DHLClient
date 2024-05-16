@@ -1,9 +1,7 @@
-﻿// Ignore Spelling: Incoterm Measurment
-
-namespace DHLClient
+﻿namespace DHLClient
 {
     /// <summary>
-    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="MeasurmentUnit"/> to <see cref="string"/>
+    /// The <see cref="BaseEnumJsonConverter{T}"/> that converts a <see cref="MeasurmentUnit"/> to <see cref="string"/>
     /// </summary>
     public class MeasurmentUnitToStringJsonConverter : BaseEnumJsonConverter<MeasurmentUnit>
     {

@@ -1,5 +1,4 @@
-﻿using DHLClient.DataModels.Enums;
-using System.Collections.Immutable;
+﻿using System.Collections.Immutable;
 
 namespace DHLClient
 {

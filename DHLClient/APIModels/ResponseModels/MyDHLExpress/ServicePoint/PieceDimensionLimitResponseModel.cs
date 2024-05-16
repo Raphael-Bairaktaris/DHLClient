@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// The member of the <see cref=""/>

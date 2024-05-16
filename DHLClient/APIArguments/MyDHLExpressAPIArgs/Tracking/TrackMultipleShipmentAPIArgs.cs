@@ -1,6 +1,4 @@
-﻿using DHLClient.DataModels.Enums;
-
-namespace DHLClient
+﻿namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// Arguments used tracking a single or multiple shipments

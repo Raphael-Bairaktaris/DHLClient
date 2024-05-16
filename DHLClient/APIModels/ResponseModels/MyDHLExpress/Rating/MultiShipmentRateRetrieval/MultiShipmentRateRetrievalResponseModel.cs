@@ -1,4 +1,4 @@
-﻿namespace DHLClient
+﻿namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// The Rate request will return DHL's product capabilities and prices (where applicable) based on the input data. 

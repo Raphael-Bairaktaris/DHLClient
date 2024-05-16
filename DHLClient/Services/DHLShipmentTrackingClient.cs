@@ -1,4 +1,4 @@
-﻿namespace DHLClient
+﻿namespace DHLClient.ShipmentTracking
 {
     /// <summary>
     /// An agent that is capable of making requests to the DHL shipment Tracking API

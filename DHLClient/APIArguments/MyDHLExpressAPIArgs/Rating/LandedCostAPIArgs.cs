@@ -1,5 +1,4 @@
-﻿
-namespace DHLClient
+﻿namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// Arguments used for landed cost

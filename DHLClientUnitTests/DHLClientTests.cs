@@ -12,7 +12,7 @@ namespace DHLClientTests
         /// <summary>
         /// The client
         /// </summary>
-        private readonly DHLClient.DHLLocationFinderClient mClient;
+        //private readonly DHLClient.DHLLocationFinder mClient;
 
         #endregion
 

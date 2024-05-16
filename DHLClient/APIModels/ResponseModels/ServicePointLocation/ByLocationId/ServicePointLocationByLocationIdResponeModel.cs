@@ -1,4 +1,4 @@
-﻿namespace DHLClient
+﻿namespace DHLClient.LocationUnified
 {
     /// <summary>
     /// Represents a service point location by location id

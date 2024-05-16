@@ -1,6 +1,6 @@
 ﻿using DHLClient.QueryArgumentConverters;
 
-namespace DHLClient
+namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// Arguments used for getting a shipment image

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DHLClient
+namespace DHLClient.ShipmentTracking
 {
     /// <summary>
     /// Represents a shipment detail quantity response

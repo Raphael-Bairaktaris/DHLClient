@@ -1,7 +1,5 @@
 ﻿// Ignore Spelling: Incoterm
 
-using DHLClient.DataModels.Enums;
-
 namespace DHLClient
 {
     /// <summary>

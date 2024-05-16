@@ -1,9 +1,4 @@
-﻿
-using System.Globalization;
-using System.Net.Http.Headers;
-using System.Text;
-
-namespace DHLClient
+﻿namespace DHLClient.MyDHLExpress
 {
     /// <summary>
     /// An agent that is capable of making requests to the MyDHL Express API
